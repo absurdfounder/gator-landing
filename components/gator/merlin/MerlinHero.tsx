@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import Image from 'next/image'
+import MerlinImage from '@/components/gator/merlin/MerlinImage'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowUpRight, ChevronDown, Menu, Moon, Send, Sun, X } from 'lucide-react'
 import { merlinAssets } from '@/lib/merlinAssets'
@@ -45,7 +45,7 @@ function MerlinRotatingHeadline() {
   }, [])
 
   return (
-    <div className="merlin-rotating-slot text-center font-serif text-4xl font-medium tracking-tight sm:text-5xl md:text-left md:text-6xl md:leading-[86px]">
+    <div className="merlin-rotating-slot relative z-[1] text-center font-serif text-3xl font-medium tracking-tight sm:text-4xl md:text-5xl lg:text-left lg:text-6xl lg:leading-[86px]">
       <AnimatePresence mode="wait">
         <motion.div
           key={ROTATING_WORDS[idx]}
@@ -86,7 +86,7 @@ export function MerlinAskInput() {
             className="relative mx-auto h-12 w-full max-w-3xl overflow-hidden rounded-[10px] bg-background transition duration-200 md:h-16"
           >
             <div className="absolute left-2 top-1/2 z-[60] flex size-10 -translate-y-1/2 items-center justify-center">
-              <Image src={merlinAssets.hero.sparkles} alt="" width={20} height={20} />
+              <MerlinImage src={merlinAssets.hero.sparkles} alt="" width={20} height={20} />
             </div>
             <input
               value={query}
@@ -134,25 +134,26 @@ export function MerlinAskInput() {
 
 export function MerlinHeroBlock() {
   return (
-    <div className="relative flex w-full max-w-7xl flex-col items-center justify-center gap-9 px-4 md:my-32 xl:px-0">
-      <Image
+    <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-9 px-4 pt-8 md:my-32 md:pt-0 xl:px-0">
+      <MerlinImage
         src={merlinAssets.hero.gradient}
         alt=""
         fill
-        className="!bottom-0 z-[1] !h-auto object-cover opacity-80"
+        sizes="100vw"
+        className="!bottom-0 z-[1] !h-auto object-cover opacity-40 md:opacity-70"
         priority
       />
-      <div className="relative z-[2] flex flex-col items-center justify-center">
-        <Image
+      <div className="relative z-[3] flex w-full flex-col items-center justify-center">
+        <MerlinImage
           src={merlinAssets.hero.illustration}
           alt="hero-image"
           width={196}
           height={86}
           priority
         />
-        <div className="mt-2 flex flex-wrap items-baseline justify-center gap-x-2 md:mt-0 md:justify-start">
+        <div className="mt-3 flex w-full max-w-4xl flex-col items-center gap-1 text-center md:mt-2 md:flex-row md:flex-wrap md:items-baseline md:justify-center md:gap-x-2 lg:justify-start lg:text-left">
           <MerlinRotatingHeadline />
-          <h1 className="text-center font-serif text-4xl font-normal italic tracking-normal text-foreground sm:text-5xl md:text-left md:text-6xl md:leading-[86px]">
+          <h1 className="font-serif text-3xl font-normal italic tracking-normal text-foreground sm:text-4xl md:text-5xl lg:text-6xl lg:leading-[86px]">
             are a chat away
           </h1>
         </div>
@@ -169,15 +170,15 @@ export function MerlinHeroBlock() {
           </h3>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-4">
-          <a href="#"><Image src={merlinAssets.stores.chrome} alt="Chrome Web Store" width={180} height={52} className="h-12 w-auto" /></a>
-          <a href="#"><Image src={merlinAssets.stores.googlePlay} alt="Google Play" width={180} height={52} className="h-12 w-auto" /></a>
-          <a href="#"><Image src={merlinAssets.stores.apple} alt="App Store" width={140} height={44} className="h-11 w-auto" /></a>
+          <a href={BRAND_APP}><MerlinImage src={merlinAssets.stores.chrome} alt="Chrome Web Store" width={180} height={52} className="h-12 w-auto" /></a>
+          <a href={BRAND_APP}><MerlinImage src={merlinAssets.stores.googlePlay} alt="Google Play" width={180} height={52} className="h-12 w-auto" /></a>
+          <a href={BRAND_APP}><MerlinImage src={merlinAssets.stores.apple} alt="App Store" width={140} height={44} className="h-11 w-auto" /></a>
         </div>
       </div>
       <div className="z-[2] w-full overflow-hidden md:mt-2">
         <div className="merlin-marquee flex w-max gap-12">
           {[...merlinAssets.brands, ...merlinAssets.brands].map((logo, i) => (
-            <Image key={`${logo}-${i}`} src={logo} alt="" width={100} height={32} className="merlin-brand-logo h-8 w-auto shrink-0" />
+            <MerlinImage key={`${logo}-${i}`} src={logo} alt="" width={100} height={32} className="merlin-brand-logo h-8 w-auto shrink-0" />
           ))}
         </div>
       </div>
@@ -191,9 +192,9 @@ export function MerlinHeroBlock() {
         <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Trusted by 20M+ users</h3>
         <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Install on all platforms</h3>
         <div className="flex flex-wrap items-center justify-center gap-4">
-          <a href="#"><Image src={merlinAssets.stores.chrome} alt="" width={180} height={52} className="h-12 w-auto" /></a>
-          <a href="#"><Image src={merlinAssets.stores.googlePlay} alt="" width={180} height={52} className="h-12 w-auto" /></a>
-          <a href="#"><Image src={merlinAssets.stores.apple} alt="" width={140} height={44} className="h-11 w-auto" /></a>
+          <a href={BRAND_APP}><MerlinImage src={merlinAssets.stores.chrome} alt="" width={180} height={52} className="h-12 w-auto" /></a>
+          <a href={BRAND_APP}><MerlinImage src={merlinAssets.stores.googlePlay} alt="" width={180} height={52} className="h-12 w-auto" /></a>
+          <a href={BRAND_APP}><MerlinImage src={merlinAssets.stores.apple} alt="" width={140} height={44} className="h-11 w-auto" /></a>
         </div>
       </div>
     </div>
@@ -243,7 +244,7 @@ export function MerlinHeader() {
       <div className="relative z-50 mx-auto flex w-full max-w-7xl items-center justify-between">
         <div className="flex w-full items-center justify-start gap-6 lg:gap-10">
           <a href="/" className="flex shrink-0 items-center gap-2" aria-label="Main Navigation">
-            <Image src="/images/gator-icon.png" alt="" width={28} height={28} className="w-7 rounded-lg" />
+            <MerlinImage src="/images/gator-icon.png" alt="" width={28} height={28} className="w-7 rounded-lg" />
             <span className="text-2xl font-semibold lowercase text-foreground sm:text-3xl">{BRAND}</span>
           </a>
           <nav className="relative z-10 hidden max-w-max flex-1 items-center justify-center lg:flex">
@@ -302,7 +303,7 @@ export function MerlinHeader() {
             href={BRAND_APP}
             className="hidden h-9 items-center justify-center rounded-md bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground shadow transition hover:bg-secondary/80 lg:inline-flex"
           >
-            <Image src={merlinAssets.stores.chrome} alt="" width={14} height={14} className="mr-1.5 size-3.5 shrink-0" />
+            <MerlinImage src={merlinAssets.stores.chrome} alt="" width={14} height={14} className="mr-1.5 size-3.5 shrink-0" />
             <span className="hidden xl:inline">Add {BRAND} Extension</span>
             <span className="xl:hidden">Extension</span>
           </a>

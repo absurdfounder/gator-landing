@@ -1,8 +1,9 @@
 'use client'
 
-import { useRef, useState } from 'react'
-import Image from 'next/image'
-import { ArrowUpRight, Calendar, ChevronDown, ChevronLeft, ChevronRight, ChevronRight as ChevronRightIcon, Globe } from 'lucide-react'
+import { useState } from 'react'
+import { ArrowUpRight, Calendar, ChevronDown, ChevronRight as ChevronRightIcon, Globe } from 'lucide-react'
+import MerlinImage from '@/components/gator/merlin/MerlinImage'
+import SlideCarousel from '@/components/gator/merlin/SlideCarousel'
 import { merlinAssets } from '@/lib/merlinAssets'
 import {
   BRAND,
@@ -65,51 +66,11 @@ function PrimaryBtn({ href, children, className = '' }: { href: string; children
   )
 }
 
-type SlideItem = { title: string; desc: string; image: string }
-
-function SlideCarousel({ items, tall = true }: { items: SlideItem[]; tall?: boolean }) {
-  const [idx, setIdx] = useState(0)
-  const ref = useRef<HTMLDivElement>(null)
-
-  const scroll = (dir: number) => {
-    const next = Math.max(0, Math.min(items.length - 1, idx + dir))
-    setIdx(next)
-    ref.current?.children[next]?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' })
-  }
-
-  return (
-    <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center gap-6">
-      <div className="relative w-full overflow-hidden">
-        <div
-          ref={ref}
-          className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-4 pl-[max(1rem,calc(50%-163px))] pr-[max(1rem,calc(50%-163px))] [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-        >
-          {items.map((item) => (
-            <div key={item.title} className="w-[326px] shrink-0 snap-center">
-              <div className="flex w-[326px] flex-col gap-4">
-                <div className={`relative w-full overflow-hidden rounded-lg ${tall ? 'h-[366px]' : 'h-44'}`}>
-                  <Image src={item.image} alt="" fill className="rounded-lg object-cover" />
-                </div>
-                <div className="flex flex-col gap-1">
-                  <h4 className="line-clamp-2 font-serif text-xl font-medium leading-8 text-foreground">{item.title}</h4>
-                  <p className="font-sans text-base font-medium leading-relaxed text-muted-foreground md:text-lg">{item.desc}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="flex gap-2">
-        <button type="button" onClick={() => scroll(-1)} disabled={idx === 0} className="rounded-full border border-border p-2 transition hover:bg-accent disabled:opacity-40"><ChevronLeft className="h-4 w-4" /></button>
-        <button type="button" onClick={() => scroll(1)} disabled={idx === items.length - 1} className="rounded-full border border-border p-2 transition hover:bg-accent disabled:opacity-40"><ChevronRight className="h-4 w-4" /></button>
-      </div>
-    </div>
-  )
-}
 
 export default function MerlinSections() {
   const [tab, setTab] = useState<keyof typeof featureTabs>('Create')
   const [faqOpen, setFaqOpen] = useState<number | null>(0)
+  const [workflowOpen, setWorkflowOpen] = useState<number | null>(null)
 
   return (
     <>
@@ -140,8 +101,8 @@ export default function MerlinSections() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 md:gap-x-8 md:gap-y-20">
           {EXT_FEATURES.map((f) => (
             <div key={f.title} className="flex flex-col gap-4">
-              <div className="relative h-72 w-full overflow-hidden rounded-lg">
-                <Image src={f.image} alt={f.title} fill className="rounded-lg object-cover" />
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg sm:h-72 sm:aspect-auto">
+                <MerlinImage src={f.image} alt={f.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="rounded-lg object-cover" />
               </div>
               <p className="font-sans text-lg font-light leading-8 text-muted-foreground md:text-2xl md:leading-[38px]">
                 <span className="mr-1.5 font-serif text-lg font-medium text-foreground md:text-2xl">{f.title}</span>
@@ -155,7 +116,7 @@ export default function MerlinSections() {
       {/* CHAT */}
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-4 xl:px-0">
         <div className="flex w-full flex-col items-center justify-center gap-6 text-center">
-          <span className="inline-flex items-center rounded-sm border border-blue-600 bg-background px-3 py-0.5 text-xs font-semibold text-blue-400">
+          <span className="inline-flex items-center rounded-sm border border-blue-600 bg-background px-3 py-0.5 text-xs font-semibold text-blue-600">
             NEW · {BRAND} Chat
           </span>
           <h2 className="w-full font-serif text-3xl font-medium tracking-normal text-foreground md:text-5xl">
@@ -169,8 +130,8 @@ export default function MerlinSections() {
           </PrimaryBtn>
         </div>
         <SlideCarousel items={CHAT_CARDS} />
-        <blockquote className="mx-auto flex max-w-2xl items-center gap-4">
-          <Image src={merlinAssets.chat.testimonial} alt="" width={56} height={56} className="h-14 w-14 rounded-full object-cover" />
+        <blockquote className="mx-auto flex max-w-2xl flex-col items-center gap-4 px-2 text-center sm:flex-row sm:items-start sm:text-left">
+          <MerlinImage src={merlinAssets.chat.testimonial} alt="" width={56} height={56} className="h-14 w-14 shrink-0 rounded-full object-cover" />
           <div className="text-left">
             <p className="text-foreground/80">&ldquo;{BRAND} is my go-to AI assistant. It understands Chinese and helps with translations. A true multilingual gem!&rdquo;</p>
             <p className="mt-2 text-sm font-medium text-foreground">Liang Wei <span className="text-muted-foreground">@weiliang</span></p>
@@ -181,9 +142,9 @@ export default function MerlinSections() {
       {/* GLOBE */}
       <div className="mx-auto flex w-full max-w-7xl flex-col overflow-hidden px-4 xl:px-0">
         <div className="flex w-full flex-col overflow-hidden rounded-[32px] border border-border bg-card md:grid md:grid-cols-3">
-          <div className="relative col-span-1 block h-[600px] w-full overflow-hidden bg-yellow-400">
-            <div className="absolute -left-32 sm:-left-20">
-              <Image src={merlinAssets.social.globe} alt="" width={500} height={600} className="h-[600px] w-full object-cover" />
+          <div className="relative col-span-1 block min-h-[360px] w-full overflow-hidden bg-yellow-400 sm:min-h-[480px] md:h-[600px]">
+            <div className="absolute -left-24 sm:-left-20 md:-left-32">
+              <MerlinImage src={merlinAssets.social.globe} alt="" width={500} height={600} className="h-[360px] w-full object-cover sm:h-[480px] md:h-[600px]" />
             </div>
             <div className="absolute bottom-14 right-4 z-20 max-w-52 rounded-xl border border-border bg-card p-0 shadow">
               <div className="flex flex-col gap-2 px-4 py-3">
@@ -191,7 +152,7 @@ export default function MerlinSections() {
                   {BRAND} summarizes videos, helps draft tweets, and lets me chat with websites in Spanish. It&apos;s incredibly versatile!
                 </p>
                 <div className="flex items-center gap-2">
-                  <Image src={merlinAssets.chat.testimonial} alt="" width={28} height={28} className="size-7 rounded-full object-cover" />
+                  <MerlinImage src={merlinAssets.chat.testimonial} alt="" width={28} height={28} className="size-7 rounded-full object-cover" />
                   <div>
                     <p className="text-xs font-light text-foreground">Maria</p>
                     <p className="text-xs font-light text-muted-foreground">@maria</p>
@@ -214,7 +175,7 @@ export default function MerlinSections() {
                   { score: '4.3', label: 'by AppSumo users', icon: merlinAssets.ratings.appsumo },
                 ].map((r) => (
                   <div key={r.label} className="flex items-center gap-3">
-                    <Image src={r.icon} alt="" width={36} height={36} className="h-9 w-9" />
+                    <MerlinImage src={r.icon} alt="" width={36} height={36} className="h-9 w-9" />
                     <div>
                       <p className="text-4xl font-normal text-foreground">{r.score}</p>
                       <p className="text-xs text-muted-foreground">{r.label}</p>
@@ -265,7 +226,7 @@ export default function MerlinSections() {
                 </p>
                 {merlinAssets.models.map((m) => (
                   <div key={m.name} className="flex items-center gap-6">
-                    <Image src={m.icon} alt="" width={32} height={32} className="size-8 shrink-0 object-contain" />
+                    <MerlinImage src={m.icon} alt="" width={32} height={32} className="size-8 shrink-0 object-contain" />
                     <span className="text-lg text-foreground">{m.name}</span>
                   </div>
                 ))}
@@ -275,19 +236,19 @@ export default function MerlinSections() {
               </PrimaryBtn>
             </div>
           </div>
-          <div className="col-span-1 flex h-[644px] justify-center overflow-hidden bg-sky-400">
+          <div className="col-span-1 flex min-h-[280px] justify-center overflow-hidden bg-sky-400 md:min-h-[644px]">
             <div className="relative flex w-full flex-col items-center justify-center gap-6 overflow-hidden p-4">
               <div className="animate-marquee-reverse flex w-max gap-4">
                 {[...merlinAssets.models, ...merlinAssets.models].map((m, i) => (
                   <div key={`${m.name}-${i}`} className="mx-3 flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-card p-2 shadow-md">
-                    <Image src={m.icon} alt="" width={28} height={28} className="size-7 object-contain" />
+                    <MerlinImage src={m.icon} alt="" width={28} height={28} className="size-7 object-contain" />
                   </div>
                 ))}
               </div>
               <div className="animate-marquee flex w-max gap-4">
                 {[...merlinAssets.models.slice().reverse(), ...merlinAssets.models.slice().reverse()].map((m, i) => (
                   <div key={`r-${m.name}-${i}`} className="mx-3 flex h-12 w-12 shrink-0 rotate-12 items-center justify-center rounded-md bg-card p-2 shadow-md">
-                    <Image src={m.icon} alt="" width={28} height={28} className="size-7 object-contain" />
+                    <MerlinImage src={m.icon} alt="" width={28} height={28} className="size-7 object-contain" />
                   </div>
                 ))}
               </div>
@@ -297,7 +258,7 @@ export default function MerlinSections() {
       </div>
 
       {/* SECURITY */}
-      <div className="flex w-full max-w-5xl flex-col items-center gap-12 px-4 xl:px-0">
+      <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-12 px-4 xl:px-0">
         <div className="flex w-full flex-col items-center px-4 md:flex-row md:justify-between xl:px-0">
           <h2 className="mb-6 w-full max-w-md text-center font-serif text-3xl font-medium tracking-wide text-foreground md:mb-0 md:text-left md:text-5xl">
             Secure and customizable
@@ -312,9 +273,9 @@ export default function MerlinSections() {
             { title: 'Make your own prompt library', desc: 'Automate generation of text, comments and posts with one click.', image: merlinAssets.security[1] },
             { title: 'Create custom bots', desc: 'String instructions, context and knowledge together to create custom chatbots.', image: merlinAssets.security[2] },
           ].map((item) => (
-            <div key={item.title} className="flex w-full max-w-xs flex-col">
-              <div className="relative h-48 w-full shrink-0">
-                <Image src={item.image} alt="" fill className="rounded-lg object-cover" />
+            <div key={item.title} className="flex w-full max-w-xs flex-col sm:w-[calc(50%-1rem)] lg:w-full lg:max-w-xs">
+              <div className="relative aspect-[4/3] w-full shrink-0 sm:h-48 sm:aspect-auto">
+                <MerlinImage src={item.image} alt={item.title} fill sizes="(max-width: 640px) 100vw, 320px" className="rounded-lg object-cover" />
               </div>
               <div className="flex grow flex-col gap-4 pt-4">
                 <h4 className="font-serif text-2xl font-medium tracking-normal text-foreground sm:min-h-16">{item.title}</h4>
@@ -328,9 +289,9 @@ export default function MerlinSections() {
       {/* DEVICES */}
       <div className="mx-auto flex w-full max-w-7xl flex-col overflow-hidden px-4 xl:px-0">
         <div className="flex w-full flex-col overflow-hidden rounded-[32px] border border-border bg-card md:grid md:grid-cols-3">
-          <div className="col-span-1 flex h-[644px] items-center justify-center bg-[#C4B5FD]">
-            <div className="relative w-full animate-float px-8">
-              <Image src={merlinAssets.devices.macbook} alt="" width={482} height={492} className="w-full" />
+          <div className="col-span-1 flex min-h-[280px] items-center justify-center bg-[#C4B5FD] md:min-h-[644px]">
+            <div className="relative w-full max-w-md animate-float px-6 sm:px-8">
+              <MerlinImage src={merlinAssets.devices.macbook} alt="" width={482} height={492} className="w-full" />
             </div>
           </div>
           <div className="col-span-2 flex items-center justify-center p-6 lg:p-12">
@@ -349,7 +310,7 @@ export default function MerlinSections() {
                   { label: 'Android app', icon: merlinAssets.devices.playstore },
                 ].map((d) => (
                   <a key={d.label} href={BRAND_APP} className="flex cursor-pointer items-center gap-2 rounded-full bg-primary px-3 py-2 text-sm text-primary-foreground shadow-md">
-                    {d.icon ? <Image src={d.icon} alt="" width={20} height={20} className="size-5 shrink-0" /> : <Globe className="size-5 shrink-0" />}
+                    {d.icon ? <MerlinImage src={d.icon} alt="" width={20} height={20} className="size-5 shrink-0" /> : <Globe className="size-5 shrink-0" />}
                     <span>{d.label}</span>
                   </a>
                 ))}
@@ -371,13 +332,13 @@ export default function MerlinSections() {
           </p>
         </div>
         <div className="mx-auto flex w-full max-w-screen-2xl flex-col gap-8">
-          <div className="flex items-center justify-center gap-3 overflow-x-auto py-2">
+          <div className="flex items-center justify-center gap-2 overflow-x-auto px-2 py-2 [-ms-overflow-style:none] [scrollbar-width:none] sm:gap-3 [&::-webkit-scrollbar]:hidden">
             {(Object.keys(featureTabs) as Array<keyof typeof featureTabs>).map((t) => (
               <button
                 key={t}
                 type="button"
                 onClick={() => setTab(t)}
-                className={`shrink-0 rounded-full border px-4 py-2 font-serif text-xl transition-all duration-200 ${
+                className={`shrink-0 rounded-full border px-3 py-1.5 font-serif text-base transition-all duration-200 sm:px-4 sm:py-2 sm:text-xl ${
                   tab === t ? 'border-transparent bg-primary text-primary-foreground' : 'bg-background hover:bg-secondary'
                 }`}
               >
@@ -392,7 +353,7 @@ export default function MerlinSections() {
                   <h3 className="flex items-center text-base font-medium text-muted-foreground">
                     {f}
                     {FEATURE_NEW.has(f) && (
-                      <span className="mx-2 rounded-sm border border-blue-600 bg-background px-2.5 py-0.5 text-xs text-blue-400">
+                      <span className="mx-2 rounded-sm border border-blue-600 bg-background px-2.5 py-0.5 text-xs text-blue-600">
                         NEW
                       </span>
                     )}
@@ -418,11 +379,18 @@ export default function MerlinSections() {
           </a>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {merlinWorkflows.map((w) => (
-            <div key={w.role} className="merlin-workflow-card relative min-h-[220px] overflow-hidden rounded-2xl border border-border bg-card p-6">
+          {merlinWorkflows.map((w, i) => (
+            <div
+              key={w.role}
+              role="button"
+              tabIndex={0}
+              onClick={() => setWorkflowOpen(workflowOpen === i ? null : i)}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setWorkflowOpen(workflowOpen === i ? null : i) } }}
+              className={`merlin-workflow-card relative min-h-[220px] cursor-pointer overflow-hidden rounded-2xl border border-border bg-card p-6 ${workflowOpen === i ? 'is-open' : ''}`}
+            >
               <h4 className="font-semibold text-foreground">{w.role}</h4>
               <p className="mt-3 text-sm text-muted-foreground">{w.question}</p>
-              <p className="mt-6 text-xs text-muted-foreground/60">Hover to see how {BRAND} solves this</p>
+              <p className="mt-6 text-xs text-muted-foreground/60">Tap to see how {BRAND} solves this</p>
               <div className="merlin-workflow-answer whitespace-pre-line">{w.answer}</div>
             </div>
           ))}
@@ -457,7 +425,7 @@ export default function MerlinSections() {
                 <li key={l}>✓ {l}</li>
               ))}
             </ul>
-            <div className="mt-8 flex gap-3">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <PrimaryBtn href={BRAND_APP} className="flex-1 justify-center">Buy now</PrimaryBtn>
               <a href="#faq" className="flex flex-1 items-center justify-center rounded-md border border-border px-3 py-2 text-sm hover:bg-accent">
                 Explore plans
@@ -468,7 +436,7 @@ export default function MerlinSections() {
       </div>
 
       {/* FAQ */}
-      <div id="faq" className="flex w-full max-w-3xl flex-col gap-8 px-4">
+      <div id="faq" className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4">
         <div className="text-center">
           <h2 className="font-serif text-3xl font-medium tracking-normal text-foreground md:text-5xl">
             Want to know more?
@@ -506,7 +474,7 @@ export default function MerlinSections() {
             { score: '4.7', label: 'App Store', icon: merlinAssets.ratings.apple },
           ].map((r) => (
             <div key={r.label} className="text-center">
-              <Image src={r.icon} alt="" width={40} height={40} className="mx-auto h-10 w-10" />
+              <MerlinImage src={r.icon} alt="" width={40} height={40} className="mx-auto h-10 w-10" />
               <p className="mt-2 text-2xl text-foreground">{r.score}</p>
               <p className="text-xs text-muted-foreground">{r.label}</p>
             </div>
@@ -517,7 +485,7 @@ export default function MerlinSections() {
             {[...merlinReviews, ...merlinReviews].map((r, i) => (
               <div key={`${r.author}-${i}`} className="w-[320px] shrink-0 rounded-2xl border border-border bg-card p-6">
                 <div className="mb-4 flex items-center gap-3">
-                  <Image src={merlinAssets.avatars[i % merlinAssets.avatars.length]} alt="" width={36} height={36} className="h-9 w-9 rounded-full" />
+                  <MerlinImage src={merlinAssets.avatars[i % merlinAssets.avatars.length]} alt="" width={36} height={36} className="h-9 w-9 rounded-full" />
                   <div>
                     <p className="text-xs font-medium text-foreground">{r.author}</p>
                     <p className="text-xs text-muted-foreground">{r.source}</p>
@@ -550,15 +518,15 @@ export default function MerlinSections() {
               </PrimaryBtn>
             </div>
           </div>
-          <div className="relative h-[312px] w-full overflow-hidden md:h-auto md:min-h-[320px] md:flex-1">
-            <div className="absolute right-3 top-8 z-[2] flex items-center gap-3 rounded-full border border-border bg-background p-4 shadow-lg sm:right-8">
-              <Image src="/images/gator-icon.png" alt="" width={40} height={40} className="size-10 rounded-full" />
+          <div className="relative min-h-[300px] w-full overflow-hidden py-8 md:min-h-[320px] md:flex-1 md:py-0">
+            <div className="relative mx-auto flex w-max items-center gap-3 rounded-full border border-border bg-background p-4 shadow-lg sm:absolute sm:right-8 sm:top-8">
+              <MerlinImage src="/images/gator-icon.png" alt="" width={40} height={40} className="size-10 rounded-full" />
               <div>
                 <p className="font-sans text-sm font-medium text-foreground">{BRAND} Support</p>
                 <p className="font-sans text-sm font-light text-muted-foreground">support@{BRAND_DOMAIN}</p>
               </div>
             </div>
-            <div className="absolute right-4 top-28 rounded-md border border-border bg-background p-3 shadow-md sm:right-6">
+            <div className="relative mx-auto mt-6 w-max rounded-md border border-border bg-background p-3 shadow-md sm:absolute sm:right-6 sm:top-28 sm:mt-0">
               <p className="mb-2 text-center font-sans text-sm font-medium text-foreground">July 2026</p>
               <div className="grid grid-cols-7 gap-1 text-center text-xs text-muted-foreground">
                 {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((d, i) => <span key={`dow-${i}`}>{d}</span>)}
@@ -574,7 +542,7 @@ export default function MerlinSections() {
       {/* FOOTER */}
       <footer className="w-full border-t border-border py-16">
         <div className="mx-auto max-w-7xl px-4 xl:px-0">
-          <div className="grid gap-12 md:grid-cols-4">
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <GatorLogo variant="full" theme="light" />
               <a href={`https://${BRAND_DOMAIN}`} className="mt-4 block text-sm text-muted-foreground hover:text-foreground">{BRAND_DOMAIN}</a>

@@ -25,7 +25,7 @@ export const PRODUCT_MENU = [
 
 export const NAV_LINKS = [
   { label: 'Pricing', href: '#pricing' },
-  { label: 'Affiliate', href: '#affiliate' },
+  { label: 'Affiliate', href: '/affiliate' },
   { label: 'Teams', href: '#teams' },
   { label: 'Chat', href: BRAND_APP },
   { label: 'Agent', href: BRAND_APP },
