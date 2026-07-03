@@ -1,0 +1,4746 @@
+{
+  "comparision_library": [
+    {
+      "id": "Trooper-vs-webflow",
+      "product": {
+        "logo": "https://via.placeholder.com/100",
+        "name": "Webflow",
+        "provider": "Trooper",
+        "description": "Tagline why Trooper  is better than Webflow.",
+        "heroimage": "https://cdn.icon-icons.com/icons2/2699/PNG/512/webflow_logo_icon_169218.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-wix",
+      "product": {
+        "logo": "https://via.placeholder.com/100",
+        "name": "Wix",
+        "provider": "Trooper",
+        "description": "Why Trooper  is a versatile alternative to Wix for dynamic website creation.",
+        "heroimage": "https://cdn-icons-png.flaticon.com/512/5968/5968770.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-wordpress",
+      "product": {
+        "logo": "https://via.placeholder.com/100",
+        "name": "WordPress",
+        "provider": "Trooper",
+        "description": "Exploring how Trooper offers a streamlined, user-friendly alternative to WordPress.",
+        "heroimage": "https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/wordpress-512.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-squarespace",
+      "product": {
+        "logo": "https://www.helpmyrank.com/wp-content/uploads/2022/04/channels4_profile.jpg",
+        "name": "Squarespace",
+        "provider": "Trooper",
+        "description": "Why Trooper offers a more versatile solution compared to Squarespace for creative website building.",
+        "heroimage": "https://www.helpmyrank.com/wp-content/uploads/2022/04/channels4_profile.jpg"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-shopify",
+      "product": {
+        "logo": "https://cdn.icon-icons.com/icons2/2428/PNG/512/shopify_black_logo_icon_147085.png",
+        "name": "Shopify",
+        "provider": "Trooper",
+        "description": "Discover why Trooper  is a comprehensive alternative to Shopify for seamless e-commerce solutions.",
+        "heroimage": "https://cdn.icon-icons.com/icons2/2428/PNG/512/shopify_black_logo_icon_147085.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-zendesk",
+      "product": {
+        "logo": "https://static-00.iconduck.com/assets.00/zendesk-icon-2048x2048-q18vy4hu.png",
+        "name": "Zendesk",
+        "provider": "Trooper",
+        "description": "How Trooper presents a comprehensive alternative to Zendesk for customer support and helpdesk management.",
+        "heroimage": "https://static-00.iconduck.com/assets.00/zendesk-icon-2048x2048-q18vy4hu.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-intercom",
+      "product": {
+        "logo": "https://dazzling-cat.netlify.app/integration_icons/intercom.png",
+        "name": "Intercom",
+        "provider": "Trooper",
+        "description": "Why Trooper  is a robust alternative to Intercom for customer support and engagement.",
+        "heroimage": "https://dazzling-cat.netlify.app/integration_icons/intercom.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-gitbook",
+      "product": {
+        "logo": "https://dazzling-cat.netlify.app/integration_icons/gitbook.jpg",
+        "name": "GitBook",
+        "provider": "Trooper",
+        "description": "How Trooper  is a versatile alternative to GitBook for documentation and collaboration.",
+        "heroimage": "https://dazzling-cat.netlify.app/integration_icons/gitbook.jpg"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-docusaurus",
+      "product": {
+        "logo": "https://static-00.iconduck.com/assets.00/docusaurus-icon-2048x1741-ditzh04o.png",
+        "name": "Docusaurus",
+        "provider": "Trooper",
+        "description": "How Trooper  is a versatile alternative to GitBook for documentation and collaboration.",
+        "heroimage": "https://static-00.iconduck.com/assets.00/docusaurus-icon-2048x1741-ditzh04o.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "Trooper-vs-framer",
+      "product": {
+        "logo": "https://pbs.twimg.com/profile_images/1469296240991125519/xpZr8yYS_400x400.jpg",
+        "name": "Framer",
+        "provider": "Trooper",
+        "description": "Why Trooper  is a feature-rich alternative to Framer for design-focused web development.",
+        "heroimage": "https://pbs.twimg.com/profile_images/1469296240991125519/xpZr8yYS_400x400.jpg"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-ghost",
+      "product": {
+        "logo": "https://ghost.org/images/logos/ghost-logo-orb.png",
+        "name": "Ghost",
+        "provider": "Trooper",
+        "description": "Why Trooper  is a comprehensive alternative to Ghost for blogging and content management.",
+        "heroimage": "https://ghost.org/images/logos/ghost-logo-orb.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-joomla",
+      "product": {
+        "logo": "https://cdn.icon-icons.com/icons2/2428/PNG/512/joomla_logo_icon_147117.png",
+        "name": "Joomla",
+        "provider": "Trooper",
+        "description": "Comparing the flexibility of Trooper with the traditional CMS capabilities of Joomla.",
+        "heroimage": "https://cdn.icon-icons.com/icons2/2428/PNG/512/joomla_logo_icon_147117.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-medium",
+      "product": {
+        "logo": "https://cdn4.iconfinder.com/data/icons/social-media-2210/24/Medium-512.png",
+        "name": "Medium",
+        "provider": "Trooper",
+        "description": "Trooper as a customizable alternative to Medium for publishing content online.",
+        "heroimage": "https://cdn4.iconfinder.com/data/icons/social-media-2210/24/Medium-512.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-confluence",
+      "product": {
+        "logo": "https://cdn.icon-icons.com/icons2/2699/PNG/512/atlassian_confluence_logo_icon_170581.png",
+        "name": "Confluence",
+        "provider": "Trooper",
+        "description": "How Trooper provides a simpler alternative to Confluence for team knowledge bases.",
+        "heroimage": "https://cdn.icon-icons.com/icons2/2699/PNG/512/atlassian_confluence_logo_icon_170581.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-super",
+      "product": {
+        "logo": "https://super-static.storage.googleapis.com/logo.png",
+        "name": "Super.so",
+        "provider": "Trooper",
+        "description": "Why Trooper is a powerful alternative to Super.so for building websites from Notion.",
+        "heroimage": "https://super-static.storage.googleapis.com/logo.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-carrd",
+      "product": {
+        "logo": "https://seeklogo.com/images/C/carrd-logo-A17F4F877F-seeklogo.com.png",
+        "name": "Carrd",
+        "provider": "Trooper",
+        "description": "Explore how Trooper offers more features than Carrd for building single-page sites and beyond.",
+        "heroimage": "https://seeklogo.com/images/C/carrd-logo-A17F4F877F-seeklogo.com.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-bubble",
+      "product": {
+        "logo": "https://seeklogo.com/images/B/bubble-logo-9DA649CA3D-seeklogo.com.png",
+        "name": "Bubble",
+        "provider": "Trooper",
+        "description": "Comparing Trooper' ease of use with Bubble's powerful no-code app building capabilities.",
+        "heroimage": "https://seeklogo.com/images/B/bubble-logo-9DA649CA3D-seeklogo.com.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-bigcommerce",
+      "product": {
+        "logo": "https://cdn.iconscout.com/icon/free/png-256/free-bigcommerce-3521298-2944740.png",
+        "name": "BigCommerce",
+        "provider": "Trooper",
+        "description": "Trooper as a versatile platform versus BigCommerce's dedicated e-commerce focus.",
+        "heroimage": "https://cdn.iconscout.com/icon/free/png-256/free-bigcommerce-3521298-2944740.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-helpscout",
+      "product": {
+        "logo": "https://cdn.worldvectorlogo.com/logos/helpscout-icon.svg",
+        "name": "Help Scout",
+        "provider": "Trooper",
+        "description": "How Trooper offers broader functionality compared to Help Scout's focused customer support tools.",
+        "heroimage": "https://cdn.worldvectorlogo.com/logos/helpscout-icon.svg"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-substack",
+      "product": {
+        "logo": "https://substack--cdn--com.cdn.ampproject.org/i/s/substack-cdn.com/icons/substack-circle-logo.svg",
+        "name": "Substack",
+        "provider": "Trooper",
+        "description": "Trooper as a full-featured website builder alternative to Substack's newsletter platform.",
+        "heroimage": "https://substack--cdn--com.cdn.ampproject.org/i/s/substack-cdn.com/icons/substack-circle-logo.svg"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-duda",
+      "product": {
+        "logo": "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_04a16181a979c6ef1ac6349022f7477c/duda.png",
+        "name": "Duda",
+        "provider": "Trooper",
+        "description": "Exploring Trooper as an alternative to Duda's agency-centric website building platform.",
+        "heroimage": "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_04a16181a979c6ef1ac6349022f7477c/duda.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-featurebase",
+      "product": {
+        "logo": "https://assets-global.website-files.com/636a6b7f852f1016a4cef701/654e1ac65847e3d9b2a24f03_nav-logomark.svg",
+        "name": "FeatureBase",
+        "provider": "Trooper",
+        "description": "Trooper as a comprehensive site builder versus FeatureBase's dedicated feedback and changelog tools.",
+        "heroimage": "https://assets-global.website-files.com/636a6b7f852f1016a4cef701/654e1ac65847e3d9b2a24f03_nav-logomark.svg"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-freshdesk",
+      "product": {
+        "logo": "https://cdn.icon-icons.com/icons2/2699/PNG/512/freshdesk_logo_icon_168401.png",
+        "name": "Freshdesk",
+        "provider": "Trooper",
+        "description": "Comparing Trooper' integrated tools with Freshdesk's specialized customer support platform.",
+        "heroimage": "https://cdn.icon-icons.com/icons2/2699/PNG/512/freshdesk_logo_icon_168401.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "Trooper-vs-beehiiv",
+      "product": {
+        "logo": "https://www.beehiiv.com/beehiiv-logo-dark.svg",
+        "name": "Beehiiv",
+        "provider": "Trooper",
+        "description": "How Trooper provides broader website capabilities compared to Beehiiv's newsletter and publishing focus.",
+        "heroimage": "https://www.beehiiv.com/beehiiv-logo-dark.svg"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-softr",
+      "product": {
+        "logo": "https://www.softr.io/l/logo-softr-dark.svg",
+        "name": "Softr",
+        "provider": "Trooper",
+        "description": "Comparing Trooper with Softr's capabilities for building directories, client portals, and internal tools.",
+        "heroimage": "https://www.softr.io/l/logo-softr-dark.svg"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-canny",
+      "product": {
+        "logo": "https://canny.io/images/canny-logo.svg",
+        "name": "Canny",
+        "provider": "Trooper",
+        "description": "How Trooper provides a broader platform compared to Canny's focused user feedback and roadmap tools.",
+        "heroimage": "https://canny.io/images/canny-logo.svg"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-notion-sites",
+      "product": {
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
+        "name": "Notion Sites",
+        "provider": "Trooper",
+        "description": "Comparing Trooper' dedicated features against Notion Sites for publishing simple websites directly from Notion.",
+        "heroimage": "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-glide",
+      "product": {
+        "logo": "https://storage.googleapis.com/glideapps-downloads/logos/glide-logo-dark-padding.png",
+        "name": "Glide",
+        "provider": "Trooper",
+        "description": "Trooper for comprehensive websites compared to Glide for building mobile-first apps from data.",
+        "heroimage": "https://storage.googleapis.com/glideapps-downloads/logos/glide-logo-dark-padding.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-convertkit",
+      "product": {
+        "logo": "https://cdn.icon-icons.com/icons2/2699/PNG/512/convertkit_logo_icon_169103.png",
+        "name": "ConvertKit",
+        "provider": "Trooper",
+        "description": "Trooper as a full website solution versus ConvertKit's focus on email marketing and creator landing pages.",
+        "heroimage": "https://cdn.icon-icons.com/icons2/2699/PNG/512/convertkit_logo_icon_169103.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-gorgias",
+      "product": {
+        "logo": "https://assets-global.website-files.com/626a589154cc6a67a116751e/6272a7a41862c2a55c1a424c_Logo%20Lockup%20Primary%20-%20Dark.svg",
+        "name": "Gorgias",
+        "provider": "Trooper",
+        "description": "Comparing Trooper' broad features against Gorgias' specialized helpdesk tailored for e-commerce businesses.",
+        "heroimage": "https://assets-global.website-files.com/626a589154cc6a67a116751e/6272a7a41862c2a55c1a424c_Logo%20Lockup%20Primary%20-%20Dark.svg"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-woocommerce",
+      "product": {
+        "logo": "https://cdn.icon-icons.com/icons2/2428/PNG/512/woocommerce_black_logo_icon_147111.png",
+        "name": "WooCommerce",
+        "provider": "Trooper",
+        "description": "Trooper as an all-in-one platform versus WooCommerce's e-commerce capabilities within WordPress.",
+        "heroimage": "https://cdn.icon-icons.com/icons2/2428/PNG/512/woocommerce_black_logo_icon_147111.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "Trooper-vs-slab",
+      "product": {
+        "logo": "https://pbs.twimg.com/profile_images/1305576116867895296/qprB4e-C_400x400.png",
+        "name": "Slab",
+        "provider": "Trooper",
+        "description": "Trooper for diverse web needs versus Slab's dedicated focus on team knowledge bases and wikis.",
+        "heroimage": "https://pbs.twimg.com/profile_images/1305576116867895296/qprB4e-C_400x400.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": false
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "helpdocs-io",
+      "product": {
+        "logo": "https://via.placeholder.com/100",
+        "name": "Helpdocs.io",
+        "provider": "Trooper",
+        "description": "Trooper is the modern, flexible alternative to Helpdocs.io for creating beautiful documentation and help centers.",
+        "heroimage": "https://via.placeholder.com/400"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "mintlify",
+      "product": {
+        "logo": "https://via.placeholder.com/100",
+        "name": "Mintlify",
+        "provider": "Trooper",
+        "description": "Trooper offers a powerful alternative to Mintlify for building modern documentation sites with ease.",
+        "heroimage": "https://via.placeholder.com/400"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "zendesk-help-center",
+      "product": {
+        "logo": "https://static-00.iconduck.com/assets.00/zendesk-icon-2048x2048-q18vy4hu.png",
+        "name": "Zendesk Help Center",
+        "provider": "Trooper",
+        "description": "Trooper is a comprehensive alternative to Zendesk Help Center for customer support and knowledge management.",
+        "heroimage": "https://static-00.iconduck.com/assets.00/zendesk-icon-2048x2048-q18vy4hu.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "intercom-help-center",
+      "product": {
+        "logo": "https://dazzling-cat.netlify.app/integration_icons/intercom.png",
+        "name": "Intercom Help Center",
+        "provider": "Trooper",
+        "description": "Trooper provides a robust alternative to Intercom Help Center for customer support and engagement.",
+        "heroimage": "https://dazzling-cat.netlify.app/integration_icons/intercom.png"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "docusaurus",
+      "product": {
+        "logo": "https://via.placeholder.com/100",
+        "name": "Docusaurus",
+        "provider": "Trooper",
+        "description": "Trooper is a simpler, more intuitive alternative to Docusaurus for building documentation websites.",
+        "heroimage": "https://via.placeholder.com/400"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "gitbook",
+      "product": {
+        "logo": "https://via.placeholder.com/100",
+        "name": "GitBook",
+        "provider": "Trooper",
+        "description": "Trooper offers a modern alternative to GitBook for creating beautiful documentation and knowledge bases.",
+        "heroimage": "https://via.placeholder.com/400"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "document360",
+      "product": {
+        "logo": "https://via.placeholder.com/100",
+        "name": "Document360",
+        "provider": "Trooper",
+        "description": "Trooper is a flexible alternative to Document360 for creating comprehensive knowledge bases and documentation.",
+        "heroimage": "https://via.placeholder.com/400"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "proprofs-kb",
+      "product": {
+        "logo": "https://via.placeholder.com/100",
+        "name": "ProProfs KB",
+        "provider": "Trooper",
+        "description": "Trooper is a modern alternative to ProProfs KB for building knowledge bases and help centers.",
+        "heroimage": "https://via.placeholder.com/400"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "zoho-desk",
+      "product": {
+        "logo": "https://via.placeholder.com/100",
+        "name": "Zoho Desk",
+        "provider": "Trooper",
+        "description": "Trooper is a comprehensive alternative to Zoho Desk for customer support and helpdesk management.",
+        "heroimage": "https://via.placeholder.com/400"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "help-scout",
+      "product": {
+        "logo": "https://via.placeholder.com/100",
+        "name": "Help Scout",
+        "provider": "Trooper",
+        "description": "Trooper is a modern alternative to Help Scout for customer support and helpdesk solutions.",
+        "heroimage": "https://via.placeholder.com/400"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "helpjuice",
+      "product": {
+        "logo": "https://via.placeholder.com/100",
+        "name": "Helpjuice",
+        "provider": "Trooper",
+        "description": "Trooper is a powerful alternative to Helpjuice for creating knowledge bases and help centers.",
+        "heroimage": "https://via.placeholder.com/400"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "knowledgeowl",
+      "product": {
+        "logo": "https://via.placeholder.com/100",
+        "name": "KnowledgeOwl",
+        "provider": "Trooper",
+        "description": "Trooper is a modern alternative to KnowledgeOwl for building knowledge bases and documentation sites.",
+        "heroimage": "https://via.placeholder.com/400"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "archbee",
+      "product": {
+        "logo": "https://via.placeholder.com/100",
+        "name": "Archbee",
+        "provider": "Trooper",
+        "description": "Trooper is a flexible alternative to Archbee for creating documentation and knowledge bases.",
+        "heroimage": "https://via.placeholder.com/400"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "stonly",
+      "product": {
+        "logo": "https://via.placeholder.com/100",
+        "name": "Stonly",
+        "provider": "Trooper",
+        "description": "Trooper is a comprehensive alternative to Stonly for creating interactive guides and help centers.",
+        "heroimage": "https://via.placeholder.com/400"
+      },
+      "comparison_table": [
+        {
+          "feature": "Beginner Friendly",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Ease of Notion",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Built-in SEO",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Custom domain",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Multiple Website Support",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "AI Support Agent",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Collaboration",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Edit on Mobile",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Blog CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Helpdesk CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "marketplace CMS",
+          "feature_value": {
+            "Item": false,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Company Wiki CMS",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        },
+        {
+          "feature": "Integrated analytics",
+          "feature_value": {
+            "Item": true,
+            "Notion": true
+          }
+        }
+      ]
+    }
+    
+  ]
+}
+

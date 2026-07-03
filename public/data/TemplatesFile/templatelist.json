@@ -1,0 +1,12 @@
+{
+    "templates": [
+      {
+        "href": "/showcase/remote-jobs",
+        "imageSrc": "/images/remotejobs.png",
+        "altText": "Remote Jobs",
+        "name": "Remote Jobs",
+        "description": "Find the best remote jobs in the tech industry."
+      }
+    ]
+  }
+  

@@ -1,0 +1,46 @@
+{
+  "integrations": [
+    {
+      "href": "/integration/Linear",
+      "imageSrc": "https://framerusercontent.com/images/l4nnn6kmtzSkPgFoWWlwzYFzEA.png",
+      "altText": "Linear",
+      "name": "Linear",
+      "description": "Attract your audience by creating a blog."
+    },
+    {
+      "href": "/integration/slack",
+      "imageSrc": "https://framerusercontent.com/images/Yo5xVE0shfRCQvIwRDGU6KqIbzM.png",
+      "altText": "Slack",
+      "name": "Slack",
+      "description": "Streamline your team's communication."
+    },
+    {
+      "href": "/integration/arcade",
+      "imageSrc": "https://framerusercontent.com/images/FS1of0gxF0A6UP7GmCpIBKQM.png",
+      "altText": "Arcade",
+      "name": "Arcade",
+      "description": "Enhance your product with gamified experiences."
+    },
+    {
+      "href": "/integration/discord",
+      "imageSrc": "https://framerusercontent.com/images/m9aUcDVUAGUkouzars7JOPL4pzU.png",
+      "altText": "Discord",
+      "name": "Discord",
+      "description": "Attract your audience by creating a blog."
+    },
+    {
+      "href": "/integration/fathom",
+      "imageSrc": "https://framerusercontent.com/images/DA65II8e2dwHkaDz1CqTV7Pra6k.png",
+      "altText": "Fathom",
+      "name": "Fathom",
+      "description": "Attract your audience by creating a blog."
+    },
+    {
+      "href": "/integration/figma",
+      "imageSrc": "https://framerusercontent.com/images/Dies87xzsIZvlFyRdxkVgDUnU.png",
+      "altText": "Figma",
+      "name": "Figma",
+      "description": "Attract your audience by creating a blog."
+    }
+  ]
+}

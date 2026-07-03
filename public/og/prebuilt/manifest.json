@@ -1,0 +1,13 @@
+{
+  "generatedAt": "2026-07-03T08:59:33.007Z",
+  "count": 1,
+  "totals": {
+    "written": 1,
+    "skipped": 0,
+    "missing": 0,
+    "failed": 0
+  },
+  "samples": [
+    "/og/prebuilt/home.png"
+  ]
+}
