@@ -1,18 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-.merlin-site {
+@font-face {
+  font-family: Sentient;
+  src: url('https://cdn.getmerlin.in/cms/Sentient_Variable_ff199de859.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Sentient;
+  src: url('https://cdn.getmerlin.in/cms/Sentient_Variable_Italic_1d8b283cd5.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+html.dark {
   --background: 0 0% 8.63%;
   --foreground: 0 0% 98%;
   --card: 0 0% 8.63%;
   --card-foreground: 0 0% 98%;
   --popover: 0 0% 8.63%;
   --popover-foreground: 0 0% 98%;
-  --primary: 0 0% 98%;
+  --primary: 0 0% 90%;
   --primary-foreground: 0 0% 9%;
-  --secondary: 0 0% 90%;
-  --secondary-foreground: 0 0% 9%;
+  --secondary: 0 0% 15%;
+  --secondary-foreground: 0 0% 98%;
   --muted: 0 0% 18%;
-  --muted-foreground: 0 0% 63.9%;
+  --muted-foreground: 0 0% 64%;
   --accent: 0 0% 18%;
   --accent-foreground: 0 0% 98%;
   --destructive: 0 62.8% 30.6%;
@@ -21,29 +37,96 @@
   --input: 0 0% 18%;
   --ring: 0 0% 83.1%;
   --radius: 0.5rem;
+}
 
+html.dark body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.merlin-page {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
 }
 
-.merlin-site .font-serif {
-  font-family: Newsreader, ui-serif, Georgia, serif;
+.merlin-page .font-serif,
+.merlin-serif,
+.merlin-h1,
+.merlin-h2 {
+  font-family: Sentient, ui-serif, Georgia, serif;
 }
 
-.merlin-site .bg-background { background-color: hsl(var(--background)); }
-.merlin-site .bg-foreground { background-color: hsl(var(--foreground)); }
-.merlin-site .bg-primary { background-color: hsl(var(--primary)); }
-.merlin-site .bg-secondary { background-color: hsl(var(--secondary)); }
-.merlin-site .bg-accent { background-color: hsl(var(--accent)); }
-.merlin-site .bg-muted { background-color: hsl(var(--muted)); }
-.merlin-site .text-foreground { color: hsl(var(--foreground)); }
-.merlin-site .text-primary { color: hsl(var(--primary)); }
-.merlin-site .text-primary-foreground { color: hsl(var(--primary-foreground)); }
-.merlin-site .text-secondary-foreground { color: hsl(var(--secondary-foreground)); }
-.merlin-site .text-muted-foreground { color: hsl(var(--muted-foreground)); }
-.merlin-site .text-accent-foreground { color: hsl(var(--accent-foreground)); }
-.merlin-site .border-border { border-color: hsl(var(--border)); }
+.merlin-page .bg-background { background-color: hsl(var(--background)); }
+.merlin-page .bg-primary { background-color: hsl(var(--primary)); }
+.merlin-page .bg-secondary { background-color: hsl(var(--secondary)); }
+.merlin-page .bg-accent { background-color: hsl(var(--accent)); }
+.merlin-page .bg-muted { background-color: hsl(var(--muted)); }
+.merlin-page .text-foreground { color: hsl(var(--foreground)); }
+.merlin-page .text-primary-foreground { color: hsl(var(--primary-foreground)); }
+.merlin-page .text-secondary-foreground { color: hsl(var(--secondary-foreground)); }
+.merlin-page .text-muted-foreground { color: hsl(var(--muted-foreground)); }
+.merlin-page .border-border { border-color: hsl(var(--border)); }
+
+.merlin-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 1280px) {
+  .merlin-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.merlin-h1 {
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 640px) {
+  .merlin-h1 { font-size: 3.75rem; }
+}
+
+.merlin-h2 {
+  font-size: 1.875rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 640px) {
+  .merlin-h2 { font-size: 2.25rem; }
+}
+
+.merlin-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  background-color: hsl(var(--primary));
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--primary-foreground));
+  transition: background-color 0.2s;
+}
+
+.merlin-btn-primary:hover {
+  background-color: hsl(var(--primary) / 0.9);
+}
+
+.merlin-card {
+  border-radius: 1rem;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--muted) / 0.35);
+}
 
 .merlin-marquee {
   animation: merlinMarquee 40s linear infinite;
@@ -82,4 +165,34 @@
   color: hsl(var(--muted-foreground));
   opacity: 0;
   transition: opacity 0.3s;
+}
+
+.merlin-faq-item {
+  border-bottom: 1px solid hsl(var(--border));
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.merlin-section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .merlin-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.merlin-rotating-slot {
+  position: relative;
+  display: inline-block;
+  min-width: 8ch;
+  min-height: 1.2em;
+  vertical-align: bottom;
 }

@@ -133,7 +133,7 @@ export default function RootLayout({
         }} />
       </head>
       <body
-        className={`${nunito.variable} ${silkscreen.variable} ${erode.variable} bg-[#161616] font-sans antialiased text-[#fafafa]`}
+        className={`${nunito.variable} bg-[#161616] font-sans antialiased text-[#fafafa]`}
       >
         <div className="flex flex-col min-h-screen">
           {children}
