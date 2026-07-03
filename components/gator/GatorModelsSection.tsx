@@ -1,16 +1,9 @@
-const MODELS = [
-  'GPT-4o & o1',
-  'Claude 3.7 Sonnet',
-  'DeepSeek R1',
-  'Gemini 2.5 Pro',
-  'Mistral Large',
-  'Llama 3.1 405B',
-  'Grok 3',
-]
+import Image from 'next/image'
+import { merlinAssets } from '@/lib/merlinAssets'
 
 export default function GatorModelsSection() {
   return (
-    <section className="border-t border-black/[0.06] bg-white py-20 sm:py-28">
+    <section className="border-t border-black/[0.06] bg-[#fafaf9] py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
         <h2 className="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
           All top AI Models in one
@@ -19,14 +12,21 @@ export default function GatorModelsSection() {
           Instant access to latest models as soon as they&apos;re live for FREE.
         </p>
 
-        <div className="mx-auto mt-12 flex max-w-3xl flex-wrap justify-center gap-3">
-          {MODELS.map((model) => (
-            <span
-              key={model}
-              className="rounded-full border border-black/[0.08] bg-[#fafaf9] px-5 py-2.5 text-sm font-medium text-ink transition hover:border-gator/30 hover:bg-gator/5"
+        <div className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {merlinAssets.models.map((model) => (
+            <div
+              key={model.name}
+              className="flex items-center gap-4 rounded-2xl border border-black/[0.06] bg-white px-5 py-4 text-left transition hover:border-gator/20 hover:shadow-sm"
             >
-              {model}
-            </span>
+              <Image
+                src={model.icon}
+                alt=""
+                width={40}
+                height={40}
+                className="h-10 w-10 shrink-0 object-contain"
+              />
+              <span className="text-sm font-medium text-ink">{model.name}</span>
+            </div>
           ))}
         </div>
 

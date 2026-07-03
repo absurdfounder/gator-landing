@@ -1,9 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { ArrowUp, Sparkles } from 'lucide-react'
-
-const SUGGESTIONS = ['Write code', 'Summarize a doc', 'Draft an email', 'Research a topic']
+import Image from 'next/image'
+import { ArrowUp } from 'lucide-react'
+import { merlinAssets } from '@/lib/merlinAssets'
 
 export default function GatorHero() {
   const [query, setQuery] = useState('')
@@ -15,23 +15,29 @@ export default function GatorHero() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-[#fafaf9] pb-16 pt-[calc(var(--site-header-height)+3rem)] sm:pb-24 sm:pt-[calc(var(--site-header-height)+4rem)]">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-0 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-gator/[0.07] blur-[100px]" />
-      </div>
+    <section className="relative overflow-hidden bg-[#fafaf9] pb-10 pt-[calc(var(--site-header-height)+2rem)] sm:pb-16 sm:pt-[calc(var(--site-header-height)+3rem)]">
+      <Image
+        src={merlinAssets.hero.gradient}
+        alt=""
+        width={1920}
+        height={1080}
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-60"
+        priority
+        aria-hidden
+      />
 
-      <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
-        <p className="mb-4 inline-flex items-center gap-1.5 rounded-full bg-gator/10 px-3 py-1 text-xs font-medium text-gator-700">
-          <Sparkles className="h-3 w-3" />
+      <div className="relative mx-auto max-w-5xl px-4 text-center sm:px-6">
+        <p className="mb-3 inline-flex items-center gap-2 text-sm font-medium text-ink-muted">
+          <Image src={merlinAssets.hero.sparkles} alt="" width={16} height={16} className="h-4 w-4" />
           Ideas
         </p>
 
-        <h1 className="font-display text-[2.75rem] font-semibold leading-[1.05] tracking-tight text-ink sm:text-6xl md:text-7xl">
+        <h1 className="font-display text-[2.75rem] font-semibold leading-[1.05] tracking-tight text-ink sm:text-6xl md:text-[5.5rem]">
           are a chat away
         </h1>
 
-        <form onSubmit={handleSubmit} className="mx-auto mt-10 max-w-2xl">
-          <div className="flex items-center gap-2 rounded-2xl border border-black/[0.08] bg-white p-2 pl-5 shadow-[0_8px_40px_rgba(0,0,0,0.06)] transition focus-within:border-gator/30 focus-within:shadow-[0_8px_40px_rgba(116,180,59,0.12)]">
+        <form onSubmit={handleSubmit} className="mx-auto mt-8 max-w-2xl">
+          <div className="flex items-center gap-2 rounded-2xl border border-black/[0.08] bg-white/90 p-2 pl-5 shadow-[0_8px_40px_rgba(0,0,0,0.08)] backdrop-blur-sm">
             <input
               type="text"
               value={query}
@@ -51,39 +57,59 @@ export default function GatorHero() {
 
         <a
           href="https://app.gator.so?ref=hero-cta"
-          className="mt-6 inline-flex items-center justify-center rounded-full bg-ink px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-ink/90"
+          className="mt-5 inline-flex rounded-full bg-ink px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-ink/90"
         >
           Get Started for FREE
         </a>
 
-        <p className="mt-12 text-sm font-medium text-ink-muted">
-          Trusted by <span className="text-ink">50K+</span> users
+        <div className="relative mx-auto mt-10 max-w-3xl">
+          <Image
+            src={merlinAssets.hero.illustration}
+            alt="Gator AI chat interface"
+            width={1200}
+            height={800}
+            className="mx-auto w-full max-w-2xl drop-shadow-2xl"
+            priority
+          />
+        </div>
+
+        <p className="mt-10 text-sm font-medium text-ink-muted">
+          Trusted by <span className="font-semibold text-ink">20M+</span> users
         </p>
 
-        <div className="mt-8">
-          <p className="mb-4 text-xs font-medium uppercase tracking-wider text-ink-faint">
-            Install on all platforms
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            {[
-              { label: 'Chrome Web Store', href: '#' },
-              { label: 'Google Play', href: '#' },
-              { label: 'App Store', href: '#' },
-            ].map((store) => (
-              <a
-                key={store.label}
-                href={store.href}
-                className="rounded-xl border border-black/[0.08] bg-white px-4 py-2.5 text-xs font-medium text-ink-muted shadow-sm transition hover:border-gator/20 hover:text-ink"
-              >
-                {store.label}
-              </a>
+        <div className="mt-6 overflow-hidden">
+          <div className="flex animate-[heroMarqueeScroll_30s_linear_infinite] gap-10 whitespace-nowrap">
+            {[...merlinAssets.brands, ...merlinAssets.brands].map((logo, i) => (
+              <Image
+                key={`${logo}-${i}`}
+                src={logo}
+                alt=""
+                width={120}
+                height={40}
+                className="h-8 w-auto shrink-0 opacity-50 grayscale transition hover:opacity-80 hover:grayscale-0"
+              />
             ))}
           </div>
         </div>
 
+        <p className="mt-10 text-xs font-semibold uppercase tracking-wider text-ink-faint">
+          Install on all platforms
+        </p>
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
+          <a href="#" className="transition hover:opacity-80">
+            <Image src={merlinAssets.stores.chrome} alt="Chrome Web Store" width={160} height={48} className="h-10 w-auto" />
+          </a>
+          <a href="#" className="transition hover:opacity-80">
+            <Image src={merlinAssets.stores.googlePlay} alt="Google Play" width={160} height={48} className="h-10 w-auto" />
+          </a>
+          <a href="#" className="transition hover:opacity-80">
+            <Image src={merlinAssets.stores.apple} alt="App Store" width={120} height={40} className="h-10 w-auto" />
+          </a>
+        </div>
+
         <a
           href="#pricing"
-          className="mt-10 inline-block rounded-full bg-gator/10 px-5 py-2 text-sm font-medium text-gator-700 transition hover:bg-gator/15"
+          className="mt-8 inline-block rounded-full bg-gator/10 px-5 py-2 text-sm font-medium text-gator-700 transition hover:bg-gator/15"
         >
           $130 worth of value for just $19!
         </a>

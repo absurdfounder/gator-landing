@@ -1,5 +1,3 @@
-import type { ReactNode } from 'react'
-
 const iconSrc = '/images/gator-icon.png'
 const logoSrc = '/images/gator-logo.png'
 
@@ -20,7 +18,7 @@ export default function GatorLogo({
   priority = false,
   theme = 'light',
 }: GatorLogoProps) {
-  let content: ReactNode
+  let content: React.ReactNode
 
   if (variant === 'wordmark') {
     content = (
@@ -39,6 +37,18 @@ export default function GatorLogo({
           gator
         </span>
       </span>
+    )
+  } else if (variant === 'full' && theme === 'dark') {
+    content = (
+      <img
+        src={logoSrc}
+        alt="gator"
+        width={280}
+        height={80}
+        className={`h-8 w-auto sm:h-9 object-contain object-left ${className}`}
+        loading={priority ? 'eager' : 'lazy'}
+        decoding="async"
+      />
     )
   } else if (variant === 'full' && theme === 'light') {
     content = (

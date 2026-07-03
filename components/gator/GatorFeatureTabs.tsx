@@ -1,7 +1,9 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { Shield, Bot, Library } from 'lucide-react'
+import { merlinAssets } from '@/lib/merlinAssets'
 
 const TABS = ['Create', 'Research', 'Summarize'] as const
 
@@ -83,16 +85,19 @@ export function GatorSecuritySection() {
       icon: Shield,
       title: 'Industry-grade data security',
       desc: 'GDPR, ISO 27001, SOC 2 certification for industry-standard data security.',
+      image: merlinAssets.security[0],
     },
     {
       icon: Library,
       title: 'Make your own prompt library',
       desc: 'Automate generation of text, comments and posts with one click.',
+      image: merlinAssets.security[1],
     },
     {
       icon: Bot,
       title: 'Create custom bots',
       desc: 'String instructions, context and knowledge together to create custom chatbots.',
+      image: merlinAssets.security[2],
     },
   ]
 
@@ -112,13 +117,22 @@ export function GatorSecuritySection() {
           {items.map((item) => (
             <div
               key={item.title}
-              className="rounded-2xl border border-black/[0.06] bg-[#fafaf9] p-6"
+              className="overflow-hidden rounded-2xl border border-black/[0.06] bg-[#fafaf9]"
             >
-              <div className="mb-4 inline-flex rounded-xl bg-gator/10 p-2.5 text-gator-700">
-                <item.icon className="h-5 w-5" />
+              <Image
+                src={item.image}
+                alt={item.title}
+                width={400}
+                height={240}
+                className="h-40 w-full object-cover"
+              />
+              <div className="p-6">
+                <div className="mb-3 inline-flex rounded-xl bg-gator/10 p-2 text-gator-700">
+                  <item.icon className="h-4 w-4" />
+                </div>
+                <h3 className="text-base font-semibold text-ink">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-muted">{item.desc}</p>
               </div>
-              <h3 className="text-base font-semibold text-ink">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-muted">{item.desc}</p>
             </div>
           ))}
         </div>

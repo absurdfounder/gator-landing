@@ -1,21 +1,27 @@
+import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
+import { merlinAssets } from '@/lib/merlinAssets'
 
 const CARDS = [
   {
     title: 'Use your own knowledge to research',
     desc: 'With Projects, add any context, create reusable knowledge bases and query repeatedly for tailored responses.',
+    image: merlinAssets.chat.projects,
   },
   {
     title: 'Turn words into infographics',
     desc: 'With Crafts, generate a variety of diagrams and interactive charts with just a prompt.',
+    image: merlinAssets.chat.infographics,
   },
   {
     title: 'Create working app snippets',
     desc: 'Prototype rapidly with React-based app snippets and edit code on the fly.',
+    image: merlinAssets.chat.appsnip,
   },
   {
     title: 'Use reasoning with realtime web',
     desc: 'Use chain-of-thought reasoning with realtime web sources to get a powerful research machine.',
+    image: merlinAssets.chat.reasoning,
   },
 ]
 
@@ -42,27 +48,45 @@ export default function GatorChatSection() {
           </a>
         </div>
 
-        <div className="mt-14 grid gap-4 sm:grid-cols-2">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2">
           {CARDS.map((card) => (
             <div
               key={card.title}
-              className="rounded-2xl border border-black/[0.06] bg-white p-6 transition hover:border-gator/20 hover:shadow-md"
+              className="overflow-hidden rounded-2xl border border-black/[0.06] bg-white transition hover:border-gator/20 hover:shadow-md"
             >
-              <h3 className="text-base font-semibold text-ink">{card.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-muted">{card.desc}</p>
+              <Image
+                src={card.image}
+                alt={card.title}
+                width={600}
+                height={400}
+                className="h-48 w-full object-cover object-top"
+              />
+              <div className="p-6">
+                <h3 className="text-base font-semibold text-ink">{card.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-muted">{card.desc}</p>
+              </div>
             </div>
           ))}
         </div>
 
-        <blockquote className="mx-auto mt-16 max-w-2xl text-center">
-          <p className="text-lg font-medium leading-relaxed text-ink">
-            &ldquo;Gator is my go-to AI assistant. It understands context and helps with real
-            tasks. A true productivity gem!&rdquo;
-          </p>
-          <footer className="mt-4">
-            <p className="text-sm font-semibold text-ink">Alex Chen</p>
-            <p className="text-xs text-ink-faint">@alexchen</p>
-          </footer>
+        <blockquote className="mx-auto mt-16 flex max-w-2xl items-center gap-5 text-left">
+          <Image
+            src={merlinAssets.chat.testimonial}
+            alt="Alex Chen"
+            width={64}
+            height={64}
+            className="h-14 w-14 shrink-0 rounded-full object-cover"
+          />
+          <div>
+            <p className="text-base font-medium leading-relaxed text-ink">
+              &ldquo;Gator is my go-to AI assistant. It understands context and helps with real
+              tasks. A true productivity gem!&rdquo;
+            </p>
+            <footer className="mt-2">
+              <p className="text-sm font-semibold text-ink">Alex Chen</p>
+              <p className="text-xs text-ink-faint">@alexchen</p>
+            </footer>
+          </div>
         </blockquote>
       </div>
     </section>

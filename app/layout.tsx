@@ -1,4 +1,5 @@
 import './css/style.css'
+import './css/merlin.css'
 
 import { Nunito } from 'next/font/google'
 import localFont from 'next/font/local'
@@ -65,7 +66,7 @@ export const metadata = {
     shortcut: '/favicon.png',
   },
   manifest: '/manifest.json',
-  themeColor: '#0f0f0f',
+  themeColor: '#161616',
   keywords: [
     'gator ai',
     'ai assistant',
@@ -132,7 +133,7 @@ export default function RootLayout({
         }} />
       </head>
       <body
-        className={`${nunito.variable} ${silkscreen.variable} ${erode.variable} bg-canvas font-sans antialiased text-ink`}
+        className={`${nunito.variable} ${silkscreen.variable} ${erode.variable} bg-[#161616] font-sans antialiased text-[#fafafa]`}
       >
         <div className="flex flex-col min-h-screen">
           {children}
