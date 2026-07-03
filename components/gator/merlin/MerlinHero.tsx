@@ -18,22 +18,7 @@ const PLACEHOLDERS = [
 ]
 
 function LetterWord({ word }: { word: string }) {
-  return (
-    <span className="inline-block whitespace-nowrap">
-      {word.split('').map((ch, i) => (
-        <motion.span
-          key={`${word}-${i}`}
-          className="inline-block"
-          initial={{ opacity: 0, filter: 'blur(8px)', y: 10 }}
-          animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
-          transition={{ duration: 0.3, delay: i * 0.04 }}
-        >
-          {ch}
-        </motion.span>
-      ))}
-      <span className="inline-block">&nbsp;</span>
-    </span>
-  )
+  return <span className="inline-block whitespace-nowrap">{word}</span>
 }
 
 function MerlinRotatingHeadline() {
@@ -45,20 +30,20 @@ function MerlinRotatingHeadline() {
   }, [])
 
   return (
-    <div className="merlin-rotating-slot relative z-[1] text-center font-serif text-3xl font-medium tracking-tight sm:text-4xl md:text-5xl lg:text-left lg:text-6xl lg:leading-[86px]">
+    <span className="merlin-rotating-slot inline-block font-medium not-italic">
       <AnimatePresence mode="wait">
-        <motion.div
+        <motion.span
           key={ROTATING_WORDS[idx]}
-          className="relative z-10 inline-block"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.4 }}
+          className="inline-block text-foreground"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -12 }}
+          transition={{ duration: 0.35, ease: 'easeOut' }}
         >
           <LetterWord word={ROTATING_WORDS[idx]} />
-        </motion.div>
+        </motion.span>
       </AnimatePresence>
-    </div>
+    </span>
   )
 }
 
@@ -134,70 +119,72 @@ export function MerlinAskInput() {
 
 export function MerlinHeroBlock() {
   return (
-    <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-9 px-4 pt-8 md:my-32 md:pt-0 xl:px-0">
-      <MerlinImage
-        src={merlinAssets.hero.gradient}
-        alt=""
-        fill
-        sizes="100vw"
-        className="!bottom-0 z-[1] !h-auto object-cover opacity-40 md:opacity-70"
-        priority
-      />
-      <div className="relative z-[3] flex w-full flex-col items-center justify-center">
+    <section className="relative mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 px-4 pb-4 pt-10 md:my-28 md:gap-10 md:pb-0 md:pt-0 xl:px-0">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-1/2 top-[38%] z-[1] h-[min(420px,55vw)] w-[min(720px,92vw)] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full opacity-50 md:top-[42%] md:opacity-60"
+      >
+        <MerlinImage
+          src={merlinAssets.hero.gradient}
+          alt=""
+          fill
+          sizes="(max-width: 768px) 100vw, 720px"
+          className="object-cover"
+          priority
+        />
+      </div>
+
+      <div className="relative z-[3] flex w-full flex-col items-center justify-center text-center">
         <MerlinImage
           src={merlinAssets.hero.illustration}
           alt="hero-image"
           width={196}
           height={86}
+          className="mb-2 md:mb-0"
           priority
         />
-        <div className="mt-3 flex w-full max-w-4xl flex-col items-center gap-1 text-center md:mt-2 md:flex-row md:flex-wrap md:items-baseline md:justify-center md:gap-x-2 lg:justify-start lg:text-left">
+        <h1 className="max-w-4xl font-serif text-[2rem] font-medium leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl md:leading-[1.1] lg:text-[4.25rem] lg:leading-[86px]">
           <MerlinRotatingHeadline />
-          <h1 className="font-serif text-3xl font-normal italic tracking-normal text-foreground sm:text-4xl md:text-5xl lg:text-6xl lg:leading-[86px]">
-            are a chat away
-          </h1>
-        </div>
+          <span className="italic font-normal"> are a chat away</span>
+        </h1>
       </div>
-      <MerlinAskInput />
-      <div className="z-[2] hidden flex-col items-center justify-center gap-4 md:flex">
-        <div className="flex items-center gap-3">
-          <h3 className="text-center font-sans text-sm font-semibold uppercase tracking-wider text-foreground">
+
+      <div className="relative z-[3] w-full">
+        <MerlinAskInput />
+      </div>
+
+      <div className="relative z-[3] flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
+          <h3 className="text-center font-sans text-xs font-semibold uppercase tracking-wider text-foreground sm:text-sm">
             Trusted by 20M+ users
           </h3>
-          <span className="text-muted-foreground">|</span>
-          <h3 className="text-center font-sans text-sm font-semibold uppercase tracking-wider text-foreground">
+          <span className="hidden text-muted-foreground sm:inline">|</span>
+          <h3 className="text-center font-sans text-xs font-semibold uppercase tracking-wider text-foreground sm:text-sm">
             Install on all platforms
           </h3>
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-4">
-          <a href={BRAND_APP}><MerlinImage src={merlinAssets.stores.chrome} alt="Chrome Web Store" width={180} height={52} className="h-12 w-auto" /></a>
-          <a href={BRAND_APP}><MerlinImage src={merlinAssets.stores.googlePlay} alt="Google Play" width={180} height={52} className="h-12 w-auto" /></a>
-          <a href={BRAND_APP}><MerlinImage src={merlinAssets.stores.apple} alt="App Store" width={140} height={44} className="h-11 w-auto" /></a>
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+          <a href={BRAND_APP}><MerlinImage src={merlinAssets.stores.chrome} alt="Chrome Web Store" width={180} height={52} className="h-10 w-auto sm:h-12" /></a>
+          <a href={BRAND_APP}><MerlinImage src={merlinAssets.stores.googlePlay} alt="Google Play" width={180} height={52} className="h-10 w-auto sm:h-12" /></a>
+          <a href={BRAND_APP}><MerlinImage src={merlinAssets.stores.apple} alt="App Store" width={140} height={44} className="h-9 w-auto sm:h-11" /></a>
         </div>
       </div>
-      <div className="z-[2] w-full overflow-hidden md:mt-2">
-        <div className="merlin-marquee flex w-max gap-12">
+
+      <div className="relative z-[3] w-full overflow-hidden">
+        <div className="merlin-marquee flex w-max gap-10 sm:gap-12">
           {[...merlinAssets.brands, ...merlinAssets.brands].map((logo, i) => (
-            <MerlinImage key={`${logo}-${i}`} src={logo} alt="" width={100} height={32} className="merlin-brand-logo h-8 w-auto shrink-0" />
+            <MerlinImage key={`${logo}-${i}`} src={logo} alt="" width={100} height={32} className="merlin-brand-logo h-7 w-auto shrink-0 sm:h-8" />
           ))}
         </div>
       </div>
-      <p className="z-[2] max-w-2xl text-center font-sans text-sm text-muted-foreground md:text-base">
+
+      <p className="relative z-[3] max-w-2xl px-2 text-center font-sans text-sm text-muted-foreground md:text-base">
         People across teams love {BRAND} for delivering{' '}
         <a href="#pricing" className="font-medium text-[#a855f7] hover:underline">
           $130 worth of value for just $19!
         </a>
       </p>
-      <div className="z-[2] flex flex-col items-center gap-4 md:hidden">
-        <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Trusted by 20M+ users</h3>
-        <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Install on all platforms</h3>
-        <div className="flex flex-wrap items-center justify-center gap-4">
-          <a href={BRAND_APP}><MerlinImage src={merlinAssets.stores.chrome} alt="" width={180} height={52} className="h-12 w-auto" /></a>
-          <a href={BRAND_APP}><MerlinImage src={merlinAssets.stores.googlePlay} alt="" width={180} height={52} className="h-12 w-auto" /></a>
-          <a href={BRAND_APP}><MerlinImage src={merlinAssets.stores.apple} alt="" width={140} height={44} className="h-11 w-auto" /></a>
-        </div>
-      </div>
-    </div>
+    </section>
   )
 }
 

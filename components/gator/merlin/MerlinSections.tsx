@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { ArrowUpRight, Calendar, ChevronDown, ChevronRight as ChevronRightIcon, Globe } from 'lucide-react'
 import MerlinImage from '@/components/gator/merlin/MerlinImage'
+import MerlinPricing from '@/components/gator/merlin/MerlinPricing'
 import SlideCarousel from '@/components/gator/merlin/SlideCarousel'
 import { merlinAssets } from '@/lib/merlinAssets'
 import {
@@ -397,43 +398,7 @@ export default function MerlinSections() {
         </div>
       </div>
 
-      {/* PRICING */}
-      <div id="pricing" className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 text-center xl:px-0">
-        <h2 className="font-serif text-3xl font-medium tracking-normal text-foreground md:text-5xl">
-          Most valuable AI subscription ever
-        </h2>
-        <p className="mx-auto max-w-lg font-sans text-lg font-medium text-muted-foreground">
-          Untrap yourself from thousands of tools with overlapping features.
-        </p>
-        <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
-          <div className="rounded-2xl border border-border bg-card p-8 text-left">
-            <p className="text-sm text-muted-foreground">Other</p>
-            <h3 className="mt-2 font-serif text-5xl text-foreground">$130</h3>
-            <p className="text-sm text-muted-foreground">per month for multiple tools</p>
-            <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
-              {['Claude AI $30/m', 'OpenAI $20/m', 'Gemini Advanced $20/m', 'Mistral AI $20/m', 'Open source model hosting $40/m'].map((l) => (
-                <li key={l}>{l}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="rounded-2xl border border-foreground/30 bg-card p-8 text-left">
-            <p className="text-sm font-medium text-foreground">{BRAND}</p>
-            <h3 className="mt-2 font-serif text-5xl text-foreground">$19</h3>
-            <p className="text-sm text-muted-foreground">per month billed annually</p>
-            <ul className="mt-6 space-y-2 text-sm text-foreground/80">
-              {['All data in one place', '24x7 support at your service', 'Great value for money'].map((l) => (
-                <li key={l}>✓ {l}</li>
-              ))}
-            </ul>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <PrimaryBtn href={BRAND_APP} className="flex-1 justify-center">Buy now</PrimaryBtn>
-              <a href="#faq" className="flex flex-1 items-center justify-center rounded-md border border-border px-3 py-2 text-sm hover:bg-accent">
-                Explore plans
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <MerlinPricing />
 
       {/* FAQ */}
       <div id="faq" className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4">

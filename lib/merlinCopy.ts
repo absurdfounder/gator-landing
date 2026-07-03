@@ -3,6 +3,68 @@ export const BRAND = 'Gator'
 export const BRAND_DOMAIN = 'gator.so'
 export const BRAND_APP = `https://app.${BRAND_DOMAIN}`
 
+export const merlinPricingComparison = {
+  other: {
+    total: '$130',
+    subtitle: 'per month for multiple tools',
+    label: 'Purchased individually',
+    items: [
+      { name: 'Claude AI', price: '$30/m' },
+      { name: 'OpenAI', price: '$20/m' },
+      { name: 'Gemini Advanced', price: '$20/m' },
+      { name: 'Mistral AI', price: '$20/m' },
+      { name: 'Open source model hosting', price: '$40/m' },
+    ],
+  },
+  gator: {
+    total: '$19',
+    subtitle: 'per month billed annually',
+    label: 'One purchase is all it takes',
+    items: [
+      'All top AI models in one place',
+      'Chrome extension + web + mobile apps',
+      '24×7 support at your service',
+      'Great value for money',
+    ],
+  },
+} as const
+
+export const merlinPlans = [
+  {
+    id: 'free',
+    name: 'Free',
+    price: '$0',
+    period: 'forever',
+    description: '102 free queries every day across top AI models.',
+    features: ['GPT-4o, Claude, Gemini & more', 'Chrome extension access', 'Web search summaries', 'YouTube & PDF summaries'],
+    cta: 'Get started free',
+    href: BRAND_APP,
+    highlighted: false,
+  },
+  {
+    id: 'pro',
+    name: `${BRAND} Pro`,
+    price: '$19',
+    period: 'per month billed annually',
+    description: 'Unlimited queries for power users who build every day.',
+    features: ['Unlimited queries', 'All Pro AI models', 'Projects & knowledge bases', 'Image gen & app snippets'],
+    cta: 'Buy now',
+    href: BRAND_APP,
+    highlighted: true,
+  },
+  {
+    id: 'teams',
+    name: 'Teams',
+    price: 'Custom',
+    period: 'per seat · 5+ members',
+    description: 'End-to-end AI for your org with shared billing and admin controls.',
+    features: ['Everything in Pro', 'Team billing & seats', 'Shared prompt libraries', 'Priority support'],
+    cta: 'Book a demo',
+    href: '#teams',
+    highlighted: false,
+  },
+] as const
+
 export const merlinFaqs = [
   {
     q: `What is ${BRAND}?`,

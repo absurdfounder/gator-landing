@@ -176,9 +176,14 @@ html.dark body {
 .merlin-rotating-slot {
   position: relative;
   display: inline-block;
-  min-width: 9ch;
-  min-height: 1.15em;
+  min-width: 10ch;
+  min-height: 1.1em;
   vertical-align: baseline;
+  text-align: center;
+}
+
+.merlin-hero-glow {
+  filter: blur(0);
 }
 
 .merlin-page .animate-float {
