@@ -3,17 +3,17 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ChevronDown, Send } from 'lucide-react'
+import { ArrowUpRight, ChevronDown, Moon, Send, Sun } from 'lucide-react'
 import { merlinAssets } from '@/lib/merlinAssets'
 import { BRAND, BRAND_APP } from '@/lib/merlinCopy'
 
-const ROTATING_WORDS = ['Ideas', 'Answers', 'Emails', 'Posts', 'Code', 'Research']
+const ROTATING_WORDS = ['Ideas', 'Answers', 'Emails', 'Posts', 'Plans', 'Code', 'Research']
 const PLACEHOLDERS = [
-  'Ask Gator',
+  'Generate a sci-fi plot',
   'Explain bitcoin simply',
   'Write a haiku about climate change',
+  'Plan my weekend getaway',
   'Write a cold email',
-  'Summarize this article',
 ]
 
 function LetterWord({ word }: { word: string }) {
@@ -21,12 +21,11 @@ function LetterWord({ word }: { word: string }) {
     <span className="inline-block whitespace-nowrap">
       {word.split('').map((ch, i) => (
         <motion.span
-          key={`${word}-${i}-${ch}`}
+          key={`${word}-${i}`}
           className="inline-block"
-          initial={{ opacity: 0, filter: 'blur(8px)', y: 8 }}
+          initial={{ opacity: 0, filter: 'blur(8px)', y: 10 }}
           animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
-          exit={{ opacity: 0, filter: 'blur(8px)', y: -6 }}
-          transition={{ duration: 0.35, delay: i * 0.04 }}
+          transition={{ duration: 0.3, delay: i * 0.04 }}
         >
           {ch}
         </motion.span>
@@ -36,7 +35,7 @@ function LetterWord({ word }: { word: string }) {
   )
 }
 
-export function MerlinRotatingHeadline() {
+function MerlinRotatingHeadline() {
   const [idx, setIdx] = useState(0)
 
   useEffect(() => {
@@ -50,10 +49,10 @@ export function MerlinRotatingHeadline() {
         <motion.div
           key={ROTATING_WORDS[idx]}
           className="relative z-10 inline-block"
-          initial={{ opacity: 0, scale: 0.92 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.88 }}
-          transition={{ duration: 0.45 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.4 }}
         >
           <LetterWord word={ROTATING_WORDS[idx]} />
         </motion.div>
@@ -125,6 +124,7 @@ export function MerlinAskInput() {
           className="flex h-12 w-full items-center justify-center gap-3 rounded-md bg-primary px-4 py-2 text-base font-medium text-primary-foreground shadow hover:bg-primary/90"
         >
           Get Started for FREE
+          <ArrowUpRight className="size-5" />
         </a>
       </div>
     </div>
@@ -133,7 +133,7 @@ export function MerlinAskInput() {
 
 export function MerlinHeroBlock() {
   return (
-    <div className="relative mx-auto mt-32 flex w-full max-w-7xl flex-col items-center justify-center gap-9 px-4 md:my-32 xl:px-0">
+    <div className="relative flex w-full max-w-7xl flex-col items-center justify-center gap-9 px-4 md:my-32 xl:px-0">
       <Image
         src={merlinAssets.hero.gradient}
         alt=""
@@ -147,10 +147,9 @@ export function MerlinHeroBlock() {
           alt="hero-image"
           width={196}
           height={86}
-          className="mb-2"
           priority
         />
-        <div className="mt-2 flex flex-wrap items-end justify-center md:mt-0 md:justify-normal">
+        <div className="mt-2 flex flex-wrap justify-center md:mt-0 md:justify-normal">
           <MerlinRotatingHeadline />
           <h1 className="break-words text-center font-serif text-4xl font-normal italic tracking-normal text-foreground sm:text-5xl md:text-6xl md:leading-[86px]">
             are a chat away
@@ -158,31 +157,42 @@ export function MerlinHeroBlock() {
         </div>
       </div>
       <MerlinAskInput />
-      <h3 className="z-[2] text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-        Trusted by 20M+ users
-      </h3>
-      <div className="z-[2] w-full overflow-hidden">
+      <div className="z-[2] hidden flex-col items-center justify-center gap-4 md:flex">
+        <div className="flex items-center gap-3">
+          <h3 className="text-center font-sans text-sm font-semibold uppercase tracking-wider text-foreground">
+            Trusted by 20M+ users
+          </h3>
+          <span className="text-muted-foreground">|</span>
+          <h3 className="text-center font-sans text-sm font-semibold uppercase tracking-wider text-foreground">
+            Install on all platforms
+          </h3>
+        </div>
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          <a href="#"><Image src={merlinAssets.stores.chrome} alt="Chrome Web Store" width={180} height={52} className="h-12 w-auto" /></a>
+          <a href="#"><Image src={merlinAssets.stores.googlePlay} alt="Google Play" width={180} height={52} className="h-12 w-auto" /></a>
+          <a href="#"><Image src={merlinAssets.stores.apple} alt="App Store" width={140} height={44} className="h-11 w-auto" /></a>
+        </div>
+      </div>
+      <div className="z-[2] w-full overflow-hidden md:mt-2">
         <div className="merlin-marquee flex w-max gap-12">
           {[...merlinAssets.brands, ...merlinAssets.brands].map((logo, i) => (
             <Image key={`${logo}-${i}`} src={logo} alt="" width={100} height={32} className="h-8 w-auto shrink-0 opacity-40" />
           ))}
         </div>
       </div>
-      <h3 className="z-[2] text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-        Install on all platforms
-      </h3>
-      <div className="z-[2] flex flex-wrap items-center justify-center gap-4">
-        <a href="#"><Image src={merlinAssets.stores.chrome} alt="Chrome Web Store" width={180} height={52} className="h-12 w-auto" /></a>
-        <a href="#"><Image src={merlinAssets.stores.googlePlay} alt="Google Play" width={180} height={52} className="h-12 w-auto" /></a>
-        <a href="#"><Image src={merlinAssets.stores.apple} alt="App Store" width={140} height={44} className="h-11 w-auto" /></a>
-      </div>
-      <a href="#pricing" className="z-[2] rounded-full border border-border bg-muted/50 px-5 py-2 text-sm text-foreground hover:bg-accent">
-        $130 worth of value for just $19!
-      </a>
-      <p className="z-[2] max-w-xl text-center text-sm text-muted-foreground">
+      <p className="z-[2] max-w-2xl text-center font-sans text-sm text-muted-foreground md:text-base">
         People across teams love {BRAND} for delivering{' '}
-        <span className="text-foreground">$130 worth of value for just $19!</span>
+        <span className="font-medium text-[#a855f7]">$130 worth of value for just $19!</span>
       </p>
+      <div className="z-[2] flex flex-col items-center gap-4 md:hidden">
+        <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Trusted by 20M+ users</h3>
+        <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Install on all platforms</h3>
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          <a href="#"><Image src={merlinAssets.stores.chrome} alt="" width={180} height={52} className="h-12 w-auto" /></a>
+          <a href="#"><Image src={merlinAssets.stores.googlePlay} alt="" width={180} height={52} className="h-12 w-auto" /></a>
+          <a href="#"><Image src={merlinAssets.stores.apple} alt="" width={140} height={44} className="h-11 w-auto" /></a>
+        </div>
+      </div>
     </div>
   )
 }
@@ -212,7 +222,7 @@ export function MerlinHeader() {
                 <li key={l}>
                   <a
                     href={`#${l.toLowerCase()}`}
-                    className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-base font-medium backdrop-blur-md transition-colors hover:bg-accent hover:text-accent-foreground"
+                    className="inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-base font-medium backdrop-blur-md transition-colors hover:bg-accent hover:text-accent-foreground"
                   >
                     {l}
                   </a>
@@ -221,17 +231,29 @@ export function MerlinHeader() {
             </ul>
           </nav>
         </div>
-        <span className="flex items-center justify-between gap-4">
-          <span className="hidden items-center justify-between gap-4 lg:flex">
-            <a
-              href={BRAND_APP}
-              className="inline-flex h-9 items-center justify-center rounded-md bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground shadow transition hover:bg-secondary/80"
-            >
-              <Image src={merlinAssets.stores.chrome} alt="" width={14} height={14} className="mr-1.5 size-3.5 shrink-0" />
-              <span className="hidden xl:inline">Add {BRAND} Extension</span>
-              <span className="xl:hidden">Extension</span>
-            </a>
-          </span>
+        <span className="flex items-center gap-4">
+          <a
+            href={BRAND_APP}
+            className="hidden h-9 items-center justify-center rounded-md bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground shadow transition hover:bg-secondary/80 lg:inline-flex"
+          >
+            <Image src={merlinAssets.stores.chrome} alt="" width={14} height={14} className="mr-1.5 size-3.5 shrink-0" />
+            <span className="hidden xl:inline">Add {BRAND} Extension</span>
+            <span className="xl:hidden">Extension</span>
+          </a>
+          <button
+            type="button"
+            className="relative hidden size-9 items-center justify-center rounded-md transition hover:bg-accent hover:text-accent-foreground lg:inline-flex"
+            aria-label="Toggle theme"
+          >
+            <Sun className="size-[1.2rem] rotate-0 scale-100 dark:-rotate-90 dark:scale-0" />
+            <Moon className="absolute size-[1.2rem] rotate-90 scale-0 dark:rotate-0 dark:scale-100" />
+          </button>
+          <a
+            href={BRAND_APP}
+            className="hidden h-9 items-center justify-center rounded-md border border-border bg-background px-4 py-2 text-sm font-medium shadow transition hover:bg-accent md:inline-flex"
+          >
+            Log in
+          </a>
         </span>
       </div>
     </header>

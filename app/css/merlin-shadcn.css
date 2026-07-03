@@ -196,3 +196,16 @@ html.dark body {
   min-height: 1.2em;
   vertical-align: bottom;
 }
+
+.merlin-page .bg-card { background-color: hsl(var(--card)); }
+.merlin-page .text-card-foreground { color: hsl(var(--card-foreground)); }
+.merlin-page .border-input { border-color: hsl(var(--input)); }
+
+.merlin-page .animate-float {
+  animation: merlinFloat 3s ease-in-out infinite;
+}
+
+@keyframes merlinFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5%); }
+}
