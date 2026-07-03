@@ -66,7 +66,7 @@ export const metadata = {
     shortcut: '/favicon.png',
   },
   manifest: '/manifest.json',
-  themeColor: '#161616',
+  themeColor: '#ffffff',
   keywords: [
     'gator ai',
     'ai assistant',
@@ -88,7 +88,7 @@ export default function RootLayout({
 }) {
   const canonicalUrl = 'https://gator.so'
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="light" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" sizes="96x96" />
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
@@ -133,7 +133,7 @@ export default function RootLayout({
         }} />
       </head>
       <body
-        className={`${nunito.variable} bg-[#161616] font-sans antialiased text-[#fafafa]`}
+        className={`${nunito.variable} font-sans antialiased`}
       >
         <div className="flex flex-col min-h-screen">
           {children}

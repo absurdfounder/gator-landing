@@ -78,25 +78,30 @@ function SlideCarousel({ items, tall = true }: { items: SlideItem[]; tall?: bool
   }
 
   return (
-    <div className="relative flex w-full flex-col items-center gap-6">
-      <div ref={ref} className="flex w-full snap-x snap-mandatory gap-4 overflow-x-auto pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        {items.map((item) => (
-          <div key={item.title} className="w-[326px] shrink-0 snap-center">
-            <div className="flex w-[326px] flex-col gap-4">
-              <div className={`relative w-full overflow-hidden rounded-lg ${tall ? 'h-[366px]' : 'h-44'}`}>
-                <Image src={item.image} alt="" fill className="rounded-lg object-cover" />
-              </div>
-              <div className="flex flex-col gap-1">
-                <h4 className="font-serif text-xl font-medium leading-8 text-foreground sm:min-h-14">{item.title}</h4>
-                <p className="font-sans text-lg font-medium leading-[30px] text-muted-foreground">{item.desc}</p>
+    <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center gap-6">
+      <div className="relative w-full overflow-hidden">
+        <div
+          ref={ref}
+          className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-4 pl-[max(1rem,calc(50%-163px))] pr-[max(1rem,calc(50%-163px))] [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
+          {items.map((item) => (
+            <div key={item.title} className="w-[326px] shrink-0 snap-center">
+              <div className="flex w-[326px] flex-col gap-4">
+                <div className={`relative w-full overflow-hidden rounded-lg ${tall ? 'h-[366px]' : 'h-44'}`}>
+                  <Image src={item.image} alt="" fill className="rounded-lg object-cover" />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <h4 className="line-clamp-2 font-serif text-xl font-medium leading-8 text-foreground">{item.title}</h4>
+                  <p className="font-sans text-base font-medium leading-relaxed text-muted-foreground md:text-lg">{item.desc}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
       <div className="flex gap-2">
-        <button type="button" onClick={() => scroll(-1)} className="rounded-full border border-border p-2 hover:bg-accent"><ChevronLeft className="h-4 w-4" /></button>
-        <button type="button" onClick={() => scroll(1)} className="rounded-full border border-border p-2 hover:bg-accent"><ChevronRight className="h-4 w-4" /></button>
+        <button type="button" onClick={() => scroll(-1)} disabled={idx === 0} className="rounded-full border border-border p-2 transition hover:bg-accent disabled:opacity-40"><ChevronLeft className="h-4 w-4" /></button>
+        <button type="button" onClick={() => scroll(1)} disabled={idx === items.length - 1} className="rounded-full border border-border p-2 transition hover:bg-accent disabled:opacity-40"><ChevronRight className="h-4 w-4" /></button>
       </div>
     </div>
   )
@@ -110,8 +115,8 @@ export default function MerlinSections() {
     <>
       {/* EXTENSION — Merlin 2x2 feature grid */}
       <div className="container flex w-full flex-col gap-16">
-        <div className="flex w-full max-w-7xl flex-col gap-8 px-4 pb-1 md:flex-row md:pb-2 xl:px-0">
-          <div className="flex w-full flex-col gap-2">
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 pb-1 md:flex-row md:items-start md:pb-2">
+          <div className="flex w-full flex-col gap-2 md:flex-1">
             <div className="flex justify-center md:justify-normal">
               <span className="inline-flex items-center rounded-md border border-transparent bg-secondary px-2.5 py-0.5 text-sm font-medium text-secondary-foreground">
                 {BRAND} Chrome Extension
@@ -121,7 +126,7 @@ export default function MerlinSections() {
               One-click answers in realtime
             </h2>
           </div>
-          <div className="flex w-full flex-col gap-9">
+          <div className="flex w-full flex-col gap-9 md:flex-1">
             <p className="text-center font-sans text-lg font-light leading-8 text-muted-foreground md:text-left md:text-2xl md:leading-[38px]">
               Get context from wherever you are, and just ask with one click.
             </p>
@@ -132,7 +137,7 @@ export default function MerlinSections() {
             </div>
           </div>
         </div>
-        <div className="grid max-w-7xl grid-cols-1 gap-8 px-4 md:grid-cols-2 md:gap-x-8 md:gap-y-20 xl:px-0">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 md:gap-x-8 md:gap-y-20">
           {EXT_FEATURES.map((f) => (
             <div key={f.title} className="flex flex-col gap-4">
               <div className="relative h-72 w-full overflow-hidden rounded-lg">
@@ -148,7 +153,7 @@ export default function MerlinSections() {
       </div>
 
       {/* CHAT */}
-      <div className="flex w-full max-w-7xl flex-col gap-12 px-4 xl:px-0">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-4 xl:px-0">
         <div className="flex w-full flex-col items-center justify-center gap-6 text-center">
           <span className="inline-flex items-center rounded-sm border border-blue-600 bg-background px-3 py-0.5 text-xs font-semibold text-blue-400">
             NEW · {BRAND} Chat
@@ -174,7 +179,7 @@ export default function MerlinSections() {
       </div>
 
       {/* GLOBE */}
-      <div className="flex w-full max-w-7xl flex-col overflow-hidden px-4 xl:px-0">
+      <div className="mx-auto flex w-full max-w-7xl flex-col overflow-hidden px-4 xl:px-0">
         <div className="flex w-full flex-col overflow-hidden rounded-[32px] border border-border bg-card md:grid md:grid-cols-3">
           <div className="relative col-span-1 block h-[600px] w-full overflow-hidden bg-yellow-400">
             <div className="absolute -left-32 sm:-left-20">
@@ -226,7 +231,7 @@ export default function MerlinSections() {
       </div>
 
       {/* SOCIAL */}
-      <div className="flex w-full max-w-7xl flex-col gap-8 px-4 xl:px-0">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 xl:px-0">
         <div className="flex flex-col gap-4 text-center">
           <span className="mx-auto inline-flex items-center rounded-md border border-transparent bg-secondary px-2.5 py-0.5 text-sm font-medium text-secondary-foreground">
             {BRAND} Chrome Extension
@@ -247,7 +252,7 @@ export default function MerlinSections() {
       </div>
 
       {/* MODELS */}
-      <div className="flex w-full max-w-7xl flex-col overflow-hidden px-4 xl:px-0">
+      <div className="mx-auto flex w-full max-w-7xl flex-col overflow-hidden px-4 xl:px-0">
         <div className="flex w-full flex-col overflow-hidden rounded-[32px] border border-border bg-card md:grid md:grid-cols-3">
           <div className="col-span-2 flex items-center justify-center p-6 lg:p-12">
             <div className="flex max-w-2xl flex-col gap-8">
@@ -321,7 +326,7 @@ export default function MerlinSections() {
       </div>
 
       {/* DEVICES */}
-      <div className="flex w-full max-w-7xl flex-col overflow-hidden px-4 xl:px-0">
+      <div className="mx-auto flex w-full max-w-7xl flex-col overflow-hidden px-4 xl:px-0">
         <div className="flex w-full flex-col overflow-hidden rounded-[32px] border border-border bg-card md:grid md:grid-cols-3">
           <div className="col-span-1 flex h-[644px] items-center justify-center bg-[#C4B5FD]">
             <div className="relative w-full animate-float px-8">
@@ -356,7 +361,7 @@ export default function MerlinSections() {
       </div>
 
       {/* FEATURE TABS */}
-      <div id="features" className="flex w-full max-w-7xl flex-col gap-8 px-4 xl:px-0">
+      <div id="features" className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 xl:px-0">
         <div className="flex flex-col gap-4 text-center">
           <h2 className="font-serif text-3xl font-medium tracking-normal text-foreground md:text-5xl">
             All that... and more
@@ -400,7 +405,7 @@ export default function MerlinSections() {
       </div>
 
       {/* WORKFLOW */}
-      <div className="flex w-full max-w-7xl flex-col gap-8 px-4 xl:px-0">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 xl:px-0">
         <div className="text-center">
           <h2 className="font-serif text-3xl font-medium tracking-normal text-foreground md:text-5xl">
             Your workflow, our magic
@@ -425,7 +430,7 @@ export default function MerlinSections() {
       </div>
 
       {/* PRICING */}
-      <div id="pricing" className="flex w-full max-w-7xl flex-col gap-8 px-4 text-center xl:px-0">
+      <div id="pricing" className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 text-center xl:px-0">
         <h2 className="font-serif text-3xl font-medium tracking-normal text-foreground md:text-5xl">
           Most valuable AI subscription ever
         </h2>
@@ -486,7 +491,7 @@ export default function MerlinSections() {
       </div>
 
       {/* REVIEWS */}
-      <div className="flex w-full max-w-7xl flex-col gap-8 px-4 xl:px-0">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 xl:px-0">
         <div className="text-center">
           <h2 className="font-serif text-3xl font-medium tracking-normal text-foreground md:text-5xl">
             1M+ and counting
@@ -527,7 +532,7 @@ export default function MerlinSections() {
       </div>
 
       {/* TEAMS */}
-      <div id="teams" className="flex w-full max-w-7xl flex-col px-4 xl:px-0">
+      <div id="teams" className="mx-auto flex w-full max-w-7xl flex-col px-4 xl:px-0">
         <div className="relative flex w-full flex-col overflow-hidden rounded-xl border border-border bg-card md:flex-row md:gap-6">
           <div className="flex w-full flex-col gap-6 py-6 pl-6 md:py-8 md:pl-8">
             <h2 className="font-serif text-3xl font-medium tracking-normal text-foreground md:text-5xl">
@@ -571,7 +576,7 @@ export default function MerlinSections() {
         <div className="mx-auto max-w-7xl px-4 xl:px-0">
           <div className="grid gap-12 md:grid-cols-4">
             <div>
-              <GatorLogo variant="full" theme="dark" />
+              <GatorLogo variant="full" theme="light" />
               <a href={`https://${BRAND_DOMAIN}`} className="mt-4 block text-sm text-muted-foreground hover:text-foreground">{BRAND_DOMAIN}</a>
               <PrimaryBtn href={BRAND_APP} className="mt-6">Start using {BRAND}</PrimaryBtn>
             </div>

@@ -1,11 +1,12 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ArrowUpRight, ChevronDown, Moon, Send, Sun } from 'lucide-react'
+import { ArrowUpRight, ChevronDown, Menu, Moon, Send, Sun, X } from 'lucide-react'
 import { merlinAssets } from '@/lib/merlinAssets'
 import { BRAND, BRAND_APP } from '@/lib/merlinCopy'
+import { NAV_LINKS, PRODUCT_MENU } from '@/lib/merlinNav'
 
 const ROTATING_WORDS = ['Ideas', 'Answers', 'Emails', 'Posts', 'Plans', 'Code', 'Research']
 const PLACEHOLDERS = [
@@ -138,7 +139,7 @@ export function MerlinHeroBlock() {
         src={merlinAssets.hero.gradient}
         alt=""
         fill
-        className="!bottom-0 z-[1] !h-auto object-cover"
+        className="!bottom-0 z-[1] !h-auto object-cover opacity-80"
         priority
       />
       <div className="relative z-[2] flex flex-col items-center justify-center">
@@ -149,9 +150,9 @@ export function MerlinHeroBlock() {
           height={86}
           priority
         />
-        <div className="mt-2 flex flex-wrap justify-center md:mt-0 md:justify-normal">
+        <div className="mt-2 flex flex-wrap items-baseline justify-center gap-x-2 md:mt-0 md:justify-start">
           <MerlinRotatingHeadline />
-          <h1 className="break-words text-center font-serif text-4xl font-normal italic tracking-normal text-foreground sm:text-5xl md:text-6xl md:leading-[86px]">
+          <h1 className="text-center font-serif text-4xl font-normal italic tracking-normal text-foreground sm:text-5xl md:text-left md:text-6xl md:leading-[86px]">
             are a chat away
           </h1>
         </div>
@@ -176,7 +177,7 @@ export function MerlinHeroBlock() {
       <div className="z-[2] w-full overflow-hidden md:mt-2">
         <div className="merlin-marquee flex w-max gap-12">
           {[...merlinAssets.brands, ...merlinAssets.brands].map((logo, i) => (
-            <Image key={`${logo}-${i}`} src={logo} alt="" width={100} height={32} className="h-8 w-auto shrink-0 opacity-40" />
+            <Image key={`${logo}-${i}`} src={logo} alt="" width={100} height={32} className="merlin-brand-logo h-8 w-auto shrink-0" />
           ))}
         </div>
       </div>
@@ -200,40 +201,103 @@ export function MerlinHeroBlock() {
 }
 
 export function MerlinHeader() {
-  const NAV = ['Pricing', 'Affiliate', 'Teams', 'Chat', 'Agent']
+  const [productOpen, setProductOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [theme, setTheme] = useState<'light' | 'dark'>('light')
+  const productRef = useRef<HTMLLIElement>(null)
+
+  useEffect(() => {
+    document.documentElement.classList.remove('light', 'dark')
+    document.documentElement.classList.add(theme)
+  }, [theme])
+
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      if (productRef.current && !productRef.current.contains(e.target as Node)) {
+        setProductOpen(false)
+      }
+    }
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setProductOpen(false)
+        setMobileOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', onClick)
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.removeEventListener('mousedown', onClick)
+      document.removeEventListener('keydown', onKey)
+    }
+  }, [])
+
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [mobileOpen])
+
+  const toggleTheme = () => setTheme((t) => (t === 'light' ? 'dark' : 'light'))
 
   return (
-    <header className="sticky top-0 z-50 flex h-16 w-full items-center px-4 shadow-sm backdrop-blur transition-[background] duration-300 ease-out">
+    <header className="sticky top-0 z-50 flex h-16 w-full items-center border-b border-border bg-background/90 px-4 shadow-sm backdrop-blur-md">
       <div className="relative z-50 mx-auto flex w-full max-w-7xl items-center justify-between">
-        <div className="flex w-full items-center justify-start gap-10">
-          <a href="/" className="flex items-center gap-2" aria-label="Main Navigation">
+        <div className="flex w-full items-center justify-start gap-6 lg:gap-10">
+          <a href="/" className="flex shrink-0 items-center gap-2" aria-label="Main Navigation">
             <Image src="/images/gator-icon.png" alt="" width={28} height={28} className="w-7 rounded-lg" />
-            <span className="text-3xl font-semibold lowercase text-foreground">{BRAND}</span>
+            <span className="text-2xl font-semibold lowercase text-foreground sm:text-3xl">{BRAND}</span>
           </a>
           <nav className="relative z-10 hidden max-w-max flex-1 items-center justify-center lg:flex">
             <ul className="flex list-none items-center justify-center gap-1">
-              <li>
+              <li ref={productRef} className="relative">
                 <button
                   type="button"
-                  className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-base font-medium backdrop-blur-md transition-colors hover:bg-accent hover:text-accent-foreground"
+                  aria-expanded={productOpen}
+                  aria-haspopup="true"
+                  onClick={() => setProductOpen((o) => !o)}
+                  className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-base font-medium transition-colors hover:bg-accent hover:text-accent-foreground data-[state=open]:bg-accent"
+                  data-state={productOpen ? 'open' : 'closed'}
                 >
-                  Product <ChevronDown className="ml-1 size-3" />
+                  Product
+                  <ChevronDown className={`ml-1 size-3 transition-transform duration-200 ${productOpen ? 'rotate-180' : ''}`} />
                 </button>
+                <AnimatePresence>
+                  {productOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 8 }}
+                      transition={{ duration: 0.15 }}
+                      className="merlin-nav-dropdown absolute left-0 top-full z-50 mt-2 w-[320px] overflow-hidden rounded-xl border border-border bg-popover p-2 text-popover-foreground"
+                    >
+                      {PRODUCT_MENU.map((item) => (
+                        <a
+                          key={item.title}
+                          href={item.href}
+                          onClick={() => setProductOpen(false)}
+                          className="flex flex-col gap-0.5 rounded-lg px-3 py-2.5 transition-colors hover:bg-accent"
+                        >
+                          <span className="text-sm font-medium text-foreground">{item.title}</span>
+                          <span className="text-xs text-muted-foreground">{item.description}</span>
+                        </a>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </li>
-              {NAV.map((l) => (
-                <li key={l}>
+              {NAV_LINKS.map((link) => (
+                <li key={link.label}>
                   <a
-                    href={`#${l.toLowerCase()}`}
-                    className="inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-base font-medium backdrop-blur-md transition-colors hover:bg-accent hover:text-accent-foreground"
+                    href={link.href}
+                    className="inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-base font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
                   >
-                    {l}
+                    {link.label}
                   </a>
                 </li>
               ))}
             </ul>
           </nav>
         </div>
-        <span className="flex items-center gap-4">
+        <span className="flex items-center gap-2 sm:gap-4">
           <a
             href={BRAND_APP}
             className="hidden h-9 items-center justify-center rounded-md bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground shadow transition hover:bg-secondary/80 lg:inline-flex"
@@ -244,11 +308,12 @@ export function MerlinHeader() {
           </a>
           <button
             type="button"
+            onClick={toggleTheme}
             className="relative hidden size-9 items-center justify-center rounded-md transition hover:bg-accent hover:text-accent-foreground lg:inline-flex"
             aria-label="Toggle theme"
           >
-            <Sun className="size-[1.2rem] rotate-0 scale-100 dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute size-[1.2rem] rotate-90 scale-0 dark:rotate-0 dark:scale-100" />
+            <Sun className={`size-[1.2rem] transition-all ${theme === 'light' ? 'rotate-0 scale-100' : '-rotate-90 scale-0'}`} />
+            <Moon className={`absolute size-[1.2rem] transition-all ${theme === 'dark' ? 'rotate-0 scale-100' : 'rotate-90 scale-0'}`} />
           </button>
           <a
             href={BRAND_APP}
@@ -256,8 +321,78 @@ export function MerlinHeader() {
           >
             Log in
           </a>
+          <button
+            type="button"
+            className="inline-flex size-9 items-center justify-center rounded-md transition hover:bg-accent lg:hidden"
+            aria-label="Open menu"
+            onClick={() => setMobileOpen(true)}
+          >
+            <Menu className="size-5" />
+          </button>
         </span>
       </div>
+
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[60] bg-background/80 backdrop-blur-sm lg:hidden"
+            onClick={() => setMobileOpen(false)}
+          >
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'tween', duration: 0.2 }}
+              className="absolute right-0 top-0 flex h-full w-[min(100%,320px)] flex-col gap-6 border-l border-border bg-background p-6 shadow-xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-lg font-semibold">Menu</span>
+                <button type="button" aria-label="Close menu" onClick={() => setMobileOpen(false)} className="rounded-md p-1 hover:bg-accent">
+                  <X className="size-5" />
+                </button>
+              </div>
+              <div className="flex flex-col gap-1">
+                <p className="px-2 py-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Product</p>
+                {PRODUCT_MENU.map((item) => (
+                  <a
+                    key={item.title}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="rounded-lg px-2 py-2 text-sm font-medium hover:bg-accent"
+                  >
+                    {item.title}
+                  </a>
+                ))}
+              </div>
+              <div className="flex flex-col gap-1 border-t border-border pt-4">
+                {NAV_LINKS.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="rounded-lg px-2 py-2 text-sm font-medium hover:bg-accent"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+              <div className="mt-auto flex flex-col gap-3">
+                <button type="button" onClick={toggleTheme} className="flex h-9 items-center justify-center gap-2 rounded-md border border-border text-sm hover:bg-accent">
+                  {theme === 'light' ? <Moon className="size-4" /> : <Sun className="size-4" />}
+                  {theme === 'light' ? 'Dark mode' : 'Light mode'}
+                </button>
+                <a href={BRAND_APP} className="flex h-9 items-center justify-center rounded-md bg-primary text-sm font-medium text-primary-foreground">
+                  Log in
+                </a>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   )
 }

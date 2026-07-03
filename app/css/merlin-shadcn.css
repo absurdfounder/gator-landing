@@ -16,6 +16,30 @@
   font-style: italic;
 }
 
+/* Light theme (default) */
+html.light {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 9%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 9%;
+  --primary: 0 0% 9%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 96.1%;
+  --secondary-foreground: 0 0% 9%;
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+  --accent: 0 0% 96.1%;
+  --accent-foreground: 0 0% 9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
+  --ring: 0 0% 9%;
+  --radius: 0.5rem;
+}
+
 html.dark {
   --background: 0 0% 8.63%;
   --foreground: 0 0% 98%;
@@ -23,7 +47,7 @@ html.dark {
   --card-foreground: 0 0% 98%;
   --popover: 0 0% 8.63%;
   --popover-foreground: 0 0% 98%;
-  --primary: 0 0% 90%;
+  --primary: 0 0% 98%;
   --primary-foreground: 0 0% 9%;
   --secondary: 0 0% 15%;
   --secondary-foreground: 0 0% 98%;
@@ -39,6 +63,7 @@ html.dark {
   --radius: 0.5rem;
 }
 
+html.light body,
 html.dark body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
@@ -50,12 +75,10 @@ html.dark body {
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
 }
 
-html.dark .merlin-page .font-serif,
 .merlin-page .font-serif,
 .merlin-page h1,
 .merlin-page h2,
-.merlin-page h3.font-serif,
-.merlin-page .font-serif {
+.merlin-page h3.font-serif {
   font-family: Sentient, ui-serif, Georgia, serif !important;
 }
 
@@ -72,70 +95,24 @@ html.dark .merlin-page .font-serif,
 .merlin-page .bg-secondary { background-color: hsl(var(--secondary)); }
 .merlin-page .bg-accent { background-color: hsl(var(--accent)); }
 .merlin-page .bg-muted { background-color: hsl(var(--muted)); }
+.merlin-page .bg-card { background-color: hsl(var(--card)); }
+.merlin-page .bg-popover { background-color: hsl(var(--popover)); }
 .merlin-page .text-foreground { color: hsl(var(--foreground)); }
 .merlin-page .text-primary-foreground { color: hsl(var(--primary-foreground)); }
 .merlin-page .text-secondary-foreground { color: hsl(var(--secondary-foreground)); }
 .merlin-page .text-muted-foreground { color: hsl(var(--muted-foreground)); }
+.merlin-page .text-card-foreground { color: hsl(var(--card-foreground)); }
+.merlin-page .text-popover-foreground { color: hsl(var(--popover-foreground)); }
 .merlin-page .border-border { border-color: hsl(var(--border)); }
+.merlin-page .border-input { border-color: hsl(var(--input)); }
 
-.merlin-container {
-  margin-left: auto;
-  margin-right: auto;
+.merlin-page .container {
   width: 100%;
   max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-@media (min-width: 1280px) {
-  .merlin-container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-.merlin-h1 {
-  font-size: 2.75rem;
-  font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-}
-
-@media (min-width: 640px) {
-  .merlin-h1 { font-size: 3.75rem; }
-}
-
-.merlin-h2 {
-  font-size: 1.875rem;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-}
-
-@media (min-width: 640px) {
-  .merlin-h2 { font-size: 2.25rem; }
-}
-
-.merlin-btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.375rem;
-  background-color: hsl(var(--primary));
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: hsl(var(--primary-foreground));
-  transition: background-color 0.2s;
-}
-
-.merlin-btn-primary:hover {
-  background-color: hsl(var(--primary) / 0.9);
-}
-
-.merlin-card {
-  border-radius: 1rem;
-  border: 1px solid hsl(var(--border));
-  background: hsl(var(--muted) / 0.35);
 }
 
 .merlin-marquee {
@@ -183,33 +160,13 @@ html.dark .merlin-page .font-serif,
   padding-bottom: 1.25rem;
 }
 
-.merlin-section {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-@media (min-width: 768px) {
-  .merlin-section {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-}
-
 .merlin-rotating-slot {
   position: relative;
   display: inline-block;
-  min-width: 8ch;
-  min-height: 1.2em;
-  vertical-align: bottom;
+  min-width: 9ch;
+  min-height: 1.15em;
+  vertical-align: baseline;
 }
-
-.merlin-page .bg-card { background-color: hsl(var(--card)); }
-.merlin-page .text-card-foreground { color: hsl(var(--card-foreground)); }
-.merlin-page .border-input { border-color: hsl(var(--input)); }
 
 .merlin-page .animate-float {
   animation: merlinFloat 3s ease-in-out infinite;
@@ -226,4 +183,18 @@ html.dark .merlin-page .font-serif,
 @keyframes merlinFloat {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-5%); }
+}
+
+.merlin-brand-logo {
+  opacity: 0.45;
+  filter: grayscale(100%);
+}
+
+html.light .merlin-brand-logo {
+  opacity: 0.55;
+  filter: grayscale(100%) contrast(1.1);
+}
+
+.merlin-nav-dropdown {
+  box-shadow: 0 10px 38px -10px rgba(0, 0, 0, 0.15), 0 10px 20px -15px rgba(0, 0, 0, 0.1);
 }
