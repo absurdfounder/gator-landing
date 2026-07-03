@@ -268,7 +268,7 @@ export function MerlinHeader() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 8 }}
                       transition={{ duration: 0.15 }}
-                      className="merlin-nav-dropdown absolute left-0 top-full z-50 mt-2 w-[320px] overflow-hidden rounded-xl border border-border bg-popover p-2 text-popover-foreground"
+                      className="merlin-nav-dropdown absolute left-0 top-full z-[100] mt-2 w-[320px] overflow-hidden rounded-xl border border-border bg-white p-2 shadow-lg dark:bg-[hsl(var(--popover))]"
                     >
                       {PRODUCT_MENU.map((item) => (
                         <a
@@ -339,7 +339,7 @@ export function MerlinHeader() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] bg-background/80 backdrop-blur-sm lg:hidden"
+            className="fixed inset-0 z-[100] bg-black/50 lg:hidden"
             onClick={() => setMobileOpen(false)}
           >
             <motion.div
@@ -347,7 +347,7 @@ export function MerlinHeader() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.2 }}
-              className="absolute right-0 top-0 flex h-full w-[min(100%,320px)] flex-col gap-6 border-l border-border bg-background p-6 shadow-xl"
+              className="absolute right-0 top-0 flex h-full w-[min(100%,320px)] flex-col gap-6 overflow-y-auto border-l border-border bg-background p-6 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between">
