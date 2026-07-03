@@ -50,11 +50,21 @@ html.dark body {
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
 }
 
+html.dark .merlin-page .font-serif,
 .merlin-page .font-serif,
-.merlin-serif,
-.merlin-h1,
-.merlin-h2 {
-  font-family: Sentient, ui-serif, Georgia, serif;
+.merlin-page h1,
+.merlin-page h2,
+.merlin-page h3.font-serif,
+.merlin-page .font-serif {
+  font-family: Sentient, ui-serif, Georgia, serif !important;
+}
+
+.merlin-page .font-sans,
+.merlin-page p,
+.merlin-page button,
+.merlin-page a,
+.merlin-page input {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
 }
 
 .merlin-page .bg-background { background-color: hsl(var(--background)); }
@@ -203,6 +213,14 @@ html.dark body {
 
 .merlin-page .animate-float {
   animation: merlinFloat 3s ease-in-out infinite;
+}
+
+.merlin-page .animate-marquee {
+  animation: merlinMarquee 80s linear infinite;
+}
+
+.merlin-page .animate-marquee-reverse {
+  animation: merlinMarquee 80s linear infinite reverse;
 }
 
 @keyframes merlinFloat {

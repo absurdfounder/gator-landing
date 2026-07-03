@@ -182,7 +182,9 @@ export function MerlinHeroBlock() {
       </div>
       <p className="z-[2] max-w-2xl text-center font-sans text-sm text-muted-foreground md:text-base">
         People across teams love {BRAND} for delivering{' '}
-        <span className="font-medium text-[#a855f7]">$130 worth of value for just $19!</span>
+        <a href="#pricing" className="font-medium text-[#a855f7] hover:underline">
+          $130 worth of value for just $19!
+        </a>
       </p>
       <div className="z-[2] flex flex-col items-center gap-4 md:hidden">
         <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Trusted by 20M+ users</h3>

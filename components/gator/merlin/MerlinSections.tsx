@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react'
 import Image from 'next/image'
-import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, ChevronRight as ChevronRightIcon, Globe } from 'lucide-react'
+import { ArrowUpRight, Calendar, ChevronDown, ChevronLeft, ChevronRight, ChevronRight as ChevronRightIcon, Globe } from 'lucide-react'
 import { merlinAssets } from '@/lib/merlinAssets'
 import {
   BRAND,
@@ -103,47 +103,47 @@ function SlideCarousel({ items, tall = true }: { items: SlideItem[]; tall?: bool
 }
 
 export default function MerlinSections() {
-  const [extIdx, setExtIdx] = useState(0)
   const [tab, setTab] = useState<keyof typeof featureTabs>('Create')
   const [faqOpen, setFaqOpen] = useState<number | null>(0)
 
   return (
     <>
-      {/* EXTENSION */}
-      <div className="flex w-full max-w-7xl flex-col gap-8 px-4 xl:px-0">
-        <div className="flex w-full flex-col gap-8 md:flex-row md:items-start">
-          <div className="relative min-h-[400px] flex-1 overflow-hidden rounded-2xl">
-            <Image src={EXT_FEATURES[extIdx].image} alt="" fill className="rounded-2xl object-cover" />
-          </div>
-          <div className="flex w-full max-w-lg flex-col gap-8">
-            <div className="flex flex-col gap-2">
-              <span className="inline-flex w-max items-center rounded-md border border-transparent bg-secondary px-2.5 py-0.5 text-sm font-medium text-secondary-foreground">
+      {/* EXTENSION — Merlin 2x2 feature grid */}
+      <div className="container flex w-full flex-col gap-16">
+        <div className="flex w-full max-w-7xl flex-col gap-8 px-4 pb-1 md:flex-row md:pb-2 xl:px-0">
+          <div className="flex w-full flex-col gap-2">
+            <div className="flex justify-center md:justify-normal">
+              <span className="inline-flex items-center rounded-md border border-transparent bg-secondary px-2.5 py-0.5 text-sm font-medium text-secondary-foreground">
                 {BRAND} Chrome Extension
               </span>
-              <h2 className="font-serif text-3xl font-medium leading-[44px] tracking-tight text-foreground md:text-5xl md:leading-[58px]">
-                One-click answers in realtime
-              </h2>
             </div>
-            <p className="font-sans text-lg font-light leading-8 text-muted-foreground md:text-2xl md:leading-[38px]">
+            <h2 className="w-full text-center font-serif text-3xl font-medium leading-[44px] tracking-tight text-foreground md:text-left md:text-5xl md:leading-[58px]">
+              One-click answers in realtime
+            </h2>
+          </div>
+          <div className="flex w-full flex-col gap-9">
+            <p className="text-center font-sans text-lg font-light leading-8 text-muted-foreground md:text-left md:text-2xl md:leading-[38px]">
               Get context from wherever you are, and just ask with one click.
             </p>
-            <div className="space-y-5">
-              {EXT_FEATURES.map((f, i) => (
-                <button
-                  key={f.title}
-                  type="button"
-                  onClick={() => setExtIdx(i)}
-                  className={`block w-full border-l-2 pl-4 text-left transition ${extIdx === i ? 'border-foreground text-foreground' : 'border-transparent text-muted-foreground hover:text-foreground'}`}
-                >
-                  <p className="font-medium">{f.title}</p>
-                  <p className="mt-1 text-sm">{f.desc}</p>
-                </button>
-              ))}
+            <div className="mx-auto md:mx-0">
+              <PrimaryBtn href={BRAND_APP}>
+                Get the extension <ArrowUpRight className="size-4" />
+              </PrimaryBtn>
             </div>
-            <PrimaryBtn href={BRAND_APP}>
-              Get the extension <ArrowUpRight className="ml-1 size-4" />
-            </PrimaryBtn>
           </div>
+        </div>
+        <div className="grid max-w-7xl grid-cols-1 gap-8 px-4 md:grid-cols-2 md:gap-x-8 md:gap-y-20 xl:px-0">
+          {EXT_FEATURES.map((f) => (
+            <div key={f.title} className="flex flex-col gap-4">
+              <div className="relative h-72 w-full overflow-hidden rounded-lg">
+                <Image src={f.image} alt={f.title} fill className="rounded-lg object-cover" />
+              </div>
+              <p className="font-sans text-lg font-light leading-8 text-muted-foreground md:text-2xl md:leading-[38px]">
+                <span className="mr-1.5 font-serif text-lg font-medium text-foreground md:text-2xl">{f.title}</span>
+                {f.desc}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -254,10 +254,10 @@ export default function MerlinSections() {
               <h2 className="font-serif text-3xl font-medium tracking-normal text-foreground md:text-5xl">
                 All top AI Models in one
               </h2>
-              <p className="font-serif text-lg font-medium tracking-normal text-foreground">
-                Instant access to latest models as soon as they&apos;re live for FREE.
-              </p>
-              <div className="flex flex-col gap-4">
+              <div className="flex w-full max-w-md flex-col gap-4">
+                <p className="font-serif text-lg font-medium tracking-normal text-foreground">
+                  Instant access to latest models as soon as they&apos;re live for FREE.
+                </p>
                 {merlinAssets.models.map((m) => (
                   <div key={m.name} className="flex items-center gap-6">
                     <Image src={m.icon} alt="" width={32} height={32} className="size-8 shrink-0 object-contain" />
@@ -265,32 +265,55 @@ export default function MerlinSections() {
                   </div>
                 ))}
               </div>
-              <PrimaryBtn href={BRAND_APP}>Hell yeah, I want this!</PrimaryBtn>
+              <PrimaryBtn href={BRAND_APP}>
+                Hell yeah, I want this! <ChevronRightIcon className="ml-1 size-5" />
+              </PrimaryBtn>
             </div>
           </div>
-          <div className="col-span-1 hidden min-h-[400px] bg-muted/30 md:block" />
+          <div className="col-span-1 flex h-[644px] justify-center overflow-hidden bg-sky-400">
+            <div className="relative flex w-full flex-col items-center justify-center gap-6 overflow-hidden p-4">
+              <div className="animate-marquee-reverse flex w-max gap-4">
+                {[...merlinAssets.models, ...merlinAssets.models].map((m, i) => (
+                  <div key={`${m.name}-${i}`} className="mx-3 flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-card p-2 shadow-md">
+                    <Image src={m.icon} alt="" width={28} height={28} className="size-7 object-contain" />
+                  </div>
+                ))}
+              </div>
+              <div className="animate-marquee flex w-max gap-4">
+                {[...merlinAssets.models.slice().reverse(), ...merlinAssets.models.slice().reverse()].map((m, i) => (
+                  <div key={`r-${m.name}-${i}`} className="mx-3 flex h-12 w-12 shrink-0 rotate-12 items-center justify-center rounded-md bg-card p-2 shadow-md">
+                    <Image src={m.icon} alt="" width={28} height={28} className="size-7 object-contain" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* SECURITY */}
-      <div className="flex w-full max-w-7xl flex-col gap-8 px-4 text-center xl:px-0">
-        <h2 className="font-serif text-3xl font-medium tracking-normal text-foreground md:text-5xl">
-          Secure and customizable
-        </h2>
-        <p className="mx-auto max-w-2xl font-sans text-lg font-medium text-muted-foreground">
-          Build custom solutions that adapt to your context, knowledge or brand voice, with industry-leading security.
-        </p>
-        <div className="mt-4 grid gap-6 md:grid-cols-3">
+      <div className="flex w-full max-w-5xl flex-col items-center gap-12 px-4 xl:px-0">
+        <div className="flex w-full flex-col items-center px-4 md:flex-row md:justify-between xl:px-0">
+          <h2 className="mb-6 w-full max-w-md text-center font-serif text-3xl font-medium tracking-wide text-foreground md:mb-0 md:text-left md:text-5xl">
+            Secure and customizable
+          </h2>
+          <p className="w-full max-w-md text-center font-sans text-lg font-light text-muted-foreground md:text-left md:text-2xl">
+            Build custom solutions that adapt to your context, knowledge or brand voice, with industry-leading security.
+          </p>
+        </div>
+        <div className="flex flex-wrap items-stretch justify-center gap-8">
           {[
             { title: 'Industry-grade data security', desc: 'GDPR, ISO 27001, AICPA SOC 2 certification for industry-standard data security.', image: merlinAssets.security[0] },
             { title: 'Make your own prompt library', desc: 'Automate generation of text, comments and posts with one click.', image: merlinAssets.security[1] },
             { title: 'Create custom bots', desc: 'String instructions, context and knowledge together to create custom chatbots.', image: merlinAssets.security[2] },
           ].map((item) => (
-            <div key={item.title} className="overflow-hidden rounded-2xl border border-border bg-card text-left">
-              <Image src={item.image} alt="" width={400} height={220} className="h-44 w-full object-cover" />
-              <div className="p-6">
-                <h4 className="font-semibold text-foreground">{item.title}</h4>
-                <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
+            <div key={item.title} className="flex w-full max-w-xs flex-col">
+              <div className="relative h-48 w-full shrink-0">
+                <Image src={item.image} alt="" fill className="rounded-lg object-cover" />
+              </div>
+              <div className="flex grow flex-col gap-4 pt-4">
+                <h4 className="font-serif text-2xl font-medium tracking-normal text-foreground sm:min-h-16">{item.title}</h4>
+                <p className="flex min-h-[84px] items-start font-sans text-lg font-medium text-muted-foreground">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -504,18 +527,42 @@ export default function MerlinSections() {
       </div>
 
       {/* TEAMS */}
-      <div id="teams" className="flex w-full max-w-7xl flex-col gap-6 px-4 text-center xl:px-0">
-        <h2 className="font-serif text-3xl font-medium tracking-normal text-foreground md:text-5xl">
-          Teams love us too!
-        </h2>
-        <p className="mx-auto max-w-lg font-sans text-lg font-medium text-muted-foreground">
-          Empower your entire organization with AI that works where your team already does.
-        </p>
-        <div className="flex flex-wrap justify-center gap-4">
-          <PrimaryBtn href={BRAND_APP}>Book a demo</PrimaryBtn>
-          <a href={BRAND_APP} className="inline-flex items-center rounded-md border border-border px-6 py-2 text-sm hover:bg-accent">
-            Discover Teams
-          </a>
+      <div id="teams" className="flex w-full max-w-7xl flex-col px-4 xl:px-0">
+        <div className="relative flex w-full flex-col overflow-hidden rounded-xl border border-border bg-card md:flex-row md:gap-6">
+          <div className="flex w-full flex-col gap-6 py-6 pl-6 md:py-8 md:pl-8">
+            <h2 className="font-serif text-3xl font-medium tracking-normal text-foreground md:text-5xl">
+              Teams love us too!
+            </h2>
+            <p className="w-full max-w-md font-sans text-lg font-light text-foreground">
+              Want an end-to-end AI solution for your org? Let&apos;s talk.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <PrimaryBtn href={BRAND_APP} className="h-11 gap-2 text-sm">
+                Book a demo <Calendar className="size-5" />
+              </PrimaryBtn>
+              <PrimaryBtn href={BRAND_APP} className="h-11 gap-2 text-sm">
+                Discover Teams <ArrowUpRight className="size-5" />
+              </PrimaryBtn>
+            </div>
+          </div>
+          <div className="relative h-[312px] w-full overflow-hidden md:h-auto md:min-h-[320px] md:flex-1">
+            <div className="absolute right-3 top-8 z-[2] flex items-center gap-3 rounded-full border border-border bg-background p-4 shadow-lg sm:right-8">
+              <Image src="/images/gator-icon.png" alt="" width={40} height={40} className="size-10 rounded-full" />
+              <div>
+                <p className="font-sans text-sm font-medium text-foreground">{BRAND} Support</p>
+                <p className="font-sans text-sm font-light text-muted-foreground">support@{BRAND_DOMAIN}</p>
+              </div>
+            </div>
+            <div className="absolute right-4 top-28 rounded-md border border-border bg-background p-3 shadow-md sm:right-6">
+              <p className="mb-2 text-center font-sans text-sm font-medium text-foreground">July 2026</p>
+              <div className="grid grid-cols-7 gap-1 text-center text-xs text-muted-foreground">
+                {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((d, i) => <span key={`dow-${i}`}>{d}</span>)}
+                {Array.from({ length: 28 }).map((_, i) => (
+                  <span key={i} className={`rounded p-1 ${i === 14 ? 'bg-primary text-primary-foreground' : ''}`}>{i + 1}</span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
