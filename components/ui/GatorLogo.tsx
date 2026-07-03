@@ -1,9 +1,11 @@
+import type { ReactNode } from 'react'
+
 const iconSrc = '/images/gator-icon.png'
 const logoSrc = '/images/gator-logo.png'
 
 type GatorLogoProps = {
   className?: string
-  variant?: 'icon' | 'full'
+  variant?: 'icon' | 'full' | 'wordmark'
   iconClassName?: string
   asLink?: boolean
   priority?: boolean
@@ -18,8 +20,46 @@ export default function GatorLogo({
   priority = false,
   theme = 'light',
 }: GatorLogoProps) {
-  const content =
-    variant === 'full' ? (
+  let content: ReactNode
+
+  if (variant === 'wordmark') {
+    content = (
+      <span className={`inline-flex items-center gap-2.5 ${className}`}>
+        <img
+          src={iconSrc}
+          alt=""
+          width={512}
+          height={512}
+          className={`object-contain ${iconClassName}`}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
+          aria-hidden
+        />
+        <span className="font-display text-xl font-bold lowercase tracking-tight text-gator sm:text-2xl">
+          gator
+        </span>
+      </span>
+    )
+  } else if (variant === 'full' && theme === 'light') {
+    content = (
+      <span className={`inline-flex items-center gap-2.5 ${className}`}>
+        <img
+          src={iconSrc}
+          alt=""
+          width={512}
+          height={512}
+          className="h-8 w-8 object-contain sm:h-9 sm:w-9"
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
+          aria-hidden
+        />
+        <span className="font-display text-xl font-bold lowercase tracking-tight text-gator sm:text-2xl">
+          gator
+        </span>
+      </span>
+    )
+  } else if (variant === 'full') {
+    content = (
       <img
         src={logoSrc}
         alt="gator"
@@ -29,7 +69,9 @@ export default function GatorLogo({
         loading={priority ? 'eager' : 'lazy'}
         decoding="async"
       />
-    ) : (
+    )
+  } else {
+    content = (
       <img
         src={iconSrc}
         alt=""
@@ -41,6 +83,7 @@ export default function GatorLogo({
         aria-hidden
       />
     )
+  }
 
   if (asLink) {
     return (

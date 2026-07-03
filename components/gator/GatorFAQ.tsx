@@ -6,23 +6,27 @@ import { ChevronDown } from 'lucide-react'
 const FAQS = [
   {
     q: 'What is Gator?',
-    a: 'Gator is an AI assistant that doesn\'t just answer questions — it takes action. Write code, browse the web, send emails, run commands, and complete multi-step tasks from a single conversation.',
+    a: 'Gator is an AI assistant and Chrome Extension that works as your AI-powered helper, saving you time and money. It provides top AI models such as GPT-4, Claude, DeepSeek, Llama, Mistral and more to generate responses on Google Search, summarize YouTube videos, blogs, documents, and reply to comments on LinkedIn, Twitter and Gmail.',
   },
   {
-    q: 'How is Gator different from ChatGPT?',
-    a: 'ChatGPT gives you text. Gator gives you results. It connects to your tools, runs commands on your machine, browses websites, and delivers finished work — not just suggestions.',
+    q: 'How does Gator work?',
+    a: 'Once installed as a Chrome Extension, you can open Gator on any website using Ctrl/⌘+M. On specific websites such as Twitter, LinkedIn, YouTube and Gmail, you\'ll find Gator buttons for easy access.',
   },
   {
-    q: 'Is my data safe?',
-    a: 'Yes. Gator runs in isolated environments, requires your approval for sensitive actions, and never trains on your private data. Enterprise plans include SOC 2 compliance and audit logs.',
+    q: 'Is Gator free to use?',
+    a: 'Yes, Gator is FREE to start. Free users get daily queries to run multiple AI models. Upgrade to Pro for unlimited access to all top models.',
   },
   {
-    q: 'What channels does Gator work on?',
-    a: 'Web, Slack, Telegram, WhatsApp, Discord, and email. Talk to Gator wherever you already work — same assistant, same memory, every channel.',
+    q: 'Do I need separate ChatGPT or Claude accounts?',
+    a: 'No. Create a free account at gator.so and get access to all top models through a single account.',
   },
   {
-    q: 'Can I try it for free?',
-    a: 'Absolutely. The free plan includes 50 messages per month with no credit card required. Upgrade anytime when you need more.',
+    q: 'What counts as a query?',
+    a: 'When you ask Gator anything and click enter, that\'s one query. On search engines like Google, Gator provides FREE automatic responses.',
+  },
+  {
+    q: 'Which search engines are supported?',
+    a: 'Gator currently supports Google, Bing, DuckDuckGo, Yahoo, and Yandex.',
   },
 ]
 
@@ -30,33 +34,35 @@ export default function GatorFAQ() {
   const [open, setOpen] = useState<number | null>(0)
 
   return (
-    <section id="faq" className="bg-canvas-warm py-20 sm:py-28">
+    <section id="faq" className="border-t border-black/[0.06] bg-[#fafaf9] py-20 sm:py-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <div className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gator">FAQ</p>
-          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-            Questions? We&apos;ve got answers.
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+            Want to know more?
           </h2>
+          <p className="mt-3 text-base text-ink-muted">
+            Here&apos;s a list of FAQs to help you get started!
+          </p>
         </div>
 
-        <div className="mt-12 space-y-3">
+        <div className="mt-12 space-y-2">
           {FAQS.map((faq, i) => (
             <div
               key={faq.q}
-              className="rounded-xl border border-[var(--color-line)] bg-white overflow-hidden"
+              className="overflow-hidden rounded-xl border border-black/[0.06] bg-white"
             >
               <button
                 type="button"
                 onClick={() => setOpen(open === i ? null : i)}
                 className="flex w-full items-center justify-between px-6 py-4 text-left"
               >
-                <span className="text-sm font-semibold text-ink">{faq.q}</span>
+                <span className="pr-4 text-sm font-semibold text-ink">{faq.q}</span>
                 <ChevronDown
-                  className={`h-4 w-4 shrink-0 text-ink-muted transition ${open === i ? 'rotate-180' : ''}`}
+                  className={`h-4 w-4 shrink-0 text-ink-faint transition ${open === i ? 'rotate-180' : ''}`}
                 />
               </button>
               {open === i && (
-                <div className="border-t border-[var(--color-line)] px-6 py-4">
+                <div className="border-t border-black/[0.06] px-6 py-4">
                   <p className="text-sm leading-relaxed text-ink-muted">{faq.a}</p>
                 </div>
               )}

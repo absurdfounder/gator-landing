@@ -1,17 +1,17 @@
 import { ogImageMeta } from '@/lib/og/url';
 
-const homeOg = ogImageMeta('home', 'Gator — Your AI assistant that actually gets things done');
+const homeOg = ogImageMeta('home', 'Gator — Ideas are a chat away');
 
 export const metadata = {
   metadataBase: new URL('https://gator.so'),
-  title: 'Gator: AI Assistant That Actually Gets Things Done',
-  description: 'Ask anything. Gator writes code, browses the web, sends emails, and handles tasks autonomously. Your always-on AI coworker — free to start.',
+  title: 'Gator — AI Chat. Ideas are a chat away.',
+  description: 'Ask Gator anything. Chat with top AI models — GPT-4, Claude, Gemini and more. Free Chrome extension and web app.',
   alternates: {
     canonical: 'https://gator.so',
   },
   openGraph: {
-    title: 'Gator — Ask Anything. Gator Gets It Done.',
-    description: 'Your AI assistant that takes action — code, email, browser, terminal. Not just answers, real results.',
+    title: 'Gator — Ideas are a chat away',
+    description: 'Chat with top AI models. Summarize, create, research — all in one place.',
     url: 'https://gator.so',
     siteName: 'Gator',
     images: homeOg.openGraph!.images,
@@ -20,46 +20,52 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gator: AI Assistant That Gets Things Done',
-    description: 'Ask anything. Gator writes code, browses the web, and handles tasks while you focus on what matters.',
+    title: 'Gator — AI Chat',
+    description: 'Ideas are a chat away. Free AI assistant with GPT-4, Claude, Gemini and more.',
     site: '@gator_ai',
     images: homeOg.twitter!.images,
   },
   keywords: [
     'gator ai',
+    'ai chat',
     'ai assistant',
-    'ai agent',
-    'ask gator',
-    'autonomous ai',
-    'ai coworker',
-    'ai automation',
+    'chatgpt alternative',
+    'claude ai',
+    'ai extension',
   ],
 }
 
 import GatorHeader from '@/components/gator/GatorHeader'
 import GatorHero from '@/components/gator/GatorHero'
-import GatorHowItWorks from '@/components/gator/GatorHowItWorks'
-import GatorFeatures from '@/components/gator/GatorFeatures'
+import GatorExtensionSection from '@/components/gator/GatorExtensionSection'
+import GatorChatSection from '@/components/gator/GatorChatSection'
+import GatorSocialProof from '@/components/gator/GatorSocialProof'
+import GatorModelsSection from '@/components/gator/GatorModelsSection'
+import GatorFeatureTabs, { GatorSecuritySection } from '@/components/gator/GatorFeatureTabs'
+import GatorDevicesSection from '@/components/gator/GatorDevicesSection'
+import GatorWorkflowSection from '@/components/gator/GatorWorkflowSection'
 import GatorPricing from '@/components/gator/GatorPricing'
 import GatorFAQ from '@/components/gator/GatorFAQ'
-import GatorCTA from '@/components/gator/GatorCTA'
+import GatorTestimonials from '@/components/gator/GatorTestimonials'
 import GatorFooter from '@/components/gator/GatorFooter'
 
 export default function Home() {
   return (
-    <>
-      <div className="overflow-x-hidden">
-        <GatorHeader />
-        <GatorHero />
-        <GatorHowItWorks />
-        <div id="features">
-          <GatorFeatures />
-        </div>
-        <GatorPricing />
-        <GatorFAQ />
-        <GatorCTA />
-        <GatorFooter />
-      </div>
-    </>
+    <div className="overflow-x-hidden bg-white">
+      <GatorHeader />
+      <GatorHero />
+      <GatorExtensionSection />
+      <GatorChatSection />
+      <GatorSocialProof />
+      <GatorModelsSection />
+      <GatorSecuritySection />
+      <GatorDevicesSection />
+      <GatorFeatureTabs />
+      <GatorWorkflowSection />
+      <GatorPricing />
+      <GatorFAQ />
+      <GatorTestimonials />
+      <GatorFooter />
+    </div>
   )
 }
