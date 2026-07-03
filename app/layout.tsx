@@ -1,5 +1,5 @@
 import './css/style.css'
-import './css/merlin.css'
+import './css/merlin-shadcn.css'
 
 import { Nunito } from 'next/font/google'
 import localFont from 'next/font/local'
@@ -88,7 +88,7 @@ export default function RootLayout({
 }) {
   const canonicalUrl = 'https://gator.so'
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" sizes="96x96" />
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
