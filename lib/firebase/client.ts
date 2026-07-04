@@ -1,29 +1,44 @@
 import { getApp, getApps, initializeApp, type FirebaseApp, type FirebaseOptions } from 'firebase/app'
 import { getAuth, type Auth } from 'firebase/auth'
 
-function readConfig(): FirebaseOptions | null {
-  const apiKey = process.env.NEXT_PUBLIC_FIREBASE_API_KEY
-  const authDomain = process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
-  const projectId = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID
-  const storageBucket = process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
-  const messagingSenderId = process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
-  const appId = process.env.NEXT_PUBLIC_FIREBASE_APP_ID
+/** Public web client config — same Firebase project as Trooper / askgator auth. */
+const DEFAULT_FIREBASE_CONFIG: FirebaseOptions = {
+  apiKey: 'AIzaSyCbBR2aIwfR-iPHZC6zFLcjS7EdZs5KeNA',
+  authDomain: 'ai-copilot-104.firebaseapp.com',
+  projectId: 'ai-copilot-104',
+  storageBucket: 'ai-copilot-104.appspot.com',
+  messagingSenderId: '836821389098',
+  appId: '1:836821389098:web:3cfb286b3fcb0e728c5853',
+  databaseURL: 'https://ai-copilot-104-default-rtdb.firebaseio.com',
+}
 
-  if (!apiKey || !authDomain || !projectId || !storageBucket || !messagingSenderId || !appId) {
+function readConfig(): FirebaseOptions | null {
+  const config: FirebaseOptions = {
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || DEFAULT_FIREBASE_CONFIG.apiKey,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || DEFAULT_FIREBASE_CONFIG.authDomain,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || DEFAULT_FIREBASE_CONFIG.projectId,
+    storageBucket:
+      process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || DEFAULT_FIREBASE_CONFIG.storageBucket,
+    messagingSenderId:
+      process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID ||
+      DEFAULT_FIREBASE_CONFIG.messagingSenderId,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || DEFAULT_FIREBASE_CONFIG.appId,
+  }
+
+  const databaseURL =
+    process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL || DEFAULT_FIREBASE_CONFIG.databaseURL
+  if (databaseURL) config.databaseURL = databaseURL
+
+  if (
+    !config.apiKey ||
+    !config.authDomain ||
+    !config.projectId ||
+    !config.storageBucket ||
+    !config.messagingSenderId ||
+    !config.appId
+  ) {
     return null
   }
-
-  const config: FirebaseOptions = {
-    apiKey,
-    authDomain,
-    projectId,
-    storageBucket,
-    messagingSenderId,
-    appId,
-  }
-
-  const databaseURL = process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL
-  if (databaseURL) config.databaseURL = databaseURL
 
   return config
 }
