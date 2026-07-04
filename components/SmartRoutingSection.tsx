@@ -1,7 +1,6 @@
 'use client';
 
-import MerlinFeaturePanel from '@/components/MerlinFeaturePanel';
-import GatorCharacter from '@/components/GatorCharacter';
+import FeatureMerlinWithCharacter from '@/components/FeatureMerlinWithCharacter';
 import { SMART_ROUTING_MERLIN_IMAGE } from '@/lib/trooperFeatureMerlinImages';
 
 const sectionXPadding = 'px-4 sm:px-6 lg:px-8';
@@ -13,7 +12,6 @@ type SmartRoutingSectionProps = {
   kicker?: string;
 };
 
-/** Same card shell as other capabilities — sits between sticky deck segments. */
 export default function SmartRoutingSection({ kicker = '09' }: SmartRoutingSectionProps) {
   return (
     <article
@@ -35,13 +33,13 @@ export default function SmartRoutingSection({ kicker = '09' }: SmartRoutingSecti
           <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-muted sm:mt-4 sm:text-[15px] sm:leading-7">
             {ROUTING_DESCRIPTION}
           </p>
-          <GatorCharacter id="analytics" size="sm" className="mt-6" />
         </div>
 
         <div className="relative min-h-[320px] border-t border-[var(--color-line)] sm:min-h-[380px] lg:min-h-[500px] lg:border-t-0 lg:rounded-r-xl">
-          <MerlinFeaturePanel
-            src={SMART_ROUTING_MERLIN_IMAGE}
-            alt="Smart model routing"
+          <FeatureMerlinWithCharacter
+            merlinSrc={SMART_ROUTING_MERLIN_IMAGE}
+            merlinAlt="Smart model routing"
+            characterId="analytics"
             className="absolute inset-0"
           />
         </div>

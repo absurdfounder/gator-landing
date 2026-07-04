@@ -14,7 +14,8 @@ function isCatalogPage(pathname: string) {
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {  
   const pathname = usePathname()
-  const hideNewsletter = pathname === '/wonder-auth' || isCatalogPage(pathname)
+  const hideNewsletter =
+    pathname === '/wonder-auth' || pathname === '/login' || pathname === '/logout' || isCatalogPage(pathname)
   
   return (
     <>

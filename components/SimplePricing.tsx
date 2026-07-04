@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import MarketingHeadline from '@/components/marketing/MarketingHeadline';
-import GatorCharacter from '@/components/GatorCharacter';
 import PixelButton from './ui/PixelButton';
 import {
   CLOUD_SUBSCRIPTION_TIERS,
@@ -725,10 +724,6 @@ export default function SimplePricing({ showFullPricingLink = true }: SimplePric
             </Link>
           </div>
         ) : null}
-      </div>
-
-      <div className="mt-8 flex justify-center border-t border-slate-100 pt-8 sm:mt-10 sm:pt-10">
-        <GatorCharacter id="coffee" size="lg" />
       </div>
     </div>
   );

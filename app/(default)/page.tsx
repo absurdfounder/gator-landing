@@ -1,17 +1,17 @@
 import { ogImageMeta } from '@/lib/og/url';
 
-const homeOg = ogImageMeta('home', 'Gator - OpenClaw AI Workforce Platform with GitHub Integration');
+const homeOg = ogImageMeta('home', 'Gator — Run loops in your own browser');
 
 export const metadata = {
   metadataBase: new URL('https://gator.so'),
-  title: 'Gator: AI Workforce Powered by OpenClaw | GitHub Integration',
-  description: 'Build AI workforce teams with OpenClaw AI. Multiple AI employees execute tasks autonomously using GitHub, Gmail, browsers, and APIs. From the creators of ClawdBot and MoltBot.',
+  title: 'Gator — Run Loops in Your Own Browser',
+  description: 'Install the Gator Chrome extension and run autonomous agent loops on any tab — research, coding, CI, reviews, and more. Powered by OpenClaw.',
   alternates: {
     canonical: 'https://gator.so',
   },
   openGraph: {
-    title: 'Gator: AI Workforce Platform Built on OpenClaw GitHub',
-    description: 'Deploy AI workforce teams powered by OpenClaw AI. ClawdBot evolution for teams—GitHub commits, autonomous execution, persistent memory.',
+    title: 'Gator — Run loops in your own browser',
+    description: 'Launch autonomous agent loops from Chrome. Research, code, review, and ship without leaving your browser.',
     url: 'https://gator.so',
     siteName: 'Gator',
     images: homeOg.openGraph!.images,
@@ -20,21 +20,18 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gator: OpenClaw AI Workforce for Teams',
-    description: 'Scale your ClawdBot into a full AI workforce. Multiple OpenClaw AI employees working together—GitHub integration, autonomous execution.',
+    title: 'Gator — Run loops in your own browser',
+    description: 'Autonomous agent loops in Chrome — powered by OpenClaw.',
     site: '@gator_ai',
     images: homeOg.twitter!.images,
   },
   keywords: [
-    'openclaw ai',
-    'github openclaw',
-    'openclaw github',
-    'openclaw clawdbot',
-    'clawdbot openclaw',
-    'clawdbot',
-    'moltbot',
-    'ai workforce',
+    'agent loops',
+    'browser agent',
+    'chrome extension ai',
+    'openclaw',
     'gator ai',
+    'autonomous agents',
   ],
 }
 

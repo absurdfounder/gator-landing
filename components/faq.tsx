@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { formatUsd, PRICING_USD } from '@/lib/pricing';
-import GatorCharacter from '@/components/GatorCharacter';
 
 interface FAQ {
   question: string;
@@ -210,8 +209,7 @@ const FAQ: React.FC = () => {
 
   return (
     <div className="px-0 pt-4 sm:pt-6 pb-12 sm:pb-20 max-w-7xl mx-auto">
-      <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-        <div className="max-w-2xl">
+      <div className="max-w-2xl">
         <h2 className="font-funneldisplay text-[1.65rem] sm:text-4xl tracking-tight text-slate-900">
           Intel brief.
         </h2>
@@ -227,8 +225,6 @@ const FAQ: React.FC = () => {
           </a>
           .
         </p>
-        </div>
-        <GatorCharacter id="reading" size="lg" className="mx-auto sm:mx-0 sm:shrink-0" />
       </div>
 
       {/* Category tabs — flat mono text links with red underline on active */}

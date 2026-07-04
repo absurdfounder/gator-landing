@@ -9,7 +9,7 @@ import Banner from '@/components/banner'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { ogImageMeta } from '@/lib/og/url'
 
-const homeOg = ogImageMeta('home', 'Gator — Your AI assistant that actually gets things done')
+const homeOg = ogImageMeta('home', 'Gator — Run loops in your own browser')
 
 /** Body — paragraphs, nav, UI */
 const nunito = Nunito({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
@@ -35,14 +35,14 @@ export const viewport = {
 
 export const metadata = {
   metadataBase: new URL('https://gator.so'),
-  title: 'Gator: AI Assistant That Actually Gets Things Done',
-  description: 'Ask anything. Gator writes code, browses the web, sends emails, and handles tasks autonomously. Your always-on AI coworker — free to start.',
+  title: 'Gator — Run Loops in Your Own Browser',
+  description: 'Install the Gator Chrome extension and run autonomous agent loops on any tab — research, coding, CI, reviews, and more. Powered by OpenClaw.',
   alternates: {
     canonical: 'https://gator.so',
   },
   openGraph: {
-    title: 'Gator — Ask Anything. Gator Gets It Done.',
-    description: 'Your AI assistant that takes action — code, email, browser, terminal. Not just answers, real results.',
+    title: 'Gator — Run loops in your own browser',
+    description: 'Launch autonomous agent loops from Chrome. Research, code, review, and ship without leaving your browser.',
     url: 'https://gator.so',
     siteName: 'Gator',
     images: homeOg.openGraph!.images,
@@ -51,8 +51,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gator: AI Assistant That Gets Things Done',
-    description: 'Ask anything. Gator writes code, browses the web, and handles tasks while you focus on what matters.',
+    title: 'Gator — Run loops in your own browser',
+    description: 'Autonomous agent loops in Chrome — powered by OpenClaw.',
     images: homeOg.twitter!.images,
     site: '@gator_ai',
   },
@@ -68,13 +68,12 @@ export const metadata = {
   manifest: '/manifest.json',
   themeColor: '#ffffff',
   keywords: [
+    'agent loops',
+    'browser agent',
+    'chrome extension ai',
     'gator ai',
-    'ai assistant',
-    'ai agent',
-    'ask gator',
-    'autonomous ai',
-    'ai coworker',
-    'ai automation',
+    'openclaw',
+    'autonomous agents',
   ],
   other: {
     'robots': 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',

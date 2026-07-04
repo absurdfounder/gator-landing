@@ -1,8 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import MerlinFeaturePanel from '@/components/MerlinFeaturePanel';
-import GatorCharacter from '@/components/GatorCharacter';
+import FeatureMerlinWithCharacter from '@/components/FeatureMerlinWithCharacter';
 import SmartRoutingSection from './SmartRoutingSection';
 import DataSourcesSection from './DataSourcesSection';
 import { CAPABILITY_MERLIN_IMAGES } from '@/lib/trooperFeatureMerlinImages';
@@ -139,15 +138,15 @@ export default function OldWays() {
               <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-muted sm:mt-4 sm:text-[15px] sm:leading-7">
                 {card.description}
               </p>
-              <GatorCharacter
-                id={capabilityCharacterIds[index] ?? 'laptop'}
-                size="sm"
-                className="mt-6"
-              />
             </div>
 
             <div className="relative min-h-[320px] border-t border-[var(--color-line)] sm:min-h-[380px] lg:min-h-[500px] lg:border-t-0 lg:rounded-r-xl">
-              <MerlinFeaturePanel src={featureImage} alt={card.tag} className="absolute inset-0" />
+              <FeatureMerlinWithCharacter
+                merlinSrc={featureImage}
+                merlinAlt={card.tag}
+                characterId={capabilityCharacterIds[index] ?? 'laptop'}
+                className="absolute inset-0"
+              />
             </div>
           </div>
         </article>

@@ -1,23 +1,22 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import GatorCharacter from '@/components/GatorCharacter';
 
 const steps = [
   {
     number: '01',
-    title: 'Define the goal.',
-    example: '"Build the #1 AI note-taking app to $1mm ARR."',
+    title: 'Install the extension.',
+    example: 'Add Gator to Chrome and pin it — loops run right on the page you\'re on.',
   },
   {
     number: '02',
-    title: 'Hire the team.',
-    example: 'CEO, CTO, engineers, designers, marketers — any agent, any provider.',
+    title: 'Pick a loop.',
+    example: 'CI watcher, PR review, research, codegen — or build your own from a prompt.',
   },
   {
     number: '03',
-    title: 'Approve and run.',
-    example: "Review the CEO's strategy. Set budgets. Hit go. Monitor from the dashboard.",
+    title: 'Let it run.',
+    example: 'The agent loops in your browser tab until the job is done. Check in anytime.',
   },
 ];
 
@@ -26,23 +25,19 @@ const ease = [0.22, 1, 0.36, 1] as const;
 export default function HowItWorksSteps() {
   return (
     <div className="pb-8 md:pb-16 pt-2">
-      <div className="grid items-end gap-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-10">
-        <motion.div
-          className="how-it-works-header mb-6 md:mb-12 max-w-3xl lg:mb-0"
+      <motion.div
+        className="how-it-works-header mb-6 md:mb-12 max-w-3xl"
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55, ease }}
         viewport={{ once: true, margin: '-40px' }}
       >
         <h2 className="how-it-works-heading font-funneldisplay text-[1.65rem] sm:text-3xl md:text-4xl lg:text-[2.75rem] tracking-tight text-ink leading-[1.15]">
-          Manage business goals
+          Agent loops,
           <br />
-          not pull requests.
+          right in your browser.
         </h2>
-        </motion.div>
-
-        <GatorCharacter id="thinking" size="lg" className="mx-auto hidden shrink-0 lg:block" />
-      </div>
+      </motion.div>
 
       <div className="steps-grid grid grid-cols-1 md:grid-cols-3 border border-[var(--color-line)] bg-canvas-section overflow-hidden">
         {steps.map((step, index) => (

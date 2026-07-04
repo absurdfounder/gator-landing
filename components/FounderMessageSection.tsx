@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import PixelButton from '@/components/ui/PixelButton';
-import GatorCharacter from '@/components/GatorCharacter';
 
 const getCalApiImport = () => import('@calcom/embed-react').then((mod) => mod.getCalApi);
 
@@ -56,24 +55,21 @@ export default function FounderMessageSection() {
             </p>
 
             <div className="mt-5 flex flex-col gap-3 sm:mt-6 sm:flex-row sm:items-end sm:justify-between sm:gap-4 md:mt-8">
-              <div className="flex items-end gap-4">
-                <GatorCharacter id="coffee" size="sm" className="hidden sm:block" />
-                <div>
-                  <p className="font-funneldisplay text-base font-bold text-slate-900 sm:text-base md:text-lg">
-                    Vaibhav
-                  </p>
-                  <p className="mt-0.5 font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">
-                    Founder, Gator
-                  </p>
-                  <a
-                    href="https://twitter.com/absurdfounder"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-1 inline-block font-mono text-[11px] uppercase tracking-[0.14em] text-trooper transition-colors hover:text-trooper-700"
-                  >
-                    @absurdfounder
-                  </a>
-                </div>
+              <div>
+                <p className="font-funneldisplay text-base font-bold text-slate-900 sm:text-base md:text-lg">
+                  Vaibhav
+                </p>
+                <p className="mt-0.5 font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">
+                  Founder, Gator
+                </p>
+                <a
+                  href="https://twitter.com/absurdfounder"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 inline-block font-mono text-[11px] uppercase tracking-[0.14em] text-trooper transition-colors hover:text-trooper-700"
+                >
+                  @absurdfounder
+                </a>
               </div>
 
               <PixelButton

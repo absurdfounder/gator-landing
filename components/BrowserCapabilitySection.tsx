@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 
 import LandingIconsGrid from '@/components/LandingIconsGrid';
-import GatorCharacter from '@/components/GatorCharacter';
 
 export default function BrowserCapabilitySection() {
   return (
@@ -20,9 +19,9 @@ export default function BrowserCapabilitySection() {
               </Link>
             </p>
             <h2 className="font-display text-3xl font-medium leading-9 tracking-tight text-ink sm:text-4xl sm:leading-11 xl:text-[2.75rem] xl:leading-[3rem]">
-              Anything you do in a computer,
+              Anything you do in a browser,
               <br />
-              Gator can do for you.
+              Gator loops can run for you.
             </h2>
           </div>
         </div>
@@ -33,13 +32,10 @@ export default function BrowserCapabilitySection() {
 
         <div className="border-b border-[var(--color-line)] px-6 py-10 sm:px-8 sm:py-12 md:px-14 md:py-16 xl:px-36">
           <p className="mx-auto max-w-2xl text-center text-[15px] leading-relaxed text-ink-muted sm:text-base sm:leading-7">
-            Unlike agents that only work through brittle integrations, Gator&apos;s workforce uses
-            browsers and accounts the same way your team does — GitHub, Gmail, Slack, and any site
-            you can log into. If a human can do it in a tab, your agents can too.
+            Unlike agents that only work through brittle integrations, Gator&apos;s loops run
+            inside your browser — on GitHub, Gmail, Slack, and any site you can log into. If you
+            can do it in a tab, your agent loop can too.
           </p>
-          <div className="mt-8 flex justify-center sm:mt-10">
-            <GatorCharacter id="typing" size="xl" />
-          </div>
         </div>
       </div>
     </section>

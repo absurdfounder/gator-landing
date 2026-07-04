@@ -51,3 +51,16 @@ export const capabilityCharacterIds: GatorCharacterId[] = [
   'analytics',
   'coffee',
 ]
+
+/** Hero carousel — cycles one pose at a time like the extension feature picker. */
+export const heroCharacterIds: GatorCharacterId[] = [
+  'laptop',
+  'typing',
+  'thinking',
+  'headphones',
+  'reading',
+  'analytics',
+  'files',
+  'coffee',
+  'laptopMug',
+]
