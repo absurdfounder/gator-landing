@@ -6,6 +6,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Download, FileSpreadsheet, FileText, Signal, Wifi } from 'lucide-react';
 import FieldCommsChannelIcon from '@/components/marketing/FieldCommsChannelIcon';
+import GatorCharacter from '@/components/GatorCharacter';
 import { OPENCLAW_CHANNELS } from '@/lib/channelCatalog';
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -455,6 +456,7 @@ export default function MobileChannelsSection() {
           viewport={{ once: true, margin: '-40px' }}
         >
           <div className="space-y-4 text-center lg:text-left">
+            <GatorCharacter id="headphones" size="md" className="mx-auto lg:mx-0" />
             <h2 className="font-funneldisplay text-[1.75rem] leading-[1.12] tracking-tight text-white sm:text-4xl lg:text-[2.65rem] lg:leading-[1.08]">
               Chat with your workforce,
               <br className="hidden sm:block" />

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 
 import LandingIconsGrid from '@/components/LandingIconsGrid';
+import GatorCharacter from '@/components/GatorCharacter';
 
 export default function BrowserCapabilitySection() {
   return (
@@ -36,6 +37,9 @@ export default function BrowserCapabilitySection() {
             browsers and accounts the same way your team does — GitHub, Gmail, Slack, and any site
             you can log into. If a human can do it in a tab, your agents can too.
           </p>
+          <div className="mt-8 flex justify-center sm:mt-10">
+            <GatorCharacter id="typing" size="xl" />
+          </div>
         </div>
       </div>
     </section>

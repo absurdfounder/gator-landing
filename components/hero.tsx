@@ -9,6 +9,7 @@ import HeroMarquee from './HeroMarquee';
 import HeroDownloadButtons from './HeroDownloadButtons';
 import PixelButton from './ui/PixelButton';
 import FernCircleCheckIcon from './ui/FernCircleCheckIcon';
+import GatorCharacter from './GatorCharacter';
 
 const TRUST_ITEMS = ['Free to start', 'No credit card', 'OpenClaw-powered'] as const;
 
@@ -40,6 +41,12 @@ export default function Hero() {
             </div>
 
             <div className="min-w-0 lg:col-span-5 lg:pt-8 xl:pt-10">
+              <GatorCharacter
+                id="laptop"
+                size="hero"
+                priority
+                className="mx-auto mb-5 lg:mx-0 lg:mb-6"
+              />
               <p className="max-w-full text-[15px] leading-relaxed text-ink-muted sm:text-base sm:leading-7">
                 <b className="text-ink">Fire all your employees.</b> An AI workforce that{' '}
                 <b className="text-lime-700">writes code</b>, <b className="text-lime-700">makes commits</b>,{' '}

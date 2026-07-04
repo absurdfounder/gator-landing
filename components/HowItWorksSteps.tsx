@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import GatorCharacter from '@/components/GatorCharacter';
 
 const steps = [
   {
@@ -25,8 +26,9 @@ const ease = [0.22, 1, 0.36, 1] as const;
 export default function HowItWorksSteps() {
   return (
     <div className="pb-8 md:pb-16 pt-2">
-      <motion.div
-        className="how-it-works-header mb-6 md:mb-12 max-w-3xl"
+      <div className="grid items-end gap-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-10">
+        <motion.div
+          className="how-it-works-header mb-6 md:mb-12 max-w-3xl lg:mb-0"
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55, ease }}
@@ -37,7 +39,10 @@ export default function HowItWorksSteps() {
           <br />
           not pull requests.
         </h2>
-      </motion.div>
+        </motion.div>
+
+        <GatorCharacter id="thinking" size="lg" className="mx-auto hidden shrink-0 lg:block" />
+      </div>
 
       <div className="steps-grid grid grid-cols-1 md:grid-cols-3 border border-[var(--color-line)] bg-canvas-section overflow-hidden">
         {steps.map((step, index) => (

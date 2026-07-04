@@ -1,6 +1,7 @@
 'use client';
 
 import GatorLogo from '@/components/ui/GatorLogo';
+import GatorCharacter from '@/components/GatorCharacter';
 import PixelButton from '@/components/ui/PixelButton';
 import Link from 'next/link';
 import { getFaviconUrl } from '@/lib/favicon';
@@ -320,12 +321,15 @@ export default function Footer() {
 
         {/* Giant gator. watermark */}
         <div className="overflow-x-hidden border-t border-slate-100 pb-5 pt-3 sm:pb-6 sm:pt-4 md:pb-8">
-          <p
+          <div className="relative flex flex-col items-center gap-2">
+            <GatorCharacter id="files" size="sm" className="opacity-80" />
+            <p
             aria-hidden
             className="pointer-events-none select-none whitespace-nowrap text-center font-display lowercase leading-none tracking-tight text-slate-200 text-[clamp(2.75rem,18vw,12rem)]"
           >
             gator.
-          </p>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

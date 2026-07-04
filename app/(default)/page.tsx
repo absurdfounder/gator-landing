@@ -48,6 +48,7 @@ import SimplePricing from '@/components/SimplePricing'
 import GovernanceSection from '@/components/GovernanceSection'
 import FAQ from '@/components/faq'
 import FounderMessageSection from '@/components/FounderMessageSection'
+import Footer from '@/components/ui/footer'
 import MobileChannelsSection from '@/components/MobileChannelsSection'
 import YcQuoteSection from '@/components/YcQuoteSection'
 import DarkSplitSection from '@/components/ui/DarkSplitSection'
@@ -96,6 +97,8 @@ export default function Home() {
       <SectionShell eyebrow="Intel Brief" eyebrowNumber="08" bgClass="bg-canvas-warm">
         <FAQ />
       </SectionShell>
+
+      <Footer />
       </div>
     </>
   )

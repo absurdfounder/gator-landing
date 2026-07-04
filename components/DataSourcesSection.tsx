@@ -1,6 +1,7 @@
 'use client';
 
 import MerlinFeaturePanel from '@/components/MerlinFeaturePanel';
+import GatorCharacter from '@/components/GatorCharacter';
 import { DATA_SOURCES_MERLIN_IMAGE } from '@/lib/trooperFeatureMerlinImages';
 
 const sectionXPadding = 'px-4 sm:px-6 lg:px-8';
@@ -56,6 +57,7 @@ export default function DataSourcesSection({ kicker = '05' }: DataSourcesSection
               </span>
             ))}
           </div>
+          <GatorCharacter id="files" size="sm" className="mt-6" />
         </div>
 
         <div className="relative min-h-[360px] border-t border-[var(--color-line)] sm:min-h-[440px] lg:min-h-[500px] lg:border-t-0 lg:rounded-r-xl">

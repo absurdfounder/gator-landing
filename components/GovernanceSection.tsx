@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import GatorCharacter from '@/components/GatorCharacter';
 
 const actions = [
   { label: 'Pause.', colorClass: 'text-amber-600' },
@@ -49,7 +50,7 @@ export default function GovernanceSection() {
         </motion.div>
 
         <motion.div
-          className="governance-block p-4 sm:p-6 md:p-8 flex items-center border-t lg:border-t-0 border-slate-100"
+          className="governance-block p-4 sm:p-6 md:p-8 flex flex-col items-center justify-center gap-6 border-t lg:border-t-0 border-slate-100"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-20px' }}
@@ -58,7 +59,8 @@ export default function GovernanceSection() {
             visible: { transition: { staggerChildren: 0.07, delayChildren: 0.12 } },
           }}
         >
-          <p className="governance-actions flex flex-col gap-1 sm:gap-2">
+          <GatorCharacter id="analytics" size="lg" />
+          <p className="governance-actions flex flex-col gap-1 sm:gap-2 w-full">
             {actions.map((action) => (
               <motion.span
                 key={action.label}

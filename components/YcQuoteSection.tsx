@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import GatorCharacter from '@/components/GatorCharacter';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -30,7 +31,7 @@ export default function YcQuoteSection() {
       </div>
 
       <motion.figure
-        className="rounded-2xl border border-white/[0.08] bg-white/[0.03] px-5 py-6 sm:px-7 sm:py-8 lg:px-9 lg:py-10"
+        className="relative rounded-2xl border border-white/[0.08] bg-white/[0.03] px-5 py-6 sm:px-7 sm:py-8 lg:px-9 lg:py-10"
         initial={{ opacity: 0, y: 14 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease }}
@@ -72,6 +73,12 @@ export default function YcQuoteSection() {
             <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.25} aria-hidden />
           </Link>
         </figcaption>
+
+        <GatorCharacter
+          id="laptopMug"
+          size="md"
+          className="absolute -bottom-2 right-4 hidden opacity-90 sm:block lg:right-8"
+        />
       </motion.figure>
     </div>
   );
