@@ -4,6 +4,7 @@ import type { ExtensionBrowser } from '@/lib/detectBrowser'
 export const GATOR_APP_URL = 'https://app.gator.so'
 export const GATOR_SIGN_IN_URL = GATOR_APP_URL
 export const GATOR_EXTENSION_URL = `${GATOR_APP_URL}?ref=extension`
+export const GATOR_BILLING_SETTINGS_URL = `${GATOR_APP_URL}/settings?tab=billing`
 
 /** Stripe checkout entry on the app — login required, email pre-filled on Stripe. */
 export function gatorCheckoutUrl(plan: 'lifetime' | 'cloud') {
