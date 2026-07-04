@@ -13,9 +13,9 @@ export default function TopBar() {
         <span className="mr-1 shrink-0 rounded-md bg-lime-900/20 px-1 py-0.5 text-[11px] font-semibold leading-none text-lime-950/90">
           New
         </span>
-        <span className="min-w-0 truncate sm:hidden">Trooper for Mac</span>
+        <span className="min-w-0 truncate sm:hidden">Gator for Mac</span>
         <span className="hidden min-w-0 truncate sm:inline">
-          Trooper for Mac — run your AI workforce on your machine
+          Gator for Mac — run your AI workforce on your machine
         </span>
         <span className="ml-2 hidden shrink-0 items-center gap-1 text-sm font-medium text-lime-950/50 transition-colors group-hover:text-lime-950/70 sm:inline-flex">
           <span aria-hidden className="mr-1">

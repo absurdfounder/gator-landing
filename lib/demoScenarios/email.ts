@@ -60,7 +60,7 @@ const CANVAS_KEYS = ['email/parsed-rfp.md', 'email/rfp-research.md', 'email/rfp-
 
 export const emailScenario: DemoScenario = {
   id: 'email',
-  org: { name: 'Trooper', domain: 'trooper.so', icon: VIRALHOOKS_FAVICON },
+  org: { name: 'Gator', domain: 'gator.so', icon: VIRALHOOKS_FAVICON },
   channels: [
     { id: 'inbox', name: 'email-inbox', preview: 'RFP: AI ops platform evaluation', time: 'now', system: false },
     { id: 'general', name: 'general', preview: 'Jordan: RFP ticket created', time: '5m', system: false },

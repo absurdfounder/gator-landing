@@ -9,7 +9,7 @@ import FieldCommsChannelIcon from '@/components/marketing/FieldCommsChannelIcon'
 import { OPENCLAW_CHANNELS } from '@/lib/channelCatalog';
 
 const ease = [0.22, 1, 0.36, 1] as const;
-const CHANNEL_SETUP_URL = 'https://app.trooper.so/settings/channels';
+const CHANNEL_SETUP_URL = 'https://app.gator.so/settings/channels';
 
 const FEATURED_CHANNEL_IDS = ['imessage', 'telegram', 'whatsapp', 'email'] as const;
 
@@ -219,7 +219,7 @@ function PhoneChatScreen() {
           <div className="mx-auto flex flex-col items-center">
             <div className="flex size-9 items-center justify-center overflow-hidden rounded-full bg-white/10 ring-1 ring-white/12">
               <Image
-                src="/images/trooper-logomark.png"
+                src="/images/gator-icon.png"
                 alt=""
                 width={22}
                 height={22}
@@ -227,7 +227,7 @@ function PhoneChatScreen() {
                 style={{ imageRendering: 'pixelated' }}
               />
             </div>
-            <p className="mt-0.5 text-[11px] font-medium text-white">Trooper</p>
+            <p className="mt-0.5 text-[11px] font-medium text-white">Gator</p>
             <p className="text-[9px] text-white/35">AI workforce</p>
           </div>
         </div>
@@ -371,13 +371,13 @@ function DarkMockCard({
 
 function ConnectCard() {
   return (
-    <DarkMockCard title="Save Trooper to your phone" meta="channel setup">
+    <DarkMockCard title="Save Gator to your phone" meta="channel setup">
       <div className="flex flex-col items-center gap-5 sm:flex-row sm:items-start">
         <div className="relative shrink-0">
           <div className="overflow-hidden rounded-xl bg-white p-2 shadow-[0_8px_24px_-8px_rgba(0,0,0,0.4)] ring-1 ring-white/10">
             <Image
               src="/images/trooper-connect-qr.png"
-              alt="QR code to open Trooper channel setup"
+              alt="QR code to open Gator channel setup"
               width={108}
               height={108}
               className="size-[108px]"
@@ -386,7 +386,7 @@ function ConnectCard() {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="flex size-8 items-center justify-center rounded-lg bg-white shadow-sm ring-1 ring-slate-200/80">
               <Image
-                src="/images/trooper-logomark.png"
+                src="/images/gator-icon.png"
                 alt=""
                 width={18}
                 height={18}

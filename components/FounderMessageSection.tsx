@@ -37,7 +37,7 @@ export default function FounderMessageSection() {
           <div className="relative h-52 w-full shrink-0 overflow-hidden border-b-4 border-[#007040] bg-white sm:h-60 lg:h-auto lg:w-48 lg:border-b-0 lg:border-r lg:border-r-slate-200 xl:w-52">
             <Image
               src="/images/founder-portrait.png"
-              alt="Vaibhav, founder of Trooper"
+              alt="Vaibhav, founder of Gator"
               fill
               className="object-cover object-top"
               sizes="(max-width: 1024px) 100vw, 208px"
@@ -50,7 +50,7 @@ export default function FounderMessageSection() {
               Everyone deserves a{' '}
               <span className="font-semibold text-trooper">fully powered agentic system</span> that
               does real work for them. That power should not sit only in the hands of big
-              corporations — so we built Trooper for you, and made it{' '}
+              corporations — so we built Gator for you, and made it{' '}
               <span className="font-semibold text-trooper">free for anyone to use</span>.
             </p>
 
@@ -60,7 +60,7 @@ export default function FounderMessageSection() {
                   Vaibhav
                 </p>
                 <p className="mt-0.5 font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">
-                  Founder, Trooper
+                  Founder, Gator
                 </p>
                 <a
                   href="https://twitter.com/absurdfounder"

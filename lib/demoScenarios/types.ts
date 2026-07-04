@@ -38,7 +38,7 @@ export type DemoOrg = {
   icon: string;
 };
 
-export type ChannelBrand = 'trooper' | 'slack' | 'whatsapp';
+export type ChannelBrand = 'gator' | 'slack' | 'whatsapp';
 
 export type DemoScenarioId =
   | 'launch'

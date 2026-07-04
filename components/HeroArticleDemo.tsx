@@ -218,7 +218,7 @@ function DemoSidebarRail({ org }: { org: DemoOrg }) {
   return (
     <div style={{ width: 52, minWidth: 52, borderRight: `1px solid ${C.border}`, background: C.bg, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-between", padding: "8px 0" }}>
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, width: "100%" }}>
-        <img src="/images/trooper-logomark.png" alt="" style={{ width: 32, height: 32, objectFit: "contain", imageRendering: "pixelated" }} />
+        <img src="/images/gator-icon.png" alt="" style={{ width: 32, height: 32, objectFit: "contain" }} />
         <div style={{ width: 28, height: 1, background: "rgba(231,229,228,0.9)" }} />
         <div style={{ width: 40, height: 40, borderRadius: 16, display: "flex", alignItems: "center", justifyContent: "center", background: C.card, boxShadow: "0 1px 4px rgba(28,25,23,0.08)", overflow: "hidden", padding: 6 }}>
           <DemoFavicon src={org.icon} size={24} rounded="md" alt={org.name} />
@@ -421,7 +421,7 @@ function DemoSidebarNav({
 
 function DemoChatPane({
   messages, inputText, mentionTab, agentTyping, activeChannel, composerPlaceholder, chatRef,
-  channels, org, channelBrand = 'trooper',
+  channels, org, channelBrand = 'gator',
 }: {
   messages: Message[];
   inputText: string;
@@ -938,7 +938,7 @@ export default function TrooperDemo({ scenarioId = DEFAULT_DEMO_SCENARIO_ID }: {
             <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 5, background: C.bg, borderRadius: 999, padding: "4px 16px", fontSize: 11.5, color: C.textSubtle, border: `1px solid ${C.border}`, maxWidth: 280, width: "100%", justifyContent: "center" }}>
                 <Lock size={10} strokeWidth={2.5} />
-                app.trooper.so
+                app.gator.so
               </div>
             </div>
             <div style={{ display: "flex", gap: 5 }}>

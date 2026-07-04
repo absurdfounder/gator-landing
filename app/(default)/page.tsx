@@ -1,16 +1,17 @@
 import { ogImageMeta } from '@/lib/og/url';
-import MerlinClone from '@/components/gator/merlin/MerlinClone'
 
-const homeOg = ogImageMeta('home', 'Gator — Ideas are a chat away');
+const homeOg = ogImageMeta('home', 'Gator - OpenClaw AI Workforce Platform with GitHub Integration');
 
 export const metadata = {
   metadataBase: new URL('https://gator.so'),
-  title: 'Gator — AI Chat. Ideas are a chat away.',
-  description: 'Ask Gator anything. Chat with top AI models — GPT-4, Claude, Gemini and more. Free Chrome extension and web app.',
-  alternates: { canonical: 'https://gator.so' },
+  title: 'Gator: AI Workforce Powered by OpenClaw | GitHub Integration',
+  description: 'Build AI workforce teams with OpenClaw AI. Multiple AI employees execute tasks autonomously using GitHub, Gmail, browsers, and APIs. From the creators of ClawdBot and MoltBot.',
+  alternates: {
+    canonical: 'https://gator.so',
+  },
   openGraph: {
-    title: 'Gator — Ideas are a chat away',
-    description: 'Chat with top AI models. Summarize, create, research — all in one place.',
+    title: 'Gator: AI Workforce Platform Built on OpenClaw GitHub',
+    description: 'Deploy AI workforce teams powered by OpenClaw AI. ClawdBot evolution for teams—GitHub commits, autonomous execution, persistent memory.',
     url: 'https://gator.so',
     siteName: 'Gator',
     images: homeOg.openGraph!.images,
@@ -19,13 +20,83 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gator — AI Chat',
-    description: 'Ideas are a chat away.',
+    title: 'Gator: OpenClaw AI Workforce for Teams',
+    description: 'Scale your ClawdBot into a full AI workforce. Multiple OpenClaw AI employees working together—GitHub integration, autonomous execution.',
     site: '@gator_ai',
     images: homeOg.twitter!.images,
   },
+  keywords: [
+    'openclaw ai',
+    'github openclaw',
+    'openclaw github',
+    'openclaw clawdbot',
+    'clawdbot openclaw',
+    'clawdbot',
+    'moltbot',
+    'ai workforce',
+    'gator ai',
+  ],
 }
 
+import Hero from '@/components/hero'
+import Header from '@/components/ui/header'
+import HowItWorksSteps from '@/components/HowItWorksSteps'
+import BrowserCapabilitySection from '@/components/BrowserCapabilitySection'
+import OldWays from '@/components/OldWays'
+import FloatingScrollIndicator from '@/components/FloatingScrollIndicator'
+import SimplePricing from '@/components/SimplePricing'
+import GovernanceSection from '@/components/GovernanceSection'
+import FAQ from '@/components/faq'
+import FounderMessageSection from '@/components/FounderMessageSection'
+import MobileChannelsSection from '@/components/MobileChannelsSection'
+import YcQuoteSection from '@/components/YcQuoteSection'
+import DarkSplitSection from '@/components/ui/DarkSplitSection'
+import SectionShell from '@/components/ui/SectionShell'
+
 export default function Home() {
-  return <MerlinClone />
+  return (
+    <>
+      <div className="overflow-x-hidden">
+      <FloatingScrollIndicator />
+      <div className="hero-shell bg-canvas">
+        <Header />
+        <Hero />
+      </div>
+
+      <DarkSplitSection>
+        <YcQuoteSection />
+      </DarkSplitSection>
+
+      <SectionShell eyebrow="How It Works" eyebrowNumber="02">
+        <HowItWorksSteps />
+      </SectionShell>
+
+      <BrowserCapabilitySection />
+
+      <SectionShell eyebrow="Capabilities" eyebrowNumber="03">
+        <OldWays />
+      </SectionShell>
+
+      <DarkSplitSection innerClassName="bg-gray-900">
+        <MobileChannelsSection />
+      </DarkSplitSection>
+
+      <SectionShell eyebrow="Governance" eyebrowNumber="05">
+        <GovernanceSection />
+      </SectionShell>
+
+      <SectionShell eyebrow="Deployment Plans" eyebrowNumber="06">
+        <SimplePricing />
+      </SectionShell>
+
+      <SectionShell eyebrow="Message from the founder" eyebrowNumber="07">
+        <FounderMessageSection />
+      </SectionShell>
+
+      <SectionShell eyebrow="Intel Brief" eyebrowNumber="08" bgClass="bg-canvas-warm">
+        <FAQ />
+      </SectionShell>
+      </div>
+    </>
+  )
 }

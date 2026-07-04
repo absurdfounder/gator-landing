@@ -576,7 +576,7 @@ export default function SimplePricing({ showFullPricingLink = true }: SimplePric
       allowance: localAllowance,
       features: localFeatures,
       cta: (
-        <PixelButton href="https://app.trooper.so" external size="md" tone="dark" className="w-full">
+        <PixelButton href="https://app.gator.so" external size="md" tone="dark" className="w-full">
           Install locally
         </PixelButton>
       ),
@@ -599,7 +599,7 @@ export default function SimplePricing({ showFullPricingLink = true }: SimplePric
       allowance: soloAllowance,
       features: lifetimeFeatures,
       cta: (
-        <PixelButton href="https://app.trooper.so" external size="md" tone="dark" className="w-full">
+        <PixelButton href="https://app.gator.so" external size="md" tone="dark" className="w-full">
           Get lifetime deal
         </PixelButton>
       ),
@@ -624,7 +624,7 @@ export default function SimplePricing({ showFullPricingLink = true }: SimplePric
       allowance: cloudAllowance,
       features: cloudFeatures,
       cta: (
-        <PixelButton href="https://app.trooper.so" external size="md" tone="brand" className="w-full">
+        <PixelButton href="https://app.gator.so" external size="md" tone="brand" className="w-full">
           Choose · {formatUsd(estimatedMonthly)}/month
         </PixelButton>
       ),
@@ -643,7 +643,7 @@ export default function SimplePricing({ showFullPricingLink = true }: SimplePric
       features: enterpriseFeatures,
       cta: (
         <PixelButton
-          href="https://cal.com/trooper/setup-call"
+          href="https://cal.com/gator/setup-call"
           external
           size="md"
           tone="dark"

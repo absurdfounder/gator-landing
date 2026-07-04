@@ -33,7 +33,7 @@ const CANVAS_KEYS = ['tickets/whatsapp-support-881.md', 'tickets/whatsapp-reply.
 
 export const whatsappScenario: DemoScenario = {
   id: 'whatsapp',
-  org: { name: 'Trooper', domain: 'trooper.so', icon: VIRALHOOKS_FAVICON },
+  org: { name: 'Gator', domain: 'gator.so', icon: VIRALHOOKS_FAVICON },
   channels: [
     { id: 'support', name: 'WhatsApp · Support', preview: 'Customer: login still broken after reset', time: 'now', system: false },
     { id: 'general', name: 'general', preview: 'Jordan: ticket from WhatsApp', time: '1m', system: false },

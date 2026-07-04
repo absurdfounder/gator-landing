@@ -44,7 +44,7 @@ const CANVAS_KEYS = ['tickets/dm-summary.md', 'deck/q2-roadmap-notes.md'];
 
 export const messagingScenario: DemoScenario = {
   id: 'messaging',
-  org: { name: 'Trooper', domain: 'trooper.so', icon: VIRALHOOKS_FAVICON },
+  org: { name: 'Gator', domain: 'gator.so', icon: VIRALHOOKS_FAVICON },
   channels: [
     { id: 'dm', name: 'Direct message', preview: 'You: update the Q2 roadmap deck by EOD', time: 'now', system: false },
     { id: 'general', name: 'general', preview: 'Jordan: deck task on board', time: '3m', system: false },

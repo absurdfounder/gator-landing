@@ -12,7 +12,7 @@ import { allIndustrySlugs } from '@/lib/industryContent';
 import { getAllLoopSlugs } from '@/lib/loopCatalog';
 import { buildSkillRouteIndex, getSkillPagePath } from '@/lib/skillRoutes';
 
-const URL = "https://trooper.so";
+const URL = "https://gator.so";
 
 interface IntegrationOrTemplate {
   id: string;

@@ -5,12 +5,12 @@ const SchemaMarkup = () => {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Trooper",
-    "url": "https://trooper.so/",
+    "name": "Gator",
+    "url": "https://gator.so/",
     "description": "AI Workforce Platform Powered by OpenClaw — Deploy autonomous AI employees that execute real tasks using GitHub, Gmail, browsers, and APIs.",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://trooper.so/integration?search={search_term_string}",
+      "target": "https://gator.so/integration?search={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
@@ -18,28 +18,28 @@ const SchemaMarkup = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Trooper",
-    "url": "https://trooper.so",
-    "logo": "https://dazzling-cat.netlify.app/trooper_social.png",
-    "description": "Trooper builds AI workforce teams powered by OpenClaw. Multiple AI employees execute tasks autonomously using GitHub, Gmail, browsers, and APIs.",
+    "name": "Gator",
+    "url": "https://gator.so",
+    "logo": "https://gator.so/images/gator-icon.png",
+    "description": "Gator builds AI workforce teams powered by OpenClaw. Multiple AI employees execute tasks autonomously using GitHub, Gmail, browsers, and APIs.",
     "sameAs": [
-      "https://twitter.com/trooper_so"
+      "https://twitter.com/gator_ai"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer support",
-      "url": "https://trooper.so/contact"
+      "url": "https://gator.so/contact"
     }
   };
 
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "Trooper",
+    "name": "Gator",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
     "description": "AI workforce platform powered by OpenClaw. Deploy multiple AI employees that make GitHub commits, send emails, browse the web, and execute complex multi-step tasks autonomously.",
-    "url": "https://trooper.so",
+    "url": "https://gator.so",
     "featureList": [
       "AI Workforce Teams",
       "GitHub Integration with real commits",
@@ -62,7 +62,7 @@ const SchemaMarkup = () => {
       "price": "7.00",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
-      "url": "https://trooper.so/pricing",
+      "url": "https://gator.so/pricing",
       "priceValidUntil": "2026-12-31",
       "priceSpecification": {
         "@type": "UnitPriceSpecification",
@@ -84,10 +84,10 @@ const SchemaMarkup = () => {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is Trooper?",
+        "name": "What is Gator?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Trooper is an AI workforce platform powered by OpenClaw technology. It lets you deploy multiple AI employees (agents) that work autonomously — making GitHub commits, sending emails, browsing the web, and executing complex multi-step tasks."
+          "text": "Gator is an AI workforce platform powered by OpenClaw technology. It lets you deploy multiple AI employees (agents) that work autonomously — making GitHub commits, sending emails, browsing the web, and executing complex multi-step tasks."
         }
       },
       {
@@ -103,7 +103,7 @@ const SchemaMarkup = () => {
         "name": "How does GitHub integration work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Trooper AI agents connect directly to your GitHub repositories. They can make real commits, create pull requests, review code, manage branches, and resolve merge conflicts — all autonomously."
+          "text": "Gator AI agents connect directly to your GitHub repositories. They can make real commits, create pull requests, review code, manage branches, and resolve merge conflicts — all autonomously."
         }
       },
       {
@@ -111,7 +111,7 @@ const SchemaMarkup = () => {
         "name": "Can multiple AI agents work together?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, Trooper supports multi-agent collaboration. Multiple AI agents can work on the same project, communicate with each other, delegate tasks, and orchestrate complex workflows together."
+          "text": "Yes, Gator supports multi-agent collaboration. Multiple AI agents can work on the same project, communicate with each other, delegate tasks, and orchestrate complex workflows together."
         }
       }
     ]
@@ -125,25 +125,25 @@ const SchemaMarkup = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://trooper.so"
+        "item": "https://gator.so"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Skills Catalog",
-        "item": "https://trooper.so/integration"
+        "item": "https://gator.so/integration"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Pricing",
-        "item": "https://trooper.so/pricing"
+        "item": "https://gator.so/pricing"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Features",
-        "item": "https://trooper.so/features/ai-workforce"
+        "item": "https://gator.so/features/ai-workforce"
       }
     ]
   };

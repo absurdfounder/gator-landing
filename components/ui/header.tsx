@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { ArrowRight, ChevronDown, Github } from 'lucide-react'
 
-import TrooperLogo from '@/components/ui/TrooperLogo'
+import GatorLogo from '@/components/ui/GatorLogo'
 import MobileMenu from './mobile-menu'
 import PixelButton from '@/components/ui/PixelButton'
 import TranslateButton from './TranslateButton'
@@ -75,13 +75,13 @@ export default function Header() {
           darkNav ? 'border-white/[0.06]' : 'border-[var(--color-line)]'
         }`}
       >
-        <TrooperLogo
+        <GatorLogo
           asLink
           priority
+          variant="wordmark"
           theme={darkNav ? 'dark' : 'light'}
           className="shrink-0"
-          characterClassName="h-8 w-8 sm:h-10 sm:w-10 object-contain"
-          textClassName="text-[15px] sm:text-lg"
+          iconClassName="h-8 w-8 sm:h-10 sm:w-10 object-contain"
         />
 
         <nav
@@ -133,7 +133,7 @@ export default function Header() {
           </div>
 
           <PixelButton
-            href="https://app.trooper.so"
+            href="https://app.gator.so"
             external
             size="sm"
             variant="outline"
@@ -148,7 +148,7 @@ export default function Header() {
           </PixelButton>
 
           <PixelButton
-            href="https://app.trooper.so"
+            href="https://app.gator.so"
             external
             size="sm"
             tone="dark"
@@ -172,7 +172,7 @@ function GitHubNavLink({ dark = false }: { dark?: boolean }) {
       href={GITHUB_URL}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Trooper on GitHub"
+      aria-label="Gator on GitHub"
       className={`inline-flex h-9 w-9 items-center justify-center rounded-lg border transition-colors sm:h-10 sm:w-10 ${
         dark
           ? 'border-white/20 text-white/75 hover:bg-white/10 hover:text-white'

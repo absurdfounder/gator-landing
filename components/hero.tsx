@@ -50,7 +50,7 @@ export default function Hero() {
 
               <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center lg:inline-flex lg:flex-nowrap">
                 <PixelButton
-                  href="https://app.trooper.so?ref=herolanding"
+                  href="https://app.gator.so?ref=herolanding"
                   external
                   size="lg"
                   tone="dark"

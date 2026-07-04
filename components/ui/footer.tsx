@@ -1,13 +1,11 @@
 'use client';
 
-import TrooperLogo from '@/components/ui/TrooperLogo';
+import GatorLogo from '@/components/ui/GatorLogo';
 import PixelButton from '@/components/ui/PixelButton';
 import Link from 'next/link';
 import { getFaviconUrl } from '@/lib/favicon';
 import {
   Twitter,
-  Linkedin,
-  Youtube,
   Github,
   Users,
   CheckCircle,
@@ -66,7 +64,7 @@ const featureColumn: FooterColumn = {
     {
       heading: 'Get help',
       links: [
-        { label: 'Contact us', href: 'mailto:support@trooper.so' },
+        { label: 'Contact us', href: 'mailto:support@gator.so' },
         { label: 'Privacy policy', href: '/privacy' },
         { label: 'Terms of service', href: '/terms' },
       ],
@@ -86,9 +84,9 @@ const productColumn: FooterColumn = {
         { label: 'OpenClaw Skills', href: '/integration' },
         { label: 'Agent Loops', href: '/loops' },
         { label: 'Pricing', href: '/pricing' },
-        { label: 'Changelog', href: 'https://app.trooper.so/changelog', external: true },
+        { label: 'Changelog', href: 'https://app.gator.so/changelog', external: true },
         { label: 'Download', href: '/download' },
-        { label: 'Dashboard', href: 'https://app.trooper.so', external: true },
+        { label: 'Dashboard', href: 'https://app.gator.so', external: true },
       ],
     },
     {
@@ -98,8 +96,8 @@ const productColumn: FooterColumn = {
         { label: 'Use Cases', href: '/use-cases' },
         { label: 'Alternatives', href: '/alternatives' },
         { label: 'Documentation', href: 'https://docs.openclaw.ai', external: true },
-        { label: 'Blog', href: 'https://app.trooper.so/blog', external: true },
-        { label: 'Changelog', href: 'https://app.trooper.so/changelog', external: true },
+        { label: 'Blog', href: 'https://app.gator.so/blog', external: true },
+        { label: 'Changelog', href: 'https://app.gator.so/changelog', external: true },
       ],
     },
   ],
@@ -209,10 +207,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand cell */}
           <div className="flex flex-col gap-5 px-6 py-8 md:px-8 md:py-10 lg:border-r lg:border-slate-100 border-b border-slate-100 sm:col-span-2 lg:col-span-1 lg:border-b-0">
-            <CellHeader number="01" eyebrow="Trooper" />
-            <TrooperLogo
-              characterClassName="h-10 w-10 sm:h-11 sm:w-11 object-contain"
-              textClassName="text-lg sm:text-xl"
+            <CellHeader number="01" eyebrow="Gator" />
+            <GatorLogo
+              variant="wordmark"
+              iconClassName="h-10 w-10 sm:h-11 sm:w-11 object-contain"
             />
             <p className="text-sm leading-relaxed text-slate-600">
               AI workforce platform powered by OpenClaw. Multiple AI employees executing tasks
@@ -251,28 +249,6 @@ export default function Footer() {
                 >
                   <Twitter className="h-3.5 w-3.5 text-slate-400" />
                   <span>Twitter (X)</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="flex items-center gap-2 text-sm text-slate-600 transition-colors hover:text-slate-900"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.linkedin.com/company/trooper"
-                >
-                  <Linkedin className="h-3.5 w-3.5 text-slate-400" />
-                  <span>LinkedIn</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="flex items-center gap-2 text-sm text-slate-600 transition-colors hover:text-slate-900"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.youtube.com/@trooper"
-                >
-                  <Youtube className="h-3.5 w-3.5 text-slate-400" />
-                  <span>YouTube</span>
                 </a>
               </li>
             </ul>
@@ -316,7 +292,7 @@ export default function Footer() {
               size="sm"
               variant="outline"
               tone="dark"
-              ariaLabel="Trooper open source on GitHub"
+              ariaLabel="Gator open source on GitHub"
               icon={<Github className="h-3.5 w-3.5" strokeWidth={2} />}
             >
               Open Source
@@ -334,7 +310,7 @@ export default function Footer() {
                 className="h-3.5 w-3.5 rounded-sm"
                 loading="lazy"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = '/images/trooper-logomark.png';
+                  (e.target as HTMLImageElement).src = '/images/gator-icon.png';
                 }}
               />
               <span className="font-semibold text-slate-700">OpenClaw</span>
@@ -342,13 +318,13 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Giant trooper. watermark */}
+        {/* Giant gator. watermark */}
         <div className="overflow-x-hidden border-t border-slate-100 pb-5 pt-3 sm:pb-6 sm:pt-4 md:pb-8">
           <p
             aria-hidden
-            className="pointer-events-none select-none whitespace-nowrap text-center font-brand lowercase leading-none tracking-tight text-slate-200 text-[clamp(2.75rem,18vw,12rem)]"
+            className="pointer-events-none select-none whitespace-nowrap text-center font-display lowercase leading-none tracking-tight text-slate-200 text-[clamp(2.75rem,18vw,12rem)]"
           >
-            trooper.
+            gator.
           </p>
         </div>
       </div>

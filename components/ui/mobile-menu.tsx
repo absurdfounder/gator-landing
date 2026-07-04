@@ -160,7 +160,7 @@ export default function MobileMenu({ dark = false }: { dark?: boolean }) {
           ))}
 
           <a
-            href="https://app.trooper.so"
+            href="https://app.gator.so"
             onClick={close}
             className="flex border-b border-slate-100 py-4 text-[15px] font-semibold text-slate-900 active:text-[#009fbc]"
           >
@@ -170,7 +170,7 @@ export default function MobileMenu({ dark = false }: { dark?: boolean }) {
 
         <div className="border-t border-slate-100 bg-white p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
           <a
-            href="https://app.trooper.so"
+            href="https://app.gator.so"
             target="_blank"
             rel="noopener noreferrer"
             onClick={close}

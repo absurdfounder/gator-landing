@@ -56,7 +56,7 @@ const CANVAS_KEYS = ['tickets/slack-thread.md', 'tickets/slack-lead-4421.md', 't
 
 export const slackScenario: DemoScenario = {
   id: 'slack',
-  org: { name: 'Trooper', domain: 'trooper.so', icon: VIRALHOOKS_FAVICON },
+  org: { name: 'Gator', domain: 'gator.so', icon: VIRALHOOKS_FAVICON },
   channels: [
     { id: 'sales', name: 'sales', preview: 'Sarah: can we schedule a demo this week?', time: 'now', system: false },
     { id: 'general', name: 'general', preview: 'Jordan: ticket #4421 created from Slack', time: '2m', system: false },

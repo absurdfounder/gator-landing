@@ -105,7 +105,7 @@ const faqs: FAQCategories = {
     },
     {
       question: "Are there discounts for startups or nonprofits?",
-      answer: "Yes. We offer special discounts for students, startups, and nonprofits. Contact support@trooper.so with proof of eligibility.",
+      answer: "Yes. We offer special discounts for students, startups, and nonprofits. Contact support@gator.so with proof of eligibility.",
     },
   ],
   Technical: [
@@ -216,12 +216,12 @@ const FAQ: React.FC = () => {
         <p className="text-sm sm:text-base text-slate-600 mt-3">
           Missing intel? Transmit your question to{' '}
           <a
-            href="mailto:vaibhav@trooper.so"
+            href="mailto:support@gator.so"
             className="text-trooper-700 hover:text-trooper hover:underline"
             target="_blank"
             rel="noopener"
           >
-            vaibhav@trooper.so
+            support@gator.so
           </a>
           .
         </p>
