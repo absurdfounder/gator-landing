@@ -178,22 +178,22 @@ export default function LoginClient() {
     return (
       <GatorSignInShell subtitle="You're signed in and ready to go.">
         <div className="space-y-4 text-center">
-          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-400">
+          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
             <CheckCircle2 className="h-6 w-6" />
           </div>
           <div>
-            <p className="font-medium text-white">You&apos;re signed in</p>
-            {signedInEmail ? <p className="mt-1 text-sm text-zinc-400">{signedInEmail}</p> : null}
+            <p className="font-medium text-stone-900">You&apos;re signed in</p>
+            {signedInEmail ? <p className="mt-1 text-sm text-stone-600">{signedInEmail}</p> : null}
           </div>
           {wantsExtensionHandoff ? (
-            <p className="text-sm text-zinc-400">
+            <p className="text-sm text-stone-600">
               Your session was sent to the Gator extension. You can close this tab and return to the
               side panel.
             </p>
           ) : checkoutPlan ? (
             <div className="space-y-3">
-              <p className="text-sm text-zinc-400">
-                Redirecting you to Stripe checkout with <strong className="text-white">{signedInEmail}</strong>{' '}
+              <p className="text-sm text-stone-600">
+                Redirecting you to Stripe checkout with <strong className="text-stone-900">{signedInEmail}</strong>{' '}
                 pre-filled…
               </p>
               <PixelButton type="button" onClick={redirectToAppCheckout} className="w-full">
@@ -201,7 +201,7 @@ export default function LoginClient() {
               </PixelButton>
             </div>
           ) : (
-            <p className="text-sm text-zinc-400">You can close this tab or continue browsing askgator.app.</p>
+            <p className="text-sm text-stone-600">You can close this tab or continue browsing askgator.app.</p>
           )}
         </div>
       </GatorSignInShell>
@@ -216,11 +216,11 @@ export default function LoginClient() {
         disabled={phase === 'loading' || phase === 'handoff'}
         label={buttonLabel}
       />
-      {error ? <p className="mt-4 text-center text-sm text-red-400">{error}</p> : null}
+      {error ? <p className="mt-4 text-center text-sm text-red-600">{error}</p> : null}
       <GatorSignInSecureNote>{secureNote}</GatorSignInSecureNote>
       {wantsExtensionHandoff ? (
-        <p className="mt-3 text-center text-[11px] text-zinc-500">
-          Extension ID <code className="rounded bg-white/5 px-1 py-0.5 text-zinc-400">{extensionId}</code>
+        <p className="mt-3 text-center text-[11px] text-stone-500">
+          Extension ID <code className="rounded bg-stone-100 px-1 py-0.5 text-stone-600">{extensionId}</code>
         </p>
       ) : null}
     </GatorSignInShell>

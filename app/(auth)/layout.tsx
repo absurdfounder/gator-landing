@@ -24,7 +24,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
   
   return (
     <>
-      <main className={`grow ${hideChrome ? 'bg-[#0b0d0b]' : 'bg-gray-50'}`}>
+      <main className={`grow ${hideChrome ? 'bg-stone-50' : 'bg-gray-50'}`}>
         {children}
       </main>
       {!hideNewsletter && <Newsletter />}
