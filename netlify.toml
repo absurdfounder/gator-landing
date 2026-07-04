@@ -3,6 +3,6 @@
 
 [build.environment]
   NODE_VERSION = "20"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+  # Firebase web client keys are public but Netlify secret scan flags them in client/server bundles.
+  SECRETS_SCAN_OMIT_PATHS = "lib/firebase/publicConfig.ts,lib/firebase/serverConfig.ts,lib/firebase/client.ts,app/api/firebase-config/route.ts"
+  SECRETS_SCAN_OMIT_KEYS = "FIREBASE_API_KEY,NEXT_PUBLIC_FIREBASE_API_KEY"
