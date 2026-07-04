@@ -45,8 +45,6 @@ import GovernanceSection from '@/components/GovernanceSection'
 import FAQ from '@/components/faq'
 import FounderMessageSection from '@/components/FounderMessageSection'
 import Footer from '@/components/ui/footer'
-import MobileChannelsSection from '@/components/MobileChannelsSection'
-import YcQuoteSection from '@/components/YcQuoteSection'
 import DarkSplitSection from '@/components/ui/DarkSplitSection'
 import SectionShell from '@/components/ui/SectionShell'
 
@@ -60,7 +58,7 @@ export default function Home() {
       </div>
 
       <DarkSplitSection>
-        <YcQuoteSection />
+        <GovernanceSection variant="dark" eyebrowNumber="01" />
       </DarkSplitSection>
 
       <SectionShell eyebrow="How It Works" eyebrowNumber="02">
@@ -73,23 +71,15 @@ export default function Home() {
         <OldWays />
       </SectionShell>
 
-      <DarkSplitSection innerClassName="bg-gray-900">
-        <MobileChannelsSection />
-      </DarkSplitSection>
-
-      <SectionShell eyebrow="Governance" eyebrowNumber="05">
-        <GovernanceSection />
-      </SectionShell>
-
-      <SectionShell eyebrow="Deployment Plans" eyebrowNumber="06">
+      <SectionShell eyebrow="Deployment Plans" eyebrowNumber="04">
         <SimplePricing />
       </SectionShell>
 
-      <SectionShell eyebrow="Message from the founder" eyebrowNumber="07">
+      <SectionShell eyebrow="Message from the founder" eyebrowNumber="05">
         <FounderMessageSection />
       </SectionShell>
 
-      <SectionShell eyebrow="FAQ" eyebrowNumber="08" bgClass="bg-canvas-warm">
+      <SectionShell eyebrow="FAQ" eyebrowNumber="06" bgClass="bg-canvas-warm">
         <FAQ />
       </SectionShell>
 
