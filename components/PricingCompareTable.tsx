@@ -24,8 +24,8 @@ type ComparisonCategory = {
 
 const PLAN_COLUMNS = [
   { key: 'lite' as const, label: 'Gator Lite' },
-  { key: 'lifetime' as const, label: 'Lifetime' },
-  { key: 'cloud' as const, label: 'Gator Cloud', featured: true },
+  { key: 'lifetime' as const, label: 'Lifetime', featured: true },
+  { key: 'cloud' as const, label: 'Gator Cloud' },
 ];
 
 const comparisonCategories: ComparisonCategory[] = [
