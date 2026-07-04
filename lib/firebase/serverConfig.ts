@@ -1,7 +1,5 @@
 import type { FirebaseOptions } from 'firebase/app'
 
-import { DEFAULT_FIREBASE_CONFIG, resolveFirebaseClientConfig } from '@/lib/firebase/publicConfig'
-
 function pickEnv(...names: string[]) {
   for (const name of names) {
     const value = process.env[name]?.trim()
@@ -10,6 +8,29 @@ function pickEnv(...names: string[]) {
   return undefined
 }
 
+/** Public web client config — same Firebase project as Trooper / askgator auth. */
+const DEFAULT_FIREBASE_CONFIG: FirebaseOptions = {
+  apiKey: 'AIzaSyCbBR2aIwfR-iPHZC6zFLcjS7EdZs5KeNA',
+  authDomain: 'ai-copilot-104.firebaseapp.com',
+  projectId: 'ai-copilot-104',
+  storageBucket: 'ai-copilot-104.appspot.com',
+  messagingSenderId: '836821389098',
+  appId: '1:836821389098:web:3cfb286b3fcb0e728c5853',
+  databaseURL: 'https://ai-copilot-104-default-rtdb.firebaseio.com',
+}
+
+function isCompleteConfig(config: Partial<FirebaseOptions>): config is FirebaseOptions {
+  return Boolean(
+    config.apiKey &&
+      config.authDomain &&
+      config.projectId &&
+      config.storageBucket &&
+      config.messagingSenderId &&
+      config.appId,
+  )
+}
+
+/** Server-only Firebase config for /api/firebase-config. */
 export function readFirebaseServerConfig(): FirebaseOptions {
   const fromServerEnv: Partial<FirebaseOptions> = {
     apiKey: pickEnv('FIREBASE_API_KEY', 'NEXT_PUBLIC_FIREBASE_API_KEY'),
@@ -24,7 +45,9 @@ export function readFirebaseServerConfig(): FirebaseOptions {
     databaseURL: pickEnv('FIREBASE_DATABASE_URL', 'NEXT_PUBLIC_FIREBASE_DATABASE_URL'),
   }
 
-  return resolveFirebaseClientConfig(fromServerEnv.apiKey ? fromServerEnv : null)
-}
+  if (isCompleteConfig(fromServerEnv)) {
+    return fromServerEnv
+  }
 
-export { DEFAULT_FIREBASE_CONFIG }
+  return DEFAULT_FIREBASE_CONFIG
+}
