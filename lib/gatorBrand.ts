@@ -5,6 +5,16 @@ export const GATOR_APP_URL = 'https://app.gator.so'
 export const GATOR_SIGN_IN_URL = GATOR_APP_URL
 export const GATOR_EXTENSION_URL = `${GATOR_APP_URL}?ref=extension`
 
+/** Stripe checkout entry on the app — login required, email pre-filled on Stripe. */
+export function gatorCheckoutUrl(plan: 'lifetime' | 'cloud') {
+  return `${GATOR_APP_URL}?plan=${plan}`
+}
+
+/** Marketing-site login handoff before app checkout. */
+export function gatorLoginCheckoutUrl(plan: 'lifetime' | 'cloud') {
+  return `/login?plan=${plan}`
+}
+
 export type ExtensionDownloadTarget = {
   browser: ExtensionBrowser
   label: string

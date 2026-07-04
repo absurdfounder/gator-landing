@@ -157,7 +157,7 @@ export default function PricingCompareTable() {
             <div key={col.key} className={`${compareCellClass(col.featured)} py-4`}>
               <PixelButton
                 href={planByKey[col.key].href}
-                external
+                external={planByKey[col.key].href.startsWith('http')}
                 size="sm"
                 variant={col.featured ? 'solid' : 'outline'}
                 tone={col.featured ? 'brand' : 'dark'}

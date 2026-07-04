@@ -1,3 +1,5 @@
+import { GATOR_EXTENSION_URL, gatorCheckoutUrl } from './gatorBrand';
+
 /** Public marketing prices — keep in sync with app checkout when billing changes. */
 export const PRICING_USD = {
   lite: 0,
@@ -50,7 +52,7 @@ export const MARKETING_PLANS: MarketingPlan[] = [
       'Bring your own API keys (optional)',
     ],
     cta: 'Get started free',
-    href: 'https://app.gator.so?ref=extension',
+    href: GATOR_EXTENSION_URL,
   },
   {
     id: 'lifetime',
@@ -70,7 +72,7 @@ export const MARKETING_PLANS: MarketingPlan[] = [
       'Lifetime access — no subscription',
     ],
     cta: 'Get lifetime',
-    href: 'https://app.gator.so?plan=lifetime',
+    href: gatorCheckoutUrl('lifetime'),
   },
   {
     id: 'cloud',
@@ -89,6 +91,6 @@ export const MARKETING_PLANS: MarketingPlan[] = [
       'Unlimited connected devices',
     ],
     cta: 'Start Gator Cloud',
-    href: 'https://app.gator.so?plan=cloud',
+    href: gatorCheckoutUrl('cloud'),
   },
 ];

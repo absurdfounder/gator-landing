@@ -7,6 +7,7 @@ import { CheckCircle2, Loader2 } from 'lucide-react'
 
 import Header from '@/components/ui/header'
 import PixelButton from '@/components/ui/PixelButton'
+import { gatorCheckoutUrl } from '@/lib/gatorBrand'
 import { getFirebaseAuth, isFirebaseConfigured } from '@/lib/firebase/client'
 import { sendAuthSessionToExtension } from '@/lib/extensionAuth'
 
@@ -45,6 +46,9 @@ export default function LoginClient() {
   const extensionId = searchParams.get('extensionId')?.trim() || ''
   const returnMode = searchParams.get('returnMode')?.trim() || ''
   const source = searchParams.get('source')?.trim() || ''
+  const checkoutPlanParam = searchParams.get('plan')?.trim().toLowerCase() || ''
+  const checkoutPlan =
+    checkoutPlanParam === 'lifetime' || checkoutPlanParam === 'cloud' ? checkoutPlanParam : null
   const wantsExtensionHandoff = returnMode === 'extensionMessage' && extensionId.length > 0
 
   const [phase, setPhase] = useState<LoginPhase>('loading')
@@ -56,28 +60,45 @@ export default function LoginClient() {
     if (source === 'gator-extension') {
       return 'Sign in with Google to connect your Gator extension account.'
     }
+    if (checkoutPlan === 'lifetime') {
+      return 'Sign in to continue to secure checkout for Gator Lifetime ($37 one-time).'
+    }
+    if (checkoutPlan === 'cloud') {
+      return 'Sign in to continue to secure checkout for Gator Cloud ($20/month).'
+    }
     return 'Sign in with Google to manage billing and your Gator subscription.'
-  }, [source])
+  }, [checkoutPlan, source])
+
+  const redirectToAppCheckout = useCallback(() => {
+    if (!checkoutPlan) return
+    window.location.assign(gatorCheckoutUrl(checkoutPlan))
+  }, [checkoutPlan])
 
   const completeHandoff = useCallback(
     async (user: User) => {
       setSignedInEmail(user.email || '')
-      if (!wantsExtensionHandoff) {
-        setPhase('success')
+      if (wantsExtensionHandoff) {
+        setPhase('handoff')
+        const result = await handoffUserToExtension(user, extensionId)
+        if (result.ok) {
+          setPhase('success')
+          return
+        }
+
+        setPhase('error')
+        setError(result.error)
         return
       }
 
-      setPhase('handoff')
-      const result = await handoffUserToExtension(user, extensionId)
-      if (result.ok) {
+      if (checkoutPlan) {
         setPhase('success')
+        redirectToAppCheckout()
         return
       }
 
-      setPhase('error')
-      setError(result.error)
+      setPhase('success')
     },
-    [extensionId, wantsExtensionHandoff],
+    [checkoutPlan, extensionId, redirectToAppCheckout, wantsExtensionHandoff],
   )
 
   useEffect(() => {
@@ -169,6 +190,15 @@ export default function LoginClient() {
                 <p className="text-sm text-stone-600">
                   Your session was sent to the Gator extension. You can close this tab and return to the side panel.
                 </p>
+              ) : checkoutPlan ? (
+                <div className="space-y-3">
+                  <p className="text-sm text-stone-600">
+                    Redirecting you to Stripe checkout with <strong>{signedInEmail}</strong> pre-filled…
+                  </p>
+                  <PixelButton type="button" onClick={redirectToAppCheckout} className="w-full">
+                    Continue to checkout
+                  </PixelButton>
+                </div>
               ) : (
                 <p className="text-sm text-stone-600">You can close this tab or continue browsing askgator.app.</p>
               )}

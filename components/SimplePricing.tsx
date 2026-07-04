@@ -6,7 +6,8 @@ import { Check, Cloud, Gift, Infinity, type LucideIcon } from 'lucide-react';
 
 import MarketingHeadline from '@/components/marketing/MarketingHeadline';
 import PixelButton from './ui/PixelButton';
-import { formatUsd, MARKETING_PLANS, type MarketingPlan, type PlanId } from '@/lib/pricing';
+import type { MarketingPlan, PlanId } from '@/lib/pricing';
+import { formatUsd, MARKETING_PLANS } from '@/lib/pricing';
 
 type SimplePricingProps = {
   showFullPricingLink?: boolean;
@@ -72,7 +73,7 @@ function PricingCard({ plan }: { plan: MarketingPlan }) {
       <div className="mt-6">
         <PixelButton
           href={plan.href}
-          external
+          external={plan.href.startsWith('http')}
           size="md"
           variant={plan.featured ? 'solid' : 'outline'}
           tone={plan.featured ? 'brand' : 'dark'}
