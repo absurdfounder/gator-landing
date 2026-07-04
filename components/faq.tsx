@@ -140,34 +140,16 @@ interface FAQCellProps {
   question: string;
   answer: string;
   index: number;
-  totalRows: number;
   totalCount: number;
 }
 
-const FAQCell: React.FC<FAQCellProps> = ({ question, answer, index, totalRows, totalCount }) => {
+const FAQCell: React.FC<FAQCellProps> = ({ question, answer, index, totalCount }) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  // For 2-col md grid: cells in left column (even index) need right hairline on md+.
-  // Cells in last row drop bottom hairline.
-  const isLeftCol = index % 2 === 0;
-  const rowIndex = Math.floor(index / 2);
-  const isLastRowDesktop = rowIndex === totalRows - 1;
   const isLastMobile = index === totalCount - 1;
-
-  const borderClasses = [
-    // Mobile: every cell gets a bottom hairline except the final cell
-    !isLastMobile ? 'border-b border-slate-100' : '',
-    // Desktop: bottom hairline unless on last row
-    'md:border-b',
-    isLastRowDesktop ? 'md:border-b-0' : '',
-    // Desktop: right hairline only on left column
-    isLeftCol ? 'md:border-r md:border-slate-100' : '',
-  ]
-    .filter(Boolean)
-    .join(' ');
+  const borderClasses = !isLastMobile ? 'border-b border-slate-100 md:border-b-0' : '';
 
   return (
-    <div className={`relative group bg-white ${borderClasses}`}>
+    <div className={`relative rounded-xl bg-white shadow-sm ring-1 ring-black/5 ${borderClasses}`}>
       <button
         className="w-full text-left px-4 py-4 sm:px-6 sm:py-6 flex items-start gap-3 sm:gap-4"
         onClick={() => setIsOpen(!isOpen)}
@@ -205,7 +187,6 @@ const FAQCell: React.FC<FAQCellProps> = ({ question, answer, index, totalRows, t
 const FAQ: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('General');
   const activeFaqs = faqs[activeTab];
-  const totalRows = Math.ceil(activeFaqs.length / 2);
 
   return (
     <div className="px-0 pt-4 sm:pt-6 pb-12 sm:pb-20 max-w-7xl mx-auto">
@@ -244,15 +225,14 @@ const FAQ: React.FC = () => {
         ))}
       </div>
 
-      {/* 2-column shared-border grid */}
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 border border-slate-100 bg-white">
+      {/* FAQ cards */}
+      <div className="mt-8 grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
         {activeFaqs.map((faq, index) => (
           <FAQCell
             key={`${activeTab}-${index}`}
             question={faq.question}
             answer={faq.answer}
             index={index}
-            totalRows={totalRows}
             totalCount={activeFaqs.length}
           />
         ))}

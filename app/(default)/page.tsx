@@ -40,7 +40,6 @@ import Header from '@/components/ui/header'
 import HowItWorksSteps from '@/components/HowItWorksSteps'
 import BrowserCapabilitySection from '@/components/BrowserCapabilitySection'
 import OldWays from '@/components/OldWays'
-import FloatingScrollIndicator from '@/components/FloatingScrollIndicator'
 import SimplePricing from '@/components/SimplePricing'
 import GovernanceSection from '@/components/GovernanceSection'
 import FAQ from '@/components/faq'
@@ -55,7 +54,6 @@ export default function Home() {
   return (
     <>
       <div className="overflow-x-hidden">
-      <FloatingScrollIndicator />
       <div className="hero-shell bg-canvas">
         <Header />
         <Hero />

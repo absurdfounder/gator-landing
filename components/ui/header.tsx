@@ -36,9 +36,7 @@ export default function Header() {
         }`}
       >
         <div
-          className={`relative mx-auto grid h-14 max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-2 border-l border-r px-3 sm:h-16 sm:gap-3 sm:px-6 lg:grid-cols-[1fr_auto_1fr] ${
-            darkNav ? 'border-white/[0.06]' : 'border-[var(--color-line)]'
-          }`}
+          className="relative mx-auto grid h-14 max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-2 px-3 sm:h-16 sm:gap-3 sm:px-6 lg:grid-cols-[1fr_auto_1fr]"
         >
           <GatorLogo
             asLink

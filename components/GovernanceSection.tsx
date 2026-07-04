@@ -29,9 +29,9 @@ export default function GovernanceSection() {
         </p>
       </motion.div>
 
-      <div className="governance-content grid grid-cols-1 lg:grid-cols-2 border border-slate-100 bg-white overflow-hidden">
+      <div className="governance-content grid grid-cols-1 gap-6 lg:grid-cols-2">
         <motion.div
-          className="governance-block p-4 sm:p-6 md:p-8 lg:border-r border-slate-100"
+          className="governance-block rounded-xl bg-white p-4 shadow-sm ring-1 ring-black/5 sm:p-6 md:p-8"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease }}
@@ -49,7 +49,7 @@ export default function GovernanceSection() {
         </motion.div>
 
         <motion.div
-          className="governance-block p-4 sm:p-6 md:p-8 flex items-center border-t lg:border-t-0 border-slate-100"
+          className="governance-block flex items-center rounded-xl bg-white p-4 shadow-sm ring-1 ring-black/5 sm:p-6 md:p-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-20px' }}

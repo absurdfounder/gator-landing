@@ -39,7 +39,7 @@ export default function HowItWorksSteps() {
         </h2>
       </motion.div>
 
-      <div className="steps-grid grid grid-cols-1 md:grid-cols-3 border border-[var(--color-line)] bg-canvas-section overflow-hidden">
+      <div className="steps-grid grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
         {steps.map((step, index) => (
           <motion.div
             key={step.number}
@@ -47,12 +47,7 @@ export default function HowItWorksSteps() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.08, ease }}
             viewport={{ once: true, margin: '-20px' }}
-            className={[
-              'step-card p-4 sm:p-6 md:p-8',
-              index < steps.length - 1 ? 'border-b md:border-b-0 md:border-r border-[var(--color-line)]' : '',
-            ]
-              .filter(Boolean)
-              .join(' ')}
+            className="step-card rounded-xl bg-canvas-section p-4 shadow-sm ring-1 ring-black/5 sm:p-6 md:p-8"
           >
             <span className="step-number block font-mono text-2xl sm:text-3xl text-slate-300 tabular-nums">
               {step.number}

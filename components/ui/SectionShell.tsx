@@ -41,15 +41,11 @@ export default function SectionShell({
     .filter(Boolean)
     .join(' ');
 
-  // Inner frame: left/right vertical hairlines + a top hairline closing the
-  // box on top. The next SectionShell's own top border serves as this
-  // section's bottom divider, so we omit border-b unless explicitly asked.
+  // Inner frame — content width only, no vertical grid hairlines
   const frameClasses = [
-    'max-w-7xl mx-auto min-w-0 overflow-x-hidden border-[var(--color-line)]',
+    'max-w-7xl mx-auto min-w-0 overflow-x-hidden',
     'px-4 sm:px-6',
     bgClass || 'bg-canvas',
-    !noBorder ? 'border-t border-l border-r' : 'border-l border-r',
-    !noBorderBottom ? 'border-b' : '',
   ]
     .filter(Boolean)
     .join(' ');

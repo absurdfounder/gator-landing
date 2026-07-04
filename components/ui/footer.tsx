@@ -168,20 +168,11 @@ function LinkList({ links }: { links: LinkItem[] }) {
 
 function FooterColumnCell({
   column,
-  borderRight,
 }: {
   column: FooterColumn;
-  borderRight: boolean;
 }) {
   return (
-    <div
-      className={[
-        'flex flex-col gap-6 px-6 py-8 md:px-8 md:py-10',
-        borderRight ? 'lg:border-r lg:border-slate-100' : '',
-      ]
-        .filter(Boolean)
-        .join(' ')}
-    >
+    <div className="flex flex-col gap-6 px-6 py-8 md:px-8 md:py-10">
       <CellHeader number={column.number} eyebrow={column.eyebrow} />
       {column.groups.map((group, gIdx) => (
         <div
@@ -202,11 +193,9 @@ export default function Footer() {
   const linkColumns = [featureColumn, productColumn, ecosystemColumn];
   return (
     <footer className="border-t border-slate-100 bg-white">
-      <div className="mx-auto max-w-7xl border-l border-r border-slate-100">
-        {/* Cell grid: 1 brand cell + 3 link cells, sharing hairlines */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Brand cell */}
-          <div className="flex flex-col gap-5 px-6 py-8 md:px-8 md:py-10 lg:border-r lg:border-slate-100 border-b border-slate-100 sm:col-span-2 lg:col-span-1 lg:border-b-0">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 gap-10 py-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8 lg:py-12">
+          <div className="flex flex-col gap-5 px-6 sm:col-span-2 md:px-8 lg:col-span-1">
             <CellHeader number="01" eyebrow="Gator" />
             <GatorLogo
               variant="wordmark"
@@ -255,26 +244,13 @@ export default function Footer() {
           </div>
 
           {/* Link cells */}
-          {linkColumns.map((col, idx) => {
-            const isLast = idx === linkColumns.length - 1;
-            const isMobileLast = idx === linkColumns.length - 1;
-            return (
-              <div
-                key={col.number}
-                className={[
-                  !isMobileLast ? 'border-b border-slate-100 sm:border-b lg:border-b-0' : '',
-                  idx % 2 === 0 ? 'sm:border-r sm:border-slate-100 lg:border-r-0' : '',
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
-              >
-                <FooterColumnCell column={col} borderRight={!isLast} />
+          {linkColumns.map((col) => (
+              <div key={col.number}>
+                <FooterColumnCell column={col} />
               </div>
-            );
-          })}
+            ))}
         </div>
 
-        {/* Bottom bar */}
         <div className="flex flex-col gap-4 border-t border-slate-100 px-6 py-5 md:flex-row md:items-center md:justify-between md:px-8">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-500 md:text-sm">
             <span>© Boring Sites LLC. All rights reserved.</span>

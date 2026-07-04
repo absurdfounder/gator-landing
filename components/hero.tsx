@@ -14,7 +14,7 @@ const TRUST_ITEMS = ['Free Chrome extension', 'Runs in your browser', 'OpenClaw-
 export default function Hero() {
   return (
     <section className="relative overflow-x-hidden bg-canvas text-ink">
-      <div className="mx-auto max-w-7xl min-w-0 border-l border-r border-[var(--color-line)]">
+      <div className="mx-auto max-w-7xl min-w-0">
         <div className="pb-0 pt-[calc(var(--site-header-height)+1.25rem)] sm:pt-[calc(var(--site-header-height)+1.75rem)] md:pt-[calc(var(--site-header-height)+2rem)]">
           <div className="grid min-w-0 items-center gap-8 px-4 sm:gap-10 sm:px-6 lg:grid-cols-12 lg:gap-14 xl:gap-16">
             <div className="min-w-0 lg:col-span-7">
