@@ -11,7 +11,6 @@ import { TROOPER_DEMO as C, KANBAN_COLUMNS, type DemoColumnId } from './demoThem
 import { DemoMainPage, DEMO_AGENTS } from './demoPages';
 import { DemoTaskModal } from './demoTaskModal';
 import { DemoFavicon } from './DemoFavicon';
-import PixelDitherGradient from './ui/PixelDitherGradient';
 import {
   type DemoArtifact, type DemoFeedItem, type DemoSubtask, type TaskExecStep, type DemoWorkspaceMode,
 } from './demoTaskExecution';
@@ -921,7 +920,10 @@ export default function TrooperDemo({ scenarioId = DEFAULT_DEMO_SCENARIO_ID }: {
       `}</style>
 
       <div className="relative border-t border-slate-100 px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-12">
-        <PixelDitherGradient />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-[#eef8dc] via-[#c8e88a] to-[#8cc352]"
+        />
         <div className="Trooper-demo relative z-10 hidden lg:block" style={{ width: "100%", margin: "0 auto", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", fontSize: 13 }}>
         <DemoScaleFrame>
         <div style={{
