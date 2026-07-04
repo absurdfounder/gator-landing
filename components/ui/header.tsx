@@ -66,7 +66,7 @@ export default function Header() {
               size="sm"
               variant="outline"
               tone="dark"
-              className={`hidden sm:inline-flex ${
+              className={`hidden shrink-0 items-center sm:inline-flex ${
                 darkNav
                   ? '!border-white/25 !text-white hover:!bg-white/10 focus-visible:!ring-offset-[#141a10]'
                   : ''
@@ -77,7 +77,7 @@ export default function Header() {
 
             <DownloadExtensionButton
               size="sm"
-              className={`hidden md:inline-flex ${darkNav ? 'focus-visible:!ring-offset-split' : ''}`}
+              className={`hidden shrink-0 md:inline-flex ${darkNav ? 'focus-visible:!ring-offset-split' : ''}`}
             />
 
             <MobileMenu dark={darkNav} />

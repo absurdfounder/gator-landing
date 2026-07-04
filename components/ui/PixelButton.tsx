@@ -44,7 +44,7 @@ interface ButtonProps extends BasePropsCommon, ButtonRest {
 type PixelButtonProps = AnchorProps | ButtonProps;
 
 const SIZE_STYLES: Record<Size, string> = {
-  sm: 'min-h-[36px] rounded-lg px-3.5 py-2 text-sm',
+  sm: 'h-9 rounded-xl px-4 text-sm',
   md: 'min-h-[40px] rounded-xl px-4 py-2.5 text-sm',
   lg: 'min-h-[44px] rounded-xl px-5 py-3 text-[15px]',
 };

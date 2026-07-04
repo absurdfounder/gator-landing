@@ -105,7 +105,9 @@ export default function MobileMenu({ dark = false }: { dark?: boolean }) {
           </nav>
 
           <div className="border-t border-slate-100 bg-white p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
-            <DownloadExtensionButton size="md" className="w-full justify-center" onClick={close} />
+            <div className="flex justify-center">
+              <DownloadExtensionButton size="md" onClick={close} />
+            </div>
             <a
               href="/pricing"
               onClick={close}
