@@ -15,7 +15,7 @@ const INSTALL_STEPS = [
     illustration: <OpenInstallerIllustration />,
     text: (
       <>
-        Open <strong className="font-semibold text-ink">Trooper-Windows-x64-Setup.exe</strong> from
+        Open <strong className="font-semibold text-ink">Gator-Windows-x64-Setup.exe</strong> from
         your <strong className="font-semibold text-ink">Downloads</strong> folder
       </>
     ),
@@ -24,7 +24,7 @@ const INSTALL_STEPS = [
     illustration: <RunInstallerIllustration />,
     text: (
       <>
-        Run the <strong className="font-semibold text-ink">Trooper</strong> installer and follow the
+        Run the <strong className="font-semibold text-ink">Gator</strong> installer and follow the
         setup steps
       </>
     ),
@@ -33,7 +33,7 @@ const INSTALL_STEPS = [
     illustration: <OpenFromAppsIllustration />,
     text: (
       <>
-        Open <strong className="font-semibold text-ink">Trooper</strong> from{' '}
+        Open <strong className="font-semibold text-ink">Gator</strong> from{' '}
         <strong className="font-semibold text-ink">Settings</strong> or the Start menu
       </>
     ),

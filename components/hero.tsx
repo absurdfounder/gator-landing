@@ -1,15 +1,12 @@
 'use client';
 
-import { ArrowRight } from 'lucide-react';
-
 import HeroRotatingHeadline from './HeroRotatingHeadline';
 import HeroArticleDemo from './HeroArticleDemo';
-import PixelButton from './ui/PixelButton';
 import FernCircleCheckIcon from './ui/FernCircleCheckIcon';
 import HeroCharacterCarousel from './HeroCharacterCarousel';
-import { GATOR_EXTENSION_URL } from '@/lib/gatorBrand';
+import DownloadExtensionButton from './ui/DownloadExtensionButton';
 
-const TRUST_ITEMS = ['Free Chrome extension', 'Runs in your browser', 'OpenClaw-powered'] as const;
+const TRUST_ITEMS = ['Free browser extension', 'Runs in your browser', 'OpenClaw-powered'] as const;
 
 export default function Hero() {
   return (
@@ -23,16 +20,7 @@ export default function Hero() {
               </div>
 
               <div className="mt-6 sm:mt-8">
-                <PixelButton
-                  href={GATOR_EXTENSION_URL}
-                  external
-                  size="lg"
-                  tone="dark"
-                  className="w-full shrink-0 sm:w-auto"
-                  icon={<ArrowRight className="h-4 w-4" />}
-                >
-                  Download extension
-                </PixelButton>
+                <DownloadExtensionButton size="lg" className="w-full sm:w-auto" />
               </div>
 
               <ul className="fern-trust-row mt-5" aria-label="Product highlights">

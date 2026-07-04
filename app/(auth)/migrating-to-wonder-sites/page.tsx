@@ -3,10 +3,10 @@ import Image from 'next/image'
 import Header from '@/components/ui/header';
 
 export const metadata = {
-    title: 'Migrate to Trooper',
-    description: 'Migrate your helpdesk, blog, or even marketplace to Trooper. Start living a hassle free life just SET and FORGET.',
+    title: 'Migrate to Gator',
+    description: 'Migrate your helpdesk, blog, or even marketplace to Gator. Start living a hassle free life just SET and FORGET.',
     alternates: {
-        canonical: "https://trooper.so/migrating-to-wonder-sites",
+        canonical: "https://gator.so/migrating-to-wonder-sites",
       },
     openGraph: {
         images: [
@@ -85,7 +85,7 @@ export default function PageDetail() {
                                     Migrate from 100+ Knowledge base platforms or other websites.
                                 </h2>
                                 <p className="mt-6 text-slate-600 sm:text-lg sm:leading-8">
-                                    Migrate your articles from pretty much any knowledge base platform to Trooper. Our experts will make sure it’s a hassle-free and quick transition.
+                                    Migrate your articles from pretty much any knowledge base platform to Gator. Our experts will make sure it’s a hassle-free and quick transition.
                                 </p>
                             </div>
                         </div>

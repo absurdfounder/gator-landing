@@ -61,7 +61,7 @@ export default function Helpdesk_Type() {
             </p>
 
             <p className="text-lg text-gray-900 font-medium italic">
-              Or... you could just use Trooper...
+              Or... you could just use Gator...
             </p>
           </div>
         </div>

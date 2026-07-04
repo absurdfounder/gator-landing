@@ -32,7 +32,7 @@ export default function SubpageLayout({ content }: { content: SubpageContent }) 
 
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <PixelButton
-                href="https://app.trooper.so"
+                href="https://app.gator.so"
                 external
                 size="lg"
                 tone="brand"

@@ -49,9 +49,9 @@ function build(args: BuildArgs): UseCasePageContent {
     missionLabel: 'Use case brief',
     demoId: args.demoId ?? 'launch',
     meta: {
-      title: `${args.title} | Trooper`,
+      title: `${args.title} | Gator`,
       description: args.description.slice(0, 160),
-      canonical: `https://trooper.so/use-cases/${args.slug}`,
+      canonical: `https://gator.so/use-cases/${args.slug}`,
     },
   };
 }
@@ -62,10 +62,10 @@ const useCases: Record<string, UseCasePageContent> = {
     title: 'AI agent for lead generation',
     titleAccent: 'prospects to pipeline, traced',
     description:
-      'Trooper agents research prospects on LinkedIn, enrich accounts, find emails, draft personalized outreach, and log everything to HubSpot — one autonomous mission from list to first touch.',
+      'Gator agents research prospects on LinkedIn, enrich accounts, find emails, draft personalized outreach, and log everything to HubSpot — one autonomous mission from list to first touch.',
     overviewTitle: 'Lead gen that executes, not just researches',
     overviewParagraphs: [
-      'Traditional lead gen stacks require exporting between Clay, Hunter, Apollo, and your CRM. Trooper agents run the full chain: LinkedIn research, account briefs, email discovery, outreach drafts, and CRM updates on one traced board.',
+      'Traditional lead gen stacks require exporting between Clay, Hunter, Apollo, and your CRM. Gator agents run the full chain: LinkedIn research, account briefs, email discovery, outreach drafts, and CRM updates on one traced board.',
       'Every prospect touch is a ticket with sources, drafts, and approval gates. Reps review before send; managers audit the full thread.',
       'Scale outbound without adding headcount — agents work 24/7 across time zones while humans close deals.',
     ],
@@ -100,7 +100,7 @@ const useCases: Record<string, UseCasePageContent> = {
       'Deploy agents that build account briefs, map decision-makers, track company news, and prepare talking points — grounded in LinkedIn, CRM, and web research before every sales conversation.',
     overviewTitle: 'Research ops that reps actually use',
     overviewParagraphs: [
-      'Reps spend hours in tabs before discovery calls. Trooper agents compile account briefs from LinkedIn, HubSpot history, recent news, and competitive signals — delivered as a one-page brief linked to the deal record.',
+      'Reps spend hours in tabs before discovery calls. Gator agents compile account briefs from LinkedIn, HubSpot history, recent news, and competitive signals — delivered as a one-page brief linked to the deal record.',
       'Research missions are traced tickets. Managers see sources, reasoning, and output — not black-box summaries.',
       'Fan out research across 50 accounts in parallel. Agents synthesize into structured CRM fields and Notion pages.',
     ],
@@ -132,10 +132,10 @@ const useCases: Record<string, UseCasePageContent> = {
     title: 'AI agent that updates CRM',
     titleAccent: 'HubSpot hygiene on autopilot',
     description:
-      'Trooper agents log calls, update deal stages, create tasks, fix data hygiene issues, and sync meeting notes to HubSpot — with human approval before every write.',
+      'Gator agents log calls, update deal stages, create tasks, fix data hygiene issues, and sync meeting notes to HubSpot — with human approval before every write.',
     overviewTitle: 'CRM ops without the data-entry tax',
     overviewParagraphs: [
-      'Reps hate CRM data entry. Trooper agents listen to meeting outcomes, email threads, and Slack updates — then propose CRM writes you approve in one click.',
+      'Reps hate CRM data entry. Gator agents listen to meeting outcomes, email threads, and Slack updates — then propose CRM writes you approve in one click.',
       'Pipeline health reviews run on cron: stale deals flagged, slipping close dates surfaced, missing fields audited.',
       'Every CRM action is a traced ticket. Compliance and sales ops can audit exactly what changed and why.',
     ],
@@ -145,7 +145,7 @@ const useCases: Record<string, UseCasePageContent> = {
       { title: 'Approval gates', description: 'Agents propose CRM writes; you approve before anything changes.' },
     ],
     howItWorks: [
-      'Connect HubSpot via OAuth in Trooper Settings → Plugins',
+      'Connect HubSpot via OAuth in Gator Settings → Plugins',
       'Agent monitors Slack, email, and calendar for CRM-relevant events',
       'Proposed updates appear on the board for approval',
       'Approved writes sync to HubSpot with full audit trail',
@@ -169,7 +169,7 @@ const useCases: Record<string, UseCasePageContent> = {
       'Agents research prospects, find verified email addresses, draft personalized outreach, and log contacts to CRM — the complete find-and-reach workflow, not just a lookup tool.',
     overviewTitle: 'Beyond email lookup',
     overviewParagraphs: [
-      'Email finders give you an address. Trooper agents find the email, research the prospect for personalization context, draft the first touch, and create the CRM record — ready for your approval before send.',
+      'Email finders give you an address. Gator agents find the email, research the prospect for personalization context, draft the first touch, and create the CRM record — ready for your approval before send.',
       'Combine LinkedIn research with email discovery in one mission. No exporting between Hunter, Clay, and your sequencing tool.',
       'Traced tickets show which sources were used and what was drafted — full transparency for compliance-conscious teams.',
     ],
@@ -203,9 +203,9 @@ const useCases: Record<string, UseCasePageContent> = {
       'Deploy coding agents (Claude Code, Codex, OpenCode) that open PRs, fix CI, address review comments, and ship features — with traced diffs, test output, and human merge approval.',
     overviewTitle: 'Coding agents that ship',
     overviewParagraphs: [
-      'Chat-based code assistants suggest snippets. Trooper coding agents operate on real repos — branching, committing, opening PRs, and debugging CI with full terminal traces on the ticket Canvas.',
+      'Chat-based code assistants suggest snippets. Gator coding agents operate on real repos — branching, committing, opening PRs, and debugging CI with full terminal traces on the ticket Canvas.',
       'Run multiple harnesses in parallel: Claude Code hardens a parser, Codex dedupes ETL rows, your custom agent drafts release notes — one board, shared org memory.',
-      'BYOA: your Claude, OpenAI, or Cursor subscriptions. Trooper routes work, enforces permissions, and keeps AGENTS.md loaded on every mission.',
+      'BYOA: your Claude, OpenAI, or Cursor subscriptions. Gator routes work, enforces permissions, and keeps AGENTS.md loaded on every mission.',
     ],
     benefits: [
       { title: 'Real PRs', description: 'Agents open draft PRs with diffs, test output, and CI status — not code blocks in chat.' },
@@ -213,7 +213,7 @@ const useCases: Record<string, UseCasePageContent> = {
       { title: 'Human merge gates', description: 'Senior engineers approve merges. Agents handle the grind.' },
     ],
     howItWorks: [
-      'Connect GitHub and assign coding agents on your Trooper roster',
+      'Connect GitHub and assign coding agents on your Gator roster',
       'Delegate a task: fix CI, address review comments, or implement a feature',
       'Agent branches, commits, runs tests, and opens a draft PR',
       'You review diffs on Canvas and approve merge',
@@ -234,10 +234,10 @@ const useCases: Record<string, UseCasePageContent> = {
     title: 'AI agent that uses a browser',
     titleAccent: 'navigate, fill forms, extract data',
     description:
-      'Trooper agents control a real browser — navigating websites, filling forms, extracting data, and completing web workflows that APIs alone cannot handle.',
+      'Gator agents control a real browser — navigating websites, filling forms, extracting data, and completing web workflows that APIs alone cannot handle.',
     overviewTitle: 'Web automation with agent judgment',
     overviewParagraphs: [
-      'Many workflows require browser interaction — legacy portals, dynamic forms, and sites without APIs. Trooper agents use OpenClaw browser control to navigate, interact, and extract data with full screenshot traces.',
+      'Many workflows require browser interaction — legacy portals, dynamic forms, and sites without APIs. Gator agents use OpenClaw browser control to navigate, interact, and extract data with full screenshot traces.',
       'Agents reason about page state, handle CAPTCHAs by escalating to humans, and adapt when layouts change — unlike brittle scrapers.',
       'Browser actions join multi-step missions: research a site, extract data, update a spreadsheet, and post results to Slack.',
     ],
@@ -248,7 +248,7 @@ const useCases: Record<string, UseCasePageContent> = {
     ],
     howItWorks: [
       'Describe the web task: extract pricing, fill a form, or research a site',
-      'Agent opens a browser session on your private Trooper server',
+      'Agent opens a browser session on your private Gator server',
       'Actions traced with screenshots on the ticket thread',
       'Extracted data flows to Sheets, CRM, or Slack as needed',
     ],
@@ -272,7 +272,7 @@ const useCases: Record<string, UseCasePageContent> = {
       'Deploy support agents that triage tickets, search knowledge bases, draft responses, and escalate complex issues — with human approval before customer-facing replies.',
     overviewTitle: 'Support ops that scale without burnout',
     overviewParagraphs: [
-      'Support teams drown in repetitive tickets. Trooper agents triage incoming requests, search Notion and help-center docs for answers, and draft responses grounded in your actual knowledge base.',
+      'Support teams drown in repetitive tickets. Gator agents triage incoming requests, search Notion and help-center docs for answers, and draft responses grounded in your actual knowledge base.',
       'Complex issues escalate to humans with full context — conversation history, attempted resolutions, and customer account data from CRM.',
       'Agents work 24/7 across time zones. Humans handle judgment calls and relationship-sensitive replies.',
     ],
@@ -282,7 +282,7 @@ const useCases: Record<string, UseCasePageContent> = {
       { title: 'Smart escalation', description: 'Complex issues routed to humans with full context and attempted resolutions.' },
     ],
     howItWorks: [
-      'Connect support channels (email, Slack, Zendesk) to Trooper',
+      'Connect support channels (email, Slack, Zendesk) to Gator',
       'Agent triages incoming requests and searches knowledge base',
       'Draft response presented for human approval',
       'Approved replies sent; ticket updated with full trace',
@@ -303,10 +303,10 @@ const useCases: Record<string, UseCasePageContent> = {
     title: 'AI agent for operations',
     titleAccent: 'runbooks, reports, and process automation',
     description:
-      'Trooper ops agents execute runbooks, generate reports, sync data between tools, and keep processes running on schedule — traced, approval-gated, and running 24/7.',
+      'Gator ops agents execute runbooks, generate reports, sync data between tools, and keep processes running on schedule — traced, approval-gated, and running 24/7.',
     overviewTitle: 'Ops that runs while you command',
     overviewParagraphs: [
-      'Operations teams juggle spreadsheets, email threads, Slack channels, and manual checklists. Trooper agents execute runbooks on cron — daily reports, data syncs, onboarding checklists, and incident response.',
+      'Operations teams juggle spreadsheets, email threads, Slack channels, and manual checklists. Gator agents execute runbooks on cron — daily reports, data syncs, onboarding checklists, and incident response.',
       'Every ops mission is a traced ticket. When something fails, you see exactly which step broke and why.',
       'Combine Sheets, Notion, Slack, and Gmail in multi-step ops workflows — one agent, one board.',
     ],
@@ -340,17 +340,17 @@ const useCases: Record<string, UseCasePageContent> = {
       'Deploy an AI workforce that handles sales outreach, code reviews, customer support, and ops runbooks — giving startup teams the output of a much larger org from day one.',
     overviewTitle: 'Scale without scaling headcount',
     overviewParagraphs: [
-      'Startups need sales, engineering, support, and ops — but can\'t hire for all four at once. Trooper deploys AI employees for each function on one unit, sharing org memory and a unified task board.',
+      'Startups need sales, engineering, support, and ops — but can\'t hire for all four at once. Gator deploys AI employees for each function on one unit, sharing org memory and a unified task board.',
       'Founders command from Slack. Agents execute sales research, PR reviews, support triage, and weekly reports — 24/7 across time zones.',
-      'BYOA pricing: bring your Claude or OpenAI subscriptions. Trooper provides the harness, hosting, and coordination.',
+      'BYOA pricing: bring your Claude or OpenAI subscriptions. Gator provides the harness, hosting, and coordination.',
     ],
     benefits: [
-      { title: 'Multi-function unit', description: 'Sales, coding, support, and ops agents on one Trooper deployment.' },
+      { title: 'Multi-function unit', description: 'Sales, coding, support, and ops agents on one Gator deployment.' },
       { title: 'Founder command', description: 'Delegate from Slack or mobile — agents execute while you focus on product.' },
-      { title: 'Startup-friendly pricing', description: 'Your model costs + Trooper hosting — not per-seat enterprise pricing.' },
+      { title: 'Startup-friendly pricing', description: 'Your model costs + Gator hosting — not per-seat enterprise pricing.' },
     ],
     howItWorks: [
-      'Deploy a Trooper unit and configure your first agents (sales + coding)',
+      'Deploy a Gator unit and configure your first agents (sales + coding)',
       'Connect GitHub, HubSpot, Gmail, and Slack plugins',
       'Delegate tasks from chat: research prospects, review PRs, triage support',
       'Scale agent roster as the team grows — same unit, more soldiers',
@@ -375,7 +375,7 @@ const useCases: Record<string, UseCasePageContent> = {
       'Give your small business AI employees for email, scheduling, customer follow-ups, invoicing, and social media — working 24/7 so you can focus on customers and growth.',
     overviewTitle: 'Enterprise capability, small business budget',
     overviewParagraphs: [
-      'Small businesses wear every hat — sales, support, bookkeeping, marketing. Trooper agents handle the repetitive work: inbox triage, appointment reminders, invoice follow-ups, and weekly reports.',
+      'Small businesses wear every hat — sales, support, bookkeeping, marketing. Gator agents handle the repetitive work: inbox triage, appointment reminders, invoice follow-ups, and weekly reports.',
       'No IT team required. Connect Gmail, Google Calendar, and Stripe in minutes. Command agents from your phone via WhatsApp or Slack.',
       'Human approval on every customer email and payment action. Agents propose; you stay in control.',
     ],
@@ -385,7 +385,7 @@ const useCases: Record<string, UseCasePageContent> = {
       { title: 'No IT required', description: 'Connect tools via OAuth in minutes. Command from phone via WhatsApp or Slack.' },
     ],
     howItWorks: [
-      'Sign up and deploy your Trooper unit in under 10 minutes',
+      'Sign up and deploy your Gator unit in under 10 minutes',
       'Connect Gmail, Google Calendar, and Stripe via OAuth',
       'Tell your agent what to handle: inbox, follow-ups, or reports',
       'Approve actions from your phone — agents work while you serve customers',
@@ -413,10 +413,10 @@ export function allUseCaseSlugs(): string[] {
 }
 
 export const useCaseHubMeta = {
-  title: 'AI Agent Use Cases | Trooper',
+  title: 'AI Agent Use Cases | Gator',
   description:
-    'See how Trooper AI agents handle lead generation, sales research, CRM updates, code writing, browser automation, customer support, and operations for startups and small businesses.',
-  canonical: 'https://trooper.so/use-cases',
+    'See how Gator AI agents handle lead generation, sales research, CRM updates, code writing, browser automation, customer support, and operations for startups and small businesses.',
+  canonical: 'https://gator.so/use-cases',
 };
 
 export const useCaseSocialImage = SOCIAL_IMAGE;

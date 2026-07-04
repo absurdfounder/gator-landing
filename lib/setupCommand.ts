@@ -20,11 +20,11 @@ export type SetupTarget = {
 export const SETUP_TARGETS: SetupTarget[] = [
   {
     id: 'trooper',
-    label: 'Trooper CLI',
-    iconSrc: '/images/trooper-logomark.png',
+    label: 'Gator CLI',
+    iconSrc: '/images/gator-icon.png',
     command: TROOPER_CLI_COMMAND,
     prompt:
-      'Install Trooper on your machine, then open the app and connect your API keys:\n\nnpx -y trooper-cli',
+      'Install Gator on your machine, then open the app and connect your API keys:\n\nnpx -y trooper-cli',
   },
   {
     id: 'claude-code',
@@ -32,7 +32,7 @@ export const SETUP_TARGETS: SetupTarget[] = [
     iconDomain: 'anthropic.com',
     command: TROOPER_CLI_COMMAND,
     prompt:
-      'Set up Trooper locally, then point Claude Code at your Trooper workspace:\n\nnpx -y trooper-cli',
+      'Set up Gator locally, then point Claude Code at your Gator workspace:\n\nnpx -y trooper-cli',
   },
   {
     id: 'cursor',
@@ -40,7 +40,7 @@ export const SETUP_TARGETS: SetupTarget[] = [
     iconDomain: 'cursor.com',
     command: TROOPER_CLI_COMMAND,
     prompt:
-      'Install Trooper on your laptop and connect Cursor to your Trooper agents:\n\nnpx -y trooper-cli',
+      'Install Gator on your laptop and connect Cursor to your Gator agents:\n\nnpx -y trooper-cli',
   },
   {
     id: 'openclaw',
@@ -48,7 +48,7 @@ export const SETUP_TARGETS: SetupTarget[] = [
     iconDomain: 'openclaw.ai',
     command: TROOPER_CLI_COMMAND,
     prompt:
-      'Install Trooper with the OpenClaw runtime on your machine:\n\nnpx -y trooper-cli',
+      'Install Gator with the OpenClaw runtime on your machine:\n\nnpx -y trooper-cli',
   },
   {
     id: 'codex',
@@ -56,7 +56,7 @@ export const SETUP_TARGETS: SetupTarget[] = [
     iconDomain: 'openai.com',
     command: TROOPER_CLI_COMMAND,
     prompt:
-      'Install Trooper locally, then run Codex against your Trooper workspace:\n\nnpx -y trooper-cli',
+      'Install Gator locally, then run Codex against your Gator workspace:\n\nnpx -y trooper-cli',
   },
 ];
 

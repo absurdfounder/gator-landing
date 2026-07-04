@@ -33,7 +33,7 @@ export default function ChannelSubpageLayout({ content }: { content: ChannelPage
 
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <PixelButton
-                href="https://app.trooper.so"
+                href="https://app.gator.so"
                 external
                 size="lg"
                 tone="brand"
@@ -116,13 +116,13 @@ export default function ChannelSubpageLayout({ content }: { content: ChannelPage
 
             <div className="mt-10">
               <PixelButton
-                href="https://app.trooper.so"
+                href="https://app.gator.so"
                 external
                 size="lg"
                 tone="brand"
                 icon={<ArrowRight className="h-4 w-4" />}
               >
-                Open Trooper settings
+                Open Gator settings
               </PixelButton>
             </div>
           </div>

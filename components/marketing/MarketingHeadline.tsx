@@ -51,7 +51,7 @@ function InlineTrooperMark({ size }: { size: MarketingHeadlineProps['size'] }) {
   return (
     <span className="inline-flex mx-1.5 sm:mx-2 align-[-0.15em]" aria-hidden>
       <img
-        src="/images/trooper-logomark.png"
+        src="/images/gator-icon.png"
         alt=""
         width={36}
         height={36}

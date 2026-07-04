@@ -82,9 +82,9 @@ function buildPage(args: BuildArgs): SubpageContent {
     ...args,
     demoId,
     meta: {
-      title: `${args.title} | Trooper`,
+      title: `${args.title} | Gator`,
       description: args.description,
-      canonical: `https://trooper.so/${base}/${args.slug}`,
+      canonical: `https://gator.so/${base}/${args.slug}`,
     },
   };
 }
@@ -92,7 +92,7 @@ function buildPage(args: BuildArgs): SubpageContent {
 const genericFeatureBenefits = (topic: string): SubpageBenefit[] => [
   {
     title: 'Autonomous execution',
-    description: `Trooper agents handle ${topic} end-to-end — creating tickets, taking action, and reporting back.`,
+    description: `Gator agents handle ${topic} end-to-end — creating tickets, taking action, and reporting back.`,
   },
   {
     title: 'Traced decisions',
@@ -127,10 +127,10 @@ const featureContent: Record<string, SubpageContent> = {
     title: 'Multiple AI employees',
     titleAccent: 'working as a team',
     description:
-      'Build AI workforce teams with Trooper. Deploy multiple AI employees that collaborate, share context, and execute tasks autonomously.',
+      'Build AI workforce teams with Gator. Deploy multiple AI employees that collaborate, share context, and execute tasks autonomously.',
     overviewTitle: 'Why AI organizations outperform single agents',
     overviewParagraphs: [
-      'Traditional AI assistants handle one task at a time. Trooper lets you create AI organizations — multiple employees with roles, skills, and system access.',
+      'Traditional AI assistants handle one task at a time. Gator lets you create AI organizations — multiple employees with roles, skills, and system access.',
       'Each employee can own GitHub, email, browsers, or internal tools while sharing organizational memory and coordinating automatically.',
       'Engineering gets code review agents, marketing gets content agents, support gets triage agents — all under one command structure.',
     ],
@@ -149,7 +149,7 @@ const featureContent: Record<string, SubpageContent> = {
     description: 'Autonomous commits, pull requests, code reviews, and issue triage powered by OpenClaw agents.',
     overviewTitle: 'Agents that contribute like developers',
     overviewParagraphs: [
-      'Trooper agents make real commits, open PRs, review changes, and triage issues — not just suggest diffs in chat.',
+      'Gator agents make real commits, open PRs, review changes, and triage issues — not just suggest diffs in chat.',
       'They understand repo context, branch strategy, and your review standards through persistent memory.',
       'Connect once and agents keep shipping while you stay in command on merges and releases.',
     ],
@@ -211,7 +211,7 @@ const featureContent: Record<string, SubpageContent> = {
     overviewParagraphs: [
       'Every org runs on a dedicated OpenClaw runtime with terminal, filesystem, and process access.',
       'Agents install dependencies, run builds, manage configs, and execute scripts within your policies.',
-      'Self-host or use Trooper Cloud — your data stays isolated per organization.',
+      'Self-host or use Gator Cloud — your data stays isolated per organization.',
     ],
     benefits: genericFeatureBenefits('system operations'),
   }),
@@ -266,11 +266,11 @@ const featureContent: Record<string, SubpageContent> = {
     missionLabel: 'Feature brief',
     title: 'OpenClaw runtime',
     titleAccent: 'you control',
-    description: 'Trooper deploys OpenClaw on a private server per org — full runtime with a polished command UI.',
+    description: 'Gator deploys OpenClaw on a private server per org — full runtime with a polished command UI.',
     overviewTitle: 'Private server per organization',
     overviewParagraphs: [
       'OpenClaw handles orchestration, memory, skills, and tool execution under the hood.',
-      'Trooper adds org charts, ticketing, governance, and a UI your team actually uses.',
+      'Gator adds org charts, ticketing, governance, and a UI your team actually uses.',
       'Data stays siloed per company with audit trails on every agent action.',
     ],
     benefits: genericFeatureBenefits('OpenClaw operations'),
@@ -284,7 +284,7 @@ const featureContent: Record<string, SubpageContent> = {
     description: 'Talk to your workforce on WhatsApp, Telegram, Discord, Slack, Signal, and more. Per-channel setup guides at trooper.so/channels.',
     overviewTitle: 'Command from any channel',
     overviewParagraphs: [
-      'Assign work from the channel you use daily — agents pick it up in Trooper automatically.',
+      'Assign work from the channel you use daily — agents pick it up in Gator automatically.',
       'Threaded tickets keep chat chaos out of your ops record.',
       'Same agents, same memory, whether you message from mobile or desktop.',
       'Browse setup guides for Slack, WhatsApp, Telegram, Discord, Signal, iMessage, and Email at /channels.',
@@ -297,7 +297,7 @@ const legacyFeatureSlugs: Record<string, { title: string; description: string }>
   'ai-documentation-agent': { title: 'AI Documentation Agent', description: 'Generate and maintain technical documentation from code and conversations.' },
   'ai-help-center': { title: 'AI Help Center', description: 'Self-service help center powered by your knowledge base and AI agents.' },
   'automated-screenshots-for-docs': { title: 'Automated Screenshots', description: 'Capture UI screenshots automatically for docs and changelogs.' },
-  'chrome-extension-for-documentation': { title: 'Chrome Extension', description: 'Document workflows directly from the browser with Trooper agents.' },
+  'chrome-extension-for-documentation': { title: 'Chrome Extension', description: 'Document workflows directly from the browser with Gator agents.' },
   'code-to-docs': { title: 'Code to Docs', description: 'Turn repositories and PRs into living documentation.' },
   'generative-ai-customer-service': { title: 'AI Customer Service', description: 'Autonomous support agents with escalation to humans.' },
   'internal-knowledge-base': { title: 'Internal Knowledge Base', description: 'Company wiki and internal docs agents can read and update.' },
@@ -460,12 +460,12 @@ for (const item of featureNavItems) {
       kind: 'feature',
       missionLabel: 'Feature brief',
       title: item.title,
-      titleAccent: 'with Trooper',
-      description: item.description ?? `Learn how Trooper handles ${item.title.toLowerCase()}.`,
+      titleAccent: 'with Gator',
+      description: item.description ?? `Learn how Gator handles ${item.title.toLowerCase()}.`,
       overviewTitle: `How ${item.title} works`,
       overviewParagraphs: [
         item.description ?? '',
-        'Trooper agents execute real work through tickets, tools, and traced decisions.',
+        'Gator agents execute real work through tickets, tools, and traced decisions.',
         'Deploy on your private OpenClaw runtime and connect the skills your team already uses.',
       ].filter(Boolean),
       benefits: genericFeatureBenefits(item.title.toLowerCase()),
@@ -481,7 +481,7 @@ for (const item of teamNavItems) {
       kind: 'team',
       missionLabel: 'Unit brief',
       title: `AI ${item.title} Team`,
-      titleAccent: 'with Trooper',
+      titleAccent: 'with Gator',
       description: item.description ?? `AI ${item.title} unit for your company.`,
       overviewTitle: `Why an AI ${item.title} unit`,
       overviewParagraphs: [
@@ -501,12 +501,12 @@ for (const [slug, meta] of Object.entries(legacyFeatureSlugs)) {
       kind: 'feature',
       missionLabel: 'Feature brief',
       title: meta.title,
-      titleAccent: 'with Trooper',
+      titleAccent: 'with Gator',
       description: meta.description,
       overviewTitle: `About ${meta.title}`,
       overviewParagraphs: [
         meta.description,
-        'Trooper agents integrate this capability into your org structure and ticket workflow.',
+        'Gator agents integrate this capability into your org structure and ticket workflow.',
         'Connect OpenClaw skills and deploy in minutes.',
       ],
       benefits: genericFeatureBenefits(meta.title.toLowerCase()),

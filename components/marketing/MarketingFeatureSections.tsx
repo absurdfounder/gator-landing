@@ -99,7 +99,7 @@ const defaultHeadingLines: MarketingHeadlineLine[] = [
     iconAfter: 0,
   },
   {
-    parts: [{ text: 'on Trooper.', tone: 'brand' }],
+    parts: [{ text: 'on Gator.', tone: 'brand' }],
   },
 ];
 
@@ -107,7 +107,7 @@ export default function MarketingFeatureSections({
   sections,
   eyebrow = 'Capabilities',
   eyebrowNumber = '03',
-  heading = 'How this unit runs on Trooper.',
+  heading = 'How this unit runs on Gator.',
   headingLines = defaultHeadingLines,
   subheading = 'Traced tickets, live artifacts, and harnesses that match the work — not generic placeholders.',
 }: MarketingFeatureSectionsProps) {

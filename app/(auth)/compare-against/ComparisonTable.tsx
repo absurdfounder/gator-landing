@@ -21,9 +21,9 @@ const ComparisonTable = ({ id }: { id: string }) => {
   return (
     <div className="max-w-4xl mx-auto py-16">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold mb-4">Get so much more with Trooper</h2>
+        <h2 className="text-3xl font-bold mb-4">Get so much more with Gator</h2>
         <p className="text-lg text-slate-600 max-w-2xl">
-          Trooper  has everything you need, from task tracking to templates to documentation.
+          Gator  has everything you need, from task tracking to templates to documentation.
           Get comfortable — you won't be leaving all that often.
         </p>
       </div>
@@ -37,14 +37,14 @@ const ComparisonTable = ({ id }: { id: string }) => {
                 {competitorName}
               </th>
               <th className="px-6 py-4 text-center font-semibold text-slate-700 border-b w-1/4 bg-emerald-50">
-                Trooper
+                Gator
               </th>
             </tr>
           </thead>
           <tbody>
             {libraryItem.comparison_table.map((item: any, index: number) => {
               const competitorHasFeature = item.feature_value[competitorName] || false;
-              const trooperHasFeature = item.feature_value["Trooper"] || item.feature_value["Notion"] || false;
+              const trooperHasFeature = item.feature_value["Gator"] || item.feature_value["Notion"] || false;
 
               return (
                 <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>

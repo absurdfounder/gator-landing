@@ -4,48 +4,41 @@ import { mergeBadgeIcons } from '@/lib/og/agentIcons';
 import { loadOgFonts } from '@/lib/og/fonts';
 import { formatOgDisplayUrl } from '@/lib/og/pageUrls';
 import type { OgHeroContent } from '@/lib/og/types';
-import { TROOPER_CLI_COMMAND } from '@/lib/setupCommand';
 
 export const OG_SIZE = { width: 1200, height: 630 };
 
-const BRAND_GREEN = '#284800';
-const BRAND_GREEN_TEXT = '#325600';
+const BRAND_GREEN = '#3f6b00';
+const BRAND_GREEN_LIGHT = '#8cc352';
 const SLATE_200 = '#e2e8f0';
 const SLATE_400 = '#94a3b8';
-const TROOPER_LOGOMARK_URL = 'https://trooper.so/images/trooper-logomark.png';
-const OG_BACKGROUND_URL = 'https://trooper.so/og/share-background.png';
 
-/** Scaled from site max-w-7xl + md:px-6 frame rhythm for 1200×630 OG canvas. */
-const FRAME_INSET = 28;
-const FRAME_PAD_X = 40;
+const GATOR_LOGO_URL = 'https://gator.so/images/gator-icon.png';
+const GATOR_CHARACTER_URL = 'https://gator.so/images/characters/gator-laptop.png';
+
+const FRAME_INSET = 32;
+const FRAME_PAD_X = 44;
 const FRAME_PAD_Y = 36;
 
-// Satori/@vercel/og does not support repeating-linear-gradient — use a subtle wash instead.
-const PIXEL_GRID_BG =
-  'linear-gradient(180deg, rgba(63, 107, 0, 0.04) 0%, rgba(15, 23, 42, 0.02) 100%)';
-
-const CAMO_WASH_BG = [
-  'radial-gradient(circle at 18% 28%, rgba(123, 160, 68, 0.14) 0%, transparent 48%)',
-  'radial-gradient(circle at 82% 72%, rgba(63, 107, 0, 0.1) 0%, transparent 42%)',
-  'linear-gradient(180deg, #f8faf6 0%, #eef2e8 100%)',
+const HERO_GRADIENT = [
+  'radial-gradient(circle at 85% 50%, rgba(140, 195, 82, 0.22) 0%, transparent 55%)',
+  'linear-gradient(135deg, #f4f9ec 0%, #eef6e0 45%, #f8faf6 100%)',
 ].join(', ');
 
-function TrooperBrandMark() {
+function GatorBrandMark() {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={TROOPER_LOGOMARK_URL} alt="" width={56} height={56} />
+      <img src={GATOR_LOGO_URL} alt="" width={52} height={52} style={{ borderRadius: 12 }} />
       <span
         style={{
-          fontSize: 36,
+          fontSize: 34,
           lineHeight: 1,
           fontFamily: 'Silkscreen',
           color: '#0f172a',
           letterSpacing: '-0.02em',
-          textTransform: 'lowercase',
         }}
       >
-        trooper
+        gator
       </span>
     </div>
   );
@@ -58,33 +51,33 @@ function MissionEyebrow({ index, label }: { index: string; label: string }) {
         display: 'flex',
         alignItems: 'center',
         gap: 10,
-        border: `1px solid rgba(63, 107, 0, 0.35)`,
-        background: 'linear-gradient(180deg, #f8faf9 0%, #f0f5e6 100%)',
-        padding: '8px 14px',
-        boxShadow: '0 1px 0 rgba(255, 255, 255, 0.9)',
+        border: '1px solid rgba(63, 107, 0, 0.28)',
+        borderRadius: 999,
+        background: 'rgba(255, 255, 255, 0.9)',
+        padding: '8px 16px',
       }}
     >
       <span
         style={{
-          fontSize: 13,
+          fontSize: 12,
           fontFamily: 'Silkscreen',
           fontWeight: 700,
-          letterSpacing: '0.2em',
+          letterSpacing: '0.18em',
           textTransform: 'uppercase',
           color: SLATE_400,
         }}
       >
         [{index}]
       </span>
-      <div style={{ width: 1, height: 12, background: 'rgba(63, 107, 0, 0.25)' }} />
+      <div style={{ width: 1, height: 12, background: 'rgba(63, 107, 0, 0.22)' }} />
       <span
         style={{
-          fontSize: 13,
+          fontSize: 12,
           fontFamily: 'Silkscreen',
           fontWeight: 700,
-          letterSpacing: '0.2em',
+          letterSpacing: '0.18em',
           textTransform: 'uppercase',
-          color: BRAND_GREEN_TEXT,
+          color: BRAND_GREEN,
         }}
       >
         {label}
@@ -100,10 +93,10 @@ function truncate(text: string, max: number) {
 
 function HeadlineBlock({ content }: { content: OgHeroContent }) {
   const singleLine = content.singleLineHeadline !== false;
-  const headlineSize = content.headlineLead ? 50 : 58;
+  const headlineSize = content.headlineLead ? 52 : 60;
   const headlineStyle = {
     fontSize: headlineSize,
-    lineHeight: 1.08,
+    lineHeight: 1.06,
     fontWeight: 700,
     letterSpacing: '-0.03em',
     fontFamily: 'Erode',
@@ -115,35 +108,21 @@ function HeadlineBlock({ content }: { content: OgHeroContent }) {
         style={{
           ...headlineStyle,
           color: '#0f172a',
-          marginRight: content.headlineAccent && singleLine ? 12 : 0,
+          marginRight: content.headlineAccent && singleLine ? 14 : 0,
         }}
       >
         {content.headlinePrimary}
       </span>
       {content.headlineAccent ? (
-        <span
-          style={{
-            ...headlineStyle,
-            color: BRAND_GREEN,
-          }}
-        >
-          {content.headlineAccent}
-        </span>
+        <span style={{ ...headlineStyle, color: BRAND_GREEN }}>{content.headlineAccent}</span>
       ) : null}
     </>
   );
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', maxWidth: 720 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', maxWidth: 680 }}>
       {content.headlineLead ? (
-        <div
-          style={{
-            ...headlineStyle,
-            color: '#0f172a',
-          }}
-        >
-          {content.headlineLead}
-        </div>
+        <div style={{ ...headlineStyle, color: '#0f172a' }}>{content.headlineLead}</div>
       ) : null}
       {singleLine ? (
         <div
@@ -152,16 +131,16 @@ function HeadlineBlock({ content }: { content: OgHeroContent }) {
             flexDirection: 'row',
             flexWrap: 'wrap',
             alignItems: 'baseline',
-            marginTop: content.headlineLead ? 6 : 0,
+            marginTop: content.headlineLead ? 8 : 0,
           }}
         >
           {primaryAccent}
         </div>
       ) : (
-        <div style={{ display: 'flex', flexDirection: 'column', marginTop: content.headlineLead ? 6 : 0 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', marginTop: content.headlineLead ? 8 : 0 }}>
           <div style={{ ...headlineStyle, color: '#0f172a' }}>{content.headlinePrimary}</div>
           {content.headlineAccent ? (
-            <div style={{ ...headlineStyle, color: BRAND_GREEN, marginTop: 4 }}>{content.headlineAccent}</div>
+            <div style={{ ...headlineStyle, color: BRAND_GREEN, marginTop: 6 }}>{content.headlineAccent}</div>
           ) : null}
         </div>
       )}
@@ -171,7 +150,7 @@ function HeadlineBlock({ content }: { content: OgHeroContent }) {
 
 function BadgeRow({ badges }: { badges: NonNullable<OgHeroContent['badgeIcons']> }) {
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 20 }}>
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 18 }}>
       {badges.map((badge) => (
         <div
           key={badge.label}
@@ -187,57 +166,44 @@ function BadgeRow({ badges }: { badges: NonNullable<OgHeroContent['badgeIcons']>
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={badge.iconUrl} alt="" width={22} height={22} style={{ borderRadius: 4 }} />
-          <span style={{ fontSize: 18, color: '#334155', fontFamily: 'Inter' }}>{badge.label}</span>
+          <span style={{ fontSize: 17, color: '#334155', fontFamily: 'Inter' }}>{badge.label}</span>
         </div>
       ))}
     </div>
   );
 }
 
-function DecorativeGridPanel() {
-  const cellStyle = {
-    display: 'flex' as const,
-    flex: 1,
-    background: '#ffffff',
-    position: 'relative' as const,
-    overflow: 'hidden' as const,
-  };
-
+function CharacterPanel() {
   return (
     <div
       style={{
         display: 'flex',
-        flexDirection: 'column',
-        width: 300,
+        width: 360,
         flexShrink: 0,
+        alignItems: 'flex-end',
+        justifyContent: 'center',
         alignSelf: 'stretch',
+        background: `linear-gradient(180deg, rgba(140, 195, 82, 0.18) 0%, rgba(238, 248, 220, 0.95) 100%)`,
         borderLeft: `1px solid ${SLATE_200}`,
-        background: SLATE_200,
-        gap: 1,
+        padding: '24px 20px 0',
+        overflow: 'hidden',
       }}
     >
-      <div style={{ display: 'flex', flex: 1, gap: 1 }}>
-        <div style={{ ...cellStyle, background: '#f0f5e6' }} />
-        <div style={cellStyle}>{/* eslint-disable-next-line @next/next/no-img-element */}<img src={OG_BACKGROUND_URL} alt="" width={170} height={130} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 0.85 }} /></div>
-        <div style={{ ...cellStyle, background: '#fafaf8' }} />
-      </div>
-      <div style={{ display: 'flex', flex: 1, gap: 1 }}>
-        <div style={cellStyle} />
-        <div style={{ ...cellStyle, background: '#f0f5e6' }} />
-        <div style={cellStyle}><div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: BRAND_GREEN, opacity: 0.08 }} /></div>
-      </div>
-      <div style={{ display: 'flex', height: 48, gap: 1 }}>
-        <div style={{ ...cellStyle, background: '#fafaf8' }} />
-        <div style={{ ...cellStyle, background: '#ffffff' }} />
-        <div style={{ ...cellStyle, background: '#f0f5e6' }} />
-      </div>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={GATOR_CHARACTER_URL}
+        alt=""
+        width={300}
+        height={380}
+        style={{ objectFit: 'contain', objectPosition: 'bottom center' }}
+      />
     </div>
   );
 }
 
 export function OgHeroImage({ content }: { content: OgHeroContent }) {
   const badges = mergeBadgeIcons(content.badgeIcons, content.description);
-  const displayUrl = formatOgDisplayUrl(content.pageUrl || 'https://trooper.so');
+  const displayUrl = formatOgDisplayUrl(content.pageUrl || 'https://gator.so');
 
   return (
     <div
@@ -247,21 +213,10 @@ export function OgHeroImage({ content }: { content: OgHeroContent }) {
         display: 'flex',
         position: 'relative',
         overflow: 'hidden',
-        backgroundColor: '#f0f3eb',
-        backgroundImage: CAMO_WASH_BG,
+        backgroundColor: '#f4f9ec',
+        backgroundImage: HERO_GRADIENT,
       }}
     >
-      {/* Pixel grid overlay — matches .pixel-flicker-grid on site */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage: PIXEL_GRID_BG,
-          opacity: 0.55,
-        }}
-      />
-
-      {/* SectionShell-style frame: max-w-7xl rail borders */}
       <div
         style={{
           position: 'relative',
@@ -269,25 +224,25 @@ export function OgHeroImage({ content }: { content: OgHeroContent }) {
           flexDirection: 'column',
           flex: 1,
           margin: FRAME_INSET,
+          borderRadius: 20,
           border: `1px solid ${SLATE_200}`,
-          background: 'rgba(255, 255, 255, 0.72)',
+          background: 'rgba(255, 255, 255, 0.88)',
+          overflow: 'hidden',
         }}
       >
-        {/* Header band — eyebrow + wordmark */}
         <div
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            padding: `${FRAME_PAD_Y}px ${FRAME_PAD_X}px 24px`,
+            padding: `${FRAME_PAD_Y}px ${FRAME_PAD_X}px 22px`,
             borderBottom: `1px solid ${SLATE_200}`,
           }}
         >
           <MissionEyebrow index={content.eyebrowIndex} label={content.eyebrowLabel} />
-          <TrooperBrandMark />
+          <GatorBrandMark />
         </div>
 
-        {/* Main body — content column + decorative grid panel */}
         <div style={{ display: 'flex', flex: 1, alignItems: 'stretch', minHeight: 0 }}>
           <div
             style={{
@@ -295,79 +250,68 @@ export function OgHeroImage({ content }: { content: OgHeroContent }) {
               flexDirection: 'column',
               flex: 1,
               minWidth: 0,
-              padding: `24px ${FRAME_PAD_X}px 20px`,
+              padding: `22px ${FRAME_PAD_X}px 18px`,
             }}
           >
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20 }}>
-                {content.iconUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={content.iconUrl}
-                    alt=""
-                    width={56}
-                    height={56}
-                    style={{ borderRadius: 12, marginTop: 6 }}
-                  />
-                ) : null}
-                <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
-                  <HeadlineBlock content={content} />
-                </div>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: 18 }}>
+              {content.iconUrl ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={content.iconUrl}
+                  alt=""
+                  width={52}
+                  height={52}
+                  style={{ borderRadius: 12, marginTop: 8 }}
+                />
+              ) : null}
+              <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+                <HeadlineBlock content={content} />
               </div>
-
-              {content.description ? (
-                <p
-                  style={{
-                    marginTop: 14,
-                    maxWidth: 640,
-                    fontSize: 20,
-                    lineHeight: 1.4,
-                    color: '#475569',
-                    fontFamily: 'Erode',
-                  }}
-                >
-                  {truncate(content.description, 140)}
-                </p>
-              ) : null}
-
-              {badges?.length ? <BadgeRow badges={badges} /> : null}
-
-              {content.showSetup ? (
-                <div
-                  style={{
-                    marginTop: 16,
-                    display: 'flex',
-                    alignItems: 'center',
-                    maxWidth: 420,
-                    border: `1px dashed ${SLATE_200}`,
-                    borderRadius: 4,
-                    padding: '12px 16px',
-                    background: '#ffffff',
-                  }}
-                >
-                  <span style={{ fontSize: 22, color: '#0891b2', fontFamily: 'Roboto Mono', marginRight: 10 }}>
-                    $
-                  </span>
-                  <span style={{ fontSize: 20, color: '#0f172a', fontFamily: 'Roboto Mono' }}>{TROOPER_CLI_COMMAND}</span>
-                </div>
-              ) : null}
             </div>
+
+            {content.description ? (
+              <p
+                style={{
+                  marginTop: 16,
+                  maxWidth: 620,
+                  fontSize: 22,
+                  lineHeight: 1.35,
+                  color: '#475569',
+                  fontFamily: 'Erode',
+                }}
+              >
+                {truncate(content.description, 120)}
+              </p>
+            ) : null}
+
+            {badges?.length ? <BadgeRow badges={badges} /> : null}
           </div>
 
-          <DecorativeGridPanel />
+          <CharacterPanel />
         </div>
 
-        {/* Footer band — URL row with section divider */}
         <div
           style={{
             display: 'flex',
             alignItems: 'center',
-            padding: `16px ${FRAME_PAD_X}px`,
+            justifyContent: 'space-between',
+            padding: `14px ${FRAME_PAD_X}px`,
             borderTop: `1px solid ${SLATE_200}`,
-            background: 'rgba(255, 255, 255, 0.85)',
+            background: 'rgba(255, 255, 255, 0.92)',
           }}
         >
-          <span style={{ fontSize: 18, color: '#64748b', fontFamily: 'Inter' }}>{displayUrl}</span>
+          <span style={{ fontSize: 17, color: '#64748b', fontFamily: 'Inter' }}>{displayUrl}</span>
+          <span
+            style={{
+              fontSize: 14,
+              color: BRAND_GREEN,
+              fontFamily: 'Silkscreen',
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+            }}
+          >
+            OpenClaw
+          </span>
         </div>
       </div>
     </div>

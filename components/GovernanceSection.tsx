@@ -25,7 +25,7 @@ export default function GovernanceSection() {
           You&apos;re in charge.
         </h2>
         <p className="governance-sub text-sm sm:text-base text-slate-500 mt-3 leading-relaxed">
-          Approve hires. Approve strategy. Override anything.
+          Pause, override, or stop any loop. You stay in control.
         </p>
       </motion.div>
 
@@ -38,13 +38,8 @@ export default function GovernanceSection() {
           viewport={{ once: true, margin: '-20px' }}
         >
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-            You operate as the board of directors. Agents can&apos;t hire new agents without your approval.
-            The CEO can&apos;t execute a strategy you haven&apos;t reviewed. You can pause any agent, reassign
-            any task, adjust any budget — at any time.
-            <br />
-            <br />
-            You have full control over every agent in the org. Autonomy is a privilege you grant,
-            not a default.
+            You call the shots. Pause a loop, reassign a task, or stop an agent anytime.
+            Autonomy is something you grant — not the default.
           </p>
         </motion.div>
 

@@ -41,7 +41,7 @@ export default function UseCaseSubpageLayout({
 
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <PixelButton
-                href="https://app.trooper.so"
+                href="https://app.gator.so"
                 external
                 size="lg"
                 tone="brand"
@@ -95,7 +95,7 @@ export default function UseCaseSubpageLayout({
         <section className="py-12 md:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-funneldisplay text-2xl sm:text-3xl tracking-tight text-slate-900 mb-8">
-              How Trooper handles this
+              How Gator handles this
             </h2>
             <ol className="grid gap-4 md:grid-cols-2 max-w-4xl">
               {content.howItWorks.map((step, index) => (

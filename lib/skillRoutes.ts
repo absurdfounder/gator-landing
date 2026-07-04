@@ -54,5 +54,5 @@ export function findSkillByPageSlug(slug: string, skills: Skill[]): Skill | unde
 }
 
 export function getSkillCanonicalUrl(skill: Skill, index?: SkillRouteIndex): string {
-  return `https://trooper.so${getSkillPagePath(skill, index)}`;
+  return `https://gator.so${getSkillPagePath(skill, index)}`;
 }

@@ -4,7 +4,7 @@ import { i } from '@/lib/demoIntegrations';
 import type { DemoScenario } from './types';
 
 const VIDEO_TRANSCRIPT = `[00:00] Hook — "Stop tab-switching between agents"
-[00:05] Screen: Trooper board with kanban columns
+[00:05] Screen: Gator board with kanban columns
 [00:11] Pillar page hero scroll
 [00:22] CTA — Book a demo
 [00:30] End card — northstar.io/q2`;
@@ -24,7 +24,7 @@ const ARTIFACTS = {
     ext: 'png',
     kind: 'image',
     src: DEMO_MEDIA.linkedinCarousel,
-    caption: 'LinkedIn carousel — slide 1 of 3 · designed in Trooper',
+    caption: 'LinkedIn carousel — slide 1 of 3 · designed in Gator',
   }),
   'copy/email-sequence.md': a({
     name: 'copy/email-sequence.md',

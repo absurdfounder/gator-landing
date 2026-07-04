@@ -23,10 +23,10 @@ export function VignetteChrome({ label, children }: { label: string; children: R
 
 export function ProviderChip({ provider, size = 16 }: { provider: string; size?: number }) {
   const domain = getProviderDomain(provider);
-  if (provider === 'Trooper' || domain === 'trooper.so') {
+  if (provider === 'Gator' || domain === 'trooper.so') {
     return (
       <img
-        src="/images/trooper-logomark.png"
+        src="/images/gator-icon.png"
         alt=""
         width={size}
         height={size}
@@ -43,8 +43,8 @@ export function ProviderChip({ provider, size = 16 }: { provider: string; size?:
 export function TrooperMark({ className = '' }: { className?: string }) {
   return (
     <img
-      src="/images/trooper-logomark.png"
-      alt="Trooper"
+      src="/images/gator-icon.png"
+      alt="Gator"
       className={`object-contain pixel-render ${className}`}
     />
   );

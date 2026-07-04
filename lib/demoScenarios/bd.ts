@@ -25,11 +25,11 @@ const ARTIFACTS = {
     content: `# Partnership brief — CloudScale co-sell
 
 ## Proposal
-Joint GTM: Trooper agent ops + CloudScale deployment automation
+Joint GTM: Gator agent ops + CloudScale deployment automation
 
 ## Mutual value
 - CloudScale: upsell AI workforce to existing base
-- Trooper: distribution via AWS marketplace listing`,
+- Gator: distribution via AWS marketplace listing`,
   }),
   'bd/intro-email.md': a({
     name: 'bd/intro-email.md',

@@ -48,14 +48,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const loop = getLoopBySlug(params.slug);
   if (!loop) {
-    return { title: 'Loop | Trooper' };
+    return { title: 'Loop | Gator' };
   }
   return mergeOgImages(
     {
-      title: `${loop.title} Loop | Trooper`,
+      title: `${loop.title} Loop | Gator`,
       description: `${loop.description} Copy the kickoff prompt for Cursor, Claude Code, or Codex.`,
       alternates: {
-        canonical: `https://trooper.so/loops/${loop.slug}`,
+        canonical: `https://gator.so/loops/${loop.slug}`,
       },
       openGraph: {
         title: `${loop.title} — Agent Loop`,
@@ -160,13 +160,13 @@ export default function LoopDetailPage({ params }: { params: { slug: string } })
 
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                   <PixelButton
-                    href="https://app.trooper.so"
+                    href="https://app.gator.so"
                     external
                     size="lg"
                     tone="brand"
                     icon={<ArrowRight className="h-4 w-4" />}
                   >
-                    Run in Trooper
+                    Run in Gator
                   </PixelButton>
                   <PixelButton
                     href="/loops"

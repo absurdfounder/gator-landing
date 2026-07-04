@@ -81,7 +81,7 @@ function buildIndustry(def: IndustryDef): IndustryPageContent {
     description: `AI-powered call handling, booking, and follow-up — built for ${audience}.`,
     overviewTitle: `Run ${lowerName} ops without hiring a front desk`,
     overviewParagraphs: [
-      `Missed calls are missed revenue for ${audience}. Trooper agents answer inbound, qualify the request, and book jobs into your calendar — 24/7, with full transcripts and approval gates.`,
+      `Missed calls are missed revenue for ${audience}. Gator agents answer inbound, qualify the request, and book jobs into your calendar — 24/7, with full transcripts and approval gates.`,
       `Dispatchers and owners stay in command: agents draft quotes, send follow-ups, and update CRM records, but nothing goes out without your rules.`,
       `Powered by OpenClaw — connect phone, SMS, email, and field tools your ${lowerName} team already uses.`,
     ],
@@ -96,9 +96,9 @@ function buildIndustry(def: IndustryDef): IndustryPageContent {
     relatedIntegrations: DEFAULT_INTEGRATIONS,
     demoId: def.demoId ?? 'messaging',
     meta: {
-      title: `The AI Front Office for ${def.name} | Trooper`,
+      title: `The AI Front Office for ${def.name} | Gator`,
       description: `AI-powered call handling, booking, and follow-up — built for ${audience}.`,
-      canonical: `https://trooper.so/industries/${def.slug}`,
+      canonical: `https://gator.so/industries/${def.slug}`,
     },
   };
 }
@@ -120,8 +120,8 @@ export function getIndustryHubCards(): IndustryPageContent[] {
 }
 
 export const industryHubMeta = {
-  title: 'Industries | Trooper',
+  title: 'Industries | Gator',
   description:
     'AI front office for home services and field businesses — call handling, booking, dispatch, and follow-up powered by OpenClaw.',
-  canonical: 'https://trooper.so/industries',
+  canonical: 'https://gator.so/industries',
 };

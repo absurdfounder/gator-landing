@@ -33,7 +33,7 @@ const ARTIFACTS = {
 - Pricing model: 15%
 - Support SLA: 10%
 
-## Trooper strengths to highlight
+## Gator strengths to highlight
 - Traced tickets + Canvas artifacts
 - Human review gates (Smart Approve)
 - OpenClaw node execution layer`,
@@ -46,9 +46,9 @@ const ARTIFACTS = {
 
 Dear Enterprise procurement team,
 
-Thank you for including Trooper in your AI ops platform evaluation.
+Thank you for including Gator in your AI ops platform evaluation.
 
-**Executive summary:** Trooper provides a unified command layer for Codex, Claude Code, Cursor, and custom agents — with traced diffs, Canvas artifacts, and human review gates.
+**Executive summary:** Gator provides a unified command layer for Codex, Claude Code, Cursor, and custom agents — with traced diffs, Canvas artifacts, and human review gates.
 
 Attached: security overview, architecture diagram, pricing sheet.
 

@@ -3,7 +3,7 @@ import { playbookContent, workflow } from '../helpers';
 export const chatInterfacesPlaybookWorkflow = playbookContent(
   'Chat playbooks',
   'route to missions.',
-  'Slack routing, DM missions, and channel digests — traced on the Trooper board.',
+  'Slack routing, DM missions, and channel digests — traced on the Gator board.',
   [
     workflow(
       'slack-route',
@@ -14,7 +14,7 @@ export const chatInterfacesPlaybookWorkflow = playbookContent(
         { label: 'Parse request', kind: 'agent', agent: 'Codex' },
         { label: 'Create ticket', kind: 'agent', agent: 'Claude Code' },
         { label: 'Reply in thread', kind: 'integration', iconDomain: 'slack.com' },
-        { label: 'Assign gate', kind: 'gate', iconDomain: 'trooper' },
+        { label: 'Assign gate', kind: 'gate', iconDomain: 'gator' },
       ],
       { label: 'Routing accuracy', value: '92% correct queue' },
     ),
@@ -27,7 +27,7 @@ export const chatInterfacesPlaybookWorkflow = playbookContent(
         { label: 'Scope mission', kind: 'agent', agent: 'Claude Code' },
         { label: 'Execute work', kind: 'agent', agent: 'OpenCode' },
         { label: 'Progress updates', kind: 'integration', iconDomain: 'slack.com' },
-        { label: 'Done gate', kind: 'gate', iconDomain: 'trooper' },
+        { label: 'Done gate', kind: 'gate', iconDomain: 'gator' },
       ],
       { label: 'DM → done rate', value: '78% without escalation' },
     ),
@@ -36,11 +36,11 @@ export const chatInterfacesPlaybookWorkflow = playbookContent(
       'Channel digest',
       'Cron daily',
       [
-        { label: 'End of day', kind: 'trigger', iconDomain: 'trooper' },
+        { label: 'End of day', kind: 'trigger', iconDomain: 'gator' },
         { label: 'Summarize threads', kind: 'agent', agent: 'Codex' },
         { label: 'Extract actions', kind: 'agent', agent: 'Claude Code' },
         { label: 'Post digest', kind: 'integration', iconDomain: 'slack.com' },
-        { label: 'Lead gate', kind: 'gate', iconDomain: 'trooper' },
+        { label: 'Lead gate', kind: 'gate', iconDomain: 'gator' },
       ],
       { label: 'Missed actions', value: 'Down 81%' },
     ),

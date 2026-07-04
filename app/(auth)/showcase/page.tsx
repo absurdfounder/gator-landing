@@ -4,10 +4,10 @@ import ShowcaseClient from "./ShowcaseClient";
 import { buildPageMetadata } from "@/lib/og/buildMetadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Websites built on Trooper – Simple to Use - Transparent Pricing",
+  title: "Websites built on Gator – Simple to Use - Transparent Pricing",
   description:
-    "Explore the websites built on Trooper. From personal projects to enterprise-scale solutions, unlock unlimited AI-powered websites, custom domains, analytics, SEO tools, and more — all built on Notion. Try free for 3 days!",
-  canonical: "https://trooper.so/showcase",
+    "Explore the websites built on Gator. From personal projects to enterprise-scale solutions, unlock unlimited AI-powered websites, custom domains, analytics, SEO tools, and more — all built on Notion. Try free for 3 days!",
+  canonical: "https://gator.so/showcase",
   ogKind: "hub",
   ogSlug: "showcase",
 });

@@ -12,7 +12,7 @@ export default function Newsletter() {
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-12">
               <div className="max-w-xl">
                 <h3 className="text-2xl sm:text-3xl md:text-[2rem] font-funneldisplay tracking-tight text-slate-900 leading-tight">
-                  Try Trooper now.
+                  Try Gator now.
                 </h3>
                 <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
                   Stand up AI units that write code, manage tasks, and connect to 3,000+ tools — without the overhead of hiring.
@@ -21,7 +21,7 @@ export default function Newsletter() {
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 shrink-0">
                 <PixelButton
-                  href="https://app.trooper.so?ref=cta"
+                  href="https://app.gator.so?ref=cta"
                   external
                   size="lg"
                   tone="brand"
@@ -31,7 +31,7 @@ export default function Newsletter() {
                 </PixelButton>
 
                 <PixelButton
-                  href="https://github.com/absurdfounder/trooper_landing/releases/download/macos-latest/Trooper.dmg"
+                  href="https://github.com/absurdfounder/trooper_landing/releases/download/macos-latest/Gator.dmg"
                   external
                   size="lg"
                   variant="outline"

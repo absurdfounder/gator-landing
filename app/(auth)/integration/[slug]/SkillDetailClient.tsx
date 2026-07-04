@@ -145,7 +145,7 @@ export default function SkillDetailClient({
       <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
         <h2 className="font-funneldisplay text-lg font-semibold text-slate-900">How this skill works</h2>
         <p className="mt-2 text-sm leading-relaxed text-slate-600">
-          When installed, this skill becomes available to your AI agents on Trooper. The agent can invoke
+          When installed, this skill becomes available to your AI agents on Gator. The agent can invoke
           it when relevant tasks are detected based on trigger phrases and context.
         </p>
         <ul className="mt-4 list-disc space-y-1.5 pl-5 text-sm text-slate-600">
@@ -218,7 +218,7 @@ export default function SkillDetailClient({
             <div>
               <p className="font-medium text-slate-800">Is this skill compatible with all agents?</p>
               <p className="mt-1">
-                This skill works with any OpenClaw-compatible agent on Trooper, including ClawdBot and
+                This skill works with any OpenClaw-compatible agent on Gator, including ClawdBot and
                 MoltBot-based agents.
               </p>
             </div>

@@ -201,7 +201,7 @@ function DemoKanbanColumn({ colKey, tasks, highlightedTaskId }: { colKey: DemoCo
           display: "inline-block",
         }}>{tasks.length}</span>
       </div>
-      <div className="Trooper-scrollbar" style={{ flex: 1, overflowY: "auto", borderRadius: 8, padding: 8, background: col.bodyBg }}>
+      <div className="Gator-scrollbar" style={{ flex: 1, overflowY: "auto", borderRadius: 8, padding: 8, background: col.bodyBg }}>
         {tasks.length === 0 ? (
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", borderRadius: 8, border: `1px dashed ${C.border}`, background: "rgba(255,255,255,0.8)", padding: "16px 10px", textAlign: "center" }}>
             <p style={{ fontSize: 11, fontWeight: 500, color: C.textMuted, margin: 0 }}>Nothing here yet</p>
@@ -347,7 +347,7 @@ function DemoSidebarNav({
   };
 
   return (
-    <div className="Trooper-scrollbar" style={{ width: DEMO_SIDEBAR_W, minWidth: DEMO_SIDEBAR_W, borderRight: `1px solid ${C.border}`, background: C.bg, display: "flex", flexDirection: "column", overflow: "hidden", boxShadow: "4px 0 24px rgba(28,25,23,0.05)" }}>
+    <div className="Gator-scrollbar" style={{ width: DEMO_SIDEBAR_W, minWidth: DEMO_SIDEBAR_W, borderRight: `1px solid ${C.border}`, background: C.bg, display: "flex", flexDirection: "column", overflow: "hidden", boxShadow: "4px 0 24px rgba(28,25,23,0.05)" }}>
       <div style={{ display: "flex", alignItems: "center", gap: 2, padding: "10px 12px 8px" }}>
         {tabBtn('menu', LayoutGrid, 'Menu')}
         {tabBtn('channels', MessagesSquare, 'Channels')}
@@ -460,7 +460,7 @@ function DemoChatPane({
         </div>
       )}
 
-      <div ref={chatRef} data-demo-target="chat-thread" className="Trooper-scrollbar" style={{ flex: 1, overflowY: "auto", padding: "12px 16px", background: C.card }}>
+      <div ref={chatRef} data-demo-target="chat-thread" className="Gator-scrollbar" style={{ flex: 1, overflowY: "auto", padding: "12px 16px", background: C.card }}>
         {messages.map((msg, i) => (
           <div key={i} style={{ marginBottom: 16, animation: `msgIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both` }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6, flexWrap: "wrap" }}>
@@ -571,7 +571,7 @@ function DemoBoardPane({ tasks, highlightedTaskId }: { tasks: Task[]; highlighte
           <Plus size={14} strokeWidth={2} />
         </button>
       </div>
-      <div className="Trooper-scrollbar" style={{ display: "flex", gap: 10, flex: 1, overflowX: "auto", overflowY: "hidden", minHeight: 0 }}>
+      <div className="Gator-scrollbar" style={{ display: "flex", gap: 10, flex: 1, overflowX: "auto", overflowY: "hidden", minHeight: 0 }}>
         {(Object.keys(KANBAN_COLUMNS) as DemoColumnId[]).map((k) => (
           <DemoKanbanColumn key={k} colKey={k} tasks={cols[k]} highlightedTaskId={highlightedTaskId} />
         ))}
@@ -913,9 +913,9 @@ export default function TrooperDemo({ scenarioId = DEFAULT_DEMO_SCENARIO_ID }: {
         .demo-thread-turn { animation: demoThreadEnter 0.4s cubic-bezier(0.22, 1, 0.36, 1) both; }
         .demo-thread-tool-row { animation: demoThreadEnter 0.35s cubic-bezier(0.22, 1, 0.36, 1) both; }
         .demo-spin { animation: spin 1s linear infinite; }
-        .Trooper-scrollbar::-webkit-scrollbar{width:5px;height:5px}
-        .Trooper-scrollbar::-webkit-scrollbar-track{background:rgba(231,229,228,0.35);border-radius:4px}
-        .Trooper-scrollbar::-webkit-scrollbar-thumb{background:${C.textSubtle};border-radius:4px}
+        .Gator-scrollbar::-webkit-scrollbar{width:5px;height:5px}
+        .Gator-scrollbar::-webkit-scrollbar-track{background:rgba(231,229,228,0.35);border-radius:4px}
+        .Gator-scrollbar::-webkit-scrollbar-thumb{background:${C.textSubtle};border-radius:4px}
         *{box-sizing:border-box}
       `}</style>
 
@@ -924,7 +924,7 @@ export default function TrooperDemo({ scenarioId = DEFAULT_DEMO_SCENARIO_ID }: {
           aria-hidden
           className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-[#eef8dc] via-[#c8e88a] to-[#8cc352]"
         />
-        <div className="Trooper-demo relative z-10 hidden lg:block" style={{ width: "100%", margin: "0 auto", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", fontSize: 13 }}>
+        <div className="Gator-demo relative z-10 hidden lg:block" style={{ width: "100%", margin: "0 auto", fontFamily: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", fontSize: 13 }}>
         <DemoScaleFrame>
         <div style={{
           position: "relative", width: DEMO_CANVAS_W, borderRadius: C.radius, overflow: "hidden",

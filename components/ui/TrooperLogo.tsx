@@ -1,4 +1,4 @@
-const characterSrc = '/images/trooper-logomark.png'
+const characterSrc = '/images/gator-icon.png'
 
 type TrooperLogoProps = {
   className?: string
@@ -40,7 +40,7 @@ export default function TrooperLogo({
 
   if (asLink) {
     return (
-      <a href="/" className="shrink-0" aria-label="Trooper">
+      <a href="/" className="shrink-0" aria-label="Gator">
         {content}
       </a>
     )

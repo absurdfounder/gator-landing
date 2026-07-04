@@ -70,7 +70,7 @@ export async function generateMetadata(
         title: 'Wonder- Error Loading Content',
         description: 'Unable to load template content',
         alternates: {
-          canonical: `https://trooper.so/showcase/${slug}`,
+          canonical: `https://gator.so/showcase/${slug}`,
         },
       };
     }
@@ -79,10 +79,10 @@ export async function generateMetadata(
 
     if (!filteredContent) {
       return {
-        title: 'Trooper vs Unknown Template',
-        description: 'Compare Trooper  to an unknown template',
+        title: 'Gator vs Unknown Template',
+        description: 'Compare Gator  to an unknown template',
         alternates: {
-          canonical: `https://trooper.so/showcase/${slug}`,
+          canonical: `https://gator.so/showcase/${slug}`,
         },
       };
     }
@@ -92,7 +92,7 @@ export async function generateMetadata(
         title: `${filteredContent.product.name}`,
         description: `${filteredContent.product.name}: ${filteredContent.product.description}`,
         alternates: {
-          canonical: `https://trooper.so/showcase/${slug}`,
+          canonical: `https://gator.so/showcase/${slug}`,
         },
       },
       'showcase',
@@ -105,7 +105,7 @@ export async function generateMetadata(
       title: 'Wonder- Error',
       description: 'An error occurred while loading the content',
       alternates: {
-        canonical: `https://trooper.so/showcase/${params.slug}`,
+        canonical: `https://gator.so/showcase/${params.slug}`,
       },
     };
   }

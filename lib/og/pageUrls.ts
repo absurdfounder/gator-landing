@@ -1,6 +1,6 @@
 import type { OgKind } from '@/lib/og/types';
 
-const ORIGIN = 'https://trooper.so';
+const ORIGIN = 'https://gator.so';
 
 const HUB_PATHS: Record<string, string> = {
   loops: '/loops',
@@ -32,7 +32,7 @@ export function resolveOgPageUrl(kind: OgKind, slug?: string): string {
   return ORIGIN;
 }
 
-/** Display URL without scheme — e.g. trooper.so/loops */
+/** Display URL without scheme — e.g. gator.so/loops */
 export function formatOgDisplayUrl(pageUrl: string): string {
   return pageUrl.replace(/^https?:\/\//, '');
 }

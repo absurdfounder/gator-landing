@@ -35,11 +35,11 @@ export default function PluginHubPage() {
           </h1>
           <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
             Connect HubSpot, Gmail, GitHub, Slack, Notion, Linear, Stripe, and {PLUGIN_CATALOG_COUNT.toLocaleString()}+ tools
-            to your Trooper AI workforce. Deploy agents that execute real work through OpenClaw plugins.
+            to your Gator AI workforce. Deploy agents that execute real work through OpenClaw plugins.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
             <PixelButton
-              href="https://app.trooper.so"
+              href="https://app.gator.so"
               external
               size="lg"
               tone="brand"
@@ -100,7 +100,7 @@ export default function PluginHubPage() {
       <SectionShell eyebrow="Catalog" eyebrowNumber="03" bgClass="bg-white">
         <div className="px-4 sm:px-6 lg:px-8 pt-2 pb-16 md:pb-24">
           <p className="mb-8 text-slate-600 max-w-2xl leading-relaxed">
-            Browse all {PLUGIN_CATALOG_COUNT.toLocaleString()} Trooper app plugins — Composio, Codex, OpenClaw channels,
+            Browse all {PLUGIN_CATALOG_COUNT.toLocaleString()} Gator app plugins — Composio, Codex, OpenClaw channels,
             and native integrations. Each has a dedicated SEO page at{' '}
             <code className="text-sm bg-slate-100 px-1.5 py-0.5 rounded font-mono">/plugin/ai_agent_for_[plugin]</code>.
           </p>

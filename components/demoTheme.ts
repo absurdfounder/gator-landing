@@ -1,4 +1,4 @@
-/** Trooper app chrome — aligned with src/index.css + KanbanBoard.jsx */
+/** Gator app chrome — aligned with src/index.css + KanbanBoard.jsx */
 export const TROOPER_DEMO = {
   brand: '#3f6b00',
   brandHover: '#325600',

@@ -17,11 +17,11 @@ export const githubIntegrationPlaybookWorkflow: PlaybookWorkflowContent = {
       tabLabel: 'PR ship loop',
       triggerBadge: 'Ticket → In Progress',
       nodes: [
-        { id: 't1', label: 'Mission started', x: 12, y: 30, kind: 'trigger', iconDomain: 'trooper' },
+        { id: 't1', label: 'Mission started', x: 12, y: 30, kind: 'trigger', iconDomain: 'gator' },
         { id: 'a1', label: 'Clone + patch', x: 34, y: 22, kind: 'agent', agent: 'Claude Code' },
         { id: 'i1', label: 'Open PR', x: 56, y: 36, kind: 'integration', iconDomain: 'github.com' },
         { id: 'a2', label: 'Attach CI log', x: 56, y: 64, kind: 'agent', agent: 'Codex' },
-        { id: 'g1', label: 'Human merge', x: 84, y: 48, kind: 'gate', iconDomain: 'trooper' },
+        { id: 'g1', label: 'Human merge', x: 84, y: 48, kind: 'gate', iconDomain: 'gator' },
       ],
       edges: [
         { from: 't1', to: 'a1' },
@@ -41,7 +41,7 @@ export const githubIntegrationPlaybookWorkflow: PlaybookWorkflowContent = {
         { id: 'a1', label: 'Parse failure log', x: 36, y: 24, kind: 'agent', agent: 'Codex' },
         { id: 'a2', label: 'Propose fix', x: 58, y: 40, kind: 'agent', agent: 'Claude Code' },
         { id: 'i1', label: 'Push commit', x: 58, y: 68, kind: 'integration', iconDomain: 'github.com' },
-        { id: 'g1', label: 'Re-run CI', x: 84, y: 50, kind: 'gate', iconDomain: 'trooper' },
+        { id: 'g1', label: 'Re-run CI', x: 84, y: 50, kind: 'gate', iconDomain: 'gator' },
       ],
       edges: [
         { from: 't1', to: 'a1' },
@@ -61,7 +61,7 @@ export const githubIntegrationPlaybookWorkflow: PlaybookWorkflowContent = {
         { id: 'a1', label: 'Identify bad commit', x: 34, y: 22, kind: 'agent', agent: 'Codex' },
         { id: 'a2', label: 'Revert PR', x: 56, y: 38, kind: 'agent', agent: 'Claude Code' },
         { id: 'i1', label: 'Notify #incidents', x: 56, y: 66, kind: 'integration', iconDomain: 'slack.com' },
-        { id: 'g1', label: 'Verify recovery', x: 82, y: 50, kind: 'gate', iconDomain: 'trooper' },
+        { id: 'g1', label: 'Verify recovery', x: 82, y: 50, kind: 'gate', iconDomain: 'gator' },
       ],
       edges: [
         { from: 't1', to: 'a1' },

@@ -29,14 +29,14 @@ export const PLATFORM_DOWNLOADS: Record<
   ios: {
     key: 'ios',
     label: 'Get the iOS app',
-    href: 'https://apps.apple.com/app/trooper',
+    href: 'https://app.gator.so/download/ios',
     iconSrc: '/images/platforms/apple.svg',
     external: true,
   },
   android: {
     key: 'android',
     label: 'Get the Android app',
-    href: 'https://play.google.com/store/apps/details?id=com.trooper',
+    href: 'https://app.gator.so/download/android',
     iconSrc: '/images/platforms/android.svg',
     external: true,
   },

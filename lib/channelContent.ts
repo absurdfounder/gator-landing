@@ -8,7 +8,7 @@ import {
   type ChannelCatalogItem,
 } from '@/lib/channelCatalog';
 
-const SOCIAL_IMAGE = 'https://dazzling-cat.netlify.app/trooper_social.png';
+const SOCIAL_IMAGE = 'https://dazzling-cat.netlify.app/gator_social.png';
 
 export type ChannelPageContent = {
   slug: string;
@@ -51,7 +51,7 @@ function buildChannelPage(args: BuildArgs): ChannelPageContent | undefined {
     slug: args.slug,
     catalog,
     missionLabel: 'Channel brief',
-    title: `Command Trooper from ${catalog.name}`,
+    title: `Command Gator from ${catalog.name}`,
     titleAccent: args.titleAccent,
     description: args.description,
     overviewTitle: args.overviewTitle,
@@ -62,9 +62,9 @@ function buildChannelPage(args: BuildArgs): ChannelPageContent | undefined {
     demoId: args.demoId,
     featureSections: args.featureSections,
     meta: {
-      title: `${catalog.name} Channel | Trooper`,
+      title: `${catalog.name} Channel | Gator`,
       description: args.description,
-      canonical: `https://trooper.so/channels/${args.slug}`,
+      canonical: `https://gator.so/channels/${args.slug}`,
     },
   };
 }
@@ -72,7 +72,7 @@ function buildChannelPage(args: BuildArgs): ChannelPageContent | undefined {
 const genericBenefits = (channel: string): SubpageBenefit[] => [
   {
     title: 'Same workforce, new front line',
-    description: `Message from ${channel} and your Trooper unit picks up the task on the board — no context lost between apps.`,
+    description: `Message from ${channel} and your Gator unit picks up the task on the board — no context lost between apps.`,
   },
   {
     title: 'Ticket-grade traceability',
@@ -101,11 +101,11 @@ const slack = buildChannelPage({
   ],
   titleAccent: 'without leaving your workspace',
   description:
-    'Assign tasks, get status updates, and approve agent actions from Slack channels and DMs. Your Trooper workforce meets your team where they already coordinate.',
+    'Assign tasks, get status updates, and approve agent actions from Slack channels and DMs. Your Gator workforce meets your team where they already coordinate.',
   overviewTitle: 'Ops command inside Slack',
   overviewParagraphs: [
-    'Drop a task in #engineering or DM your Trooper bot — agents checkout work on the unified board and report back in-thread.',
-    'Threaded tickets keep Slack fast while preserving full tool traces, diffs, and decision logs in Trooper.',
+    'Drop a task in #engineering or DM your Gator bot — agents checkout work on the unified board and report back in-thread.',
+    'Threaded tickets keep Slack fast while preserving full tool traces, diffs, and decision logs in Gator.',
     'Same org memory whether you command from desktop, mobile, or a standup channel.',
   ],
   benefits: [
@@ -143,9 +143,9 @@ const whatsapp = buildChannelPage({
     'Run your AI workforce from WhatsApp. Assign missions on the go, approve spend, and get field reports — all through the Business API on your private OpenClaw server.',
   overviewTitle: 'Field command on mobile',
   overviewParagraphs: [
-    'WhatsApp is where founders and operators actually respond. Trooper turns those messages into traced tickets, not lost threads.',
+    'WhatsApp is where founders and operators actually respond. Gator turns those messages into traced tickets, not lost threads.',
     'Agents execute on your server while you approve high-risk moves with a quick reply.',
-    'Business API credentials stay in your Secrets vault — Trooper never resells messaging access.',
+    'Business API credentials stay in your Secrets vault — Gator never resells messaging access.',
   ],
   benefits: [
     {
@@ -179,11 +179,11 @@ const telegram = buildChannelPage({
   ],
   titleAccent: 'via your bot',
   description:
-    'Connect a Telegram bot to Trooper and command your AI workforce from any device. Fast setup, global reach, full ticket tracing.',
+    'Connect a Telegram bot to Gator and command your AI workforce from any device. Fast setup, global reach, full ticket tracing.',
   overviewTitle: 'Lightweight bot command',
   overviewParagraphs: [
     'Telegram bots are ideal for solo operators and distributed teams who want instant mobile access.',
-    'Create a bot with BotFather, paste the token in Trooper, and start assigning work in minutes.',
+    'Create a bot with BotFather, paste the token in Gator, and start assigning work in minutes.',
     'Every bot message maps to a ticket — agents execute with the same memory and skills as the web app.',
   ],
   benefits: genericBenefits('Telegram'),
@@ -198,17 +198,17 @@ const discord = buildChannelPage({
       eyebrow: 'Routing',
       eyebrowNumber: '03',
       title: 'Server message → ticket',
-      intro: 'Community channels and DMs become first-class missions on your Trooper board.',
+      intro: 'Community channels and DMs become first-class missions on your Gator board.',
       visual: 'messaging-routing',
     },
     canvasFeatureSection('04'),
   ],
   titleAccent: 'in your server',
   description:
-    'Deploy Trooper inside Discord servers and DMs. Perfect for community teams, gaming orgs, and dev squads who live in voice and text channels.',
+    'Deploy Gator inside Discord servers and DMs. Perfect for community teams, gaming orgs, and dev squads who live in voice and text channels.',
   overviewTitle: 'Community-scale command',
   overviewParagraphs: [
-    'Invite the Trooper bot to your server and delegate from any channel your team uses daily.',
+    'Invite the Gator bot to your server and delegate from any channel your team uses daily.',
     'Agents share org memory across Discord, the dashboard, and other connected channels.',
     'Moderators stay in command — sensitive actions still require explicit approval.',
   ],
@@ -224,17 +224,17 @@ const signal = buildChannelPage({
       eyebrow: 'Routing',
       eyebrowNumber: '03',
       title: 'Encrypted DM → traced ops',
-      intro: 'Signal keeps messages private while Trooper handles execution on your runtime.',
+      intro: 'Signal keeps messages private while Gator handles execution on your runtime.',
       visual: 'messaging-routing',
     },
     canvasFeatureSection('04'),
   ],
   titleAccent: 'with end-to-end encryption',
   description:
-    'Command Trooper over Signal for private, encrypted ops communication. Ideal for security-conscious teams and personal command lines.',
+    'Command Gator over Signal for private, encrypted ops communication. Ideal for security-conscious teams and personal command lines.',
   overviewTitle: 'Encrypted field comms',
   overviewParagraphs: [
-    'Signal keeps message content off third-party servers while Trooper handles execution on your private runtime.',
+    'Signal keeps message content off third-party servers while Gator handles execution on your private runtime.',
     'Connect via signal-cli-rest-api on infrastructure you control.',
     'Assign tasks and receive status without sacrificing encryption expectations.',
   ],
@@ -250,18 +250,18 @@ const imessage = buildChannelPage({
       eyebrow: 'Routing',
       eyebrowNumber: '03',
       title: 'iMessage → your workforce',
-      intro: 'Bridge Apple messaging to Trooper tickets without adding another app.',
+      intro: 'Bridge Apple messaging to Gator tickets without adding another app.',
       visual: 'messaging-routing',
     },
     canvasFeatureSection('04'),
   ],
   titleAccent: 'through your Mac relay',
   description:
-    'Bridge iMessage to Trooper via a Mac relay. Command your workforce from the messaging app you already use with friends, family, and clients.',
+    'Bridge iMessage to Gator via a Mac relay. Command your workforce from the messaging app you already use with friends, family, and clients.',
   overviewTitle: 'Apple ecosystem bridge',
   overviewParagraphs: [
     'iMessage requires a Mac relay — BlueBubbles or similar — that stays online and exposes an API.',
-    'Trooper stores relay credentials securely and routes agent replies back through iMessage.',
+    'Gator stores relay credentials securely and routes agent replies back through iMessage.',
     'Best for operators who want zero new apps on their phone.',
   ],
   benefits: genericBenefits('iMessage'),
@@ -283,7 +283,7 @@ const email = buildChannelPage({
   ],
   titleAccent: 'via IMAP and SMTP',
   description:
-    'Send and receive email through Trooper agents. Inbox triage, drafted replies, scheduled follow-ups — all traced as tickets.',
+    'Send and receive email through Gator agents. Inbox triage, drafted replies, scheduled follow-ups — all traced as tickets.',
   overviewTitle: 'Inbox as command channel',
   overviewParagraphs: [
     'Connect Gmail or any IMAP provider with app passwords stored in your Secrets vault.',
@@ -308,10 +308,10 @@ const email = buildChannelPage({
 if (email) channelPages.email = email;
 
 export const channelHubMeta = {
-  title: 'Messaging Channels | Trooper',
+  title: 'Messaging Channels | Gator',
   description:
-    'Connect Slack, WhatsApp, Telegram, Discord, Signal, iMessage, and Email to your Trooper AI workforce. Command agents from the channels you already use.',
-  canonical: 'https://trooper.so/channels',
+    'Connect Slack, WhatsApp, Telegram, Discord, Signal, iMessage, and Email to your Gator AI workforce. Command agents from the channels you already use.',
+  canonical: 'https://gator.so/channels',
 };
 
 export function getChannelPage(slug: string): ChannelPageContent | undefined {

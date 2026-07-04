@@ -29,12 +29,12 @@ export default function ChannelsHubPage() {
             Messaging Channels
           </h1>
           <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
-            Command your Trooper workforce from Slack, WhatsApp, Telegram, Discord, Signal, iMessage, and Email.
+            Command your Gator workforce from Slack, WhatsApp, Telegram, Discord, Signal, iMessage, and Email.
             Same agents, same memory — whichever channel you message from.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
             <PixelButton
-              href="https://app.trooper.so"
+              href="https://app.gator.so"
               external
               size="lg"
               tone="brand"
@@ -58,7 +58,7 @@ export default function ChannelsHubPage() {
       <SectionShell eyebrow="Channels" eyebrowNumber="02" bgClass="bg-slate-50" noBorderBottom={false}>
         <div className="px-4 sm:px-6 lg:px-8 pt-2 pb-16 md:pb-24">
           <p className="mb-6 text-sm text-slate-600">
-            All {OPENCLAW_CHANNELS.length} OpenClaw messaging channels supported in Trooper.
+            All {OPENCLAW_CHANNELS.length} OpenClaw messaging channels supported in Gator.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
             {OPENCLAW_CHANNELS.map((channel) => (

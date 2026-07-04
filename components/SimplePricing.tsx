@@ -188,7 +188,7 @@ function CloudTierTabs({
       <div
         className="grid w-full grid-cols-2 gap-1 rounded-sm border border-slate-300 bg-slate-100 p-1 shadow-sm"
         role="radiogroup"
-        aria-label="Trooper Cloud tier"
+        aria-label="Gator Cloud tier"
       >
         {CLOUD_SUBSCRIPTION_TIERS.map((tier) => {
           const selected = value === tier.id;
@@ -608,7 +608,7 @@ export default function SimplePricing({ showFullPricingLink = true }: SimplePric
       index: '03',
       eyebrow: 'Hosted by us',
       badge: 'Most popular',
-      title: 'Trooper Cloud',
+      title: 'Gator Cloud',
       icon: Cloud,
       featured: true,
       price: cloudTierPrice,

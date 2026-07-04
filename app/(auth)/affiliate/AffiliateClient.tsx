@@ -123,12 +123,12 @@ const FAQ_ITEMS = [
       'After signup you get an affiliate dashboard with clicks, sign-ups, conversions, and earnings in near real time.',
   },
   {
-    question: 'Can I promote Trooper alongside other offers?',
+    question: 'Can I promote Gator alongside other offers?',
     answer:
-      'Yes. Many partners recommend Trooper next to newsletters, courses, and other SaaS tools.',
+      'Yes. Many partners recommend Gator next to newsletters, courses, and other SaaS tools.',
   },
   {
-    question: 'Can I use paid ads to promote Trooper?',
+    question: 'Can I use paid ads to promote Gator?',
     answer:
       'Check your affiliate terms in the dashboard before running paid traffic. We generally expect organic promotion — content, newsletters, communities, and direct recommendations.',
   },
@@ -154,7 +154,7 @@ const steps = [
     number: '02',
     title: 'Share your link',
     description:
-      'Share Trooper in videos, blog posts, newsletters, or social posts. Promote to founders, operators, and builders.',
+      'Share Gator in videos, blog posts, newsletters, or social posts. Promote to founders, operators, and builders.',
   },
   {
     number: '03',
@@ -181,7 +181,7 @@ const audiences = [
     icon: Code2,
     title: 'Developers & technical creators',
     description:
-      'Trooper agents make GitHub commits, review PRs, run shell commands, and automate dev workflows on an always-on virtual PC.',
+      'Gator agents make GitHub commits, review PRs, run shell commands, and automate dev workflows on an always-on virtual PC.',
   },
   {
     icon: Megaphone,
@@ -199,7 +199,7 @@ const audiences = [
     icon: Building2,
     title: 'Agencies and consultants',
     description:
-      'Recommend Trooper to clients who need coding, research, and execution done continuously — and add recurring revenue.',
+      'Recommend Gator to clients who need coding, research, and execution done continuously — and add recurring revenue.',
   },
   {
     icon: Sparkles,
@@ -213,7 +213,7 @@ const whyPromote = [
   {
     title: 'High-intent product',
     description:
-      'Trooper solves ongoing execution for teams. Referrals who need agents for real work convert better than casual AI curiosity clicks.',
+      'Gator solves ongoing execution for teams. Referrals who need agents for real work convert better than casual AI curiosity clicks.',
   },
   {
     title: 'Sticky subscriptions',
@@ -321,7 +321,7 @@ export default function AffiliateClient() {
           <SectionEyebrow index="04" label="Who it's for" />
           <div className="px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
             <h2 className="font-funneldisplay text-2xl tracking-tight text-slate-900 sm:text-3xl">
-              Promote Trooper to people who need work done
+              Promote Gator to people who need work done
             </h2>
             <p className="affiliate-section-desc mt-3">
               Easiest to recommend when your audience builds, ships, markets, or runs operations with software every
@@ -346,7 +346,7 @@ export default function AffiliateClient() {
 
         {/* Why promote */}
         <section className="border-b border-slate-200">
-          <SectionEyebrow index="05" label="Why promote Trooper" />
+          <SectionEyebrow index="05" label="Why promote Gator" />
           <div className="px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
             <h2 className="font-funneldisplay text-2xl tracking-tight text-slate-900 sm:text-3xl">
               A product your audience will love

@@ -207,7 +207,7 @@ export default function DownloadClient() {
             <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-2xl">
                 <h1 className="font-display text-3xl font-medium leading-tight tracking-tight text-ink sm:text-4xl md:text-[2.75rem]">
-                  Trooper, wherever work happens
+                  Gator, wherever work happens
                 </h1>
                 <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">
                   One command center for your AI team across Mac, Windows, iOS, Android, and web.
@@ -278,7 +278,7 @@ export default function DownloadClient() {
               </div>
               <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
                 <PixelButton
-                  href="https://app.trooper.so/settings/server"
+                  href="https://app.gator.so/settings/server"
                   external
                   size="lg"
                   tone="dark"
@@ -287,7 +287,7 @@ export default function DownloadClient() {
                   Set up local host
                 </PixelButton>
                 <PixelButton
-                  href="https://app.trooper.so"
+                  href="https://app.gator.so"
                   external
                   size="lg"
                   variant="outline"

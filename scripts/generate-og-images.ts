@@ -1,5 +1,5 @@
 /**
- * Pre-render all Trooper OG/social images to public/og/prebuilt/.
+ * Pre-render all Gator OG/social images to public/og/prebuilt/.
  * Run: npm run generate:og
  */
 import { access, mkdir, writeFile } from 'node:fs/promises';

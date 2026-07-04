@@ -9,10 +9,10 @@ import { buildPageMetadata } from '@/lib/og/buildMetadata';
 import LoopsClient from './LoopsClient';
 
 export const metadata = buildPageMetadata({
-  title: 'Agent Loops | Trooper',
+  title: 'Agent Loops | Gator',
   description:
     'Reusable prompt-only agent loops for CI, review, testing, and quality. Copy kickoff prompts into Cursor, Claude Code, or Codex and self-pace until checks pass.',
-  canonical: 'https://trooper.so/loops',
+  canonical: 'https://gator.so/loops',
   ogKind: 'hub',
   ogSlug: 'loops',
 });
@@ -40,13 +40,13 @@ const LoopsPage = async ({
           </p>
           <div className="mt-6">
             <PixelButton
-              href="https://app.trooper.so"
+              href="https://app.gator.so"
               external
               size="lg"
               tone="dark"
               icon={<ArrowRight className="h-4 w-4" />}
             >
-              Run loops in Trooper
+              Run loops in Gator
             </PixelButton>
           </div>
         </div>

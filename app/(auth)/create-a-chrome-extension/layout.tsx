@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { buildPageMetadata } from '@/lib/og/buildMetadata';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Chrome Extension Builder | Trooper",
-  description: "Create and ship browser extensions with Trooper workflows.",
-  canonical: "https://trooper.so/create-a-chrome-extension",
+  title: "Chrome Extension Builder | Gator",
+  description: "Create and ship browser extensions with Gator workflows.",
+  canonical: "https://gator.so/create-a-chrome-extension",
   ogKind: 'page',
   ogSlug: "create-a-chrome-extension",
 });

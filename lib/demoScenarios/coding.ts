@@ -104,7 +104,7 @@ Awaiting merge approval from @Vaibhav`,
     content: `# Hotfix bundle — parser v2.4.1
 
 ## Summary
-Codex, Claude Code, and OpenCode ran in parallel on the Trooper harness — parser patch, ETL dedupe, and test coverage.
+Codex, Claude Code, and OpenCode ran in parallel on the Gator harness — parser patch, ETL dedupe, and test coverage.
 
 ## Deliverables
 - Unified diffs for parser + dedupe + tests

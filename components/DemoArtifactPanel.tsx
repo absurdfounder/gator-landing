@@ -673,7 +673,7 @@ export function DemoArtifactPanel({
           <Download size={11} strokeWidth={1.75} /> Download
         </button>
       </div>
-      <div className="Trooper-scrollbar" style={{ flex: 1, overflow: 'auto', padding: noPad ? 0 : 14, position: 'relative' }}>
+      <div className="Gator-scrollbar" style={{ flex: 1, overflow: 'auto', padding: noPad ? 0 : 14, position: 'relative' }}>
         <ArtifactBody artifact={artifact} tab={effectiveTab} review={review} />
       </div>
     </div>

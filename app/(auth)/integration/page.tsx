@@ -9,10 +9,10 @@ import { ArrowRight } from 'lucide-react';
 import { buildPageMetadata } from '@/lib/og/buildMetadata';
 
 export const metadata = buildPageMetadata({
-  title: 'OpenClaw Skills | Trooper',
+  title: 'OpenClaw Skills | Gator',
   description:
     'Extend your AI workforce with 3,000+ OpenClaw skills. Connect GitHub, Gmail, Slack, Notion, AWS, Docker, Shopify, and hundreds of other tools to your AI employees.',
-  canonical: 'https://trooper.so/integration',
+  canonical: 'https://gator.so/integration',
   ogKind: 'hub',
   ogSlug: 'integration',
 });
@@ -40,7 +40,7 @@ const Integration = async ({
           </p>
           <div className="mt-6">
             <PixelButton
-              href="https://app.trooper.so"
+              href="https://app.gator.so"
               external
               size="lg"
               tone="brand"

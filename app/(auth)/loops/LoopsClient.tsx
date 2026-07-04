@@ -180,12 +180,12 @@ export default function LoopsClient({ loops, initialCategory }: LoopsClientProps
 
       <div className="mt-10 text-center">
         <a
-          href="https://app.trooper.so"
+          href="https://app.gator.so"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-sm bg-slate-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-slate-800"
         >
-          Run loops in Trooper
+          Run loops in Gator
           <ExternalLink className="h-4 w-4" />
         </a>
       </div>

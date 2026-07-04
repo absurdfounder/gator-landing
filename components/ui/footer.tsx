@@ -18,7 +18,7 @@ import {
   Zap,
 } from 'lucide-react';
 
-const GITHUB_ORG_URL = 'https://github.com/Trooper-AI';
+const GITHUB_ORG_URL = 'https://github.com/absurdfounder';
 
 type LinkItem = {
   label: string;
@@ -202,8 +202,7 @@ export default function Footer() {
               iconClassName="h-10 w-10 sm:h-11 sm:w-11 object-contain"
             />
             <p className="text-sm leading-relaxed text-slate-600">
-              AI workforce platform powered by OpenClaw. Multiple AI employees executing tasks
-              autonomously across GitHub, email, browsers, and your entire tech stack.
+              Browser agent loops powered by OpenClaw. Research, code, review, and ship from any tab.
             </p>
             <p className="text-sm text-slate-600">
               Built by{' '}

@@ -66,7 +66,7 @@ export function pluginLogoUrl(plugin: PluginCatalogItem): string {
   if (plugin.iconUrl) return plugin.iconUrl;
   if (plugin.composioSlug) return `https://logos.composio.dev/api/${plugin.composioSlug}`;
   if (plugin.domain) return `https://www.google.com/s2/favicons?domain=${plugin.domain}&sz=128`;
-  return 'https://www.google.com/s2/favicons?domain=trooper.so&sz=128';
+  return 'https://www.google.com/s2/favicons?domain=gator.so&sz=128';
 }
 
 export const PRIORITY_INTEGRATION_SLUGS = [

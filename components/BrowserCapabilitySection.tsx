@@ -29,9 +29,8 @@ export default function BrowserCapabilitySection() {
         </div>
 
         <p className="mx-auto mt-10 max-w-2xl text-center text-[15px] leading-relaxed text-ink-muted sm:mt-12 sm:text-base sm:leading-7 md:mt-16">
-          Unlike agents that only work through brittle integrations, Gator&apos;s loops run
-          inside your browser — on GitHub, Gmail, Slack, and any site you can log into. If you
-          can do it in a tab, your agent loop can too.
+          Gator runs inside your browser on GitHub, Gmail, Slack, and any site you can log into.
+          If you can do it in a tab, a loop can too.
         </p>
       </div>
     </section>

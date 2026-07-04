@@ -29,12 +29,12 @@ export default function UseCasesHubPage() {
             AI Agent Use Cases
           </h1>
           <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
-            See how Trooper AI agents handle lead generation, sales research, CRM updates, code writing,
+            See how Gator AI agents handle lead generation, sales research, CRM updates, code writing,
             browser automation, customer support, and more.
           </p>
           <div className="mt-6">
             <PixelButton
-              href="https://app.trooper.so"
+              href="https://app.gator.so"
               external
               size="lg"
               tone="brand"

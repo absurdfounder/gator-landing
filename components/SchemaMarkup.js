@@ -7,7 +7,7 @@ const SchemaMarkup = () => {
     "@type": "WebSite",
     "name": "Gator",
     "url": "https://gator.so/",
-    "description": "AI Workforce Platform Powered by OpenClaw — Deploy autonomous AI employees that execute real tasks using GitHub, Gmail, browsers, and APIs.",
+    "description": "Run autonomous agent loops in your browser. Powered by OpenClaw.",
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://gator.so/integration?search={search_term_string}",
@@ -21,7 +21,7 @@ const SchemaMarkup = () => {
     "name": "Gator",
     "url": "https://gator.so",
     "logo": "https://gator.so/images/gator-icon.png",
-    "description": "Gator builds AI workforce teams powered by OpenClaw. Multiple AI employees execute tasks autonomously using GitHub, Gmail, browsers, and APIs.",
+    "description": "Gator runs agent loops in your browser — research, code, review, and ship. Powered by OpenClaw.",
     "sameAs": [
       "https://twitter.com/gator_ai"
     ],
@@ -38,7 +38,7 @@ const SchemaMarkup = () => {
     "name": "Gator",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
-    "description": "AI workforce platform powered by OpenClaw. Deploy multiple AI employees that make GitHub commits, send emails, browse the web, and execute complex multi-step tasks autonomously.",
+    "description": "Browser extension for autonomous agent loops. Research, code, review, and ship from any tab.",
     "url": "https://gator.so",
     "featureList": [
       "AI Workforce Teams",

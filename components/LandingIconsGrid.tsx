@@ -11,7 +11,7 @@ const GRID_W = COLS * CELL + (COLS - 1) * GAP;
 const GRID_H = ROWS * CELL + (ROWS - 1) * GAP;
 const ROTATE_X = 48;
 
-/** 8×3 grid — apps and sites Trooper agents commonly operate through. */
+/** 8×3 grid — apps and sites Gator agents commonly operate through. */
 const LANDING_ICONS: ReadonlyArray<{ domain: string; label: string }> = [
   { domain: 'linkedin.com', label: 'LinkedIn' },
   { domain: 'slack.com', label: 'Slack' },
@@ -105,7 +105,7 @@ export default function LandingIconsGrid() {
       ref={viewportRef}
       className="landing-icons-mask relative -mt-16 h-80 w-full overflow-hidden"
       role="img"
-      aria-label="App and service icons Trooper agents can work with in the browser"
+      aria-label="App and service icons Gator agents can work with in the browser"
     >
       <div
         className="absolute inset-y-0 left-0 right-0 flex h-80 items-end justify-center overflow-hidden lg:left-10 lg:right-10 xl:left-12 xl:right-12"

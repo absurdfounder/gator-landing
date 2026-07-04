@@ -4,10 +4,10 @@ import DownloadMacClient from '@/components/download/DownloadMacClient';
 import { buildPageMetadata } from '@/lib/og/buildMetadata';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Download Trooper for Mac',
+  title: 'Download Gator for Mac',
   description:
-    'Your Trooper Mac download should start automatically. Follow the steps to install Trooper on macOS.',
-  canonical: 'https://trooper.so/download/mac',
+    'Your Gator Mac download should start automatically. Follow the steps to install Gator on macOS.',
+  canonical: 'https://gator.so/download/mac',
   ogKind: 'page',
   ogSlug: 'download-mac',
 });

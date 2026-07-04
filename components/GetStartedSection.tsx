@@ -69,7 +69,7 @@ export default function GetStartedSection() {
         <section className="overflow-hidden">
           <div className="pr-0 lg:pr-8">
             <div className="pt-12 pb-12 sm:pt-20">
-              <span className="font-silkscreen text-lg text-emerald-600">Trooper Cloud</span>
+              <span className="font-silkscreen text-lg text-emerald-600">Gator Cloud</span>
               <h2 className="mt-4 font-funneldisplay text-balance text-neutral-800 text-3xl lg:text-4xl">
                 Get started in minutes
               </h2>
@@ -102,7 +102,7 @@ export default function GetStartedSection() {
                 Your data, your control
               </h2>
               <p className="mt-6 text-base text-slate-700">
-                Run Trooper on your own infrastructure. Your keys, your data, fully isolated — no shared infrastructure, no vendor lock-in.
+                Run Gator on your own infrastructure. Your keys, your data, fully isolated — no shared infrastructure, no vendor lock-in.
               </p>
             </div>
             <div className="pb-20">

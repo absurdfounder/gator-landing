@@ -5,18 +5,18 @@ import { motion } from 'framer-motion';
 const steps = [
   {
     number: '01',
-    title: 'Install the extension.',
-    example: 'Add Gator to Chrome and pin it — loops run right on the page you\'re on.',
+    title: 'Install Gator.',
+    example: 'Add the extension for your browser and pin it.',
   },
   {
     number: '02',
     title: 'Pick a loop.',
-    example: 'CI watcher, PR review, research, codegen — or build your own from a prompt.',
+    example: 'CI watcher, PR review, research — or roll your own.',
   },
   {
     number: '03',
     title: 'Let it run.',
-    example: 'The agent loops in your browser tab until the job is done. Check in anytime.',
+    example: 'The loop works in your tab until the job is done.',
   },
 ];
 

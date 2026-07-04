@@ -67,15 +67,15 @@ export async function generateMetadata(
 
   return mergeOgImages(
     {
-      title: `The simple, powerful ${filteredContent.product.name} alternative - Trooper vs ${filteredContent.product.name}`,
-      description: `Trooper is the fast, modern ${filteredContent.product.name} alternative built on notion as a CMS, it's focused completely on professional website publishing. You can publish a blog, helpdesk, directory or even a 2-sided marketplace. 
-Compare Trooper  to ${filteredContent.product.name}: ${filteredContent.product.description}`,
+      title: `The simple, powerful ${filteredContent.product.name} alternative - Gator vs ${filteredContent.product.name}`,
+      description: `Gator is the fast, modern ${filteredContent.product.name} alternative built on notion as a CMS, it's focused completely on professional website publishing. You can publish a blog, helpdesk, directory or even a 2-sided marketplace. 
+Compare Gator  to ${filteredContent.product.name}: ${filteredContent.product.description}`,
       alternates: {
-        canonical: `https://trooper.so/compare-against/${slug}`,
+        canonical: `https://gator.so/compare-against/${slug}`,
       },
     },
     'compare',
-    `Trooper vs ${filteredContent.product.name}`,
+    `Gator vs ${filteredContent.product.name}`,
     slug,
   );
 }
@@ -106,12 +106,12 @@ export default async function ComparisonAgainst({ params }: { params: { slug: st
                 className="w-full max-w-xs sm:max-w-sm md:max-w-sm lg:max-w-sm rounded-md p-8 mb-8 m-auto"
               />
               <h1 className="text-4xl font-bold mb-4 font-funneldisplay">
-                Tired of <b>{filteredContent.product.name}</b>? <br /> Say hi to Trooper
+                Tired of <b>{filteredContent.product.name}</b>? <br /> Say hi to Gator
               </h1>
               <p className="text-lg sm:text-xl text-slate-600">
                 {filteredContent.product.description}
               </p>
-              <Link href="https://app.trooper.so" className="text-white bg-slate-900 rounded-md w-fit p-2 mt-4 px-4 mt-2 block m-auto">
+              <Link href="https://app.gator.so" className="text-white bg-slate-900 rounded-md w-fit p-2 mt-4 px-4 mt-2 block m-auto">
                 Build sites using AI
               </Link>
             </div>

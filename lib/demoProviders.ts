@@ -15,7 +15,7 @@ export const PROVIDER_DOMAINS: Record<string, string> = {
   Gemini: 'gemini.google.com',
   Aider: 'aider.chat',
   Cline: 'cline.bot',
-  Trooper: 'trooper.so',
+  Gator: 'trooper.so',
 };
 
 export function getProviderDomain(provider?: string): string | null {

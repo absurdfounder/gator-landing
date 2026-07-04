@@ -143,7 +143,7 @@ function WindowTile({
         </span>
       </div>
       <div
-        className={`Trooper-scrollbar overflow-auto ${win.accent ? 'bg-trooper-50/40' : 'bg-white'}`}
+        className={`Gator-scrollbar overflow-auto ${win.accent ? 'bg-trooper-50/40' : 'bg-white'}`}
         style={{ height: bodyH }}
       >
         {win.body}

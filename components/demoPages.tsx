@@ -11,7 +11,7 @@ import type { CSSProperties, ReactNode } from 'react';
 import { TROOPER_DEMO as C } from './demoTheme';
 import { getFaviconUrl } from '@/lib/favicon';
 
-/* ─── Shared tokens (mirrors Trooper index.css + PageLayout) ─── */
+/* ─── Shared tokens (mirrors Gator index.css + PageLayout) ─── */
 const card: CSSProperties = {
   borderRadius: 16, border: '1px solid #F5F5F4', background: C.card,
   boxShadow: '0 1px 2px rgba(28,25,23,0.04)',
@@ -34,7 +34,7 @@ function Av({ src, size = 32 }: { src: string; size?: number }) {
 
 function DemoPageLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="Trooper-scrollbar" style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden', background: C.card }}>
+    <div className="Gator-scrollbar" style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden', background: C.card }}>
       <div style={{ flex: 1, overflowY: 'auto', overflowX: 'hidden', padding: '12px 12px 24px', maxWidth: 1024, margin: '0 auto', width: '100%' }}>
         <div style={{ padding: '0 8px' }}>{children}</div>
       </div>
@@ -120,7 +120,7 @@ function TabPills({ tabs, active }: { tabs: string[]; active: string }) {
 /* ─── Home (centered composer shell — HomePage.jsx) ─── */
 export function DemoHomePage() {
   return (
-    <div className="Trooper-scrollbar" style={{ flex: 1, overflowY: 'auto', background: C.card }}>
+    <div className="Gator-scrollbar" style={{ flex: 1, overflowY: 'auto', background: C.card }}>
       <div style={{ maxWidth: 672, margin: '0 auto', padding: '28px 20px 32px' }}>
         {/* Hero header */}
         <header style={{ textAlign: 'center', marginBottom: 28 }}>
@@ -147,7 +147,7 @@ export function DemoHomePage() {
               <div style={{ display: 'flex', gap: 6 }}>
                 <div style={{ width: 28, height: 28, borderRadius: 8, border: `1px solid ${C.border}`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Plus size={14} color={C.textSubtle} /></div>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, height: 28, padding: '0 8px', borderRadius: 8, border: `1px solid ${C.border}`, fontSize: 11, color: C.textMuted }}>
-                  <img src="/images/trooper-logomark.png" alt="" style={{ width: 14, height: 14, imageRendering: 'pixelated' }} /> Trooper Auto
+                  <img src="/images/gator-icon.png" alt="" style={{ width: 14, height: 14, imageRendering: 'pixelated' }} /> Gator Auto
                 </span>
               </div>
               <div style={{ display: 'flex', gap: 4 }}>

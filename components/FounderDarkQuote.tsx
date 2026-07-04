@@ -40,7 +40,7 @@ export default function FounderDarkQuote() {
               <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-white/10 bg-white/5 sm:h-14 sm:w-14">
                 <Image
                   src="/images/founder-portrait.png"
-                  alt="Vaibhav, founder of Trooper"
+                  alt="Vaibhav, founder of Gator"
                   fill
                   className="object-cover object-top"
                   sizes="56px"
@@ -50,7 +50,7 @@ export default function FounderDarkQuote() {
                 <p className="font-display text-base font-medium tracking-tight text-white sm:text-lg">
                   Vaibhav
                 </p>
-                <p className="mt-0.5 text-sm text-white/50">Founder, Trooper</p>
+                <p className="mt-0.5 text-sm text-white/50">Founder, Gator</p>
               </div>
             </div>
 

@@ -15,7 +15,7 @@ const INSTALL_STEPS = [
     illustration: <OpenDmgIllustration />,
     text: (
       <>
-        Open <strong className="font-semibold text-ink">Trooper.dmg</strong> from your{' '}
+        Open <strong className="font-semibold text-ink">Gator.dmg</strong> from your{' '}
         <strong className="font-semibold text-ink">Downloads</strong> folder
       </>
     ),
@@ -24,7 +24,7 @@ const INSTALL_STEPS = [
     illustration: <DragToApplicationsIllustration />,
     text: (
       <>
-        Drag the <strong className="font-semibold text-ink">Trooper</strong> icon into your{' '}
+        Drag the <strong className="font-semibold text-ink">Gator</strong> icon into your{' '}
         <strong className="font-semibold text-ink">Applications</strong> folder
       </>
     ),
@@ -33,7 +33,7 @@ const INSTALL_STEPS = [
     illustration: <OpenFromApplicationsIllustration />,
     text: (
       <>
-        Open the <strong className="font-semibold text-ink">Trooper</strong> app from your{' '}
+        Open the <strong className="font-semibold text-ink">Gator</strong> app from your{' '}
         <strong className="font-semibold text-ink">Applications</strong> folder
       </>
     ),

@@ -376,7 +376,7 @@ function ConnectCard() {
         <div className="relative shrink-0">
           <div className="overflow-hidden rounded-xl bg-white p-2 shadow-[0_8px_24px_-8px_rgba(0,0,0,0.4)] ring-1 ring-white/10">
             <Image
-              src="/images/trooper-connect-qr.png"
+              src="/images/gator-icon.png"
               alt="QR code to open Gator channel setup"
               width={108}
               height={108}

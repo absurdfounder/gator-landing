@@ -32,13 +32,13 @@ export default function AlternativeSubpageLayout({ content }: { content: Alterna
 
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <PixelButton
-                href="https://app.trooper.so"
+                href="https://app.gator.so"
                 external
                 size="lg"
                 tone="brand"
                 icon={<ArrowRight className="h-4 w-4" />}
               >
-                Try Trooper free
+                Try Gator free
               </PixelButton>
               <PixelButton
                 href="/alternatives"
@@ -86,7 +86,7 @@ export default function AlternativeSubpageLayout({ content }: { content: Alterna
         <section className="py-12 md:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-funneldisplay text-2xl sm:text-3xl tracking-tight text-slate-900 mb-8">
-              Trooper vs {content.competitorName}
+              Gator vs {content.competitorName}
             </h2>
 
             <div className="overflow-x-auto border border-slate-200 bg-white">
@@ -94,7 +94,7 @@ export default function AlternativeSubpageLayout({ content }: { content: Alterna
                 <thead>
                   <tr className="border-b border-slate-200 bg-slate-50">
                     <th className="text-left p-4 font-semibold text-slate-900 w-1/4">Feature</th>
-                    <th className="text-left p-4 font-semibold text-emerald-700 w-[37.5%]">Trooper</th>
+                    <th className="text-left p-4 font-semibold text-emerald-700 w-[37.5%]">Gator</th>
                     <th className="text-left p-4 font-semibold text-slate-500 w-[37.5%]">{content.competitorName}</th>
                   </tr>
                 </thead>
@@ -118,7 +118,7 @@ export default function AlternativeSubpageLayout({ content }: { content: Alterna
         </section>
       </SectionShell>
 
-      <SectionShell eyebrow="When to choose Trooper" bgClass="bg-white">
+      <SectionShell eyebrow="When to choose Gator" bgClass="bg-white">
         <section className="py-12 md:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ul className="grid md:grid-cols-3 gap-4 max-w-5xl">
@@ -135,7 +135,7 @@ export default function AlternativeSubpageLayout({ content }: { content: Alterna
 
             <div className="mt-10">
               <PixelButton
-                href="https://app.trooper.so"
+                href="https://app.gator.so"
                 external
                 size="lg"
                 tone="brand"

@@ -26,20 +26,20 @@ export default function AlternativesHubPage() {
         <div className="page-hero-padding px-4 sm:px-6 lg:px-8 pb-10">
           <PixelMissionTag index="01" label="Comparisons" className="mb-4" />
           <h1 className="font-funneldisplay text-3xl sm:text-4xl md:text-[2.5rem] tracking-tight text-slate-900 max-w-3xl">
-            Trooper Alternatives
+            Gator Alternatives
           </h1>
           <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
-            See how Trooper compares to Lindy, Clay, Apollo, Cursor, Devin, Zapier Agents, and other AI automation tools.
+            See how Gator compares to Lindy, Clay, Apollo, Cursor, Devin, Zapier Agents, and other AI automation tools.
           </p>
           <div className="mt-6">
             <PixelButton
-              href="https://app.trooper.so"
+              href="https://app.gator.so"
               external
               size="lg"
               tone="brand"
               icon={<ArrowRight className="h-4 w-4" />}
             >
-              Try Trooper
+              Try Gator
             </PixelButton>
           </div>
         </div>

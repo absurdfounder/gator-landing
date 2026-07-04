@@ -71,7 +71,7 @@ export const HUB_OG_PAGES: Record<string, OgHeroContent> = {
     'Channels',
     'Talk to agents',
     'where you work',
-    'Connect Trooper to Slack, WhatsApp, Telegram, Discord, and more.',
+    'Connect Gator to Slack, WhatsApp, Telegram, Discord, and more.',
   ),
   'use-cases': hub(
     'use-cases',
@@ -90,16 +90,16 @@ export const HUB_OG_PAGES: Record<string, OgHeroContent> = {
   alternatives: hub(
     'alternatives',
     'Comparisons',
-    'Trooper',
+    'Gator',
     'alternatives',
-    'Compare Trooper to other AI workforce and automation platforms.',
+    'Compare Gator to other AI workforce and automation platforms.',
   ),
   showcase: hub(
     'showcase',
     'Showcase',
     'Site',
     'templates',
-    'Browse Trooper-powered site templates and publishing workflows.',
+    'Browse Gator-powered site templates and publishing workflows.',
   ),
 };
 
@@ -108,7 +108,7 @@ export const STATIC_OG_PAGES: Record<string, OgHeroContent> = {
   pricing: page(
     'pricing',
     'Pricing',
-    'Run Trooper',
+    'Run Gator',
     'your way',
     'Local install, Solo Cloud, hosted cloud, and enterprise self-host plans.',
   ),
@@ -116,14 +116,14 @@ export const STATIC_OG_PAGES: Record<string, OgHeroContent> = {
     'download',
     'Download',
     'Install',
-    'Trooper locally',
+    'Gator locally',
     'Get the desktop app and run agents on your machine with full control.',
   ),
   affiliate: page(
     'affiliate',
     'Affiliate',
     'Earn with',
-    'Trooper',
+    'Gator',
     'Partner program for creators and teams promoting the AI workforce platform.',
   ),
   terms: page(
@@ -131,14 +131,14 @@ export const STATIC_OG_PAGES: Record<string, OgHeroContent> = {
     'Legal',
     'Terms of',
     'service',
-    'Terms governing use of Trooper and related services.',
+    'Terms governing use of Gator and related services.',
   ),
   privacy: page(
     'privacy',
     'Legal',
     'Privacy',
     'policy',
-    'How Trooper collects, uses, and protects your data.',
+    'How Gator collects, uses, and protects your data.',
   ),
   agency: page(
     'agency',
@@ -152,14 +152,14 @@ export const STATIC_OG_PAGES: Record<string, OgHeroContent> = {
     'Contact',
     'Talk to',
     'the team',
-    'Sales, support, and partnership inquiries for Trooper.',
+    'Sales, support, and partnership inquiries for Gator.',
   ),
   'wonder-token': page(
     'wonder-token',
     'Wonder',
     'Token',
     'utility',
-    'Wonder token utilities and ecosystem pages on Trooper.',
+    'Wonder token utilities and ecosystem pages on Gator.',
   ),
   'watch-the-burn-wonder': page(
     'watch-the-burn-wonder',
@@ -173,7 +173,7 @@ export const STATIC_OG_PAGES: Record<string, OgHeroContent> = {
     'Migration',
     'Move to',
     'Wonder sites',
-    'Migrate helpdesks, docs, and sites to Trooper-powered publishing.',
+    'Migrate helpdesks, docs, and sites to Gator-powered publishing.',
   ),
   'create-a-blog-notion': page(
     'create-a-blog-notion',
@@ -236,7 +236,7 @@ export const STATIC_OG_PAGES: Record<string, OgHeroContent> = {
     'Build',
     'Chrome',
     'extension',
-    'Create and ship browser extensions with Trooper workflows.',
+    'Create and ship browser extensions with Gator workflows.',
   ),
 };
 

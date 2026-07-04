@@ -74,32 +74,32 @@ export async function generateMetadata(
   if (integration) {
     return mergeOgImages(
       {
-        title: `Integrate ${integration.product.name} with Trooper`,
-        description: `Connect Trooper to ${integration.product.name}: ${integration.product.description}`,
+        title: `Integrate ${integration.product.name} with Gator`,
+        description: `Connect Gator to ${integration.product.name}: ${integration.product.description}`,
         openGraph: {
-          title: `${integration.product.name} Integration | Trooper`,
-          description: `Connect Trooper to ${integration.product.name}: ${integration.product.description}`,
+          title: `${integration.product.name} Integration | Gator`,
+          description: `Connect Gator to ${integration.product.name}: ${integration.product.description}`,
           type: 'article',
         },
         twitter: {
-          title: `${integration.product.name} Integration | Trooper`,
+          title: `${integration.product.name} Integration | Gator`,
           description: integration.product.description,
         },
         alternates: {
-          canonical: `https://trooper.so/integration/${slug}`,
+          canonical: `https://gator.so/integration/${slug}`,
         },
       },
       'legacy-integration',
-      `${integration.product.name} Integration | Trooper`,
+      `${integration.product.name} Integration | Gator`,
       slug,
     );
   }
 
   return {
-    title: 'Integration | Trooper',
-    description: 'Explore Trooper integrations',
+    title: 'Integration | Gator',
+    description: 'Explore Gator integrations',
     alternates: {
-      canonical: `https://trooper.so/integration/${slug}`,
+      canonical: `https://gator.so/integration/${slug}`,
     },
   };
 }

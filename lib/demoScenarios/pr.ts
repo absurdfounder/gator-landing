@@ -8,11 +8,11 @@ const ARTIFACTS = {
     name: 'pr/press-release.md',
     ext: 'md',
     kind: 'markdown',
-    content: `# Press release — Trooper Series A
+    content: `# Press release — Gator Series A
 
 **FOR IMMEDIATE RELEASE**
 
-Trooper raises $18M Series A to bring traced multi-agent ops to every lean team.
+Gator raises $18M Series A to bring traced multi-agent ops to every lean team.
 
 "The command layer for AI employees is the missing piece," said CEO Vaibhav.
 

@@ -342,7 +342,7 @@ export function DemoCanvasView({
       <div
         ref={containerRef}
         data-demo-target="canvas-stage"
-        className="Trooper-scrollbar"
+        className="Gator-scrollbar"
         style={{ flex: 1, position: 'relative', overflow: 'auto', minHeight: 280, cursor: drag ? 'grabbing' : 'default' }}
       >
         <div
@@ -453,7 +453,7 @@ export function DemoCanvasView({
                   </button>
                 </div>
                 <div
-                  className="Trooper-scrollbar"
+                  className="Gator-scrollbar"
                   style={{
                     height: bodyH,
                     overflow: 'auto',

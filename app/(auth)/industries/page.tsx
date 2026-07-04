@@ -29,12 +29,12 @@ export default function IndustriesHubPage() {
             AI Front Office by Industry
           </h1>
           <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
-            Trooper agents handle calls, booking, dispatch, and follow-up for home services and field
+            Gator agents handle calls, booking, dispatch, and follow-up for home services and field
             businesses — built on OpenClaw, ready to deploy in minutes.
           </p>
           <div className="mt-6">
             <PixelButton
-              href="https://app.trooper.so"
+              href="https://app.gator.so"
               external
               size="lg"
               tone="brand"

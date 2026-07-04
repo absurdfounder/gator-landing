@@ -1,11 +1,11 @@
 {
-  "name": "Gator — AI Assistant That Gets Things Done",
+  "name": "Gator — Run loops in your browser",
   "short_name": "Gator",
-  "description": "Ask anything. Gator writes code, browses the web, and handles tasks autonomously.",
+  "description": "Autonomous agent loops in your browser. Powered by OpenClaw.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f0f0f",
-  "theme_color": "#0f0f0f",
+  "background_color": "#f4f9ec",
+  "theme_color": "#3f6b00",
   "icons": [
     {
       "src": "/favicon.png",

@@ -1,16 +1,15 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Download } from 'lucide-react'
 
 import GatorLogo from '@/components/ui/GatorLogo'
 import MobileMenu from './mobile-menu'
 import PixelButton from '@/components/ui/PixelButton'
 import {
-  GATOR_EXTENSION_URL,
   GATOR_SIGN_IN_URL,
   headerNavLinks,
 } from '@/lib/gatorBrand'
+import DownloadExtensionButton from '@/components/ui/DownloadExtensionButton'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -76,16 +75,10 @@ export default function Header() {
               Sign in
             </PixelButton>
 
-            <PixelButton
-              href={GATOR_EXTENSION_URL}
-              external
+            <DownloadExtensionButton
               size="sm"
-              tone="dark"
               className={`hidden md:inline-flex ${darkNav ? 'focus-visible:!ring-offset-split' : ''}`}
-              icon={<Download className="h-3.5 w-3.5" strokeWidth={2.5} />}
-            >
-              Download extension
-            </PixelButton>
+            />
 
             <MobileMenu dark={darkNav} />
           </div>

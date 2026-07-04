@@ -30,7 +30,7 @@ function ProviderChip({ provider, size = 14 }: { provider: string; size?: number
   const domain = getProviderDomain(provider);
   if (domain === 'trooper.so') {
     return (
-      <img src="/images/trooper-logomark.png" alt="" width={size} height={size} style={{ objectFit: 'contain', imageRendering: 'pixelated' }} />
+      <img src="/images/gator-icon.png" alt="" width={size} height={size} style={{ objectFit: 'contain', imageRendering: 'pixelated' }} />
     );
   }
   if (domain) return <DemoFavicon domain={domain} size={size + 2} rounded="sm" />;
@@ -458,7 +458,7 @@ export function DemoTaskModal({
         <div style={{ display: 'flex', flex: 1, minHeight: 0, overflow: 'hidden' }}>
           {/* Left: thread */}
           <div style={{ flex: '0 0 54%', minWidth: 0, display: 'flex', flexDirection: 'column', borderRight: `1px solid ${C.border}` }}>
-            <div ref={threadRef} data-demo-target="modal-thread" className="Trooper-scrollbar" style={{ flex: 1, overflowY: 'auto', minHeight: 0 }}>
+            <div ref={threadRef} data-demo-target="modal-thread" className="Gator-scrollbar" style={{ flex: 1, overflowY: 'auto', minHeight: 0 }}>
               <div style={{ padding: '14px 18px 8px', maxWidth: 480, margin: '0 auto' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 5, flexWrap: 'wrap', marginBottom: 8 }}>
                   <span style={{ fontSize: 9, fontWeight: 700, color: statusColor, background: statusBg, padding: '2px 7px', borderRadius: 999, textTransform: 'uppercase', letterSpacing: 0.4 }}>

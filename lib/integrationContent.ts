@@ -118,10 +118,10 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
 const RICH_OVERRIDES: Record<string, RichOverride> = {
   hubspot: {
     description:
-      'Deploy an AI agent that reads your HubSpot pipeline, logs calls, updates deal stages, and prepares customer briefs — traced on the Trooper board with human approval gates.',
+      'Deploy an AI agent that reads your HubSpot pipeline, logs calls, updates deal stages, and prepares customer briefs — traced on the Gator board with human approval gates.',
     overviewTitle: 'CRM work that actually gets done',
     overviewParagraphs: [
-      'Trooper agents connect to HubSpot through Composio OAuth and operate on real CRM records — deals, contacts, companies, tickets, and engagements.',
+      'Gator agents connect to HubSpot through Composio OAuth and operate on real CRM records — deals, contacts, companies, tickets, and engagements.',
       'Pipeline health reviews flag stale deals and slipping close dates. Customer prep briefs pull context before QBRs and renewals. Data hygiene audits catch missing fields and duplicate records.',
       'Every CRM action runs as a traced ticket. Sensitive updates wait for your approval before agents write back to HubSpot.',
     ],
@@ -136,7 +136,7 @@ const RICH_OVERRIDES: Record<string, RichOverride> = {
       { title: 'Post-call logging', description: 'Log calls, emails, and next-step tasks to the right deal record automatically.' },
     ],
     setupSteps: [
-      'Deploy a Trooper unit and open Settings → Plugins',
+      'Deploy a Gator unit and open Settings → Plugins',
       'Connect HubSpot via Composio OAuth — read and write scopes as needed',
       'Assign the HubSpot plugin to your sales or ops agent',
       'Delegate a pipeline review or customer prep task from chat or Slack',
@@ -150,7 +150,7 @@ const RICH_OVERRIDES: Record<string, RichOverride> = {
       'An AI agent that triages your Gmail inbox, drafts replies in your voice, extracts action items, and forwards updates to your team — with send approval before anything goes out.',
     overviewTitle: 'Email ops without the tab-switching',
     overviewParagraphs: [
-      'Trooper agents read Gmail through a secure OAuth connection and operate on real threads — not pasted snippets in chat.',
+      'Gator agents read Gmail through a secure OAuth connection and operate on real threads — not pasted snippets in chat.',
       'Inbox triage buckets mail into urgent, needs-reply, waiting, and FYI. Thread summaries pull decisions and follow-ups. Reply drafts match your tone with explicit confirmation before send.',
       'Email work becomes traced tickets linked to CRM updates, Slack threads, and task board missions.',
     ],
@@ -165,10 +165,10 @@ const RICH_OVERRIDES: Record<string, RichOverride> = {
       { title: 'Executive briefing', description: 'Summarize key threads from investors, customers, and partners into a daily brief.' },
     ],
     setupSteps: [
-      'Connect Gmail in Trooper Settings → Plugins via Google OAuth',
+      'Connect Gmail in Gator Settings → Plugins via Google OAuth',
       'Assign the Gmail plugin to your ops or sales agent',
       'Set approval rules for send, archive, and label actions',
-      'Delegate inbox triage or reply drafting from Slack or the Trooper board',
+      'Delegate inbox triage or reply drafting from Slack or the Gator board',
     ],
     demoId: 'email',
     relatedTeams: [{ slug: 'sales', label: 'Sales' }, { slug: 'operations', label: 'Operations' }],
@@ -176,10 +176,10 @@ const RICH_OVERRIDES: Record<string, RichOverride> = {
   },
   github: {
     description:
-      'AI agents that triage pull requests, debug failing CI, address review comments, and open draft PRs — with full diffs and terminal traces on the Trooper board.',
+      'AI agents that triage pull requests, debug failing CI, address review comments, and open draft PRs — with full diffs and terminal traces on the Gator board.',
     overviewTitle: 'Agents that contribute like developers',
     overviewParagraphs: [
-      'Trooper connects to GitHub through OAuth and operates on real repositories — issues, PRs, Actions checks, and branch workflows.',
+      'Gator connects to GitHub through OAuth and operates on real repositories — issues, PRs, Actions checks, and branch workflows.',
       'Agents inspect unresolved review threads, debug failing checks with log context, and prepare code changes for review. Every commit and PR open is traced on the ticket Canvas.',
       'Run Claude Code, Codex, and OpenCode side-by-side on the same repo — one harness, shared org memory, human merge approval.',
     ],
@@ -208,13 +208,13 @@ const RICH_OVERRIDES: Record<string, RichOverride> = {
       'AI agents that post pipeline updates, incident alerts, PR notifications, and status summaries to Slack channels — with full ticket traces behind every message.',
     overviewTitle: 'Ops output where your team already lives',
     overviewParagraphs: [
-      'Trooper agents use the Slack plugin to read channels, post updates, and notify teams — grounded in real work from GitHub, HubSpot, Linear, and your task board.',
+      'Gator agents use the Slack plugin to read channels, post updates, and notify teams — grounded in real work from GitHub, HubSpot, Linear, and your task board.',
       'Every Slack post links back to a traced ticket with tool logs, diffs, and decision history. Chat stays fast; ops stays auditable.',
       'Route general ops to team channels and sensitive approvals to DMs. Same org memory whether you command from desktop or mobile.',
     ],
     benefits: [
       { title: 'Channel notifications', description: 'Post PR opens, deal updates, and incident alerts to the right channels automatically.' },
-      { title: 'Thread preservation', description: 'Slack threads link to Trooper tickets — context never lost between apps.' },
+      { title: 'Thread preservation', description: 'Slack threads link to Gator tickets — context never lost between apps.' },
       { title: 'Status summaries', description: 'Daily or weekly digests of pipeline, sprint, and ops activity posted on schedule.' },
     ],
     useCases: [
@@ -237,7 +237,7 @@ const RICH_OVERRIDES: Record<string, RichOverride> = {
       'AI agents that read, analyze, and update Google Sheets — building reports, cleaning data tables, writing formulas, and syncing CRM exports into structured spreadsheets.',
     overviewTitle: 'Spreadsheet ops at agent speed',
     overviewParagraphs: [
-      'Trooper agents connect to Google Sheets through the Google Workspace plugin and operate on real spreadsheets with range precision.',
+      'Gator agents connect to Google Sheets through the Google Workspace plugin and operate on real spreadsheets with range precision.',
       'Agents find spreadsheets, inspect tabs and ranges, plan formulas, create charts, and write cell updates with explicit confirmation before changes.',
       'Pair Sheets with HubSpot, Stripe, and Slack — agents pull data, update reports, and post summaries to your team.',
     ],
@@ -266,7 +266,7 @@ const RICH_OVERRIDES: Record<string, RichOverride> = {
       'AI agents that research prospects on LinkedIn, build account briefs, map decision-makers, and prepare outreach context — traced for your sales team before every call.',
     overviewTitle: 'Sales research without the tab marathon',
     overviewParagraphs: [
-      'Trooper agents use the LinkedIn plugin to pull professional profiles, company context, and network signals into structured research briefs.',
+      'Gator agents use the LinkedIn plugin to pull professional profiles, company context, and network signals into structured research briefs.',
       'Research missions become traced tickets linked to HubSpot records and Gmail outreach drafts. Reps get context, not copy-paste chores.',
       'Combine LinkedIn research with Clay-style enrichment workflows — agents fan out research and synthesize into account briefs.',
     ],
@@ -295,7 +295,7 @@ const RICH_OVERRIDES: Record<string, RichOverride> = {
       'AI agents that search Notion, update docs, publish meeting notes, and maintain knowledge bases — keeping your team wiki aligned with what agents actually shipped.',
     overviewTitle: 'Knowledge ops that write back',
     overviewParagraphs: [
-      'Trooper agents connect to Notion through OAuth and operate on real pages, databases, and wikis — not static exports.',
+      'Gator agents connect to Notion through OAuth and operate on real pages, databases, and wikis — not static exports.',
       'Agents search knowledge bases for context, draft new pages from ticket deliverables, and update runbooks after incidents or releases.',
       'Pair Notion with GitHub and Slack — ship notes, post summaries, and keep docs in sync with code and ops.',
     ],
@@ -311,7 +311,7 @@ const RICH_OVERRIDES: Record<string, RichOverride> = {
     ],
     setupSteps: [
       'Connect Notion in Settings → Plugins via OAuth',
-      'Share target workspaces and databases with the Trooper integration',
+      'Share target workspaces and databases with the Gator integration',
       'Assign to ops or engineering agent with write approval rules',
       'Delegate doc updates from completed tickets or Slack',
     ],
@@ -321,10 +321,10 @@ const RICH_OVERRIDES: Record<string, RichOverride> = {
   },
   linear: {
     description:
-      'AI agents that create Linear issues, update sprint status, triage bugs, and sync engineering work with GitHub PRs — traced on the Trooper board.',
+      'AI agents that create Linear issues, update sprint status, triage bugs, and sync engineering work with GitHub PRs — traced on the Gator board.',
     overviewTitle: 'Product ops wired to your sprint',
     overviewParagraphs: [
-      'Trooper agents connect to Linear through OAuth and operate on real issues, cycles, and projects.',
+      'Gator agents connect to Linear through OAuth and operate on real issues, cycles, and projects.',
       'Agents create issues from Slack requests, update status after PR merges, and triage bugs with reproduction context from logs.',
       'Linear stays in sync with GitHub — agents bridge issue tracking and code delivery on one traced board.',
     ],
@@ -353,7 +353,7 @@ const RICH_OVERRIDES: Record<string, RichOverride> = {
       'AI agents that monitor Stripe subscriptions, flag churn risk, reconcile invoices, and update revenue reports — with finance-grade traces on every action.',
     overviewTitle: 'Revenue ops grounded in live billing data',
     overviewParagraphs: [
-      'Trooper agents connect to Stripe through Composio OAuth and operate on real customers, subscriptions, invoices, and payment events.',
+      'Gator agents connect to Stripe through Composio OAuth and operate on real customers, subscriptions, invoices, and payment events.',
       'Agents flag failed payments, summarize MRR changes, and sync billing data into Google Sheets or HubSpot — traced and approval-gated.',
       'Finance teams get automated revenue reports without manual dashboard exports or copy-paste into spreadsheets.',
     ],
@@ -383,7 +383,7 @@ function defaultBenefits(name: string, category: string): SubpageBenefit[] {
   return [
     {
       title: 'Autonomous execution',
-      description: `Trooper agents call ${name} APIs directly — search, read, write, and report back on traced tickets.`,
+      description: `Gator agents call ${name} APIs directly — search, read, write, and report back on traced tickets.`,
     },
     {
       title: 'Approval gates',
@@ -406,7 +406,7 @@ function defaultUseCases(name: string): IntegrationUseCase[] {
 
 function defaultSetupSteps(name: string): string[] {
   return [
-    'Deploy a Trooper unit at app.trooper.so',
+    'Deploy a Gator unit at app.trooper.so',
     `Open Settings → Plugins and connect ${name} via OAuth or API key`,
     `Assign the ${name} plugin to the right agent on your roster`,
     'Delegate a task from Slack, chat, or the unified task board',
@@ -429,7 +429,7 @@ function buildIntegrationPage(catalog: PluginCatalogItem): IntegrationPageConten
     .filter((s) => s !== slug && getPluginBySlug(s))
     .map((s) => ({ slug: s, label: getPluginBySlug(s)!.name }))).slice(0, 4);
 
-  const desc = catalog.description || catalog.shortDescription || `Connect ${catalog.name} to your Trooper AI workforce.`;
+  const desc = catalog.description || catalog.shortDescription || `Connect ${catalog.name} to your Gator AI workforce.`;
 
   return {
     slug,
@@ -437,10 +437,10 @@ function buildIntegrationPage(catalog: PluginCatalogItem): IntegrationPageConten
     logoUrl: pluginLogoUrl(catalog),
     missionLabel: 'Integration brief',
     title: `AI agent for ${catalog.name}`,
-    description: rich?.description ?? `Deploy an AI agent that connects to ${catalog.name} and executes ${catalog.category.toLowerCase()} workflows on your Trooper board — traced, approval-gated, and ready in minutes.`,
+    description: rich?.description ?? `Deploy an AI agent that connects to ${catalog.name} and executes ${catalog.category.toLowerCase()} workflows on your Gator board — traced, approval-gated, and ready in minutes.`,
     overviewTitle: rich?.overviewTitle ?? `Why teams connect ${catalog.name}`,
     overviewParagraphs: rich?.overviewParagraphs ?? [
-      `Trooper agents connect to ${catalog.name} through secure OAuth or API credentials synced to your private OpenClaw server.`,
+      `Gator agents connect to ${catalog.name} through secure OAuth or API credentials synced to your private OpenClaw server.`,
       desc,
       `Every action runs as a traced ticket on the unified board. Combine ${catalog.name} with GitHub, Gmail, Slack, and 1,000+ other plugins in multi-agent workflows.`,
     ],
@@ -454,9 +454,9 @@ function buildIntegrationPage(catalog: PluginCatalogItem): IntegrationPageConten
     isPriority,
     playbookWorkflow: getPluginPlaybook(catalog),
     meta: {
-      title: `AI agent for ${catalog.name} | Trooper`,
+      title: `AI agent for ${catalog.name} | Gator`,
       description: rich?.description ?? `Deploy an AI agent for ${catalog.name}. ${catalog.shortDescription || desc}`.slice(0, 160),
-      canonical: `https://trooper.so${pluginPagePath(slug)}`,
+      canonical: `https://gator.so${pluginPagePath(slug)}`,
     },
   };
 }
@@ -481,10 +481,10 @@ export function allIntegrationPageSlugs(): string[] {
 }
 
 export const integrationHubMeta = {
-  title: 'AI Agent Integrations | Trooper',
+  title: 'AI Agent Integrations | Gator',
   description:
-    'Connect HubSpot, Gmail, GitHub, Slack, Notion, Linear, Stripe, and 1,000+ tools to your Trooper AI workforce. Deploy agents that execute real work through OpenClaw plugins.',
-  canonical: 'https://trooper.so/plugin',
+    'Connect HubSpot, Gmail, GitHub, Slack, Notion, Linear, Stripe, and 1,000+ tools to your Gator AI workforce. Deploy agents that execute real work through OpenClaw plugins.',
+  canonical: 'https://gator.so/plugin',
 };
 
 export const integrationSocialImage = SOCIAL_IMAGE;

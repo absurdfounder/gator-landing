@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { buildPageMetadata } from '@/lib/og/buildMetadata';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Helpdesk from Notion | Trooper",
+  title: "Helpdesk from Notion | Gator",
   description: "Customer helpdesk and service desk sites from Notion content.",
-  canonical: "https://trooper.so/create-a-helpdesk-servicedesk-notion",
+  canonical: "https://gator.so/create-a-helpdesk-servicedesk-notion",
   ogKind: 'page',
   ogSlug: "create-a-helpdesk-servicedesk-notion",
 });

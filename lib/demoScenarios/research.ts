@@ -28,7 +28,7 @@ const ARTIFACTS = {
 |--------|-------------|----------------|--------|-------|
 | Competitor A | Partial | No | No | $89/seat |
 | Competitor B | No | No | No | $49/seat |
-| **Trooper** | Yes | Yes | Yes | BYOA |`,
+| **Gator** | Yes | Yes | Yes | BYOA |`,
   }),
   'research/intel-brief.md': a({
     name: 'research/intel-brief.md',
@@ -37,7 +37,7 @@ const ARTIFACTS = {
     content: `# Intel brief — agent ops landscape
 
 ## Executive summary
-Mid-market buyers want traced multi-agent ops, not another chat tab. Trooper's Canvas + review gates are differentiated.
+Mid-market buyers want traced multi-agent ops, not another chat tab. Gator's Canvas + review gates are differentiated.
 
 ## Recommendation
 Lead with board + harness story in outbound and pricing page.`,

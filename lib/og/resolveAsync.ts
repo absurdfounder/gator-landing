@@ -55,7 +55,7 @@ export async function resolveAsyncOgContent(
     return productOg(
       'compare',
       'Comparison',
-      `Trooper vs ${item.product.name}`,
+      `Gator vs ${item.product.name}`,
       item.product.description || '',
       item.product.heroimage,
       slug,

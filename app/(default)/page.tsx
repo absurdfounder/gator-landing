@@ -5,13 +5,13 @@ const homeOg = ogImageMeta('home', 'Gator — Run loops in your own browser');
 export const metadata = {
   metadataBase: new URL('https://gator.so'),
   title: 'Gator — Run Loops in Your Own Browser',
-  description: 'Install the Gator Chrome extension and run autonomous agent loops on any tab — research, coding, CI, reviews, and more. Powered by OpenClaw.',
+  description: 'Install Gator and run agent loops in your browser — research, code, CI, reviews. Powered by OpenClaw.',
   alternates: {
     canonical: 'https://gator.so',
   },
   openGraph: {
     title: 'Gator — Run loops in your own browser',
-    description: 'Launch autonomous agent loops from Chrome. Research, code, review, and ship without leaving your browser.',
+    description: 'Agent loops in your browser. Research, code, review, ship.',
     url: 'https://gator.so',
     siteName: 'Gator',
     images: homeOg.openGraph!.images,
@@ -21,7 +21,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Gator — Run loops in your own browser',
-    description: 'Autonomous agent loops in Chrome — powered by OpenClaw.',
+    description: 'Agent loops in your browser. Powered by OpenClaw.',
     site: '@gator_ai',
     images: homeOg.twitter!.images,
   },
@@ -89,7 +89,7 @@ export default function Home() {
         <FounderMessageSection />
       </SectionShell>
 
-      <SectionShell eyebrow="Intel Brief" eyebrowNumber="08" bgClass="bg-canvas-warm">
+      <SectionShell eyebrow="FAQ" eyebrowNumber="08" bgClass="bg-canvas-warm">
         <FAQ />
       </SectionShell>
 

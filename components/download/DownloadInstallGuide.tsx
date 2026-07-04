@@ -31,7 +31,7 @@ export default function DownloadInstallGuide({ manualDownloadHref, steps }: Down
               href={manualDownloadHref}
               className="font-medium text-blue-600 underline decoration-blue-600/30 underline-offset-2 transition-colors hover:text-blue-700"
             >
-              Download Trooper manually
+              Download Gator manually
             </a>
             .
           </p>

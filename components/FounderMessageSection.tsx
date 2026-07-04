@@ -47,11 +47,9 @@ export default function FounderMessageSection() {
 
           <div className="flex min-w-0 flex-1 flex-col p-5 sm:p-6 md:p-7 lg:p-9">
             <p className="font-funneldisplay text-xl leading-[1.45] tracking-tight text-slate-900 sm:text-xl md:text-[1.65rem] md:leading-[1.35]">
-              Everyone deserves a{' '}
-              <span className="font-semibold text-trooper">fully powered agentic system</span> that
-              does real work for them. That power should not sit only in the hands of big
-              corporations — so we built Gator for you, and made it{' '}
-              <span className="font-semibold text-trooper">free for anyone to use</span>.
+              Everyone deserves agents that do real work — not just chat. We built Gator to run loops
+              in your browser, and made it{' '}
+              <span className="font-semibold text-fern">free to start</span>.
             </p>
 
             <div className="mt-5 flex flex-col gap-3 sm:mt-6 sm:flex-row sm:items-end sm:justify-between sm:gap-4 md:mt-8">
@@ -66,7 +64,7 @@ export default function FounderMessageSection() {
                   href="https://twitter.com/absurdfounder"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-1 inline-block font-mono text-[11px] uppercase tracking-[0.14em] text-trooper transition-colors hover:text-trooper-700"
+                  className="mt-1 inline-block font-mono text-[11px] uppercase tracking-[0.14em] text-fern transition-colors hover:text-fern-dark"
                 >
                   @absurdfounder
                 </a>

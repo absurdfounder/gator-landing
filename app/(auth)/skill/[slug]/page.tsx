@@ -43,8 +43,8 @@ export async function generateMetadata({
 
   if (!skill) {
     return {
-      title: 'Skill | Trooper',
-      description: 'Explore OpenClaw skills on Trooper',
+      title: 'Skill | Gator',
+      description: 'Explore OpenClaw skills on Gator',
     };
   }
 
@@ -54,15 +54,15 @@ export async function generateMetadata({
 
   return mergeOgImages(
     {
-      title: `${skill.name} Skill — OpenClaw | Trooper`,
-      description: `${skill.description}. Install with: ${skill.install_command}. Browse ${skill.category} skills and 3,000+ more on Trooper.`,
+      title: `${skill.name} Skill — OpenClaw | Gator`,
+      description: `${skill.description}. Install with: ${skill.install_command}. Browse ${skill.category} skills and 3,000+ more on Gator.`,
       openGraph: {
         title: `${skill.name} — OpenClaw Skill`,
         description: `${skill.description}. Category: ${skill.category}. Install: ${skill.install_command}`,
         type: 'article',
       },
       twitter: {
-        title: `${skill.name} — OpenClaw Skill | Trooper`,
+        title: `${skill.name} — OpenClaw Skill | Gator`,
         description: skill.description,
       },
       alternates: { canonical },
@@ -93,7 +93,7 @@ function SkillStructuredData({
     description: skill.description,
     codeRepository: skill.link,
     programmingLanguage: 'OpenClaw Skill',
-    runtimePlatform: 'Trooper',
+    runtimePlatform: 'Gator',
     url: pageUrl,
     author: {
       '@type': 'Organization',
@@ -101,8 +101,8 @@ function SkillStructuredData({
     },
     isPartOf: {
       '@type': 'SoftwareApplication',
-      name: 'Trooper',
-      url: 'https://trooper.so',
+      name: 'Gator',
+      url: 'https://gator.so',
     },
   };
 
@@ -110,13 +110,13 @@ function SkillStructuredData({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://trooper.so' },
-      { '@type': 'ListItem', position: 2, name: 'Skills', item: 'https://trooper.so/integration' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gator.so' },
+      { '@type': 'ListItem', position: 2, name: 'Skills', item: 'https://gator.so/integration' },
       {
         '@type': 'ListItem',
         position: 3,
         name: skill.category,
-        item: `https://trooper.so/integration?category=${encodeURIComponent(skill.category)}`,
+        item: `https://gator.so/integration?category=${encodeURIComponent(skill.category)}`,
       },
       { '@type': 'ListItem', position: 4, name: skill.name, item: pageUrl },
     ],
@@ -126,7 +126,7 @@ function SkillStructuredData({
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     name: `How to install ${skill.name} OpenClaw skill`,
-    description: `Install the ${skill.name} skill on Trooper to extend your AI agent capabilities.`,
+    description: `Install the ${skill.name} skill on Gator to extend your AI agent capabilities.`,
     step: [
       {
         '@type': 'HowToStep',
@@ -246,7 +246,7 @@ export default async function SkillPage({ params }: { params: { slug: string } }
 
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                   <PixelButton
-                    href="https://app.trooper.so"
+                    href="https://app.gator.so"
                     external
                     size="lg"
                     tone="brand"
@@ -390,7 +390,7 @@ export default async function SkillPage({ params }: { params: { slug: string } }
                     </h3>
                     <code className="block break-all font-mono text-xs text-green-400">{skill.install_command}</code>
                     <Link
-                      href="https://trooper.so/features/skills-plugins"
+                      href="https://gator.so/features/skills-plugins"
                       className="mt-3 inline-block font-mono text-xs text-slate-400 hover:text-slate-300"
                     >
                       Learn more about skills &rarr;

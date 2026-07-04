@@ -110,10 +110,10 @@ export default function Features() {
         <div className="pt-6 md:pt-20">
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h1 className="font-funneldisplay text-2xl sm:text-3xl md:text-4xl mb-4 text-slate-800">
-              Have a unique website concept? <span className="block font-normal text-emerald-600">Trooper can build it.</span>
+              Have a unique website concept? <span className="block font-normal text-emerald-600">Gator can build it.</span>
             </h1>
             <p className="text-xl text-slate-600">
-              Trooper is designed for all use cases — from content curation to
+              Gator is designed for all use cases — from content curation to
               content creation. Build company blogs, helpdesks, company wikis,
               documentation sites, and marketplaces.
             </p>

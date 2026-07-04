@@ -7,7 +7,7 @@ import { canvasFeatureSection, codingCanvasFeatureSection, marketingCanvasFeatur
 import { getTeamPlaybook } from '@/lib/playbookWorkflowContent';
 import { bumpFeatureSectionNumbers, getSubpageSectionOffset } from '@/lib/subpageSections';
 
-const SOCIAL_IMAGE = 'https://dazzling-cat.netlify.app/trooper_social.png';
+const SOCIAL_IMAGE = 'https://dazzling-cat.netlify.app/gator_social.png';
 
 export type TeamUseCase = {
   title: string;
@@ -80,9 +80,9 @@ function buildTeamPage(args: BuildArgs): TeamPageContent {
     extraSection,
     missionLabel: args.missionLabel ?? 'Unit brief',
     meta: {
-      title: `${args.title} | Trooper`,
+      title: `${args.title} | Gator`,
       description: args.description,
-      canonical: `https://trooper.so/teams/${args.slug}`,
+      canonical: `https://gator.so/teams/${args.slug}`,
     },
   };
 }
@@ -102,7 +102,7 @@ const teamPages: Record<string, TeamPageContent> = {
         bullets: [
           'Three harness lanes with provider logos and branch names',
           'exec, apply_patch, and write_file traced per agent',
-          'BYOA — your keys, Trooper routes work and enforces permissions',
+          'BYOA — your keys, Gator routes work and enforces permissions',
         ],
         visual: 'coding-harness',
       },
@@ -136,13 +136,13 @@ const teamPages: Record<string, TeamPageContent> = {
       },
       codingCanvasFeatureSection('06'),
     ],
-    title: 'Trooper for Coding',
+    title: 'Gator for Coding',
     titleAccent: 'Use Codex & Claude Code together.',
     description:
-      'Delegate to Claude Code, Codex, Cursor, and your own agents from one Trooper harness. Your subscriptions, your repos, one unified task board with traced diffs and PR workflows.',
+      'Delegate to Claude Code, Codex, Cursor, and your own agents from one Gator harness. Your subscriptions, your repos, one unified task board with traced diffs and PR workflows.',
     overviewTitle: 'Multi-agent coding ops',
     overviewParagraphs: [
-      'Trooper does not resell model access. You bring Claude, OpenAI, or any provider subscription — we bring the harness: routing, permissions, logs, and shared memory across every agent on your roster.',
+      'Gator does not resell model access. You bring Claude, OpenAI, or any provider subscription — we bring the harness: routing, permissions, logs, and shared memory across every agent on your roster.',
       'Claude Code hardens a parser, Codex dedupes ETL rows, and your in-house agent drafts release notes — all in parallel, all on one board.',
       'Every edit, test run, commit, and PR open is traced in the ticket thread. Senior engineers approve merges; agents handle the grind.',
     ],
@@ -157,13 +157,13 @@ const teamPages: Record<string, TeamPageContent> = {
       },
       {
         title: 'BYOA subscriptions',
-        description: 'Your API keys and IDE subscriptions stay yours. Trooper routes work, enforces permissions, and keeps shared org memory.',
+        description: 'Your API keys and IDE subscriptions stay yours. Gator routes work, enforces permissions, and keeps shared org memory.',
       },
     ],
     extraSection: {
       eyebrow: 'Field ops',
       eyebrowNumber: '09',
-      title: 'How Trooper runs your code unit',
+      title: 'How Gator runs your code unit',
       intro: 'From invoice parsers to release notes — agents execute full workflows, not single prompts.',
       useCases: [
         {
@@ -234,7 +234,7 @@ const teamPages: Record<string, TeamPageContent> = {
       },
       marketingCanvasFeatureSection('06'),
     ],
-    title: 'Trooper for Marketing',
+    title: 'Gator for Marketing',
     titleAccent: 'Scale campaigns on mission.',
     description:
       'Deploy a marketing unit that drafts content, runs SEO recon, schedules social, and reports performance — 24/7, on-brand, under your command.',
@@ -261,7 +261,7 @@ const teamPages: Record<string, TeamPageContent> = {
     extraSection: {
       eyebrow: 'Campaign ops',
       eyebrowNumber: '07',
-      title: 'Marketing missions Trooper runs',
+      title: 'Marketing missions Gator runs',
       useCases: [
         {
           title: 'Content pipeline',
@@ -310,7 +310,7 @@ const teamPages: Record<string, TeamPageContent> = {
       },
       canvasFeatureSection('06'),
     ],
-    title: 'Trooper for Sales',
+    title: 'Gator for Sales',
     titleAccent: 'Pipeline that never stalls.',
     description:
       'AI sales operators that research prospects, draft outreach, update CRM, and follow up on schedule — so reps close deals, not chase data entry.',
@@ -386,13 +386,13 @@ const teamPages: Record<string, TeamPageContent> = {
       },
       canvasFeatureSection('06'),
     ],
-    title: 'Trooper for Legal Teams',
+    title: 'Gator for Legal Teams',
     titleAccent: 'Prep work, not practice of law.',
     description:
       'AI legal operators for contract review, compliance checks, and document prep — accelerating paralegal work while counsel stays in command on every external action.',
     overviewTitle: 'Legal prep at mission speed',
     overviewParagraphs: [
-      'Trooper agents extract clauses, compare redlines, and assemble review packets — never sending externally without human sign-off.',
+      'Gator agents extract clauses, compare redlines, and assemble review packets — never sending externally without human sign-off.',
       'Playbooks and jurisdiction notes live in org memory so first-pass review stays consistent across matters.',
       'Every document touch is traced for audit questions and matter handoffs.',
     ],
@@ -413,7 +413,7 @@ const teamPages: Record<string, TeamPageContent> = {
     extraSection: {
       eyebrow: 'Matter ops',
       eyebrowNumber: '07',
-      title: 'How legal teams deploy Trooper',
+      title: 'How legal teams deploy Gator',
       useCases: [
         {
           title: 'NDA first pass',
@@ -464,7 +464,7 @@ const teamPages: Record<string, TeamPageContent> = {
       },
       canvasFeatureSection('06'),
     ],
-    title: 'Trooper for Engineering',
+    title: 'Gator for Engineering',
     titleAccent: 'Ship faster with traced missions.',
     description: 'AI engineers for code, reviews, issues, and DevOps — scoped to your repos with checkout discipline and merge gates.',
     overviewTitle: 'Developers that never context-switch',
@@ -517,7 +517,7 @@ const teamPages: Record<string, TeamPageContent> = {
       },
       canvasFeatureSection('06'),
     ],
-    title: 'Trooper for Operations',
+    title: 'Gator for Operations',
     titleAccent: 'Ops routines that run 24/7.',
     description: 'Process automation, monitoring, and internal tooling — ops agents that run checklists and surface anomalies before they become incidents.',
     overviewTitle: 'Ops without busywork',
@@ -562,7 +562,7 @@ const teamPages: Record<string, TeamPageContent> = {
       },
       canvasFeatureSection('06'),
     ],
-    title: 'Trooper for Design',
+    title: 'Gator for Design',
     titleAccent: 'Creative that stays on brand.',
     description: 'Creative design and brand assets at scale — mockups, exports, and brand checks with full traceability.',
     overviewTitle: 'Creative ops without the handoffs',
@@ -579,7 +579,7 @@ const teamPages: Record<string, TeamPageContent> = {
     extraSection: {
       eyebrow: 'Design ops',
       eyebrowNumber: '07',
-      title: 'Design missions Trooper runs',
+      title: 'Design missions Gator runs',
       useCases: [
         { title: 'Brand refresh tickets', description: 'Frame audit → asset export → token diff → checklist sign-off in one mission.' },
         { title: 'Asset resizing', description: 'Agents batch-export social, web, and print sizes from source frames.' },
@@ -618,7 +618,7 @@ const teamPages: Record<string, TeamPageContent> = {
       },
       canvasFeatureSection('06'),
     ],
-    title: 'Trooper for Customer Support',
+    title: 'Gator for Customer Support',
     titleAccent: 'Support that never sleeps.',
     description: '24/7 support and customer success — triage, KB lookup, and reply drafts with human approval gates.',
     overviewTitle: 'Support without the queue backlog',
@@ -635,7 +635,7 @@ const teamPages: Record<string, TeamPageContent> = {
     extraSection: {
       eyebrow: 'Support ops',
       eyebrowNumber: '07',
-      title: 'Support missions Trooper runs',
+      title: 'Support missions Gator runs',
       useCases: [
         { title: 'P1 triage', description: 'Classify severity, assign owner, and start KB lookup in seconds.' },
         { title: 'Reply drafting', description: 'Context-aware drafts from thread history and knowledge base articles.' },
@@ -675,7 +675,7 @@ const teamPages: Record<string, TeamPageContent> = {
       },
       canvasFeatureSection('06'),
     ],
-    title: 'Trooper for Finance',
+    title: 'Gator for Finance',
     titleAccent: 'Close books with accuracy.',
     description: 'Financial planning and analysis — month-end close, reconciliations, and variance reports with approval gates.',
     overviewTitle: 'Numbers without manual drudgery',
@@ -692,7 +692,7 @@ const teamPages: Record<string, TeamPageContent> = {
     extraSection: {
       eyebrow: 'Finance ops',
       eyebrowNumber: '07',
-      title: 'Finance missions Trooper runs',
+      title: 'Finance missions Gator runs',
       useCases: [
         { title: 'Month-end close', description: 'Pull → reconcile → variance report → approval in one traced mission.' },
         { title: 'Budget variance', description: 'Automated variance reports with anomaly flags for FP&A review.' },
@@ -731,7 +731,7 @@ const teamPages: Record<string, TeamPageContent> = {
       },
       canvasFeatureSection('06'),
     ],
-    title: 'Trooper for Business Development',
+    title: 'Gator for Business Development',
     titleAccent: 'Scout partners on autopilot.',
     description: 'Partnership and growth opportunities — research, outreach briefs, and CRM notes with human command.',
     overviewTitle: 'Partnerships without the research grind',
@@ -748,7 +748,7 @@ const teamPages: Record<string, TeamPageContent> = {
     extraSection: {
       eyebrow: 'BD ops',
       eyebrowNumber: '07',
-      title: 'BD missions Trooper runs',
+      title: 'BD missions Gator runs',
       useCases: [
         { title: 'Partner scouting', description: 'Research → fit score → brief → outreach draft in one pipeline.' },
         { title: 'Mutual intros', description: 'Warm intro emails drafted with context from both sides.' },
@@ -787,7 +787,7 @@ const teamPages: Record<string, TeamPageContent> = {
       },
       canvasFeatureSection('06'),
     ],
-    title: 'Trooper for Research',
+    title: 'Gator for Research',
     titleAccent: 'Intel that compounds.',
     description: 'Market research and data analysis — competitive intel, synthesis briefs, and structured deliverables.',
     overviewTitle: 'Research without the tab sprawl',
@@ -804,7 +804,7 @@ const teamPages: Record<string, TeamPageContent> = {
     extraSection: {
       eyebrow: 'Research ops',
       eyebrowNumber: '07',
-      title: 'Research missions Trooper runs',
+      title: 'Research missions Gator runs',
       useCases: [
         { title: 'Competitive intel', description: 'Source notes → matrix → exec brief in one traced mission.' },
         { title: 'Market sizing', description: 'Data pulls and TAM/SAM estimates with cited sources.' },
@@ -843,7 +843,7 @@ const teamPages: Record<string, TeamPageContent> = {
       },
       canvasFeatureSection('06'),
     ],
-    title: 'Trooper for Security',
+    title: 'Gator for Security',
     titleAccent: 'SecOps, audit-ready.',
     description: 'Security audits and threat detection — log review, vulnerability scans, and remediation with full traceability.',
     overviewTitle: 'SecOps without the alert fatigue',
@@ -860,7 +860,7 @@ const teamPages: Record<string, TeamPageContent> = {
     extraSection: {
       eyebrow: 'SecOps',
       eyebrowNumber: '07',
-      title: 'Security missions Trooper runs',
+      title: 'Security missions Gator runs',
       useCases: [
         { title: 'Weekly audit runs', description: 'Log review → findings report → patch diff on one mission.' },
         { title: 'CVE response', description: 'Critical patches deployed with verification and postmortem notes.' },
@@ -899,7 +899,7 @@ const teamPages: Record<string, TeamPageContent> = {
       },
       canvasFeatureSection('06'),
     ],
-    title: 'Trooper for PR',
+    title: 'Gator for PR',
     titleAccent: 'Launches without the scramble.',
     description: 'Public relations and media management — press releases, media lists, and announcement coordination.',
     overviewTitle: 'Comms without the last-minute scramble',
@@ -916,7 +916,7 @@ const teamPages: Record<string, TeamPageContent> = {
     extraSection: {
       eyebrow: 'PR ops',
       eyebrowNumber: '07',
-      title: 'PR missions Trooper runs',
+      title: 'PR missions Gator runs',
       useCases: [
         { title: 'Funding announcements', description: 'Release → media list → embargo checklist in one mission.' },
         { title: 'Product launches', description: 'Press kit assembly with quotes, assets, and timing coordination.' },
@@ -955,7 +955,7 @@ const teamPages: Record<string, TeamPageContent> = {
       },
       canvasFeatureSection('06'),
     ],
-    title: 'Trooper for Growth',
+    title: 'Gator for Growth',
     titleAccent: 'Experiments that ship.',
     description: 'User acquisition and retention — experiment cycles, funnel analysis, and rollout coordination.',
     overviewTitle: 'Growth without the spreadsheet chaos',
@@ -972,7 +972,7 @@ const teamPages: Record<string, TeamPageContent> = {
     extraSection: {
       eyebrow: 'Growth ops',
       eyebrowNumber: '07',
-      title: 'Growth missions Trooper runs',
+      title: 'Growth missions Gator runs',
       useCases: [
         { title: 'Landing experiments', description: 'Metrics pull → experiment doc → rollout checklist in one cycle.' },
         { title: 'Activation loops', description: 'Onboarding funnel analysis with recommended next tests.' },

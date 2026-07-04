@@ -170,7 +170,7 @@ const CAMPAIGN_LANES = [
     ],
   },
   {
-    provider: 'Trooper',
+    provider: 'Gator',
     agent: 'Aria',
     task: 'seo/keyword-map.md',
     channel: 'SEO recon',

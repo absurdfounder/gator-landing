@@ -10,7 +10,7 @@ const ARTIFACTS = {
     kind: 'markdown',
     content: `# Slack thread export — #sales
 
-**Sarah Chen** (VP Ops · Acme): Hey team — can we schedule a Trooper demo this week?
+**Sarah Chen** (VP Ops · Acme): Hey team — can we schedule a Gator demo this week?
 
 **Jordan** (bot): Got it — creating ticket #4421 with full thread context.
 
@@ -45,7 +45,7 @@ We'll cover multi-agent harness, traced tickets, and human review gates.
     kind: 'markdown',
     content: `# Calendar hold
 
-**Event:** Trooper demo — Acme Corp
+**Event:** Gator demo — Acme Corp
 **When:** Thursday 2:00–2:30 PM PT
 **Attendees:** Sarah Chen, Vaibhav
 **Hold expires:** 24h pending confirmation`,
@@ -74,8 +74,8 @@ export const slackScenario: DemoScenario = {
   ],
   chatScript: [
     { type: 'mention_tab', text: 'Sarah Chen in #sales', delay: 150 },
-    { type: 'typing', text: 'Hey team — can we schedule a Trooper demo this week? VP Ops here at Acme.', delay: 200 },
-    { type: 'send', sender: 'Sarah Chen', role: 'VP Ops · Acme', text: 'Hey team — can we schedule a Trooper demo this week? VP Ops here at Acme.', delay: 300 },
+    { type: 'typing', text: 'Hey team — can we schedule a Gator demo this week? VP Ops here at Acme.', delay: 200 },
+    { type: 'send', sender: 'Sarah Chen', role: 'VP Ops · Acme', text: 'Hey team — can we schedule a Gator demo this week? VP Ops here at Acme.', delay: 300 },
     { type: 'nick_typing', delay: 700 },
     { type: 'response', sender: 'Jordan', role: 'Chief of Staff', text: 'Got it from Slack — creating ticket #4421 and routing to research + scheduling.', time: '14:02', delay: 1200 },
     { type: 'addTasks', phase: 1, delay: 500 },

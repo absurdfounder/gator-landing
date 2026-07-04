@@ -48,7 +48,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ isOpen, onClose }) =>
                             Get started in minutes - your dedicated server is ready to go. No credit card friction, just sign up and deploy.
                         </p>
                         <Link
-                            href="https://app.trooper.so"
+                            href="https://app.gator.so"
                             className="bg-emerald-600 text-white text-lg w-fit py-3 px-6 rounded-lg block hover:bg-emerald-700 transition-colors shadow-lg font-medium"
                             onClick={() => onClose()}
                         >
@@ -71,18 +71,18 @@ const faqs: Record<string, FAQItem[]> = {
     Pricing: [
         {
             question: "Do I need my own API keys?",
-            answer: "Yes. Trooper follows a bring-your-own-key model. You connect your own OpenAI, Anthropic, Gemini, or other provider keys. Model usage is billed separately — no markup, you pay providers directly at their rates.",
+            answer: "Yes. Gator follows a bring-your-own-key model. You connect your own OpenAI, Anthropic, Gemini, or other provider keys. Model usage is billed separately — no markup, you pay providers directly at their rates.",
         },
         {
             question: "What is the difference between Solo, Cloud, and Enterprise?",
-            answer: `Local Install is ${formatUsd(PRICING_USD.localLifetime)} one-time for a lifetime license on your machine — one workspace, no connected devices. Solo Cloud is ${formatUsd(PRICING_USD.cloudLifetime)} one-time for hosted team collaboration forever — also one workspace, no connected devices. Trooper Cloud is ${formatUsd(PRICING_USD.cloudStandardMonthly)}/mo (Cloud) or ${formatUsd(PRICING_USD.cloudPremiumMonthly)}/mo (Cloud Max) with multi-workspace support and unlimited connected devices. Enterprise is custom pricing with self-hosting, SSO, VPC, and dedicated support. All plans include unlimited agents and chats.`,
+            answer: `Local Install is ${formatUsd(PRICING_USD.localLifetime)} one-time for a lifetime license on your machine — one workspace, no connected devices. Solo Cloud is ${formatUsd(PRICING_USD.cloudLifetime)} one-time for hosted team collaboration forever — also one workspace, no connected devices. Gator Cloud is ${formatUsd(PRICING_USD.cloudStandardMonthly)}/mo (Cloud) or ${formatUsd(PRICING_USD.cloudPremiumMonthly)}/mo (Cloud Max) with multi-workspace support and unlimited connected devices. Enterprise is custom pricing with self-hosting, SSO, VPC, and dedicated support. All plans include unlimited agents and chats.`,
         },
         {
-            question: "Does Trooper Cloud include hosting?",
-            answer: "Yes. With Trooper Cloud, we host and manage the workspace, Always-on Virtual PC, and runtime. Your team gets a dedicated environment without managing any infrastructure.",
+            question: "Does Gator Cloud include hosting?",
+            answer: "Yes. With Gator Cloud, we host and manage the workspace, Always-on Virtual PC, and runtime. Your team gets a dedicated environment without managing any infrastructure.",
         },
         {
-            question: "Can I self-host Trooper?",
+            question: "Can I self-host Gator?",
             answer: "Yes. Enterprise customers deploy on their own infrastructure with private VPC, on-prem options, SSO, white-label branding, and custom security requirements. Solo plan users run on their own machine.",
         },
         {
@@ -125,7 +125,7 @@ const faqs: Record<string, FAQItem[]> = {
         },
         {
             question: "What is OpenClaw?",
-            answer: "OpenClaw is the open-source AI execution engine powering Trooper. It handles agent orchestration, persistent memory, multi-agent collaboration, skill execution, and task management. Trooper provides a polished UI and managed infrastructure on top of it.",
+            answer: "OpenClaw is the open-source AI execution engine powering Gator. It handles agent orchestration, persistent memory, multi-agent collaboration, skill execution, and task management. Gator provides a polished UI and managed infrastructure on top of it.",
         },
     ],
 };

@@ -24,7 +24,7 @@ type ComparisonCategory = {
 const PLAN_COLUMNS = [
   { key: 'local' as const, label: 'Local Install' },
   { key: 'cloudLifetime' as const, label: 'Solo Cloud' },
-  { key: 'cloud' as const, label: 'Trooper Cloud', featured: true },
+  { key: 'cloud' as const, label: 'Gator Cloud', featured: true },
   { key: 'enterprise' as const, label: 'Enterprise' },
 ];
 
@@ -115,7 +115,7 @@ const comparisonCategories: ComparisonCategory[] = [
     rows: [
       { feature: 'Runs on your laptop', local: true, cloudLifetime: false, cloud: false, enterprise: false },
       { feature: 'Self-hosted', local: true, cloudLifetime: false, cloud: false, enterprise: true },
-      { feature: 'Cloud-hosted by Trooper', local: false, cloudLifetime: true, cloud: true, enterprise: false },
+      { feature: 'Cloud-hosted by Gator', local: false, cloudLifetime: true, cloud: true, enterprise: false },
       { feature: 'White-label & custom domain', local: false, cloudLifetime: false, cloud: false, enterprise: true },
       { feature: 'Custom seat volume pricing', local: false, cloudLifetime: false, cloud: false, enterprise: true },
       { feature: 'Dedicated onboarding & migration', local: false, cloudLifetime: false, cloud: false, enterprise: true },
@@ -228,17 +228,17 @@ function DesktopCompareTable() {
 
         <div className={`${compareCellClass()} py-5`} />
         <div className={`${compareCellClass()} flex items-center justify-center px-3 py-5`}>
-          <PixelButton href="https://app.trooper.so" external size="md" tone="dark" className="w-full">
+          <PixelButton href="https://app.gator.so" external size="md" tone="dark" className="w-full">
             Install locally
           </PixelButton>
         </div>
         <div className={`${compareCellClass()} flex items-center justify-center px-3 py-5`}>
-          <PixelButton href="https://app.trooper.so" external size="md" tone="dark" className="w-full">
+          <PixelButton href="https://app.gator.so" external size="md" tone="dark" className="w-full">
             Get lifetime deal
           </PixelButton>
         </div>
         <div className={`${compareCellClass(true)} flex items-center justify-center px-3 py-5`}>
-          <PixelButton href="https://app.trooper.so" external size="md" tone="brand" className="w-full">
+          <PixelButton href="https://app.gator.so" external size="md" tone="brand" className="w-full">
             Start with cloud
           </PixelButton>
         </div>
@@ -310,7 +310,7 @@ export default function PricingCompareTable() {
               parts: [{ text: 'feature by feature.', tone: 'brand' }],
             },
           ]}
-          subline="Same grid rhythm as the cards above — every row aligned across Local Install, Solo Cloud, Trooper Cloud, and Enterprise."
+          subline="Same grid rhythm as the cards above — every row aligned across Local Install, Solo Cloud, Gator Cloud, and Enterprise."
         />
       </div>
 

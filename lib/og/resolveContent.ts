@@ -13,15 +13,13 @@ import type { OgHeroContent, OgKind } from '@/lib/og/types';
 const HOME_OG: OgHeroContent = {
   kind: 'home',
   eyebrowIndex: '01',
-  eyebrowLabel: 'Mission briefing',
-  headlineLead: 'Agents + Humans',
-  headlinePrimary: 'Whole Team.',
-  headlineAccent: 'One App.',
-  description:
-    'Fire all your employees. An AI workforce that does everything for you — code, commits, ads, deals, support. Powered by OpenClaw.',
-  showSetup: true,
+  eyebrowLabel: 'Browser loops',
+  headlinePrimary: 'Run loops in',
+  headlineAccent: 'your browser.',
+  description: 'Autonomous agent loops in Chrome, Firefox, or Safari. Research, code, review, ship.',
+  showSetup: false,
   singleLineHeadline: true,
-  pageUrl: 'https://trooper.so',
+  pageUrl: 'https://gator.so',
 };
 
 function fromTitleParts(title: string, titleAccent?: string, missionLabel = 'Unit brief'): OgHeroContent {
@@ -63,7 +61,7 @@ export function resolveOgContent(kind: OgKind, slug?: string): OgHeroContent | n
           headlinePrimary: rich.title,
           headlineAccent: rich.titleAccent,
           description: rich.description,
-          watermark: 'trooper.',
+          watermark: 'gator.',
         };
       }
       const page = getTeamPage(slug);
@@ -72,7 +70,7 @@ export function resolveOgContent(kind: OgKind, slug?: string): OgHeroContent | n
         ...fromTitleParts(page.title, page.titleAccent, page.missionLabel),
         kind: 'team',
         description: page.description,
-        watermark: 'trooper.',
+        watermark: 'gator.',
       };
     }
     case 'feature': {
@@ -85,7 +83,7 @@ export function resolveOgContent(kind: OgKind, slug?: string): OgHeroContent | n
           headlinePrimary: rich.title,
           headlineAccent: rich.titleAccent,
           description: rich.description,
-          watermark: 'trooper.',
+          watermark: 'gator.',
         };
       }
       const page = getFeaturePage(slug);
@@ -97,7 +95,7 @@ export function resolveOgContent(kind: OgKind, slug?: string): OgHeroContent | n
         headlinePrimary: page.title,
         headlineAccent: page.titleAccent,
         description: page.description,
-        watermark: 'trooper.',
+        watermark: 'gator.',
       };
     }
     case 'plugin': {
@@ -110,7 +108,7 @@ export function resolveOgContent(kind: OgKind, slug?: string): OgHeroContent | n
         headlinePrimary: page.title,
         description: page.description,
         iconUrl: page.logoUrl,
-        watermark: 'trooper.',
+        watermark: 'gator.',
       };
     }
     case 'use-case': {
@@ -123,7 +121,7 @@ export function resolveOgContent(kind: OgKind, slug?: string): OgHeroContent | n
         headlinePrimary: page.title,
         headlineAccent: page.titleAccent,
         description: page.description,
-        watermark: 'trooper.',
+        watermark: 'gator.',
       };
     }
     case 'alternative': {
@@ -136,7 +134,7 @@ export function resolveOgContent(kind: OgKind, slug?: string): OgHeroContent | n
         headlinePrimary: page.title,
         headlineAccent: page.titleAccent,
         description: page.description,
-        watermark: 'trooper.',
+        watermark: 'gator.',
       };
     }
     case 'channel': {
@@ -149,7 +147,7 @@ export function resolveOgContent(kind: OgKind, slug?: string): OgHeroContent | n
         headlinePrimary: page.title,
         headlineAccent: page.titleAccent,
         description: page.description,
-        watermark: 'trooper.',
+        watermark: 'gator.',
       };
     }
     case 'industry': {
@@ -162,7 +160,7 @@ export function resolveOgContent(kind: OgKind, slug?: string): OgHeroContent | n
         headlinePrimary: page.title,
         headlineAccent: page.titleAccent,
         description: page.description,
-        watermark: 'trooper.',
+        watermark: 'gator.',
       };
     }
     default:

@@ -4,7 +4,7 @@ import { buildPageMetadata } from '@/lib/og/buildMetadata';
 export const metadata: Metadata = buildPageMetadata({
   title: "Watch the Burn | Wonder",
   description: "Wonder burn tracker and ecosystem updates.",
-  canonical: "https://trooper.so/watch-the-burn-wonder",
+  canonical: "https://gator.so/watch-the-burn-wonder",
   ogKind: 'page',
   ogSlug: "watch-the-burn-wonder",
 });

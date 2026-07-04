@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { ArrowRight, Download, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 import {
-  GATOR_EXTENSION_URL,
   GATOR_SIGN_IN_URL,
   headerNavLinks,
 } from '@/lib/gatorBrand'
+import DownloadExtensionButton from '@/components/ui/DownloadExtensionButton'
 
 export default function MobileMenu({ dark = false }: { dark?: boolean }) {
   const pathname = usePathname()
@@ -105,16 +105,7 @@ export default function MobileMenu({ dark = false }: { dark?: boolean }) {
           </nav>
 
           <div className="border-t border-slate-100 bg-white p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
-            <a
-              href={GATOR_EXTENSION_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={close}
-              className="flex w-full items-center justify-center gap-2 rounded-lg bg-neutral-950 px-4 py-3 text-sm font-semibold text-white shadow-sm active:bg-neutral-900"
-            >
-              <Download className="h-4 w-4" />
-              Download extension
-            </a>
+            <DownloadExtensionButton size="md" className="w-full justify-center" onClick={close} />
             <a
               href="/pricing"
               onClick={close}

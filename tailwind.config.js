@@ -30,7 +30,7 @@ const gatorGreen = {
   900: '#243e10',
 };
 
-/** Trooper brand green #3f6b00 and derived shades */
+/** Gator brand green #3f6b00 and derived shades */
 const brandGreen = {
   DEFAULT: '#3f6b00',
   50: '#f0f5e6',
@@ -122,7 +122,7 @@ module.exports = {
         '1/1': '100%',
       },
       /*
-       * Trooper typography (Ferndesk-aligned)
+       * Gator typography (Ferndesk-aligned)
        * — font-sans / font-inter        → body, UI (Inter)
        * — font-display / font-erode     → headlines (Erode via Fontshare)
        * — font-mono                     → code, terminal, agent UI (system stack)

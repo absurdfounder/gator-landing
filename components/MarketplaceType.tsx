@@ -273,7 +273,7 @@ export default function MarketplaceType() {
         <h2 className="font-funneldisplay text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
           No matter how unique your concept,
           <span className=" block font-normal text-emerald-600">
-            Trooper can support it.
+            Gator can support it.
           </span>
         </h2>
       </div>
@@ -340,11 +340,11 @@ export default function MarketplaceType() {
       {/* Call to Action Section */}
       <div className="mt-8 sm:mt-12 text-center">
         <a
-          href="https://app.trooper.so"
+          href="https://app.gator.so"
           className="inline-flex items-center text-emerald-500 hover:text-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded text-sm sm:text-base font-medium"
-          aria-label="Learn more about building with Trooper"
+          aria-label="Learn more about building with Gator"
         >
-          Build any kind of solution with Trooper
+          Build any kind of solution with Gator
           <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
         </a>
       </div>

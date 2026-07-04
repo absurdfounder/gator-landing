@@ -3,10 +3,10 @@ import SectionShell from '@/components/ui/SectionShell';
 import { buildPageMetadata } from '@/lib/og/buildMetadata';
 
 export const metadata = buildPageMetadata({
-  title: 'Trooper Privacy Policy | OpenClaw AI Workforce Platform',
+  title: 'Gator Privacy Policy | OpenClaw AI Workforce Platform',
   description:
-    'Privacy Policy for Trooper - how we handle your data in our OpenClaw-powered AI workforce platform. Learn about data collection, storage, and your rights.',
-  canonical: 'https://trooper.so/privacy',
+    'Privacy Policy for Gator - how we handle your data in our OpenClaw-powered AI workforce platform. Learn about data collection, storage, and your rights.',
+  canonical: 'https://gator.so/privacy',
   ogKind: 'page',
   ogSlug: 'privacy',
 });
@@ -57,7 +57,7 @@ export default function PrivacyPolicyPage() { // Renamed component for clarity
 
             {/* Sections */}
             <h2 id="overview">Overview</h2>
-            <p>This Privacy Policy describes how Trooper ("we," "us," or "our") collects, uses, and shares your personal information when you visit or use the services provided through <code>https://trooper.so</code> (the “Service” or “Site”). This policy applies to users of the Trooper platform. Please note that websites created <em>by our users</em> using the Trooper service are governed by the privacy policies of those individual site owners.</p>
+            <p>This Privacy Policy describes how Gator ("we," "us," or "our") collects, uses, and shares your personal information when you visit or use the services provided through <code>https://gator.so</code> (the “Service” or “Site”). This policy applies to users of the Gator platform. Please note that websites created <em>by our users</em> using the Gator service are governed by the privacy policies of those individual site owners.</p>
 
             <hr className="my-8" />
 
@@ -94,7 +94,7 @@ export default function PrivacyPolicyPage() { // Renamed component for clarity
             <h2 id="how-do-we-use-your-personal-information">How Do We Use Your Personal Information?</h2>
             <p>We use the Personal Information we collect to:</p>
             <ul className="list-disc list-inside space-y-1 mb-4">
-              <li><strong>Provide and Maintain the Service:</strong> Operate the Trooper platform, authenticate users, connect to Notion accounts, process payments, and fulfill our contractual obligations to you.</li>
+              <li><strong>Provide and Maintain the Service:</strong> Operate the Gator platform, authenticate users, connect to Notion accounts, process payments, and fulfill our contractual obligations to you.</li>
               <li><strong>Communicate with You:</strong> Respond to support requests, send service-related announcements (e.g., maintenance, security alerts, account notifications), and, if aligned with your preferences, send marketing communications about our products or services (you can opt-out).</li>
               <li><strong>Improve and Optimize the Service:</strong> Analyze how users interact with our Site and Service to understand usage patterns, identify areas for improvement, assess the success of features or marketing campaigns, and enhance user experience (e.g., using analytics).</li>
               <li><strong>Screen for Risk and Fraud:</strong> Use information (particularly Payment Information and Usage & Device Information like IP addresses) to detect and prevent fraudulent activity, security incidents, and abuse.</li>
@@ -108,15 +108,15 @@ export default function PrivacyPolicyPage() { // Renamed component for clarity
             <ul className="list-disc list-inside space-y-1 mb-4">
               <li><strong>Service Providers:</strong> We engage third-party companies and individuals to perform services on our behalf (e.g., payment processing [like Stripe], website hosting and infrastructure [like Vercel or AWS], data analytics, email delivery, customer support platforms). These providers only have access to the Personal Information necessary to perform their tasks and are obligated not to disclose or use it for other purposes. <em>[Ensure this list reflects your actual providers]</em></li>
               <li><strong>Notion:</strong> We share necessary authentication information (handled securely) with Notion to enable the integration you authorize. Notion's use of your data is governed by their own privacy policy.</li>
-              <li><strong>Legal Compliance and Protection:</strong> We may disclose your Personal Information if required by law, regulation, legal process (like a subpoena or search warrant), or governmental request, or to protect the rights, property, or safety of Trooper, our users, or the public.</li>
-              <li><strong>Business Transfers:</strong> If Trooper is involved in a merger, acquisition, financing, reorganization, bankruptcy, or sale of assets, your Personal Information may be transferred as part of that transaction, subject to standard confidentiality arrangements.</li>
+              <li><strong>Legal Compliance and Protection:</strong> We may disclose your Personal Information if required by law, regulation, legal process (like a subpoena or search warrant), or governmental request, or to protect the rights, property, or safety of Gator, our users, or the public.</li>
+              <li><strong>Business Transfers:</strong> If Gator is involved in a merger, acquisition, financing, reorganization, bankruptcy, or sale of assets, your Personal Information may be transferred as part of that transaction, subject to standard confidentiality arrangements.</li>
             </ul>
             <p>We do <strong>not</strong> sell your Personal Information.</p>
 
             <hr className="my-8" />
 
             <h2 id="anonymous-performance-data-collection">Anonymous Performance Data Collection</h2>
-            <p>Trooper gathers anonymous performance data to assess platform and content delivery network (CDN) performance for the websites built using our service.</p>
+            <p>Gator gathers anonymous performance data to assess platform and content delivery network (CDN) performance for the websites built using our service.</p>
             <p>We gather information about the time it takes to deliver and render page content for sites hosted via our platform. This helps us ensure our platform and CDN are working optimally for speed and efficiency, ensuring user-created sites perform well.</p>
             <ul className="list-disc list-inside space-y-1 mb-4">
               <li><strong>Potential Domain:</strong> <code>vitals.vercel-insights.com</code> (if using Vercel infrastructure)</li>
@@ -150,7 +150,7 @@ export default function PrivacyPolicyPage() { // Renamed component for clarity
             <p>If you are a resident of the European Economic Area (“EEA”), pursuant to the General Data Protection Regulation (“GDPR”), we process your personal information under the following lawful bases:</p>
             <ul className="list-disc list-inside space-y-1 mb-4">
                 <li>Your consent (where applicable, e.g., for non-essential cookies or marketing emails);</li>
-                <li>The performance of the contract between you and the Site (i.e., providing the Trooper service you signed up for);</li>
+                <li>The performance of the contract between you and the Site (i.e., providing the Gator service you signed up for);</li>
                 <li>Compliance with our legal obligations;</li>
                 <li>To protect your vital interests or those of another person;</li>
                 <li>To perform a task carried out in the public interest (less common for our service);</li>
@@ -209,7 +209,7 @@ export default function PrivacyPolicyPage() { // Renamed component for clarity
               <li><strong>Email:</strong> <a href="mailto:querykitty@gmail.com" className="text-emerald-600 hover:underline">querykitty@gmail.com</a></li>
               <li><strong>Mailing Address:</strong> Boring Sites LLC , Delaware</li>
             </ul>
-            <p>Please identify Trooper as the data controller for the Personal Information collected through the <code>trooper.so</code> service in your communication where relevant (e.g., for GDPR requests).</p>
+            <p>Please identify Gator as the data controller for the Personal Information collected through the <code>trooper.so</code> service in your communication where relevant (e.g., for GDPR requests).</p>
 
           </div>
           {/* Privacy Policy Content End */}

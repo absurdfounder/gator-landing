@@ -46,12 +46,12 @@ function build(args: BuildArgs): AlternativePageContent {
   return {
     ...args,
     missionLabel: 'Alternative brief',
-    title: `Trooper — the ${args.competitorName} alternative`,
+    title: `Gator — the ${args.competitorName} alternative`,
     demoId: args.demoId ?? 'launch',
     meta: {
-      title: `${args.competitorName} Alternative | Trooper`,
+      title: `${args.competitorName} Alternative | Gator`,
       description: args.description.slice(0, 160),
-      canonical: `https://trooper.so/alternatives/${args.slug}`,
+      canonical: `https://gator.so/alternatives/${args.slug}`,
     },
   };
 }
@@ -62,12 +62,12 @@ const alternatives: Record<string, AlternativePageContent> = {
     competitorName: 'Lindy',
     titleAccent: 'for teams that need real execution',
     description:
-      'Lindy builds AI assistants for workflow automation. Trooper deploys AI employees with full system access, multi-agent teams, and 1,000+ integrations — executing end-to-end tasks on a traced board, not just chat replies.',
+      'Lindy builds AI assistants for workflow automation. Gator deploys AI employees with full system access, multi-agent teams, and 1,000+ integrations — executing end-to-end tasks on a traced board, not just chat replies.',
     overviewTitle: 'Assistants vs. an AI workforce',
     overviewParagraphs: [
-      'Lindy focuses on no-code AI assistants that connect to apps and run predefined workflows. Trooper goes further — multiple AI employees with roles, persistent org memory, and OpenClaw runtime access to browsers, terminals, and code.',
-      'Where Lindy chains app actions in a single assistant, Trooper splits complex work across specialized agents (coding, sales, ops) that collaborate on one unified task board.',
-      'Every Trooper mission is a traced ticket with tool logs, diffs, and approval gates — built for teams that need auditability, not just automation triggers.',
+      'Lindy focuses on no-code AI assistants that connect to apps and run predefined workflows. Gator goes further — multiple AI employees with roles, persistent org memory, and OpenClaw runtime access to browsers, terminals, and code.',
+      'Where Lindy chains app actions in a single assistant, Gator splits complex work across specialized agents (coding, sales, ops) that collaborate on one unified task board.',
+      'Every Gator mission is a traced ticket with tool logs, diffs, and approval gates — built for teams that need auditability, not just automation triggers.',
     ],
     benefits: [
       { title: 'Multi-agent teams', description: 'Deploy coding, sales, and ops agents that share context — not one generalist bot.' },
@@ -94,11 +94,11 @@ const alternatives: Record<string, AlternativePageContent> = {
     competitorName: 'Relevance AI',
     titleAccent: 'with production-grade agent ops',
     description:
-      'Relevance AI offers a platform for building and deploying AI agents. Trooper gives you a ready-to-run AI workforce on OpenClaw — with coding harnesses, CRM plugins, and traced execution from day one.',
+      'Relevance AI offers a platform for building and deploying AI agents. Gator gives you a ready-to-run AI workforce on OpenClaw — with coding harnesses, CRM plugins, and traced execution from day one.',
     overviewTitle: 'Build platform vs. deployed workforce',
     overviewParagraphs: [
-      'Relevance AI is an agent builder platform — you design chains, tools, and workflows from scratch. Trooper ships with pre-configured agent templates, team structures, and 1,000+ integrations already wired.',
-      'Trooper agents run on your private server with OpenClaw — browser control, shell access, and multi-model harnesses (Claude Code, Codex) out of the box.',
+      'Relevance AI is an agent builder platform — you design chains, tools, and workflows from scratch. Gator ships with pre-configured agent templates, team structures, and 1,000+ integrations already wired.',
+      'Gator agents run on your private server with OpenClaw — browser control, shell access, and multi-model harnesses (Claude Code, Codex) out of the box.',
       'Skip months of agent architecture. Deploy sales, engineering, and ops units that execute real work on a unified board with human approval gates.',
     ],
     benefits: [
@@ -126,11 +126,11 @@ const alternatives: Record<string, AlternativePageContent> = {
     competitorName: 'Gumloop',
     titleAccent: 'beyond visual flow builders',
     description:
-      'Gumloop offers visual AI workflow automation. Trooper deploys autonomous AI employees that reason through tasks, use real tools, and adapt — not just follow predefined node graphs.',
+      'Gumloop offers visual AI workflow automation. Gator deploys autonomous AI employees that reason through tasks, use real tools, and adapt — not just follow predefined node graphs.',
     overviewTitle: 'Flow charts vs. reasoning agents',
     overviewParagraphs: [
-      'Gumloop connects apps through visual drag-and-drop flows with AI steps. Trooper agents reason through tasks dynamically — choosing tools, handling edge cases, and reporting back with full traces.',
-      'When a workflow breaks on unexpected input, flow builders stall. Trooper agents adapt, escalate to humans, and continue on the next mission.',
+      'Gumloop connects apps through visual drag-and-drop flows with AI steps. Gator agents reason through tasks dynamically — choosing tools, handling edge cases, and reporting back with full traces.',
+      'When a workflow breaks on unexpected input, flow builders stall. Gator agents adapt, escalate to humans, and continue on the next mission.',
       'Combine the reliability of traced tickets with the flexibility of LLM reasoning — plus coding agents that actually ship PRs.',
     ],
     benefits: [
@@ -158,12 +158,12 @@ const alternatives: Record<string, AlternativePageContent> = {
     competitorName: 'Clay',
     titleAccent: 'plus everything else your team does',
     description:
-      'Clay excels at sales enrichment and prospecting workflows. Trooper covers enrichment plus the full sales cycle — outreach drafts, CRM updates, follow-ups, and engineering support on one AI workforce.',
+      'Clay excels at sales enrichment and prospecting workflows. Gator covers enrichment plus the full sales cycle — outreach drafts, CRM updates, follow-ups, and engineering support on one AI workforce.',
     overviewTitle: 'Enrichment tool vs. full sales ops',
     overviewParagraphs: [
-      'Clay is purpose-built for data enrichment — pulling firmographics, emails, and signals into spreadsheets. Trooper agents do enrichment and then act on it: draft outreach, update HubSpot, schedule follow-ups.',
+      'Clay is purpose-built for data enrichment — pulling firmographics, emails, and signals into spreadsheets. Gator agents do enrichment and then act on it: draft outreach, update HubSpot, schedule follow-ups.',
       'Stop exporting Clay tables into separate tools. Agents research on LinkedIn, enrich in Sheets, draft in Gmail, and log to CRM — one traced mission.',
-      'Beyond sales: the same Trooper unit handles engineering PRs, support triage, and ops runbooks.',
+      'Beyond sales: the same Gator unit handles engineering PRs, support triage, and ops runbooks.',
     ],
     benefits: [
       { title: 'Enrich → act', description: 'Research feeds directly into outreach drafts and CRM updates — no export step.' },
@@ -190,10 +190,10 @@ const alternatives: Record<string, AlternativePageContent> = {
     competitorName: 'Hunter',
     titleAccent: 'from email find to full outreach',
     description:
-      'Hunter finds professional email addresses. Trooper agents find emails, research prospects, draft personalized outreach, and update your CRM — the complete lead-gen workflow in one mission.',
+      'Hunter finds professional email addresses. Gator agents find emails, research prospects, draft personalized outreach, and update your CRM — the complete lead-gen workflow in one mission.',
     overviewTitle: 'Email finder vs. outreach operator',
     overviewParagraphs: [
-      'Hunter solves one step: finding verified email addresses for prospects. Trooper agents handle the full chain — LinkedIn research, email discovery, personalized drafting, CRM logging, and follow-up scheduling.',
+      'Hunter solves one step: finding verified email addresses for prospects. Gator agents handle the full chain — LinkedIn research, email discovery, personalized drafting, CRM logging, and follow-up scheduling.',
       'Stop copying Hunter results into spreadsheets and separate sequencing tools. One agent mission covers research through first touch.',
       'Traced tickets show exactly which sources were used, what was drafted, and what was sent — with approval before every outbound email.',
     ],
@@ -222,11 +222,11 @@ const alternatives: Record<string, AlternativePageContent> = {
     competitorName: 'Apollo',
     titleAccent: 'with autonomous execution',
     description:
-      'Apollo combines a B2B database with sequencing and dialer tools. Trooper agents use your data sources, draft outreach, update CRM, and execute multi-step sales missions — with AI reasoning, not just sequences.',
+      'Apollo combines a B2B database with sequencing and dialer tools. Gator agents use your data sources, draft outreach, update CRM, and execute multi-step sales missions — with AI reasoning, not just sequences.',
     overviewTitle: 'Sales platform vs. AI sales operators',
     overviewParagraphs: [
-      'Apollo provides a large contact database, email sequences, and calling tools in one sales platform. Trooper deploys AI sales operators that reason through each prospect — researching, personalizing, and adapting outreach based on real context.',
-      'Bring your own data from Apollo, LinkedIn, or CSVs. Trooper agents enrich, draft, and act — with human approval on every send and CRM write.',
+      'Apollo provides a large contact database, email sequences, and calling tools in one sales platform. Gator deploys AI sales operators that reason through each prospect — researching, personalizing, and adapting outreach based on real context.',
+      'Bring your own data from Apollo, LinkedIn, or CSVs. Gator agents enrich, draft, and act — with human approval on every send and CRM write.',
       'Beyond outbound: the same unit handles inbound triage, meeting prep, and post-call CRM updates.',
     ],
     benefits: [
@@ -254,11 +254,11 @@ const alternatives: Record<string, AlternativePageContent> = {
     competitorName: 'n8n AI',
     titleAccent: 'with agents that reason, not just route',
     description:
-      'n8n adds AI nodes to its workflow automation platform. Trooper deploys reasoning AI employees with OpenClaw access — handling ambiguity, writing code, and executing multi-step missions beyond fixed node graphs.',
+      'n8n adds AI nodes to its workflow automation platform. Gator deploys reasoning AI employees with OpenClaw access — handling ambiguity, writing code, and executing multi-step missions beyond fixed node graphs.',
     overviewTitle: 'Workflow nodes vs. reasoning workforce',
     overviewParagraphs: [
-      'n8n AI embeds LLM steps into self-hosted workflow automations — great for deterministic pipelines with an AI assist. Trooper agents reason through entire missions dynamically, selecting tools and adapting to context.',
-      'When step 7 of your n8n workflow fails on unexpected data, you debug nodes. Trooper agents handle edge cases, escalate to humans, and continue.',
+      'n8n AI embeds LLM steps into self-hosted workflow automations — great for deterministic pipelines with an AI assist. Gator agents reason through entire missions dynamically, selecting tools and adapting to context.',
+      'When step 7 of your n8n workflow fails on unexpected data, you debug nodes. Gator agents handle edge cases, escalate to humans, and continue.',
       'Plus native coding agents, browser control, and 3,000+ OpenClaw skills — beyond what workflow nodes typically cover.',
     ],
     benefits: [
@@ -286,11 +286,11 @@ const alternatives: Record<string, AlternativePageContent> = {
     competitorName: 'Zapier Agents',
     titleAccent: 'with real system access',
     description:
-      'Zapier Agents automate tasks across 7,000+ app connections. Trooper goes deeper — AI employees with browser control, terminal access, coding harnesses, and reasoning that adapts beyond predefined zaps.',
+      'Zapier Agents automate tasks across 7,000+ app connections. Gator goes deeper — AI employees with browser control, terminal access, coding harnesses, and reasoning that adapts beyond predefined zaps.',
     overviewTitle: 'App connectors vs. full execution',
     overviewParagraphs: [
-      'Zapier Agents trigger actions across connected apps with AI-assisted setup. Trooper agents execute full missions — browsing websites, running scripts, opening PRs, and reasoning through multi-step problems.',
-      'Zaps break when apps change APIs or data formats shift. Trooper agents adapt, use browser fallbacks, and escalate with full context.',
+      'Zapier Agents trigger actions across connected apps with AI-assisted setup. Gator agents execute full missions — browsing websites, running scripts, opening PRs, and reasoning through multi-step problems.',
+      'Zaps break when apps change APIs or data formats shift. Gator agents adapt, use browser fallbacks, and escalate with full context.',
       '1,000+ Composio integrations plus OpenClaw browser, terminal, and coding tools — broader execution surface than app-to-app triggers.',
     ],
     benefits: [
@@ -318,17 +318,17 @@ const alternatives: Record<string, AlternativePageContent> = {
     competitorName: 'Cursor',
     titleAccent: 'for teams, not just solo devs',
     description:
-      'Cursor is an AI-native IDE for individual developers. Trooper orchestrates multiple coding agents (Claude Code, Codex, OpenCode) across your team — with PR workflows, org memory, and non-engineering agents on one board.',
+      'Cursor is an AI-native IDE for individual developers. Gator orchestrates multiple coding agents (Claude Code, Codex, OpenCode) across your team — with PR workflows, org memory, and non-engineering agents on one board.',
     overviewTitle: 'IDE assistant vs. team coding ops',
     overviewParagraphs: [
-      'Cursor embeds AI into your editor for inline completions, chat, and agentic edits — powerful for solo development. Trooper coordinates multiple coding agents across repos and teammates with traced PRs, CI logs, and shared org memory.',
-      'Your Cursor subscription stays yours. Trooper routes work to Claude Code, Codex, or any harness — plus sales, ops, and support agents on the same unit.',
+      'Cursor embeds AI into your editor for inline completions, chat, and agentic edits — powerful for solo development. Gator coordinates multiple coding agents across repos and teammates with traced PRs, CI logs, and shared org memory.',
+      'Your Cursor subscription stays yours. Gator routes work to Claude Code, Codex, or any harness — plus sales, ops, and support agents on the same unit.',
       'Senior engineers approve merges. Agents handle parser patches, ETL dedupe, and regression tests in parallel.',
     ],
     benefits: [
       { title: 'Multi-agent harness', description: 'Claude Code, Codex, and custom agents side-by-side on one board.' },
       { title: 'Team coordination', description: 'Shared task board, org memory, and approval gates — not solo IDE sessions.' },
-      { title: 'Beyond coding', description: 'Sales, ops, and support agents on the same Trooper unit.' },
+      { title: 'Beyond coding', description: 'Sales, ops, and support agents on the same Gator unit.' },
     ],
     comparisonRows: [
       { feature: 'Scope', trooper: 'Full AI workforce (coding + sales + ops)', competitor: 'AI-native code editor' },
@@ -350,11 +350,11 @@ const alternatives: Record<string, AlternativePageContent> = {
     competitorName: 'Devin',
     titleAccent: 'with your subscriptions and repos',
     description:
-      'Devin is an autonomous AI software engineer. Trooper runs multiple coding agents (Claude Code, Codex) on your repos with your subscriptions — plus sales, ops, and support agents on the same workforce.',
+      'Devin is an autonomous AI software engineer. Gator runs multiple coding agents (Claude Code, Codex) on your repos with your subscriptions — plus sales, ops, and support agents on the same workforce.',
     overviewTitle: 'Solo AI engineer vs. multi-agent harness',
     overviewParagraphs: [
-      'Devin aims to be an autonomous software engineer that plans, codes, and deploys independently. Trooper takes a team-first approach — multiple specialized agents with human approval gates, shared org memory, and BYOA model subscriptions.',
-      'You bring your Claude, OpenAI, or Cursor subscriptions. Trooper provides the harness: routing, permissions, traced diffs, and PR workflows across agents.',
+      'Devin aims to be an autonomous software engineer that plans, codes, and deploys independently. Gator takes a team-first approach — multiple specialized agents with human approval gates, shared org memory, and BYOA model subscriptions.',
+      'You bring your Claude, OpenAI, or Cursor subscriptions. Gator provides the harness: routing, permissions, traced diffs, and PR workflows across agents.',
       'Coding is one lane. Sales pipeline ops, support triage, and marketing campaigns run on the same board.',
     ],
     benefits: [
@@ -368,7 +368,7 @@ const alternatives: Record<string, AlternativePageContent> = {
       { feature: 'Agent model', trooper: 'Multi-agent specialized roles', competitor: 'Single AI engineer' },
       { feature: 'Traceability', trooper: 'Ticket-grade diffs and CI logs', competitor: 'Session-based work logs' },
       { feature: 'Beyond code', trooper: 'Sales, support, ops on same unit', competitor: 'Software engineering only' },
-      { feature: 'Cost', trooper: 'Your model costs + Trooper hosting', competitor: 'Per-seat AI engineer pricing' },
+      { feature: 'Cost', trooper: 'Your model costs + Gator hosting', competitor: 'Per-seat AI engineer pricing' },
     ],
     whenToChooseTrooper: [
       'You want control over which models run and when merges happen.',
@@ -382,17 +382,17 @@ const alternatives: Record<string, AlternativePageContent> = {
     competitorName: 'HubSpot AI Agent',
     titleAccent: 'with cross-tool execution',
     description:
-      'HubSpot\'s built-in AI agents work within the CRM. Trooper\'s HubSpot agent connects CRM ops to Gmail, LinkedIn, Slack, and coding agents — executing full sales and ops missions, not just in-app suggestions.',
+      'HubSpot\'s built-in AI agents work within the CRM. Gator\'s HubSpot agent connects CRM ops to Gmail, LinkedIn, Slack, and coding agents — executing full sales and ops missions, not just in-app suggestions.',
     overviewTitle: 'In-CRM AI vs. connected workforce',
     overviewParagraphs: [
-      'HubSpot AI agents assist with content generation, deal insights, and workflow suggestions inside the CRM. Trooper agents operate on HubSpot data and then act across your stack — drafting emails, posting to Slack, updating Sheets, and opening tickets.',
+      'HubSpot AI agents assist with content generation, deal insights, and workflow suggestions inside the CRM. Gator agents operate on HubSpot data and then act across your stack — drafting emails, posting to Slack, updating Sheets, and opening tickets.',
       'Pipeline review in HubSpot becomes a Slack digest, email follow-up, and Notion brief — one traced mission across tools.',
       'Combine HubSpot with LinkedIn research, Gmail outreach, and engineering support on one AI workforce.',
     ],
     benefits: [
       { title: 'Cross-tool missions', description: 'CRM ops flow into email, Slack, Sheets, and code — not siloed in HubSpot.' },
       { title: 'LinkedIn + Gmail', description: 'Research prospects and draft outreach from the same agent mission.' },
-      { title: 'Traced execution', description: 'Every CRM write logged on the Trooper board with approval gates.' },
+      { title: 'Traced execution', description: 'Every CRM write logged on the Gator board with approval gates.' },
     ],
     comparisonRows: [
       { feature: 'Scope', trooper: 'HubSpot + Gmail + Slack + GitHub + 1,000 more', competitor: 'Within HubSpot CRM' },
@@ -420,10 +420,10 @@ export function allAlternativeSlugs(): string[] {
 }
 
 export const alternativeHubMeta = {
-  title: 'Trooper Alternatives & Comparisons',
+  title: 'Gator Alternatives & Comparisons',
   description:
-    'See how Trooper compares to Lindy, Clay, Apollo, Cursor, Devin, Zapier Agents, and other AI automation tools. The AI workforce for teams that need real execution.',
-  canonical: 'https://trooper.so/alternatives',
+    'See how Gator compares to Lindy, Clay, Apollo, Cursor, Devin, Zapier Agents, and other AI automation tools. The AI workforce for teams that need real execution.',
+  canonical: 'https://gator.so/alternatives',
 };
 
 export const alternativeSocialImage = SOCIAL_IMAGE;

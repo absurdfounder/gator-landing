@@ -251,7 +251,7 @@ export function SlackRoutingVisual() {
               <div className="h-6 w-6 rounded bg-stone-200" />
               <span className="text-[11px] font-semibold">Sarah Chen</span>
             </div>
-            <p className="text-[11px] text-stone-600">Can we schedule a Trooper demo this week?</p>
+            <p className="text-[11px] text-stone-600">Can we schedule a Gator demo this week?</p>
           </div>
           <div className="rounded-lg bg-white/80 p-2 text-[10px] text-stone-500 border border-[#611f69]/10">
             <span className="font-semibold text-[#611f69]">Jordan</span> · creating ticket…
@@ -523,7 +523,7 @@ export function ResearchIntelVisual() {
             {['Competitor A', 'Partial', 'No', '$89'].map((c) => (
               <div key={c} className="bg-white px-2 py-1.5 text-stone-700">{c}</div>
             ))}
-            {['Trooper', 'Yes', 'Yes', 'BYOA'].map((c) => (
+            {['Gator', 'Yes', 'Yes', 'BYOA'].map((c) => (
               <div key={c} className="bg-trooper-50 px-2 py-1.5 font-medium text-trooper-800">{c}</div>
             ))}
           </div>

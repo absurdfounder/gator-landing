@@ -34,7 +34,7 @@ function NodeIcon({ node }: { node: PlaybookWorkflowNode }) {
   if (node.iconDomain === 'trooper') {
     return (
       <img
-        src="/images/trooper-logomark.png"
+        src="/images/gator-icon.png"
         alt=""
         width={16}
         height={16}

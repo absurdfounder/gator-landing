@@ -32,7 +32,7 @@ export default function IntegrationSubpageLayout({ content }: { content: Integra
 
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <PixelButton
-                href="https://app.trooper.so"
+                href="https://app.gator.so"
                 external
                 size="lg"
                 tone="brand"
@@ -149,7 +149,7 @@ export default function IntegrationSubpageLayout({ content }: { content: Integra
                             href={`/teams/${t.slug}`}
                             className="text-sm text-emerald-600 hover:text-emerald-700 font-medium"
                           >
-                            Trooper for {t.label} →
+                            Gator for {t.label} →
                           </Link>
                         </li>
                       ))}
