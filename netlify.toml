@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+
+[build.environment]
+  # Firebase web client keys are public but Netlify secret scan flags them in server bundles.
+  SECRETS_SCAN_OMIT_PATHS = "lib/firebase/serverConfig.ts,app/api/firebase-config/route.ts"
+  SECRETS_SCAN_OMIT_KEYS = "FIREBASE_API_KEY,NEXT_PUBLIC_FIREBASE_API_KEY"
