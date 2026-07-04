@@ -2,6 +2,9 @@
 export const BRAND = 'Gator'
 export const BRAND_DOMAIN = 'gator.so'
 export const BRAND_APP = `https://app.${BRAND_DOMAIN}`
+export const BRAND_SUPPORT_EMAIL = `support@${BRAND_DOMAIN}`
+export const BRAND_SUPPORT_MAILTO = `mailto:${BRAND_SUPPORT_EMAIL}`
+export const BRAND_CONTACT_URL = '/contact-us'
 
 export const merlinPricingComparison = {
   other: {

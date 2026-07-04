@@ -9,12 +9,16 @@ import { merlinAssets } from '@/lib/merlinAssets'
 import {
   BRAND,
   BRAND_APP,
+  BRAND_CONTACT_URL,
   BRAND_DOMAIN,
+  BRAND_SUPPORT_EMAIL,
+  BRAND_SUPPORT_MAILTO,
   featureTabs,
   merlinFaqs,
   merlinReviews,
   merlinWorkflows,
 } from '@/lib/merlinCopy'
+import { FOOTER_COMPANY_LINKS, FOOTER_GET_GATOR_LINKS } from '@/lib/merlinNav'
 import GatorLogo from '@/components/ui/GatorLogo'
 
 const EXT_FEATURES = [
@@ -53,11 +57,6 @@ const FOOTER_TOOLS = [
   'YouTube Summarizer', 'Article Summaizer',
 ]
 
-const FOOTER_COMPANY = [
-  'Team', 'Privacy Policy', 'Legal', 'Cookie Policy', 'Terms and Conditions', 'Data Protection',
-  'Careers', 'Refund Policy', 'Query Standards', 'Product Wiki', 'Newsroom', 'Blogs',
-  'Change Shortcut', 'How It Works', 'Feature Request',
-]
 
 function PrimaryBtn({ href, children, className = '' }: { href: string; children: React.ReactNode; className?: string }) {
   return (
@@ -484,11 +483,13 @@ export default function MerlinSections() {
             </div>
           </div>
           <div className="relative min-h-[300px] w-full overflow-hidden py-8 md:min-h-[320px] md:flex-1 md:py-0">
-            <div className="relative mx-auto flex w-max items-center gap-3 rounded-full border border-border bg-background p-4 shadow-lg sm:absolute sm:right-8 sm:top-8">
+            <div className="relative mx-auto flex w-max items-center gap-3 rounded-full border border-border bg-background p-4 shadow-lg transition hover:bg-accent sm:absolute sm:right-8 sm:top-8">
               <MerlinImage src="/images/gator-icon.png" alt="" width={40} height={40} className="size-10 rounded-full" />
               <div>
                 <p className="font-sans text-sm font-medium text-foreground">{BRAND} Support</p>
-                <p className="font-sans text-sm font-light text-muted-foreground">support@{BRAND_DOMAIN}</p>
+                <a href={BRAND_SUPPORT_MAILTO} className="font-sans text-sm font-light text-muted-foreground hover:text-foreground hover:underline">
+                  {BRAND_SUPPORT_EMAIL}
+                </a>
               </div>
             </div>
             <div className="relative mx-auto mt-6 w-max rounded-md border border-border bg-background p-3 shadow-md sm:absolute sm:right-6 sm:top-28 sm:mt-0">
@@ -522,22 +523,37 @@ export default function MerlinSections() {
             <div>
               <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Company</h4>
               <ul className="mt-4 space-y-2">
-                {FOOTER_COMPANY.map((l) => <li key={l}><a href="#" className="text-sm text-muted-foreground hover:text-foreground">{l}</a></li>)}
+                {FOOTER_COMPANY_LINKS.map((link) => (
+                  <li key={link.label}>
+                    <a href={link.href} className="text-sm text-muted-foreground hover:text-foreground">
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
               <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Get {BRAND}</h4>
               <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                <li><a href={BRAND_APP} className="hover:text-foreground">Web app</a></li>
-                <li><a href="#" className="hover:text-foreground">Chrome extension</a></li>
-                <li><a href="#" className="hover:text-foreground">iOS app</a></li>
-                <li><a href="#" className="hover:text-foreground">Android app</a></li>
+                {FOOTER_GET_GATOR_LINKS.map((link) => (
+                  <li key={link.label}>
+                    <a href={link.href} className="hover:text-foreground">{link.label}</a>
+                  </li>
+                ))}
+                <li>
+                  <a href={BRAND_CONTACT_URL} className="hover:text-foreground">Contact support</a>
+                </li>
               </ul>
             </div>
           </div>
           <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
             <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} {BRAND}. All rights reserved.</p>
-            <button type="button" className="flex items-center gap-2 text-xs text-muted-foreground">English <ChevronDown className="h-3 w-3" /></button>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-muted-foreground">
+              <a href="/privacy" className="hover:text-foreground">Privacy Policy</a>
+              <a href="/terms" className="hover:text-foreground">Terms</a>
+              <a href={BRAND_CONTACT_URL} className="hover:text-foreground">Support</a>
+              <a href={BRAND_SUPPORT_MAILTO} className="hover:text-foreground">{BRAND_SUPPORT_EMAIL}</a>
+            </div>
           </div>
         </div>
       </footer>
