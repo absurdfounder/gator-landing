@@ -2,6 +2,7 @@ type ExtensionAuthPayload = {
   extensionId: string
   token: string
   email?: string | null
+  displayName?: string | null
   uid: string
   expiresIn?: number
 }
@@ -41,6 +42,7 @@ export async function sendAuthSessionToExtension(payload: ExtensionAuthPayload) 
         type: 'GATOR_AUTH_SESSION',
         token: payload.token,
         email: payload.email ?? undefined,
+        displayName: payload.displayName ?? undefined,
         uid: payload.uid,
         expires_in: payload.expiresIn ?? 3600,
       },

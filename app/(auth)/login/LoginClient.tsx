@@ -28,6 +28,7 @@ async function handoffUserToExtension(user: User, extensionId: string) {
     extensionId,
     token,
     email: user.email,
+    displayName: user.displayName,
     uid: user.uid,
     expiresIn,
   })
