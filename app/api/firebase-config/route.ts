@@ -13,6 +13,7 @@ export async function GET() {
   return NextResponse.json(config, {
     headers: {
       'Cache-Control': 'no-store',
+      'X-Gator-Firebase-Config': 'ready',
     },
   })
 }
