@@ -11,7 +11,6 @@ import {
   GATOR_SIGN_IN_URL,
   headerNavLinks,
 } from '@/lib/gatorBrand'
-import TopBar from './TopBar'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -29,7 +28,6 @@ export default function Header() {
       translate="no"
       className="notranslate site-header fixed top-0 z-[200] w-full transition-all duration-200"
     >
-      <TopBar />
       <div
         className={`transition-colors duration-200 transition-shadow duration-200 ${
           darkNav

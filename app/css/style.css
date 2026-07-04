@@ -156,12 +156,12 @@
   --color-split: #14170f;
   --color-quote-gold: #c4a882;
   --color-line: #e8e8e5;
-  --site-header-height: 6rem;
+  --site-header-height: 3.5rem;
 }
 
 @media (min-width: 640px) {
   :root {
-    --site-header-height: 6.5rem;
+    --site-header-height: 4rem;
   }
 }
 
