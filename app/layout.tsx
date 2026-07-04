@@ -31,6 +31,7 @@ const erode = localFont({
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
+  themeColor: '#ffffff',
 }
 
 export const metadata = {
@@ -66,7 +67,6 @@ export const metadata = {
     shortcut: '/favicon.png',
   },
   manifest: '/manifest.json',
-  themeColor: '#ffffff',
   keywords: [
     'agent loops',
     'browser agent',

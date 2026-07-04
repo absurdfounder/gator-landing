@@ -7,7 +7,7 @@ import { CheckCircle2, Loader2 } from 'lucide-react'
 
 import Header from '@/components/ui/header'
 import PixelButton from '@/components/ui/PixelButton'
-import { getFirebaseAuth } from '@/lib/firebase/client'
+import { getFirebaseAuth, isFirebaseConfigured } from '@/lib/firebase/client'
 import { sendAuthSessionToExtension } from '@/lib/extensionAuth'
 
 type LoginPhase = 'idle' | 'signing-in' | 'handoff' | 'success' | 'error'
@@ -47,8 +47,12 @@ export default function LoginClient() {
   const source = searchParams.get('source')?.trim() || ''
   const wantsExtensionHandoff = returnMode === 'extensionMessage' && extensionId.length > 0
 
-  const [phase, setPhase] = useState<LoginPhase>('idle')
-  const [error, setError] = useState('')
+  const [phase, setPhase] = useState<LoginPhase>(isFirebaseConfigured() ? 'idle' : 'error')
+  const [error, setError] = useState(
+    isFirebaseConfigured()
+      ? ''
+      : 'Sign-in is temporarily unavailable. Firebase environment variables are not configured.',
+  )
   const [signedInEmail, setSignedInEmail] = useState('')
   const [autoAttempted, setAutoAttempted] = useState(false)
 
@@ -81,6 +85,8 @@ export default function LoginClient() {
   )
 
   useEffect(() => {
+    if (!isFirebaseConfigured()) return
+
     const auth = getFirebaseAuth()
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (!user || autoAttempted) return
@@ -92,6 +98,12 @@ export default function LoginClient() {
   }, [autoAttempted, completeHandoff])
 
   const handleGoogleSignIn = async () => {
+    if (!isFirebaseConfigured()) {
+      setPhase('error')
+      setError('Sign-in is temporarily unavailable. Firebase environment variables are not configured.')
+      return
+    }
+
     setError('')
     setPhase('signing-in')
 

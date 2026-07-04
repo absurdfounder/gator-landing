@@ -5,12 +5,17 @@ import { signOut } from 'firebase/auth'
 import { Loader2 } from 'lucide-react'
 
 import Header from '@/components/ui/header'
-import { getFirebaseAuth } from '@/lib/firebase/client'
+import { getFirebaseAuth, isFirebaseConfigured } from '@/lib/firebase/client'
 
 export default function LogoutClient() {
   const [message, setMessage] = useState('Signing you out...')
 
   useEffect(() => {
+    if (!isFirebaseConfigured()) {
+      setMessage('Sign-out is unavailable because Firebase is not configured.')
+      return
+    }
+
     let cancelled = false
 
     signOut(getFirebaseAuth())

@@ -1,35 +1,51 @@
-import { getApp, getApps, initializeApp, type FirebaseApp } from 'firebase/app'
+import { getApp, getApps, initializeApp, type FirebaseApp, type FirebaseOptions } from 'firebase/app'
 import { getAuth, type Auth } from 'firebase/auth'
 
-const defaultFirebaseConfig = {
-  apiKey: 'AIzaSyBTnN4M1e1oQIUYpu9UrwDDDj2WmABjvNk',
-  authDomain: 'AskGator-dcfea.firebaseapp.com',
-  databaseURL: 'https://AskGator-dcfea-default-rtdb.firebaseio.com',
-  projectId: 'AskGator-dcfea',
-  storageBucket: 'AskGator-dcfea.appspot.com',
-  messagingSenderId: '448918689208',
-  appId: '1:448918689208:web:d472413081ad9d0b2f2b4d',
-}
+function readConfig(): FirebaseOptions | null {
+  const apiKey = process.env.NEXT_PUBLIC_FIREBASE_API_KEY
+  const authDomain = process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+  const projectId = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID
+  const storageBucket = process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+  const messagingSenderId = process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+  const appId = process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 
-function readConfig() {
-  return {
-    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || defaultFirebaseConfig.apiKey,
-    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || defaultFirebaseConfig.authDomain,
-    databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL || defaultFirebaseConfig.databaseURL,
-    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || defaultFirebaseConfig.projectId,
-    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || defaultFirebaseConfig.storageBucket,
-    messagingSenderId:
-      process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || defaultFirebaseConfig.messagingSenderId,
-    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || defaultFirebaseConfig.appId,
+  if (!apiKey || !authDomain || !projectId || !storageBucket || !messagingSenderId || !appId) {
+    return null
   }
+
+  const config: FirebaseOptions = {
+    apiKey,
+    authDomain,
+    projectId,
+    storageBucket,
+    messagingSenderId,
+    appId,
+  }
+
+  const databaseURL = process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL
+  if (databaseURL) config.databaseURL = databaseURL
+
+  return config
 }
 
 let cachedApp: FirebaseApp | undefined
 let cachedAuth: Auth | undefined
 
+export function isFirebaseConfigured() {
+  return readConfig() !== null
+}
+
 export function getFirebaseApp() {
   if (cachedApp) return cachedApp
-  cachedApp = getApps().length ? getApp() : initializeApp(readConfig())
+
+  const config = readConfig()
+  if (!config) {
+    throw new Error(
+      'Firebase is not configured. Set NEXT_PUBLIC_FIREBASE_* environment variables in Netlify.',
+    )
+  }
+
+  cachedApp = getApps().length ? getApp() : initializeApp(config)
   return cachedApp
 }
 
