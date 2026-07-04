@@ -183,10 +183,10 @@ export default function PlaybookWorkflowSection({
                   key={playbook.id}
                   type="button"
                   onClick={() => setActiveId(playbook.id)}
-                  className={`border px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.14em] transition-colors sm:text-[11px] ${
+                  className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors sm:text-sm ${
                     selected
-                      ? 'border-trooper/30 bg-trooper text-white'
-                      : 'border-slate-200 bg-white text-slate-500 hover:border-slate-300 hover:text-slate-700'
+                      ? 'bg-emerald-600 text-white shadow-sm'
+                      : 'bg-white text-slate-600 ring-1 ring-slate-200 hover:text-slate-900 hover:ring-slate-300'
                   }`}
                 >
                   {playbook.tabLabel}

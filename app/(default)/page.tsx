@@ -58,28 +58,28 @@ export default function Home() {
       </div>
 
       <DarkSplitSection>
-        <GovernanceSection variant="dark" eyebrowNumber="01" />
+        <GovernanceSection variant="dark" />
       </DarkSplitSection>
 
-      <SectionShell eyebrow="How It Works" eyebrowNumber="02">
+      <SectionShell>
         <HowItWorksSteps />
       </SectionShell>
 
       <BrowserCapabilitySection />
 
-      <SectionShell eyebrow="Capabilities" eyebrowNumber="03">
+      <SectionShell>
         <OldWays />
       </SectionShell>
 
-      <SectionShell eyebrow="Deployment Plans" eyebrowNumber="04">
+      <SectionShell>
         <SimplePricing />
       </SectionShell>
 
-      <SectionShell eyebrow="Message from the founder" eyebrowNumber="05">
+      <SectionShell>
         <FounderMessageSection />
       </SectionShell>
 
-      <SectionShell eyebrow="FAQ" eyebrowNumber="06" bgClass="bg-canvas-warm">
+      <SectionShell bgClass="bg-canvas-warm">
         <FAQ />
       </SectionShell>
 

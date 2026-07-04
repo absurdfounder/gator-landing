@@ -133,7 +133,7 @@ export default function PricingCompareTable() {
           {comparisonCategories.map((category) => (
             <React.Fragment key={category.title}>
               <div className={`${compareCellClass()} col-span-full border-t border-slate-200 bg-slate-50 px-5 py-2.5 xl:px-6`}>
-                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-slate-500">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
                   {category.title}
                 </p>
               </div>

@@ -46,9 +46,7 @@ function PricingCard({ plan }: { plan: MarketingPlan }) {
       ].join(' ')}
     >
       <div className="flex items-start justify-between gap-3">
-        <span className="text-[11px] font-medium uppercase tracking-[0.12em] text-slate-500">
-          {plan.eyebrow}
-        </span>
+        <span className="text-sm font-medium text-slate-500">{plan.eyebrow}</span>
         <PlanBadge featured={plan.featured}>{plan.badge}</PlanBadge>
       </div>
 

@@ -30,12 +30,10 @@ function sliderProgress(value: number) {
   return `${((value - SLIDER_MIN) / (SLIDER_MAX - SLIDER_MIN)) * 100}%`;
 }
 
-function SectionEyebrow({ index, label }: { index: string; label: string }) {
+function SectionEyebrow({ label }: { index?: string; label: string }) {
   return (
     <div className="border-b border-slate-200 px-4 py-3 sm:px-6 lg:px-8">
-      <span className="type-eyebrow-num">
-        <span className="text-slate-400">[{index}]</span>&nbsp;{label}
-      </span>
+      <span className="text-sm font-medium text-slate-600">{label}</span>
     </div>
   );
 }

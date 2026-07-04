@@ -22,12 +22,10 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 type GovernanceSectionProps = {
   variant?: 'light' | 'dark';
-  eyebrowNumber?: string;
 };
 
 export default function GovernanceSection({
   variant = 'light',
-  eyebrowNumber = '01',
 }: GovernanceSectionProps) {
   const dark = variant === 'dark';
   const actionList = dark ? actions : actionsLight;
@@ -41,13 +39,6 @@ export default function GovernanceSection({
         transition={{ duration: 0.55, ease }}
         viewport={{ once: true, margin: '-40px' }}
       >
-        {dark ? (
-          <span className="type-eyebrow-num-dark">
-            <span className="text-white/40">[{eyebrowNumber}]</span>
-            <span>&nbsp;</span>
-            Governance
-          </span>
-        ) : null}
         <h2
           className={`governance-heading font-funneldisplay text-[1.65rem] sm:text-3xl md:text-4xl lg:text-[2.75rem] tracking-tight leading-[1.15] ${
             dark ? 'text-white' : 'text-slate-900'

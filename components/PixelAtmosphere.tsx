@@ -54,20 +54,17 @@ export function ArmyStatusBadge({
     </span>
   );
 }
-/** Inline mission tag — `[05] WEEKS-LONG RUNS` army briefing style */
+/** Small section label — plain text, no numbered briefing tags */
 export function PixelMissionTag({
-  index,
   label,
   className = '',
 }: {
-  index: string;
+  index?: string;
   label: string;
   className?: string;
 }) {
   return (
-    <span className={`army-mission-tag ${className}`}>
-      <span className="text-ink-faint">[{index}]</span>
-      <span className="army-mission-tag__sep" aria-hidden />
+    <span className={`inline-block text-sm font-medium text-emerald-700 ${className}`}>
       {label}
     </span>
   );

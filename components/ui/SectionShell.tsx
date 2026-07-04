@@ -2,7 +2,9 @@ import React from 'react';
 
 interface SectionShellProps {
   id?: string;
+  /** @deprecated Section labels removed — use in-content headlines instead */
   eyebrow?: string;
+  /** @deprecated */
   eyebrowNumber?: string;
   className?: string;
   bgClass?: string;
@@ -13,22 +15,11 @@ interface SectionShellProps {
   children: React.ReactNode;
 }
 
-/**
- * SectionShell — establishes a deliberate grid/line rhythm between major
- * landing-page sections. Renders a hairline top border, an optional numbered
- * monospace eyebrow at the top-left (e.g. `[02] WORKFORCE`), and the children.
- *
- * Keeps the light theme intact. Children control their own inner padding and
- * background; pass `bgClass` so the eyebrow strip matches the section's bg.
- */
+/** Standard landing-page section wrapper — content width + top spacing only. */
 export default function SectionShell({
   id,
-  eyebrow,
-  eyebrowNumber,
   className = '',
   bgClass = 'bg-canvas',
-  noBorder = false,
-  noBorderBottom = true,
   clearSiteHeader = false,
   children,
 }: SectionShellProps) {
@@ -41,10 +32,10 @@ export default function SectionShell({
     .filter(Boolean)
     .join(' ');
 
-  // Inner frame — content width only, no vertical grid hairlines
   const frameClasses = [
     'max-w-7xl mx-auto min-w-0 overflow-x-hidden',
     'px-4 sm:px-6',
+    'pt-4 sm:pt-6 md:pt-8',
     bgClass || 'bg-canvas',
   ]
     .filter(Boolean)
@@ -52,20 +43,7 @@ export default function SectionShell({
 
   return (
     <section id={id} className={sectionClasses}>
-      <div className={frameClasses}>
-        {eyebrow && (
-          <div className="pt-4 sm:pt-6 md:pt-8 pb-2">
-            <span className="type-eyebrow-num">
-              {eyebrowNumber && (
-                <span className="text-ink-faint">[{eyebrowNumber}]</span>
-              )}
-              {eyebrowNumber && <span>&nbsp;</span>}
-              {eyebrow}
-            </span>
-          </div>
-        )}
-        {children}
-      </div>
+      <div className={frameClasses}>{children}</div>
     </section>
   );
 }
