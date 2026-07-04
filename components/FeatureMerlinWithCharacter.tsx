@@ -32,7 +32,7 @@ export default function FeatureMerlinWithCharacter({
         </div>
       </div>
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 flex justify-center px-4 pb-2 sm:justify-end sm:pr-6 sm:pb-4 md:pr-8 md:pb-6">
+      <div className="pointer-events-none absolute inset-y-4 right-4 z-10 flex items-end justify-end sm:inset-y-6 sm:right-6 md:inset-y-8 md:right-8">
         <GatorCharacter
           id={characterId}
           size="md"

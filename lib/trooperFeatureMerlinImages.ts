@@ -1,17 +1,17 @@
-import { merlinAssets } from '@/lib/merlinAssets'
+/** Self-hosted feature panel images (Merlin CDN blocks hotlinking from gator.so). */
+const M = '/images/merlin'
 
-/** Merlin landing page feature screenshots (same CDN assets as Merlin homepage sections). */
 export const CAPABILITY_MERLIN_IMAGES = [
-  merlinAssets.extension.webpage,
-  merlinAssets.extension.search,
-  merlinAssets.extension.context,
-  merlinAssets.extension.learn,
-  merlinAssets.chat.projects,
-  merlinAssets.chat.infographics,
-  merlinAssets.chat.appsnip,
-  merlinAssets.chat.reasoning,
-  merlinAssets.social.imageGen,
+  `${M}/extension/webpage.png`,
+  `${M}/extension/search.png`,
+  `${M}/extension/context.png`,
+  `${M}/extension/learn.png`,
+  `${M}/chat/projects.png`,
+  `${M}/chat/infographics.png`,
+  `${M}/chat/appsnip.png`,
+  `${M}/chat/reasoning.png`,
+  `${M}/social/image-gen.png`,
 ] as const
 
-export const DATA_SOURCES_MERLIN_IMAGE = merlinAssets.extension.learn
-export const SMART_ROUTING_MERLIN_IMAGE = merlinAssets.social.video
+export const DATA_SOURCES_MERLIN_IMAGE = `${M}/extension/data-sources.png`
+export const SMART_ROUTING_MERLIN_IMAGE = `${M}/social/video.png`

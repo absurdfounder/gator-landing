@@ -6,5 +6,6 @@ import Image, { type ImageProps } from 'next/image'
 export default function MerlinImage(props: ImageProps) {
   const src = typeof props.src === 'string' ? props.src : ''
   const isRemote = src.startsWith('http')
-  return <Image {...props} unoptimized={isRemote || props.unoptimized} />
+  const isLocal = src.startsWith('/')
+  return <Image {...props} unoptimized={isRemote || isLocal || props.unoptimized} />
 }
