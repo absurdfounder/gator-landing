@@ -3,27 +3,19 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup, type User } from 'firebase/auth'
-import { CheckCircle2, Loader2 } from 'lucide-react'
+import { CheckCircle2 } from 'lucide-react'
 
-import Header from '@/components/ui/header'
+import {
+  GatorGoogleSignInButton,
+  GatorSignInSecureNote,
+  GatorSignInShell,
+} from '@/components/auth/GatorSignInCard'
 import PixelButton from '@/components/ui/PixelButton'
 import { gatorCheckoutUrl } from '@/lib/gatorBrand'
 import { getFirebaseAuth, isFirebaseConfigured } from '@/lib/firebase/client'
 import { sendAuthSessionToExtension } from '@/lib/extensionAuth'
 
 type LoginPhase = 'loading' | 'idle' | 'signing-in' | 'handoff' | 'success' | 'error'
-
-function GoogleMark() {
-  return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src="https://developers.google.com/identity/images/g-logo.png"
-      alt=""
-      aria-hidden
-      className="h-5 w-5"
-    />
-  )
-}
 
 async function handoffUserToExtension(user: User, extensionId: string) {
   const token = await user.getIdToken()
@@ -57,8 +49,8 @@ export default function LoginClient() {
   const [autoAttempted, setAutoAttempted] = useState(false)
 
   const subtitle = useMemo(() => {
-    if (source === 'gator-extension') {
-      return 'Sign in with Google to connect your Gator extension account.'
+    if (source === 'gator-extension' || wantsExtensionHandoff) {
+      return 'Connect your account to run browser automation and sync your settings across devices.'
     }
     if (checkoutPlan === 'lifetime') {
       return 'Sign in to continue to secure checkout for Gator Lifetime ($37 one-time).'
@@ -66,8 +58,15 @@ export default function LoginClient() {
     if (checkoutPlan === 'cloud') {
       return 'Sign in to continue to secure checkout for Gator Cloud ($20/month).'
     }
-    return 'Sign in with Google to manage billing and your Gator subscription.'
-  }, [checkoutPlan, source])
+    return 'Connect your account to run browser automation and sync your settings across devices.'
+  }, [checkoutPlan, source, wantsExtensionHandoff])
+
+  const secureNote = useMemo(() => {
+    if (wantsExtensionHandoff) {
+      return 'Sign-in opens askgator.app and securely returns your session to this extension.'
+    }
+    return 'Sign in with Google to manage billing, subscriptions, and your Gator account.'
+  }, [wantsExtensionHandoff])
 
   const redirectToAppCheckout = useCallback(() => {
     if (!checkoutPlan) return
@@ -166,79 +165,64 @@ export default function LoginClient() {
     }
   }
 
-  return (
-    <>
-      <Header />
-      <section className="mx-auto flex min-h-[calc(100vh-12rem)] max-w-lg flex-col justify-center px-4 py-16 sm:px-6">
-        <div className="rounded-2xl border border-stone-200 bg-white p-8 shadow-sm">
-          <div className="mb-6 text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-600">Account</p>
-            <h1 className="mt-2 text-2xl font-semibold text-stone-900">Sign in to Gator</h1>
-            <p className="mt-2 text-sm text-stone-600">{subtitle}</p>
-          </div>
+  const buttonLabel =
+    phase === 'loading'
+      ? 'Loading...'
+      : phase === 'handoff'
+        ? 'Connecting extension...'
+        : phase === 'signing-in'
+          ? 'Signing in...'
+          : 'Continue with Google'
 
-          {phase === 'success' ? (
-            <div className="space-y-4 text-center">
-              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
-                <CheckCircle2 className="h-6 w-6" />
-              </div>
-              <div>
-                <p className="font-medium text-stone-900">You&apos;re signed in</p>
-                {signedInEmail ? <p className="mt-1 text-sm text-stone-600">{signedInEmail}</p> : null}
-              </div>
-              {wantsExtensionHandoff ? (
-                <p className="text-sm text-stone-600">
-                  Your session was sent to the Gator extension. You can close this tab and return to the side panel.
-                </p>
-              ) : checkoutPlan ? (
-                <div className="space-y-3">
-                  <p className="text-sm text-stone-600">
-                    Redirecting you to Stripe checkout with <strong>{signedInEmail}</strong> pre-filled…
-                  </p>
-                  <PixelButton type="button" onClick={redirectToAppCheckout} className="w-full">
-                    Continue to checkout
-                  </PixelButton>
-                </div>
-              ) : (
-                <p className="text-sm text-stone-600">You can close this tab or continue browsing askgator.app.</p>
-              )}
+  if (phase === 'success') {
+    return (
+      <GatorSignInShell subtitle="You're signed in and ready to go.">
+        <div className="space-y-4 text-center">
+          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-400">
+            <CheckCircle2 className="h-6 w-6" />
+          </div>
+          <div>
+            <p className="font-medium text-white">You&apos;re signed in</p>
+            {signedInEmail ? <p className="mt-1 text-sm text-zinc-400">{signedInEmail}</p> : null}
+          </div>
+          {wantsExtensionHandoff ? (
+            <p className="text-sm text-zinc-400">
+              Your session was sent to the Gator extension. You can close this tab and return to the
+              side panel.
+            </p>
+          ) : checkoutPlan ? (
+            <div className="space-y-3">
+              <p className="text-sm text-zinc-400">
+                Redirecting you to Stripe checkout with <strong className="text-white">{signedInEmail}</strong>{' '}
+                pre-filled…
+              </p>
+              <PixelButton type="button" onClick={redirectToAppCheckout} className="w-full">
+                Continue to checkout
+              </PixelButton>
             </div>
           ) : (
-            <>
-              <PixelButton
-                type="button"
-                onClick={handleGoogleSignIn}
-                disabled={phase === 'loading' || phase === 'signing-in' || phase === 'handoff'}
-                className="flex w-full items-center justify-center gap-3"
-              >
-                {phase === 'loading' || phase === 'signing-in' || phase === 'handoff' ? (
-                  <Loader2 className="h-5 w-5 animate-spin" />
-                ) : (
-                  <GoogleMark />
-                )}
-                <span>
-                  {phase === 'loading'
-                    ? 'Loading...'
-                    : phase === 'handoff'
-                    ? 'Connecting extension...'
-                    : phase === 'signing-in'
-                      ? 'Signing in...'
-                      : 'Continue with Google'}
-                </span>
-              </PixelButton>
-
-              {error ? <p className="mt-4 text-sm text-red-600">{error}</p> : null}
-
-              {wantsExtensionHandoff ? (
-                <p className="mt-4 text-xs text-stone-500">
-                  This page sends your Firebase session to extension ID{' '}
-                  <code className="rounded bg-stone-100 px-1 py-0.5">{extensionId}</code> after sign-in.
-                </p>
-              ) : null}
-            </>
+            <p className="text-sm text-zinc-400">You can close this tab or continue browsing askgator.app.</p>
           )}
         </div>
-      </section>
-    </>
+      </GatorSignInShell>
+    )
+  }
+
+  return (
+    <GatorSignInShell subtitle={subtitle}>
+      <GatorGoogleSignInButton
+        onClick={handleGoogleSignIn}
+        loading={phase === 'loading' || phase === 'signing-in' || phase === 'handoff'}
+        disabled={phase === 'loading' || phase === 'handoff'}
+        label={buttonLabel}
+      />
+      {error ? <p className="mt-4 text-center text-sm text-red-400">{error}</p> : null}
+      <GatorSignInSecureNote>{secureNote}</GatorSignInSecureNote>
+      {wantsExtensionHandoff ? (
+        <p className="mt-3 text-center text-[11px] text-zinc-500">
+          Extension ID <code className="rounded bg-white/5 px-1 py-0.5 text-zinc-400">{extensionId}</code>
+        </p>
+      ) : null}
+    </GatorSignInShell>
   )
 }

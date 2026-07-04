@@ -14,16 +14,21 @@ function isCatalogPage(pathname: string) {
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {  
   const pathname = usePathname()
-  const hideNewsletter =
-    pathname === '/wonder-auth' || pathname === '/login' || pathname === '/logout' || pathname === '/billing' || isCatalogPage(pathname)
+  const hideChrome =
+    pathname === '/wonder-auth' ||
+    pathname === '/login' ||
+    pathname === '/logout' ||
+    pathname === '/billing' ||
+    isCatalogPage(pathname)
+  const hideNewsletter = hideChrome
   
   return (
     <>
-      <main className="grow bg-gray-50">
+      <main className={`grow ${hideChrome ? 'bg-[#0b0d0b]' : 'bg-gray-50'}`}>
         {children}
       </main>
       {!hideNewsletter && <Newsletter />}
-      <Footer />
+      {!hideChrome && <Footer />}
     </>
   )
 }
