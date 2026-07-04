@@ -140,12 +140,12 @@ export default function OldWays() {
               </p>
             </div>
 
-            <div className="relative min-h-[320px] border-t border-[var(--color-line)] sm:min-h-[380px] lg:min-h-[500px] lg:border-t-0 lg:rounded-r-xl">
+            <div className="relative min-h-[320px] h-full border-t border-[var(--color-line)] sm:min-h-[380px] lg:min-h-[500px] lg:border-t-0 lg:rounded-r-xl">
               <FeatureMerlinWithCharacter
                 merlinSrc={featureImage}
                 merlinAlt={card.tag}
                 characterId={capabilityCharacterIds[index] ?? 'laptop'}
-                className="absolute inset-0"
+                className="h-full w-full"
               />
             </div>
           </div>

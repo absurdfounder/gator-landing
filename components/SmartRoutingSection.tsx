@@ -35,12 +35,12 @@ export default function SmartRoutingSection({ kicker = '09' }: SmartRoutingSecti
           </p>
         </div>
 
-        <div className="relative min-h-[320px] border-t border-[var(--color-line)] sm:min-h-[380px] lg:min-h-[500px] lg:border-t-0 lg:rounded-r-xl">
+        <div className="relative min-h-[320px] h-full border-t border-[var(--color-line)] sm:min-h-[380px] lg:min-h-[500px] lg:border-t-0 lg:rounded-r-xl">
           <FeatureMerlinWithCharacter
             merlinSrc={SMART_ROUTING_MERLIN_IMAGE}
             merlinAlt="Smart model routing"
             characterId="analytics"
-            className="absolute inset-0"
+            className="h-full w-full"
           />
         </div>
       </div>

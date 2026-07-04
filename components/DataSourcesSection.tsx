@@ -57,12 +57,12 @@ export default function DataSourcesSection({ kicker = '05' }: DataSourcesSection
           </div>
         </div>
 
-        <div className="relative min-h-[360px] border-t border-[var(--color-line)] sm:min-h-[440px] lg:min-h-[500px] lg:border-t-0 lg:rounded-r-xl">
+        <div className="relative min-h-[360px] h-full border-t border-[var(--color-line)] sm:min-h-[440px] lg:min-h-[500px] lg:border-t-0 lg:rounded-r-xl">
           <FeatureMerlinWithCharacter
             merlinSrc={DATA_SOURCES_MERLIN_IMAGE}
             merlinAlt="Files and data sources"
             characterId="files"
-            className="absolute inset-0"
+            className="h-full w-full"
           />
         </div>
       </div>
