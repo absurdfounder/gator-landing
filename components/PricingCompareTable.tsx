@@ -159,6 +159,7 @@ export default function PricingCompareTable() {
                 href={planByKey[col.key].href}
                 external
                 size="sm"
+                variant={col.featured ? 'solid' : 'outline'}
                 tone={col.featured ? 'brand' : 'dark'}
                 className="w-full"
               >

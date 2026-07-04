@@ -74,6 +74,7 @@ function PricingCard({ plan }: { plan: MarketingPlan }) {
           href={plan.href}
           external
           size="md"
+          variant={plan.featured ? 'solid' : 'outline'}
           tone={plan.featured ? 'brand' : 'dark'}
           className="w-full"
         >

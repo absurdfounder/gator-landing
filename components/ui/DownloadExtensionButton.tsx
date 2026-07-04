@@ -1,9 +1,14 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import Image from 'next/image'
+import { useEffect, useState, type ReactNode } from 'react'
 
-import { SafariIcon } from '@/components/ui/BrowserIcons'
+import {
+  BraveIcon,
+  ChromeIcon,
+  EdgeIcon,
+  FirefoxIcon,
+  SafariIcon,
+} from '@/components/ui/BrowserIcons'
 import { detectExtensionBrowser, type ExtensionBrowser } from '@/lib/detectBrowser'
 import { extensionDownloadTargets } from '@/lib/gatorBrand'
 
@@ -15,11 +20,12 @@ type DownloadExtensionButtonProps = {
   onClick?: () => void
 }
 
-const BROWSER_ICON_SRC: Partial<Record<ExtensionBrowser, string>> = {
-  chrome: '/images/browsers/chrome.png',
-  firefox: '/images/browsers/firefox.png',
-  edge: '/images/browsers/edge.png',
-  brave: '/images/browsers/brave.png',
+const browserIcons: Record<ExtensionBrowser, ReactNode> = {
+  chrome: <ChromeIcon />,
+  firefox: <FirefoxIcon />,
+  safari: <SafariIcon />,
+  edge: <EdgeIcon />,
+  brave: <BraveIcon />,
 }
 
 const sizeStyles: Record<
@@ -47,25 +53,6 @@ const sizeStyles: Record<
     label: 'text-sm sm:text-[15px] leading-tight',
     gap: 'gap-3 sm:gap-3.5',
   },
-}
-
-function BrowserMark({ browser, className }: { browser: ExtensionBrowser; className: string }) {
-  const src = BROWSER_ICON_SRC[browser]
-
-  if (src) {
-    return (
-      <Image
-        src={src}
-        alt=""
-        width={48}
-        height={48}
-        aria-hidden
-        className={`shrink-0 object-contain ${className}`}
-      />
-    )
-  }
-
-  return <SafariIcon className={className} />
 }
 
 export default function DownloadExtensionButton({
@@ -102,7 +89,9 @@ export default function DownloadExtensionButton({
         .filter(Boolean)
         .join(' ')}
     >
-      <BrowserMark browser={browser} className={styles.icon} />
+      <span className={`inline-flex shrink-0 items-center justify-center ${styles.icon}`}>
+        {browserIcons[browser]}
+      </span>
       <span className="min-w-0 text-left">
         <span className={`block text-slate-500 ${styles.kicker}`}>Download for</span>
         <span className={`block font-semibold text-slate-900 ${styles.label}`}>{target.label}</span>
