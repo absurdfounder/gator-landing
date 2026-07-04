@@ -1,10 +1,12 @@
 import type { FirebaseOptions } from 'firebase/app'
 
 /** Gator / askgator.app Firebase project (fetchkitty-app). */
+export const GATOR_FIREBASE_PROJECT_ID = 'fetchkitty-app'
+
 const DEFAULT_FIREBASE_CONFIG: FirebaseOptions = {
   apiKey: 'AIzaSyAvm-GVWRRFZIjD_wui9N3buRbgsEU7_Sw',
   authDomain: 'fetchkitty-app.firebaseapp.com',
-  projectId: 'fetchkitty-app',
+  projectId: GATOR_FIREBASE_PROJECT_ID,
   storageBucket: 'fetchkitty-app.firebasestorage.app',
   messagingSenderId: '786550008641',
   appId: '1:786550008641:web:23d7450458e2b383a0cfc0',
@@ -44,7 +46,7 @@ export function readFirebaseServerConfig(): FirebaseOptions {
     databaseURL: pickEnv('FIREBASE_DATABASE_URL', 'NEXT_PUBLIC_FIREBASE_DATABASE_URL'),
   }
 
-  if (isCompleteConfig(fromEnv)) {
+  if (isCompleteConfig(fromEnv) && fromEnv.projectId === GATOR_FIREBASE_PROJECT_ID) {
     return fromEnv
   }
 

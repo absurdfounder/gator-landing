@@ -11,6 +11,7 @@ export async function GET() {
     headers: {
       'Cache-Control': 'no-store',
       'X-Gator-Firebase-Config': 'ready',
+      'X-Gator-Firebase-Project': config.projectId,
     },
   })
 }
