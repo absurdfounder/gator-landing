@@ -1,9 +1,8 @@
 'use client';
 
 import GatorLogo from '@/components/ui/GatorLogo';
-import PixelButton from '@/components/ui/PixelButton';
+import DownloadExtensionButton from '@/components/ui/DownloadExtensionButton';
 import Link from 'next/link';
-import { getFaviconUrl } from '@/lib/favicon';
 import {
   Twitter,
   Github,
@@ -18,8 +17,6 @@ import {
   Zap,
 } from 'lucide-react';
 
-const GITHUB_ORG_URL = 'https://github.com/absurdfounder';
-
 type LinkItem = {
   label: string;
   href: string;
@@ -33,13 +30,11 @@ type CellGroup = {
 };
 
 type FooterColumn = {
-  number: string;
   eyebrow: string;
   groups: CellGroup[];
 };
 
 const featureColumn: FooterColumn = {
-  number: '02',
   eyebrow: 'Features',
   groups: [
     {
@@ -73,7 +68,6 @@ const featureColumn: FooterColumn = {
 };
 
 const productColumn: FooterColumn = {
-  number: '03',
   eyebrow: 'Product',
   groups: [
     {
@@ -104,7 +98,6 @@ const productColumn: FooterColumn = {
 };
 
 const ecosystemColumn: FooterColumn = {
-  number: '04',
   eyebrow: 'OpenClaw Ecosystem',
   groups: [
     {
@@ -120,11 +113,9 @@ const ecosystemColumn: FooterColumn = {
   ],
 };
 
-function CellHeader({ number, eyebrow }: { number: string; eyebrow: string }) {
+function CellHeader({ eyebrow }: { eyebrow: string }) {
   return (
-    <div className="font-silkscreen text-[11px] uppercase tracking-[0.18em] text-slate-500">
-      <span className="text-slate-400">[{number}]</span> {eyebrow}
-    </div>
+    <div className="text-sm font-semibold text-slate-900">{eyebrow}</div>
   );
 }
 
@@ -173,7 +164,7 @@ function FooterColumnCell({
 }) {
   return (
     <div className="flex flex-col gap-6 px-6 py-8 md:px-8 md:py-10">
-      <CellHeader number={column.number} eyebrow={column.eyebrow} />
+      <CellHeader eyebrow={column.eyebrow} />
       {column.groups.map((group, gIdx) => (
         <div
           key={group.heading}
@@ -196,7 +187,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-10 py-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8 lg:py-12">
           <div className="flex flex-col gap-5 px-6 sm:col-span-2 md:px-8 lg:col-span-1">
-            <CellHeader number="01" eyebrow="Gator" />
+            <CellHeader eyebrow="Gator" />
             <GatorLogo
               variant="wordmark"
               iconClassName="h-10 w-10 sm:h-11 sm:w-11 object-contain"
@@ -222,17 +213,6 @@ export default function Footer() {
                   className="flex items-center gap-2 text-sm text-slate-600 transition-colors hover:text-slate-900"
                   target="_blank"
                   rel="noopener noreferrer"
-                  href={GITHUB_ORG_URL}
-                >
-                  <Github className="h-3.5 w-3.5 text-slate-400" />
-                  <span>GitHub</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="flex items-center gap-2 text-sm text-slate-600 transition-colors hover:text-slate-900"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   href="https://twitter.com/absurdfounder"
                 >
                   <Twitter className="h-3.5 w-3.5 text-slate-400" />
@@ -244,7 +224,7 @@ export default function Footer() {
 
           {/* Link cells */}
           {linkColumns.map((col) => (
-              <div key={col.number}>
+              <div key={col.eyebrow}>
                 <FooterColumnCell column={col} />
               </div>
             ))}
@@ -260,37 +240,7 @@ export default function Footer() {
               Terms
             </Link>
           </div>
-          <div className="flex flex-wrap items-center gap-3">
-            <PixelButton
-              href={GITHUB_ORG_URL}
-              external
-              size="sm"
-              variant="outline"
-              tone="dark"
-              ariaLabel="Gator open source on GitHub"
-              icon={<Github className="h-3.5 w-3.5" strokeWidth={2} />}
-            >
-              Open Source
-            </PixelButton>
-            <a
-              href="https://openclaw.ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-slate-200 bg-white px-3 py-2 text-xs font-mono uppercase tracking-[0.12em] text-slate-600 transition-colors hover:text-slate-900 md:text-[11px]"
-            >
-              <span className="text-slate-400">Powered by</span>
-              <img
-                src={getFaviconUrl('openclaw.ai', 32)}
-                alt="OpenClaw"
-                className="h-3.5 w-3.5 rounded-sm"
-                loading="lazy"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = '/images/gator-icon.png';
-                }}
-              />
-              <span className="font-semibold text-slate-700">OpenClaw</span>
-            </a>
-          </div>
+          <DownloadExtensionButton size="sm" />
         </div>
 
         {/* Giant gator. watermark */}
