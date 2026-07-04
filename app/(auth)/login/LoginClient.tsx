@@ -10,7 +10,7 @@ import PixelButton from '@/components/ui/PixelButton'
 import { getFirebaseAuth, isFirebaseConfigured } from '@/lib/firebase/client'
 import { sendAuthSessionToExtension } from '@/lib/extensionAuth'
 
-type LoginPhase = 'idle' | 'signing-in' | 'handoff' | 'success' | 'error'
+type LoginPhase = 'loading' | 'idle' | 'signing-in' | 'handoff' | 'success' | 'error'
 
 function GoogleMark() {
   return (
@@ -47,12 +47,8 @@ export default function LoginClient() {
   const source = searchParams.get('source')?.trim() || ''
   const wantsExtensionHandoff = returnMode === 'extensionMessage' && extensionId.length > 0
 
-  const [phase, setPhase] = useState<LoginPhase>(isFirebaseConfigured() ? 'idle' : 'error')
-  const [error, setError] = useState(
-    isFirebaseConfigured()
-      ? ''
-      : 'Sign-in is temporarily unavailable. Firebase environment variables are not configured.',
-  )
+  const [phase, setPhase] = useState<LoginPhase>('loading')
+  const [error, setError] = useState('')
   const [signedInEmail, setSignedInEmail] = useState('')
   const [autoAttempted, setAutoAttempted] = useState(false)
 
@@ -85,20 +81,42 @@ export default function LoginClient() {
   )
 
   useEffect(() => {
-    if (!isFirebaseConfigured()) return
+    let cancelled = false
 
-    const auth = getFirebaseAuth()
-    const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      if (!user || autoAttempted) return
-      setAutoAttempted(true)
-      await completeHandoff(user)
+    isFirebaseConfigured().then((configured) => {
+      if (cancelled) return
+      if (!configured) {
+        setPhase('error')
+        setError('Sign-in is temporarily unavailable. Firebase environment variables are not configured.')
+        return
+      }
+      setPhase('idle')
     })
 
-    return unsubscribe
-  }, [autoAttempted, completeHandoff])
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
+  useEffect(() => {
+    if (phase === 'loading' || phase === 'error') return
+
+    let unsubscribe = () => {}
+
+    getFirebaseAuth().then((auth) => {
+      unsubscribe = onAuthStateChanged(auth, async (user) => {
+        if (!user || autoAttempted) return
+        setAutoAttempted(true)
+        await completeHandoff(user)
+      })
+    })
+
+    return () => unsubscribe()
+  }, [autoAttempted, completeHandoff, phase])
 
   const handleGoogleSignIn = async () => {
-    if (!isFirebaseConfigured()) {
+    const configured = await isFirebaseConfigured()
+    if (!configured) {
       setPhase('error')
       setError('Sign-in is temporarily unavailable. Firebase environment variables are not configured.')
       return
@@ -108,7 +126,7 @@ export default function LoginClient() {
     setPhase('signing-in')
 
     try {
-      const auth = getFirebaseAuth()
+      const auth = await getFirebaseAuth()
       const provider = new GoogleAuthProvider()
       provider.setCustomParameters({ prompt: 'select_account' })
       const result = await signInWithPopup(auth, provider)
@@ -160,16 +178,18 @@ export default function LoginClient() {
               <PixelButton
                 type="button"
                 onClick={handleGoogleSignIn}
-                disabled={phase === 'signing-in' || phase === 'handoff'}
+                disabled={phase === 'loading' || phase === 'signing-in' || phase === 'handoff'}
                 className="flex w-full items-center justify-center gap-3"
               >
-                {phase === 'signing-in' || phase === 'handoff' ? (
+                {phase === 'loading' || phase === 'signing-in' || phase === 'handoff' ? (
                   <Loader2 className="h-5 w-5 animate-spin" />
                 ) : (
                   <GoogleMark />
                 )}
                 <span>
-                  {phase === 'handoff'
+                  {phase === 'loading'
+                    ? 'Loading...'
+                    : phase === 'handoff'
                     ? 'Connecting extension...'
                     : phase === 'signing-in'
                       ? 'Signing in...'

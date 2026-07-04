@@ -11,22 +11,29 @@ export default function LogoutClient() {
   const [message, setMessage] = useState('Signing you out...')
 
   useEffect(() => {
-    if (!isFirebaseConfigured()) {
-      setMessage('Sign-out is unavailable because Firebase is not configured.')
-      return
-    }
-
     let cancelled = false
 
-    signOut(getFirebaseAuth())
-      .then(() => {
-        if (cancelled) return
-        setMessage('Signed out. You can close this tab.')
-      })
-      .catch((error) => {
-        if (cancelled) return
-        setMessage(error instanceof Error ? error.message : 'Unable to sign out.')
-      })
+    async function run() {
+      const configured = await isFirebaseConfigured()
+      if (!configured) {
+        if (!cancelled) {
+          setMessage('Sign-out is unavailable because Firebase is not configured.')
+        }
+        return
+      }
+
+      try {
+        const auth = await getFirebaseAuth()
+        await signOut(auth)
+        if (!cancelled) setMessage('Signed out. You can close this tab.')
+      } catch (error) {
+        if (!cancelled) {
+          setMessage(error instanceof Error ? error.message : 'Unable to sign out.')
+        }
+      }
+    }
+
+    run()
 
     return () => {
       cancelled = true
