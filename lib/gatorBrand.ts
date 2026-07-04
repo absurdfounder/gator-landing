@@ -27,6 +27,16 @@ export const extensionDownloadTargets: Record<ExtensionBrowser, ExtensionDownloa
     label: 'Apple Safari',
     href: `${GATOR_APP_URL}?ref=extension&platform=safari`,
   },
+  edge: {
+    browser: 'edge',
+    label: 'Microsoft Edge',
+    href: `${GATOR_APP_URL}?ref=extension&platform=edge`,
+  },
+  brave: {
+    browser: 'brave',
+    label: 'Brave',
+    href: `${GATOR_APP_URL}?ref=extension&platform=brave`,
+  },
 }
 
 export const headerNavLinks = [
