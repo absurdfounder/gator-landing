@@ -4,6 +4,7 @@ import './css/merlin-shadcn.css'
 import { Nunito } from 'next/font/google'
 import localFont from 'next/font/local'
 import Script from 'next/script'
+import PlausibleProvider from 'next-plausible'
 
 import Banner from '@/components/banner'
 import SchemaMarkup from '@/components/SchemaMarkup'
@@ -89,6 +90,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="light" suppressHydrationWarning>
       <head>
+        <PlausibleProvider domain="gator.so" trackOutboundLinks />
         <link rel="icon" href="/favicon.png" type="image/png" sizes="96x96" />
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
         <link rel="canonical" href={canonicalUrl} />
