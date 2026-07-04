@@ -70,24 +70,20 @@ interface FAQItem {
 const faqs: Record<string, FAQItem[]> = {
     Pricing: [
         {
-            question: "Do I need my own API keys?",
-            answer: "Yes. Gator follows a bring-your-own-key model. You connect your own OpenAI, Anthropic, Gemini, or other provider keys. Model usage is billed separately — no markup, you pay providers directly at their rates.",
+            question: "What plans are available?",
+            answer: `Gator Lite is free with the Gator Lite model. Lifetime is ${formatUsd(PRICING_USD.lifetime)} one-time with Codex Connect and OpenRouter keys included. Gator Cloud is ${formatUsd(PRICING_USD.cloudMonthly)}/mo — hosted, just buy and use.`,
         },
         {
-            question: "What is the difference between Solo, Cloud, and Enterprise?",
-            answer: `Local Install is ${formatUsd(PRICING_USD.localLifetime)} one-time for a lifetime license on your machine — one workspace, no connected devices. Solo Cloud is ${formatUsd(PRICING_USD.cloudLifetime)} one-time for hosted team collaboration forever — also one workspace, no connected devices. Gator Cloud is ${formatUsd(PRICING_USD.cloudStandardMonthly)}/mo (Cloud) or ${formatUsd(PRICING_USD.cloudPremiumMonthly)}/mo (Cloud Max) with multi-workspace support and unlimited connected devices. Enterprise is custom pricing with self-hosting, SSO, VPC, and dedicated support. All plans include unlimited agents and chats.`,
+            question: "Do I need my own API keys?",
+            answer: "Lite is free — optional BYOK. Lifetime includes Codex Connect and OpenRouter keys. Gator Cloud is fully hosted — sign up and go.",
         },
         {
             question: "Does Gator Cloud include hosting?",
-            answer: "Yes. With Gator Cloud, we host and manage the workspace, Always-on Virtual PC, and runtime. Your team gets a dedicated environment without managing any infrastructure.",
+            answer: `Yes. Gator Cloud at ${formatUsd(PRICING_USD.cloudMonthly)}/mo includes everything hosted. No team seats or workspace setup.`,
         },
         {
-            question: "Can I self-host Gator?",
-            answer: "Yes. Enterprise customers deploy on their own infrastructure with private VPC, on-prem options, SSO, white-label branding, and custom security requirements. Solo plan users run on their own machine.",
-        },
-        {
-            question: "Can I upgrade later from the lifetime deal?",
-            answer: "Yes. The lifetime deal is designed for solo founders to get started quickly. As your needs grow, you can move to Cloud for team collaboration or Enterprise for self-hosted deployment.",
+            question: "Can I upgrade from Lite?",
+            answer: "Yes. Start free on Lite, then move to Lifetime or Gator Cloud anytime from your dashboard.",
         },
         {
             question: "Are there discounts for startups or nonprofits?",
@@ -176,7 +172,7 @@ const FAQSection: React.FC = () => {
                     <p className="text-slate-600 max-w-2xl">
                         Have a different question? Reach out to our support team by
                         <a
-                            href="mailto:vaibhav@trooper.so"
+                            href="mailto:support@gator.so"
                             className="text-emerald-600 hover:text-emerald-700 hover:underline px-2"
                         >
                             sending us an email

@@ -59,21 +59,21 @@ const SchemaMarkup = () => {
     },
     "offers": {
       "@type": "Offer",
-      "price": "7.00",
+      "price": "20.00",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
       "url": "https://gator.so/pricing",
       "priceValidUntil": "2026-12-31",
       "priceSpecification": {
         "@type": "UnitPriceSpecification",
-        "price": "7.00",
+        "price": "20.00",
         "priceCurrency": "USD",
         "referenceQuantity": {
           "@type": "QuantitativeValue",
           "value": 1,
           "unitCode": "MON"
         },
-        "description": "$7 per month subscription"
+        "description": "$20 per month subscription"
       }
     }
   };

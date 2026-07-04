@@ -1,51 +1,94 @@
 /** Public marketing prices — keep in sync with app checkout when billing changes. */
 export const PRICING_USD = {
-  localLifetime: 49,
-  cloudLifetime: 149,
-  cloudStandardMonthly: 25,
-  cloudPremiumMonthly: 99,
-  cloudAdditionalMemberMonthly: 10,
-  cloudIncludedMembers: 2,
-  cloudIncludedWorkspaces: 1,
-  localIncludedMembers: 1,
-  localIncludedWorkspaces: 1,
+  lite: 0,
+  lifetime: 37,
+  cloudMonthly: 20,
 } as const;
 
-export type CloudSubscriptionTier = 'standard' | 'premium';
-
-export const CLOUD_SUBSCRIPTION_TIERS: {
-  id: CloudSubscriptionTier;
-  label: string;
-  price: number;
-}[] = [
-  { id: 'standard', label: 'Cloud', price: PRICING_USD.cloudStandardMonthly },
-  { id: 'premium', label: 'Cloud Max', price: PRICING_USD.cloudPremiumMonthly },
-];
-
 export function formatUsd(amount: number) {
-  return `$${amount}`;
-}
-
-export function getCloudTierMonthlyPrice(tier: CloudSubscriptionTier) {
-  return CLOUD_SUBSCRIPTION_TIERS.find((entry) => entry.id === tier)?.price ?? PRICING_USD.cloudStandardMonthly;
-}
-
-export function estimateCloudMonthly({
-  tier,
-  seatCount,
-  workspaceCount,
-}: {
-  tier: CloudSubscriptionTier;
-  seatCount: number;
-  workspaceCount: number;
-}) {
-  const tierPrice = getCloudTierMonthlyPrice(tier);
-  const additionalMembers = Math.max(0, seatCount - PRICING_USD.cloudIncludedMembers);
-  return tierPrice * workspaceCount + additionalMembers * PRICING_USD.cloudAdditionalMemberMonthly;
+  return amount === 0 ? 'Free' : `$${amount}`;
 }
 
 export const COMMON_PLAN_FEATURES = [
-  'Unlimited agents and chats',
-  'Adaptive memory and shared workflows',
-  'Skills, integrations, and browser automation',
+  'Browser extension loops',
+  'OpenClaw skills & integrations',
+  'Pause, override, and stop anytime',
 ] as const;
+
+export type PlanId = 'lite' | 'lifetime' | 'cloud';
+
+export type MarketingPlan = {
+  id: PlanId;
+  index: string;
+  eyebrow: string;
+  badge: string;
+  title: string;
+  price: number;
+  cadence?: string;
+  subline: string;
+  note: string;
+  features: string[];
+  cta: string;
+  href: string;
+  featured?: boolean;
+};
+
+export const MARKETING_PLANS: MarketingPlan[] = [
+  {
+    id: 'lite',
+    index: '01',
+    eyebrow: 'Get started',
+    badge: 'Free',
+    title: 'Gator Lite',
+    price: PRICING_USD.lite,
+    subline: 'Gator Lite model — loops in your browser.',
+    note: 'No credit card. Install the extension and run.',
+    features: [
+      'Gator Lite model',
+      'Browser extension loops',
+      'Core OpenClaw skills',
+      'Bring your own API keys (optional)',
+    ],
+    cta: 'Get started free',
+    href: 'https://app.gator.so?ref=extension',
+  },
+  {
+    id: 'lifetime',
+    index: '02',
+    eyebrow: 'Pay once',
+    badge: 'Lifetime',
+    title: 'Lifetime',
+    price: PRICING_USD.lifetime,
+    cadence: 'one-time',
+    subline: 'Codex Connect & OpenRouter keys included.',
+    note: 'Full models. Pay once, use forever.',
+    features: [
+      'Codex Connect included',
+      'OpenRouter keys included',
+      'All agent loops & skills',
+      'Lifetime access — no subscription',
+    ],
+    cta: 'Get lifetime',
+    href: 'https://app.gator.so?plan=lifetime',
+  },
+  {
+    id: 'cloud',
+    index: '03',
+    eyebrow: 'Hosted',
+    badge: 'Most popular',
+    title: 'Gator Cloud',
+    price: PRICING_USD.cloudMonthly,
+    cadence: '/ month',
+    featured: true,
+    subline: 'Just buy and use — we host everything.',
+    note: 'No setup. Sign up and your loops are live.',
+    features: [
+      'Hosted runtime — zero setup',
+      'Always-on virtual PC',
+      'Full model access',
+      'Unlimited connected devices',
+    ],
+    cta: 'Start Gator Cloud',
+    href: 'https://app.gator.so?plan=cloud',
+  },
+];

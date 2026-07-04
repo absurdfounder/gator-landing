@@ -67,15 +67,15 @@ const faqs: FAQCategories = {
   Pricing: [
     {
       question: 'Do I need my own API keys?',
-      answer: 'Yes. Bring your own OpenAI, Anthropic, or other keys. You pay providers directly — no markup.',
+      answer: 'Gator Lite is free — bring your own keys if you want stronger models. Lifetime includes Codex Connect and OpenRouter keys. Gator Cloud is hosted — just buy and use.',
     },
     {
       question: 'What plans are available?',
-      answer: `Local lifetime ${formatUsd(PRICING_USD.localLifetime)}. Solo Cloud lifetime ${formatUsd(PRICING_USD.cloudLifetime)}. Gator Cloud from ${formatUsd(PRICING_USD.cloudStandardMonthly)}/mo. Enterprise is custom.`,
+      answer: `Gator Lite is free with the Lite model. Lifetime is ${formatUsd(PRICING_USD.lifetime)} one-time with Codex Connect and OpenRouter keys included. Gator Cloud is ${formatUsd(PRICING_USD.cloudMonthly)}/mo — hosted, just buy and use.`,
     },
     {
       question: 'Is hosting included on Cloud?',
-      answer: 'Yes. Gator Cloud includes hosted workspace and runtime — no servers to manage.',
+      answer: `Yes. Gator Cloud (${formatUsd(PRICING_USD.cloudMonthly)}/mo) includes hosted runtime and always-on virtual PC. No setup.`,
     },
     {
       question: 'Can I self-host?',
